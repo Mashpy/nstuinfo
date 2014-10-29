@@ -4,13 +4,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class NstuInfoDetails extends ActionBarActivity {
+	TextView finalTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_nstu_info_details);
+		finalTextView=(TextView) findViewById(R.id.finalTextView);
+		finalTextView.setText("WELCOME!!\n"+getIntent().getStringExtra("New_Topic"));
 	}
 
 	@Override

@@ -3,6 +3,7 @@ package com.mashpy.nstuinfo;
 import android.os.Bundle;
 import java.util.ArrayList;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.View;
@@ -42,13 +43,14 @@ public class MainActivity extends ListActivity {
 		listView = getListView();
 		
 		listView.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view,
-								int position,long id) {
-				Toast.makeText(getApplicationContext(),
-							((TextView) view).getText().toString(),
-							 Toast.LENGTH_SHORT).show();				
+			@Override
+			public void onItemClick(AdapterView<?> adapterView, View view, int position, long offset) {	
+			Intent intent = new Intent(getApplicationContext(), NstuInfoDetails.class);
+			String mashpy= ((TextView) view).getText().toString();
+			intent.putExtra("New_Topic", mashpy);
+			startActivity(intent);
 			}
-		});
+			});
 	}
 	
 
