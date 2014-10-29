@@ -20,10 +20,14 @@ public class MainActivity extends ListActivity {
 	private static final String TABLE_NAME = "nstuinfo_first";
 	private static final String NSTUINFO_ID = "_id";
 	private static final String NSTUINFO_NAME = "name";
+	private static final String NSTUINFO_DETAILS = "details";
+	
     
 	private SQLiteDatabase database;
 	private ListView listView;
 	private ArrayList<String> nstuinfofirst;
+	private ArrayList<String> nstuinfodetails;
+	
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,7 +51,8 @@ public class MainActivity extends ListActivity {
 			public void onItemClick(AdapterView<?> adapterView, View view, int position, long offset) {	
 			Intent intent = new Intent(getApplicationContext(), NstuInfoDetails.class);
 			String mashpy= ((TextView) view).getText().toString();
-			intent.putExtra("New_Topic", mashpy);
+			fillNstuinfodetails(mashpy);
+			intent.putExtra("New_Topic", nstuinfodetails.toString());
 			startActivity(intent);
 			}
 			});
@@ -69,5 +74,18 @@ public class MainActivity extends ListActivity {
 			} while (friendCursor.moveToNext());
 		}
 		friendCursor.close();
+}
+	public void fillNstuinfodetails(String mashpy) {
+	nstuinfodetails = new ArrayList<String>();
+	String selectQueryString="SELECT * FROM "+TABLE_NAME+ " WHERE "+NSTUINFO_NAME+" = '"+mashpy+ "'";
+	Cursor friendCursordetails = database.rawQuery(selectQueryString, null);
+	friendCursordetails.moveToFirst();
+	if(!friendCursordetails.isAfterLast()) {
+		do {
+			String name = friendCursordetails.getString(1);
+			nstuinfodetails.add(name);
+		} while (friendCursordetails.moveToNext());
+	}
+	friendCursordetails.close();
 	}
 }
