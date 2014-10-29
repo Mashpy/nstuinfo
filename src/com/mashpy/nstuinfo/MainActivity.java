@@ -37,11 +37,9 @@ public class MainActivity extends ListActivity {
     }
 
 	private void setUpList() {
-
-		ArrayAdapter adapter = new ArrayAdapter<String>(this,
-				R.layout.simplerow, nstuinfofirst);
-				ListView listView = (ListView) findViewById(R.id.listView1);
-				listView.setAdapter(adapter); 
+		setListAdapter(new ArrayAdapter<String>(this,
+		android.R.layout.simple_list_item_1, nstuinfofirst));
+		listView = getListView();
 		
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -53,7 +51,7 @@ public class MainActivity extends ListActivity {
 		});
 	}
 	
-	//���������� �������� �� ���� ������
+
 	private void fillNstuinfo() {
 		nstuinfofirst = new ArrayList<String>();
 		Cursor friendCursor = database.query(TABLE_NAME,
