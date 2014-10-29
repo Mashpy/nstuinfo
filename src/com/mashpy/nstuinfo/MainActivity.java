@@ -15,7 +15,8 @@ import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
     private static final String DB_NAME = "nstuinfodb.sqlite3";
-   	private static final String TABLE_NAME = "nstuinfo_first";
+    
+	private static final String TABLE_NAME = "nstuinfo_first";
 	private static final String NSTUINFO_ID = "_id";
 	private static final String NSTUINFO_NAME = "name";
     
@@ -26,7 +27,7 @@ public class MainActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
         
 
         ExternalDbOpenHelper dbOpenHelper = new ExternalDbOpenHelper(this, DB_NAME);
@@ -36,9 +37,11 @@ public class MainActivity extends ListActivity {
     }
 
 	private void setUpList() {
-		setListAdapter(new ArrayAdapter<String>(this,
-						android.R.layout.simple_list_item_1, nstuinfofirst));
-		listView = getListView();
+
+		ArrayAdapter adapter = new ArrayAdapter<String>(this,
+				R.layout.simplerow, nstuinfofirst);
+				ListView listView = (ListView) findViewById(R.id.listView1);
+				listView.setAdapter(adapter); 
 		
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -50,6 +53,7 @@ public class MainActivity extends ListActivity {
 		});
 	}
 	
+	//���������� �������� �� ���� ������
 	private void fillNstuinfo() {
 		nstuinfofirst = new ArrayList<String>();
 		Cursor friendCursor = database.query(TABLE_NAME,
