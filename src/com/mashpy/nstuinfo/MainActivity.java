@@ -14,36 +14,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
-    private static final String DB_NAME = "yourdb.sqlite3";
-    //������� ��������� �������� ������� ���� ����� �� �����������
-	private static final String TABLE_NAME = "friends";
-	private static final String FRIEND_ID = "_id";
-	private static final String FRIEND_NAME = "name";
+    private static final String DB_NAME = "nstuinfodb.sqlite3";
+   	private static final String TABLE_NAME = "nstuinfo_first";
+	private static final String NSTUINFO_ID = "_id";
+	private static final String NSTUINFO_NAME = "name";
     
 	private SQLiteDatabase database;
 	private ListView listView;
-	private ArrayList<String> friends;
+	private ArrayList<String> nstuinfofirst;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        //��� �������� ������
+
         ExternalDbOpenHelper dbOpenHelper = new ExternalDbOpenHelper(this, DB_NAME);
         database = dbOpenHelper.openDataBase();
-        //���, ���� �������!
-        fillFreinds();
+        fillNstuinfo();
         setUpList();      
     }
 
 	private void setUpList() {
-		//��������� ����������� ������� � layout �������� ��� ���������
 		setListAdapter(new ArrayAdapter<String>(this,
-						android.R.layout.simple_list_item_1, friends));
+						android.R.layout.simple_list_item_1, nstuinfofirst));
 		listView = getListView();
 		
-		//������� ���� ����, ��� ����
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 								int position,long id) {
@@ -54,19 +50,18 @@ public class MainActivity extends ListActivity {
 		});
 	}
 	
-	//���������� �������� �� ���� ������
-	private void fillFreinds() {
-		friends = new ArrayList<String>();
+	private void fillNstuinfo() {
+		nstuinfofirst = new ArrayList<String>();
 		Cursor friendCursor = database.query(TABLE_NAME,
 											 new String[] 
-											 {FRIEND_ID, FRIEND_NAME},
+											 {NSTUINFO_ID, NSTUINFO_NAME},
 											 null, null, null, null
-											 , FRIEND_NAME);
+											 , NSTUINFO_NAME);
 		friendCursor.moveToFirst();
 		if(!friendCursor.isAfterLast()) {
 			do {
 				String name = friendCursor.getString(1);
-				friends.add(name);
+				nstuinfofirst.add(name);
 			} while (friendCursor.moveToNext());
 		}
 		friendCursor.close();

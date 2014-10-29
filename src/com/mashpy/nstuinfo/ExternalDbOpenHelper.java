@@ -13,9 +13,8 @@ import android.util.Log;
 
 public class ExternalDbOpenHelper extends SQLiteOpenHelper {
 
-	//���� � ����� � ������ �� ����������
+
 	public static String DB_PATH;
-	//��� ����� � �����
 	public static String DB_NAME;
 	public SQLiteDatabase database;
 	public final Context context;
@@ -27,14 +26,12 @@ public class ExternalDbOpenHelper extends SQLiteOpenHelper {
 	public ExternalDbOpenHelper(Context context, String databaseName) {
 		super(context, databaseName, null, 1);
 		this.context = context;
-		//�������� ������ ���� � ����� ��� ������ ����������
 		String packageName = context.getPackageName();
 		DB_PATH = String.format("//data//data//%s//databases//", packageName);
 		DB_NAME = databaseName;
 		openDataBase();
 	}
 
-	//������� ����, ���� ��� �� �������
 	public void createDataBase() {
 		boolean dbExist = checkDataBase();
 		if (!dbExist) {
@@ -49,7 +46,7 @@ public class ExternalDbOpenHelper extends SQLiteOpenHelper {
 			Log.i(this.getClass().toString(), "Database already exists");
 		}
 	}
-	//�������� ������������� ���� ������
+
 	private boolean checkDataBase() {
 		SQLiteDatabase checkDb = null;
 		try {
@@ -59,31 +56,27 @@ public class ExternalDbOpenHelper extends SQLiteOpenHelper {
 		} catch (SQLException e) {
 			Log.e(this.getClass().toString(), "Error while checking db");
 		}
-		//������� �� ����� ������ ��������, ��� ������ �����������
+
 		if (checkDb != null) {
 			checkDb.close();
 		}
 		return checkDb != null;
 	}
-	//����� ����������� ����
+
 	private void copyDataBase() throws IOException {
-		// ��������� ����� ��� ������ �� ��� ��������� ���� ��
-		//�������� � assets
+
 		InputStream externalDbStream = context.getAssets().open(DB_NAME);
 
-		// ���� � ��� ��������� ������ ���� � ��������
 		String outFileName = DB_PATH + DB_NAME;
 
-		// ������ �������� ����� ��� ������ � ��� �� ��������
 		OutputStream localDbStream = new FileOutputStream(outFileName);
 
-		// ���������� �����������
 		byte[] buffer = new byte[1024];
 		int bytesRead;
 		while ((bytesRead = externalDbStream.read(buffer)) > 0) {
 			localDbStream.write(buffer, 0, bytesRead);
 		}
-		// �� ����� �������� ����������(���������) � ������� ������
+
 		localDbStream.close();
 		externalDbStream.close();
 
