@@ -62,7 +62,7 @@ public class MainActivity extends ListActivity {
 											 new String[] 
 											 {NSTUINFO_ID, NSTUINFO_NAME},
 											 null, null, null, null
-											 , NSTUINFO_NAME);
+											 , null);
 		friendCursor.moveToFirst();
 		if(!friendCursor.isAfterLast()) {
 			do {
