@@ -6,6 +6,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -52,6 +53,7 @@ public class MainActivity extends ListActivity {
 			Intent intent = new Intent(getApplicationContext(), NstuInfoDetails.class);
 			String mashpy= ((TextView) view).getText().toString();
 			fillNstuinfodetails(mashpy);
+		
 			intent.putExtra("New_Topic", nstuinfodetails.toString());
 			startActivity(intent);
 			}
@@ -77,15 +79,18 @@ public class MainActivity extends ListActivity {
 }
 	public void fillNstuinfodetails(String mashpy) {
 	nstuinfodetails = new ArrayList<String>();
-	String selectQueryString="SELECT * FROM "+TABLE_NAME+ " WHERE "+NSTUINFO_NAME+" = '"+mashpy+ "'";
+	String selectQueryString= "select details from nstuinfo_first where name= '"+mashpy+"'";
 	Cursor friendCursordetails = database.rawQuery(selectQueryString, null);
 	friendCursordetails.moveToFirst();
 	if(!friendCursordetails.isAfterLast()) {
 		do {
-			String name = friendCursordetails.getString(1);
+			String name = friendCursordetails.getString(0);
 			nstuinfodetails.add(name);
 		} while (friendCursordetails.moveToNext());
 	}
 	friendCursordetails.close();
 	}
+	
+	
+	
 }
