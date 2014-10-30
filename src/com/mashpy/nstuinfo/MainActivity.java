@@ -6,14 +6,12 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
     private static final String DB_NAME = "nstuinfodb.sqlite3";
@@ -21,9 +19,6 @@ public class MainActivity extends ListActivity {
 	private static final String TABLE_NAME = "nstuinfo_first";
 	private static final String NSTUINFO_ID = "_id";
 	private static final String NSTUINFO_NAME = "name";
-	private static final String NSTUINFO_DETAILS = "details";
-	
-    
 	private SQLiteDatabase database;
 	private ListView listView;
 	private ArrayList<String> nstuinfofirst;

@@ -4,17 +4,22 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.webkit.WebView;
 
 public class NstuInfoDetails extends ActionBarActivity {
-	TextView finalTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_nstu_info_details);
-		finalTextView=(TextView) findViewById(R.id.finalTextView);
-		finalTextView.setText("WELCOME!!\n"+getIntent().getStringExtra("New_Topic"));
+
+		String newtest= getIntent().getStringExtra("New_Topic");
+		WebView wv = (WebView) findViewById(R.id.webView1);    
+        final String mimeType = "text/html";
+        final String encoding = "UTF-8";
+
+        wv.loadDataWithBaseURL("", newtest, mimeType, encoding, "");
+        
 	}
 
 	@Override
