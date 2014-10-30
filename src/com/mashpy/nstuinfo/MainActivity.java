@@ -48,8 +48,8 @@ public class MainActivity extends ListActivity {
 			Intent intent = new Intent(getApplicationContext(), NstuInfoDetails.class);
 			String mashpy= ((TextView) view).getText().toString();
 			fillNstuinfodetails(mashpy);
-		
-			intent.putExtra("New_Topic", nstuinfodetails.toString());
+			String s = nstuinfodetails.get(0);
+			intent.putExtra("New_Topic", s);
 			startActivity(intent);
 			}
 			});
