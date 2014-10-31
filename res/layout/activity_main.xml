@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
+	android:background="#ffffff"
     tools:context="com.mashpy.nstuinfo.MainActivity"
      >
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:background="#01579b"
+        android:background="#009688"
         android:gravity="center"
         android:paddingBottom="6dip"
         android:paddingTop="6dip"
@@ -21,7 +21,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#FFFFFF"
         android:textSize="21sp"
-        android:typeface="serif" />
+        android:typeface="serif"
+ />
 
     <ListView
         android:id="@android:id/list"
