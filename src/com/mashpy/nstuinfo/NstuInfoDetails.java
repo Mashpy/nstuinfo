@@ -17,7 +17,7 @@ public class NstuInfoDetails extends ActionBarActivity {
 		WebView wv = (WebView) findViewById(R.id.webView1);    
         final String mimeType = "text/html";
         final String encoding = "UTF-8";
-
+        wv.setBackgroundColor(0);
         wv.loadDataWithBaseURL("", newtest, mimeType, encoding, "");
         
 	}
