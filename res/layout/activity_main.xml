@@ -18,12 +18,13 @@
         android:layout_gravity="center_vertical"
         android:text="@string/uniname"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:paddingTop="10dip"
+        android:textSize="20sp"
+        android:paddingTop="0dip"
         android:paddingBottom="10dip"
         android:textColor="#ff000000"
         android:background="#ffffffff"
-        android:gravity="center" />
+        android:gravity="center"
+        android:typeface="serif" />
 
     <ListView
         android:id="@android:id/list"

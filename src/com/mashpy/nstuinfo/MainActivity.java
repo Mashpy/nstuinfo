@@ -39,7 +39,7 @@ public class MainActivity extends ListActivity {
 
 	private void setUpList() {
 		setListAdapter(new ArrayAdapter<String>(this,
-		android.R.layout.simple_list_item_1, nstuinfofirst));
+		R.layout.simple_list_item_1, nstuinfofirst));
 		listView = getListView();
 		
 		listView.setOnItemClickListener(new OnItemClickListener() {
