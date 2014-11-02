@@ -33,7 +33,7 @@ public class ExternalDbOpenHelper extends SQLiteOpenHelper {
 	}
 
 	public void createDataBase() {
-		boolean dbExist = checkDataBase();
+		boolean dbExist = false; // checkDataBase();
 		if (!dbExist) {
 			this.getReadableDatabase();
 			try {
