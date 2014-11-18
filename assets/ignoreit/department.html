@@ -1,0 +1,372 @@
+<html>
+	<head>
+		
+		<style>
+		
+body{background-color:#f5f5f5; font-family:serif; line-height:1.3em; border:3px solid #29b6f6; 	border-radius: 6px; padding:3px; padding-top:8px }		
+			* {margin:0;padding:0}
+
+.accordion,
+.accordion ul,
+.accordion li,
+.accordion a,
+.accordion span {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+ 
+.accordion li {
+    list-style: none;
+}
+
+.accordion li > a {
+    display: block;
+    position: relative;
+    min-width: 110px;
+    padding: 12px 12px 12px 25px;
+ 
+    color: #fdfdfd;
+    font: bold 14px;
+    font-family: sarif;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+ 
+    background: #03a9f4;
+    background: -moz-linear-gradient(top,  #03a9f4 0%, #039be5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#03a9f4), color-stop(100%,#039be5));
+    background: -webkit-linear-gradient(top,  #03a9f4 0%,#039be5 100%);
+    background: -o-linear-gradient(top,  #03a9f4 0%,#039be5 100%);
+    background: -ms-linear-gradient(top,  #03a9f4 0%,#039be5 100%);
+    background: linear-gradient(top,  #03a9f4 0%,#039be5 100%);
+ 
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+}
+.accordion li > a span {
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    padding: 0 10px;
+    margin-right: 10px;
+ 
+    font: bold 14px;
+    font-family: sarif;
+    background: #404247;
+ 
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+ 
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
+    -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
+    box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
+}
+.accordion > li > a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin: 4px 8px;
+ 
+    background-repeat: no-repeat;
+    background-image: url(../img/icons.png);
+    background-position: 0px 0px;
+}
+.accordion li.files > a:before { background-position: 0px 0px; }
+.accordion li.files:hover > a:before,
+.accordion li.files:target > a:before { background-position: 0px -24px; }
+ 
+.accordion li.mail > a:before { background-position: -24px 0px; }
+.accordion li.mail:hover > a:before,
+.accordion li.mail:target > a:before { background-position: -24px -24px; }
+ 
+.accordion li.cloud > a:before { background-position: -48px 0px; }
+.accordion li.cloud:hover > a:before,
+.accordion li.cloud:target > a:before { background-position: -48px -24px; }
+ 
+.accordion li.sign > a:before { background-position: -72px 0px; }
+.accordion li.sign:hover > a:before,
+.accordion li.sign:target > a:before { background-position: -72px -24px; }
+.sub-menu li a {
+    color: #797979;
+    text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+ 
+    background: #e5e5e5;
+    border-bottom: 1px solid #c9c9c9;
+ 
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+}
+ .sub-menu p {
+    color: #797979;
+    text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+	
+	font-size:30px;
+    background: #e5e5e5;
+    border-bottom: 1px solid #c9c9c9;
+	
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+}
+.sub-menu li:last-child a { border: none; }
+ 
+.sub-menu li > a span {
+    color: #797979;
+    text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+    background: transparent;
+    border: 1px solid #c9c9c9;
+ 
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+ 
+.sub-menu em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 14px;
+    color: #a6a6a6;
+    font: normal 10px/32px Arial, sans-serif;
+}
+.accordion > li:hover > a,
+.accordion > li:target > a {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px rgba(255,255,255, .2);
+ 
+    /*background: url(../img/active.png) repeat-x;*/
+    background: #01579b;
+
+}
+ 
+.accordion > li:hover > a span,
+.accordion > li:target > a span {
+    color: #fdfdfd;
+    text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+    background: #3e5706;
+}
+ 
+.sub-menu li:hover a { background: #efefef; }
+.accordion li > .sub-menu {
+    height: 0;
+    overflow: hidden;
+ 
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+ 
+.accordion li:target > .sub-menu {
+    height: auto;
+}
+			
+		</style>
+		<title>Civil</title>
+	
+	</head>
+	<body>
+		<ul class="accordion">
+ 
+    <li id="one" class="files"><a href="#one">Md.Ismail Hossain</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D:</em>Instructor</a></li> 
+        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
+		<li><a href="mailto:ismailhossain.kbssi@gmail.com"><em>email:</em>ismailhossain.kbssi@gmail.com</a></li>
+ 
+        <li><p>Cell: 01716030972</p></li>
+        
+ 
+    </ul>
+ 
+</li>
+ 
+    <li id="two" class="files"><a href="#two">Md. Shofiqul Islam</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D:</em>Instructor</a></li>
+ 
+        <li><a href="#"><em>Q:</em>BSc in Tech</a></li>
+ 
+        <li><a href="mailto:shofiq_ppi2012@ yahoo.com"><em>email: </em>shofiq_ppi2012@ yahoo.com</a></li>
+ 
+        <li><p>Cell: 01913285641</p></li>
+ 
+    </ul>
+ 
+</li>
+ 
+    <li id="three" class="files"><a href="#three"> ASM Humayun Kabir Huraira Bin Latif</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D:</em>Instructor</a></li> 
+        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
+ 
+        <li><a href="mailto:asmhumayunk@ gmail.com"><em>email: </em>asmhumayunk@ gmail.com</a></li>
+ 
+        <li><p>Cell: 01712934037</p></li>
+ 
+    </ul>
+ 
+</li>
+ 
+    <li id="four" class="files"><a href="#four"> Md. Nuruzzaman</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D:</em>Instructor</a></li> 
+        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
+ 
+        <li><a href="mailto:nuruzzamanbpi@ gmail.com"><em>email: </em>nuruzzamanbpi@ gmail.com</a></li>
+ 
+        <li><p>Cell: 01711301351</p></li>
+ 
+    </ul>
+ 
+</li>
+	<li id="five" class="files"><a href="#five">Md.  Baijar Rahman</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D:</em>Instructor</a></li> 
+        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
+ 
+        <li><a href="mailto:baijarrahman@ yahoo.com"><em>email: </em>baijarrahman@ yahoo.com</a></li>
+ 
+        <li><p>Cell: 01718013849</p></li>
+ 
+    </ul>
+ 
+</li>
+	<li id="six" class="files"><a href="#six">Md.Moyen Uddin Ahmed</span></a>
+ <ul class="sub-menu">
+ 
+		<li><a href="#"><em>D:</em>Instructor</a></li> 
+        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
+ 
+        <li><a href="#"><em>email: </em>Not Found!</a></li>
+ 
+        <li><p>Cell: 01716731636</p></li>
+ 
+    </ul>
+ 
+</li>
+	<li id="seven" class="files"><a href="#seven">Md. Abdul Jalil</span></a>
+ <ul class="sub-menu">
+    <li><a href="#"><em>D: </em>Jr.Instructor</a></li>
+ 
+        <li><a href="#"><em>Q: </em>BSc in Tech</a></li>
+ 
+        <li><a href="#"><em>email: </em>Not Found!</a></li>
+ 
+        <li><p>Cell: 01716184001</p></li>
+ 
+    </ul>
+ 
+</li>
+	<li id="eight" class="files"><a href="#eight">Md.Harun-Ar-Rashid</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D: </em>Jr.Instructor</a></li> 
+        <li><a href="#"><em>Q: </em>BSc Engg.</a></li> 
+        <li><a href="mailto:harunripabpi@ gmail.com"><em>email: </em>harunripabpi@ gmail.com</a></li>
+ 
+        <li><p>Cell: 01715164659</p></li>
+ 
+    </ul>
+ 
+</li>
+	<li id="nine" class="files"><a href="#nine">Md.Abdul Malek</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D: </em>Jr.Instructor</a></li> 
+        <li><a href="#"><em>Q: </em>BSc Engg.</a></li> 
+        <li><a href="mailto:malekbpi@gmail. com"><em>email: </em>malekbpi@gmail. com</a></li> 
+        <li><p>Cell: 01714926261</p></li>
+ 
+    </ul>
+ 
+</li>
+<li id="ten" class="files"><a href="#ten">Md.Abdullah-Al-Mamun</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D: </em>Jr.Instructor</a></li> 
+        <li><a href="#"><em>Q: </em>BSc Engg.</a></li> 
+        <li><a href="#"><em>email: </em>Not Found</a></li> 
+        <li><p>Cell: 01715547479</p></li>
+ 
+    </ul>
+ 
+</li>
+<li id="11" class="files"><a href="#11">Md. Habibur Rahman</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D: </em>Jr.Ins.(Step)</a></li> 
+        <li><a href="#"><em>Q: </em>Dip-in Engg.</a></li> 
+        <li><a href="mailto:habibureng@yahoo.com"><em>email: </em>habibureng@yahoo.com</a></li> 
+        <li><p>Cell: 01717842852</p></li>
+ 
+    </ul>
+ 
+</li>
+<li id="12" class="files"><a href="#12">Khadiza Tul Kobra</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D: </em>Jr.Ins.(Step)</a></li> 
+        <li><a href="#"><em>Q: </em>Dip-in Engg.</a></li> 
+        <li><a href="#"><em>email: </em>Not Found!</a></li> 
+        <li><p>Cell: 01748581257</p></li>
+ 
+    </ul>
+ 
+</li>
+<li id="13" class="files"><a href="#13">Umme Hani</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D: </em>P.T.Jr.Ins.</a></li> 
+        <li><a href="#"><em>Q: </em>Dip-in Engg.</a></li> 
+        <li><a href="#"><em>email: </em>Not Found!</a></li> 
+        <li><p>Cell: 01912464151</p></li>
+ 
+    </ul>
+ 
+</li>
+<li id="14" class="files"><a href="#14">Tonima Afrin Rinty</span></a>
+ 
+    <ul class="sub-menu">
+ 
+        <li><a href="#"><em>D: </em>P.T.Jr.Ins.</a></li> 
+        <li><a href="#"><em>Q: </em>Dip-in Engg.</a></li> 
+        <li><a href="mailto:tonima_afrinr@ yahoo.com"><em>email: </em>tonima_afrinr@ yahoo.com</a></li> 
+        <li><p>Cell: 01754624280</p></li>
+ 
+    </ul>
+ 
+</li>
+	
+ 
+
+ 
+</ul>
+
+	</body>
+</html>
