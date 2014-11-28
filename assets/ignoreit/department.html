@@ -1,372 +1,604 @@
-<html>
-	<head>
-		
-		<style>
-		
-body{background-color:#f5f5f5; font-family:serif; line-height:1.3em; border:3px solid #29b6f6; 	border-radius: 6px; padding:3px; padding-top:8px }		
-			* {margin:0;padding:0}
-
-.accordion,
-.accordion ul,
-.accordion li,
-.accordion a,
-.accordion span {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-}
- 
-.accordion li {
-    list-style: none;
-}
-
-.accordion li > a {
-    display: block;
-    position: relative;
-    min-width: 110px;
-    padding: 12px 12px 12px 25px;
- 
-    color: #fdfdfd;
-    font: bold 14px;
-    font-family: sarif;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px rgba(0,0,0, .35);
- 
-    background: #03a9f4;
-    background: -moz-linear-gradient(top,  #03a9f4 0%, #039be5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#03a9f4), color-stop(100%,#039be5));
-    background: -webkit-linear-gradient(top,  #03a9f4 0%,#039be5 100%);
-    background: -o-linear-gradient(top,  #03a9f4 0%,#039be5 100%);
-    background: -ms-linear-gradient(top,  #03a9f4 0%,#039be5 100%);
-    background: linear-gradient(top,  #03a9f4 0%,#039be5 100%);
- 
-    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-}
-.accordion li > a span {
-    display: block;
-    position: absolute;
-    top: 7px;
-    right: 0;
-    padding: 0 10px;
-    margin-right: 10px;
- 
-    font: bold 14px;
-    font-family: sarif;
-    background: #404247;
- 
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
- 
-    -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
-    -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
-    box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
-}
-.accordion > li > a:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 24px;
-    height: 24px;
-    margin: 4px 8px;
- 
+<style type="text/css">.infoclass{ font-size:15px;padding:8px; margin-bottom:3px; border-radius: 3px;  background-color:white;-webkit-box-shadow: inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);
+-moz-box-shadow:    inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);
+box-shadow:         inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);}
+body{background-color:#f5f5f5; font-family:serif; line-height:1.3em; border:3px solid #29b6f6; 	border-radius: 6px; padding:3px; padding-top:8px }
+p{font-size:15px}
+.headertitle{width:100%; font-size: 17px; background:#29b6f6; color:#FFFFFF; border-radius: 3px; text-align: center}
+.maintitle{font-weight:bold;width:100%; font-size: 16px; background:#039be5; color:#FFFFFF; border-radius: 15px;padding-top:10px; padding-bottom:10px; text-align: center; margin-bottom:10px}
+.telephone {
+    background-image: url("http://i61.tinypic.com/n6xtmw.png");
+    background-position: 0 0px;
     background-repeat: no-repeat;
-    background-image: url(../img/icons.png);
-    background-position: 0px 0px;
+    background-size: 20px auto;
+    color: black;
+    padding-bottom: 3px;
+    padding-left: 22px;
+    text-decoration: none;
+    padding-top: 2px;
 }
-.accordion li.files > a:before { background-position: 0px 0px; }
-.accordion li.files:hover > a:before,
-.accordion li.files:target > a:before { background-position: 0px -24px; }
- 
-.accordion li.mail > a:before { background-position: -24px 0px; }
-.accordion li.mail:hover > a:before,
-.accordion li.mail:target > a:before { background-position: -24px -24px; }
- 
-.accordion li.cloud > a:before { background-position: -48px 0px; }
-.accordion li.cloud:hover > a:before,
-.accordion li.cloud:target > a:before { background-position: -48px -24px; }
- 
-.accordion li.sign > a:before { background-position: -72px 0px; }
-.accordion li.sign:hover > a:before,
-.accordion li.sign:target > a:before { background-position: -72px -24px; }
-.sub-menu li a {
-    color: #797979;
-    text-shadow: 1px 1px 0px rgba(255,255,255, .2);
- 
-    background: #e5e5e5;
-    border-bottom: 1px solid #c9c9c9;
- 
-    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+.telephone:hover{color:#29b6f6}
+.email {
+    background-image: url("http://i60.tinypic.com/dqm2cy.png");
+    background-position: 3px 3px;
+    background-repeat: no-repeat;
+    background-size: 18px auto;
+    color: black;
+    padding-bottom: 3px;
+    padding-left: 22px;
+    padding-top: 2px;
+    text-decoration: none;
 }
- .sub-menu p {
-    color: #797979;
-    text-shadow: 1px 1px 0px rgba(255,255,255, .2);
-	
-	font-size:30px;
-    background: #e5e5e5;
-    border-bottom: 1px solid #c9c9c9;
-	
-    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
-}
-.sub-menu li:last-child a { border: none; }
- 
-.sub-menu li > a span {
-    color: #797979;
-    text-shadow: 1px 1px 0px rgba(255,255,255, .2);
-    background: transparent;
-    border: 1px solid #c9c9c9;
- 
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
- 
-.sub-menu em {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 14px;
-    color: #a6a6a6;
-    font: normal 10px/32px Arial, sans-serif;
-}
-.accordion > li:hover > a,
-.accordion > li:target > a {
-    color: #FFFFFF;
-    text-shadow: 1px 1px 1px rgba(255,255,255, .2);
- 
-    /*background: url(../img/active.png) repeat-x;*/
-    background: #01579b;
+.email:hover{color:#29b6f6}
+</style>
+<div class="maintitle">Departments &amp; Teachers</div>
 
-}
- 
-.accordion > li:hover > a span,
-.accordion > li:target > a span {
-    color: #fdfdfd;
-    text-shadow: 0px 1px 0px rgba(0,0,0, .35);
-    background: #3e5706;
-}
- 
-.sub-menu li:hover a { background: #efefef; }
-.accordion li > .sub-menu {
-    height: 0;
-    overflow: hidden;
- 
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -ms-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
- 
-.accordion li:target > .sub-menu {
-    height: auto;
-}
-			
-		</style>
-		<title>Civil</title>
-	
-	</head>
-	<body>
-		<ul class="accordion">
- 
-    <li id="one" class="files"><a href="#one">Md.Ismail Hossain</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D:</em>Instructor</a></li> 
-        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
-		<li><a href="mailto:ismailhossain.kbssi@gmail.com"><em>email:</em>ismailhossain.kbssi@gmail.com</a></li>
- 
-        <li><p>Cell: 01716030972</p></li>
-        
- 
-    </ul>
- 
-</li>
- 
-    <li id="two" class="files"><a href="#two">Md. Shofiqul Islam</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D:</em>Instructor</a></li>
- 
-        <li><a href="#"><em>Q:</em>BSc in Tech</a></li>
- 
-        <li><a href="mailto:shofiq_ppi2012@ yahoo.com"><em>email: </em>shofiq_ppi2012@ yahoo.com</a></li>
- 
-        <li><p>Cell: 01913285641</p></li>
- 
-    </ul>
- 
-</li>
- 
-    <li id="three" class="files"><a href="#three"> ASM Humayun Kabir Huraira Bin Latif</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D:</em>Instructor</a></li> 
-        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
- 
-        <li><a href="mailto:asmhumayunk@ gmail.com"><em>email: </em>asmhumayunk@ gmail.com</a></li>
- 
-        <li><p>Cell: 01712934037</p></li>
- 
-    </ul>
- 
-</li>
- 
-    <li id="four" class="files"><a href="#four"> Md. Nuruzzaman</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D:</em>Instructor</a></li> 
-        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
- 
-        <li><a href="mailto:nuruzzamanbpi@ gmail.com"><em>email: </em>nuruzzamanbpi@ gmail.com</a></li>
- 
-        <li><p>Cell: 01711301351</p></li>
- 
-    </ul>
- 
-</li>
-	<li id="five" class="files"><a href="#five">Md.  Baijar Rahman</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D:</em>Instructor</a></li> 
-        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
- 
-        <li><a href="mailto:baijarrahman@ yahoo.com"><em>email: </em>baijarrahman@ yahoo.com</a></li>
- 
-        <li><p>Cell: 01718013849</p></li>
- 
-    </ul>
- 
-</li>
-	<li id="six" class="files"><a href="#six">Md.Moyen Uddin Ahmed</span></a>
- <ul class="sub-menu">
- 
-		<li><a href="#"><em>D:</em>Instructor</a></li> 
-        <li><a href="#"><em>Q:</em>BSc Engg.</a></li>
- 
-        <li><a href="#"><em>email: </em>Not Found!</a></li>
- 
-        <li><p>Cell: 01716731636</p></li>
- 
-    </ul>
- 
-</li>
-	<li id="seven" class="files"><a href="#seven">Md. Abdul Jalil</span></a>
- <ul class="sub-menu">
-    <li><a href="#"><em>D: </em>Jr.Instructor</a></li>
- 
-        <li><a href="#"><em>Q: </em>BSc in Tech</a></li>
- 
-        <li><a href="#"><em>email: </em>Not Found!</a></li>
- 
-        <li><p>Cell: 01716184001</p></li>
- 
-    </ul>
- 
-</li>
-	<li id="eight" class="files"><a href="#eight">Md.Harun-Ar-Rashid</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D: </em>Jr.Instructor</a></li> 
-        <li><a href="#"><em>Q: </em>BSc Engg.</a></li> 
-        <li><a href="mailto:harunripabpi@ gmail.com"><em>email: </em>harunripabpi@ gmail.com</a></li>
- 
-        <li><p>Cell: 01715164659</p></li>
- 
-    </ul>
- 
-</li>
-	<li id="nine" class="files"><a href="#nine">Md.Abdul Malek</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D: </em>Jr.Instructor</a></li> 
-        <li><a href="#"><em>Q: </em>BSc Engg.</a></li> 
-        <li><a href="mailto:malekbpi@gmail. com"><em>email: </em>malekbpi@gmail. com</a></li> 
-        <li><p>Cell: 01714926261</p></li>
- 
-    </ul>
- 
-</li>
-<li id="ten" class="files"><a href="#ten">Md.Abdullah-Al-Mamun</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D: </em>Jr.Instructor</a></li> 
-        <li><a href="#"><em>Q: </em>BSc Engg.</a></li> 
-        <li><a href="#"><em>email: </em>Not Found</a></li> 
-        <li><p>Cell: 01715547479</p></li>
- 
-    </ul>
- 
-</li>
-<li id="11" class="files"><a href="#11">Md. Habibur Rahman</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D: </em>Jr.Ins.(Step)</a></li> 
-        <li><a href="#"><em>Q: </em>Dip-in Engg.</a></li> 
-        <li><a href="mailto:habibureng@yahoo.com"><em>email: </em>habibureng@yahoo.com</a></li> 
-        <li><p>Cell: 01717842852</p></li>
- 
-    </ul>
- 
-</li>
-<li id="12" class="files"><a href="#12">Khadiza Tul Kobra</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D: </em>Jr.Ins.(Step)</a></li> 
-        <li><a href="#"><em>Q: </em>Dip-in Engg.</a></li> 
-        <li><a href="#"><em>email: </em>Not Found!</a></li> 
-        <li><p>Cell: 01748581257</p></li>
- 
-    </ul>
- 
-</li>
-<li id="13" class="files"><a href="#13">Umme Hani</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D: </em>P.T.Jr.Ins.</a></li> 
-        <li><a href="#"><em>Q: </em>Dip-in Engg.</a></li> 
-        <li><a href="#"><em>email: </em>Not Found!</a></li> 
-        <li><p>Cell: 01912464151</p></li>
- 
-    </ul>
- 
-</li>
-<li id="14" class="files"><a href="#14">Tonima Afrin Rinty</span></a>
- 
-    <ul class="sub-menu">
- 
-        <li><a href="#"><em>D: </em>P.T.Jr.Ins.</a></li> 
-        <li><a href="#"><em>Q: </em>Dip-in Engg.</a></li> 
-        <li><a href="mailto:tonima_afrinr@ yahoo.com"><em>email: </em>tonima_afrinr@ yahoo.com</a></li> 
-        <li><p>Cell: 01754624280</p></li>
- 
-    </ul>
- 
-</li>
-	
- 
+<div class="headertitle">Computer Science and Telecommunication Engineering (CSTE 01)</div>
 
- 
-</ul>
+<p style="text-align: center;"><u><span style="font-size:14px;"><strong>Chairman &amp; Associate Professor</strong></span></u></p>
 
-	</body>
-</html>
+<div class="infoclass">Dr. Mohammed Humayun Kabir,<br />
+Office: 71486, 01814405238<br />
+Email: hkabir269@gmail.com</div>
+
+<p style="text-align: center;"><span style="font-size:14px;"><u><strong>&nbsp;Associate Professor</strong></u></span> &nbsp;</p>
+
+<div class="infoclass">Md. Javed Hossain<br />
+Mobile: 01718175139<br />
+Email: javed.nstu@gmail.com</div>
+
+<p style="text-align: center;"><span style="font-size:14px;"><u><strong>Assistant Professor</strong></u></span></p>
+
+<div class="infoclass">Mr. Ashadun Nobi (Study Leave)<br />
+Email: ashadunnobi_305@yahoo.com</div>
+
+<div class="infoclass">Md. Bellal Hossain<br />
+Mobile: 01717207155<br />
+Email: belal.nstu@gmail.com</div>
+
+<div class="infoclass">Abhijit Chakraborty<br />
+01912183607<br />
+Email: abhijit.cse@gmail.com</div>
+
+<div class="infoclass">Ibrahim Azad(Study Leave)<br />
+01715764437<br />
+ibrahim.azad@hotmail.com</div>
+
+<div class="infoclass">Md. Kamal Uddin<br />
+01724268223<br />
+Email: cse_kamal_ud@yahoo.com</div>
+
+<div class="infoclass">Mrs. Fateha Khanom Bapppee<br />
+Phone: 01726772578<br />
+Email: bapeenstu@yahoo.com</div>
+
+<div class="infoclass">Abul kalam Azad<br />
+Phone: 01722034899<br />
+Email: azad.nstu@gmail.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Mrs. Nahid Akter (Study leave)<br />
+Phone: 01912105887<br />
+Email: nahid_nstu@yahoo.com</div>
+
+<div class="infoclass">Mrs. Nazia majadi<br />
+Phone: 01718422881<br />
+Email: nazia_majadi@yahoo.com</div>
+
+<div class="infoclass">Mr. Amran Hossen bhuiyan(Study Leave)<br />
+Phone: 01717194634<br />
+Email: amran_apece@yahoo.com</div>
+
+<div class="infoclass">Md. Niaj Imtiaz<br />
+01723263163<br />
+Email: rabby_cse_buet@yahoo.com</div>
+
+<div class="infoclass">Iftekhar Mahmud Towhid<br />
+Phone: 01812597258<br />
+Email: im_towhid@yahoo.com</div>
+
+<p>Lab Instructor<br />
+Sozib bhowmik<br />
+Phone: 01715573929<br />
+Email: sazib.bhowmik@yahoo.com</p>
+
+<div class="headertitle">Fisheries and Marine Science (FIMS 02)</div>
+
+<div class="infoclass">DR. MD. ABUL HOSSAIN<br />
+Dean, Faculty of Science &amp; Professor, Dept. of Fisheries and Marine Science<br />
+Phone: +880-321-71484, Fax: +880-321-62788<br />
+Mobile: 01713012916<br />
+Email: mah1754@gmail.com</div>
+
+<p style="text-align: center;"><u><strong>Associate Professor and Chairman</strong></u></p>
+
+<div class="infoclass">DR. MD. JAHANGIR SARKER<br />
+Phone: +880-321-71487, Fax: +880-321-62788<br />
+Mobile: 01733910237<br />
+Email: swaponj@yahoo.com &nbsp;</div>
+
+<p style="text-align: center;"><u><strong>Assistant Professor</strong></u></p>
+
+<div class="infoclass">A.F.M. ARIFUR RAHMAN<br />
+Mobile: 01819129553<br />
+Email: arif_du2002@yahoo.com &nbsp;</div>
+
+<div class="infoclass">MEHEDI MAHMUDUL HASAN<br />
+Mobile: 01727240180<br />
+Email: mehedi_nstu@yahoo.com</div>
+
+<div class="infoclass">MOHAMMAD BELAL HOSSAIN (Study Leave)<br />
+Phone: +6738665470, +8801711781550<br />
+Email: belalhossain@yahoo.com, mbhnstu@gmail.com</div>
+
+<div class="infoclass">MD. RAKEB-UL-ISLAM (Study Leave)<br />
+Mobile: +8801716783991<br />
+Email: mrakeb_82bau@yahoo.com, r.islam@griffithuni.edu.au</div>
+
+<div class="infoclass">BHAKTA SUPRATIM SARKER<br />
+Mobile: +8801911712791<br />
+Email: vktt1979@yahoo.com</div>
+
+<div class="infoclass">ABDULLAH-AL MAMUN (Study Leave)<br />
+Mobile: +8801712928710<br />
+Email: mamun_au22@yahoo.com, a.m.mamun@stir.ac.uk</div>
+
+<div class="infoclass">DEBASISH SAHA (Study Leave)<br />
+Mobile: +818048462076, +8801714888206<br />
+Email: ds_bau@yahoo.com</div>
+
+<div class="infoclass">MD. MOFIZUR RAHMAN (RIPON)<br />
+Mobile: +8801712516953<br />
+Email: riponfisheries@gmail.com, ripondu31184@yahoo.com</div>
+
+<div class="infoclass">MD. ANISUZZAMAN RIMON(Study Leave)<br />
+Mobile: +8801717499749<br />
+Email: rimon49@yahoo.com</div>
+
+<div class="infoclass">MD. ROBIUL HASAN (RONY)<br />
+Mobile: +8801718589668<br />
+Email: rhasan_rony@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">MAHABUBUR RAHMAN (FARHAD)<br />
+Mobile: 01717-296238<br />
+Email: farhad.mrf@gmail.com &nbsp;</div>
+
+<div class="infoclass">M. GOLAM MUSTAFA<br />
+Qualification: B.Sc (Hon&rsquo;s), M.Sc (Marine Sciences)<br />
+Mobile: +8801712-186434<br />
+Email: mustafa.nstu2013@gmail.com</div>
+
+<div class="headertitle">Pharmacy (03)</div>
+
+<p style="text-align: center;"><u><strong>Chairman &amp; Associate Professor</strong></u></p>
+
+<div class="infoclass">Dr. Mohammad Salim Hossain<br />
+Phone: 71483<br />
+Mobile: 01711200410<br />
+Email: pharmasalim@yahoo.com<br />
+&nbsp;</div>
+
+<p style="text-align: center;"><strong><u>Associate Professor</u></strong></p>
+
+<div class="infoclass">Dr. Mohammad Safiqul Islam<br />
+Phone: 01714165107<br />
+Email: research_safiq@yahoo.com<br />
+&nbsp;</div>
+
+<p style="text-align: center;"><u><strong>Assistant Professor</strong></u></p>
+
+<div class="infoclass">Mohammad Anwarul Basher (Study Leave)<br />
+Phone: 01726742586<br />
+Email: mabasher@live.com</div>
+
+<div class="infoclass">A F M Sohidullah (Study Leave)<br />
+Phone: 01911711457<br />
+Email: shahidnstu@gmail.com</div>
+
+<div class="infoclass">Md. Mizanur Rahman Moghal<br />
+Phone: 01190314094<br />
+Email: mizan.phar@gmail.com</div>
+
+<div class="infoclass">Mr. Palash Karmakar<br />
+Phone: 01717036968<br />
+Email: pknstu@gmail.com</div>
+
+<div class="infoclass">Mr. Jamiuddin Ahmed<br />
+Phone: 01199113606<br />
+Email: ajami_ju@yahoo.com</div>
+
+<div class="infoclass">Latifa Bulbul<br />
+Phone: 01741676362<br />
+Email: prova_pharm32@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Biswa Nath Das(Study Leave)<br />
+Phone: 01715405777<br />
+Email: biswal121@yahoo.com</div>
+
+<div class="infoclass">Md Ariful Islam (Study Leave)<br />
+Phone: 01764145384<br />
+Email: arifnixon@yahoo.com</div>
+
+<div class="infoclass">Md. Hasanuzzaman (Study Leave)<br />
+Phone: 01715758888<br />
+Email: hasanprdu@gmail.com</div>
+
+<div class="infoclass">Md. Mamun ur Rashid<br />
+Phone: 01911141120<br />
+Email: mamun_pharma@yahoo.com</div>
+
+<div class="infoclass">Md. Monir Hossain<br />
+phone: 01670117946<br />
+Email: monir.pharma@yahoo.com</div>
+
+<div class="infoclass">Sujan Banik<br />
+Phone: 01727446920</div>
+
+<div class="infoclass">Mariyam Akter</div>
+
+<p>Section Officer<br />
+Md. Sahab Uddin<br />
+Phone: 01719900955<br />
+Email: shihab_55@yahoo.com<br />
+&nbsp;</p>
+
+<div class="headertitle">Applied Chemistry &amp; Chemical Engineering (ACCE 04)</div>
+
+<p style="text-align: center;"><u><strong>Chairman &amp; Associate Professor</strong></u></p>
+
+<div class="infoclass">Dr. Newaz Mohammed Bahadur<br />
+Phone: 71485<br />
+Mobile: 01733066950, 01911110671<br />
+Email: nmbahadur@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Associate Professor</strong></u></p>
+
+<div class="infoclass">Dr Muhammed Yousuf Miah<br />
+Mobile: 01742710338<br />
+Email: yan19742003@yahoo.com</div>
+
+<p style="text-align: center;"><strong><u>Assistant Professor</u></strong></p>
+
+<div class="infoclass">Mohammad Saiful Alam<br />
+Phone: 01913792542<br />
+Email: saiful224@yahoo.com</div>
+
+<div class="infoclass">Md. Ismail Hossen<br />
+Mobile: 0183115441<br />
+Email: mil_che@yahoo.com</div>
+
+<div class="infoclass">Md. Jakarul Islam(Study Leave)<br />
+Mobile: 01916071181<br />
+Email: write_akarul@yahoo.com</div>
+
+<div class="infoclass">Md. Ashraful Alam (Study Leave)<br />
+Mobile: 01919818044<br />
+Email: ashraf.nstu@yahoo.com</div>
+
+<div class="infoclass">Ansara Noori<br />
+Phone: 01712197256<br />
+Email: kajol_noori@yahoo.com</div>
+
+<div class="infoclass">Mr. Juganta Kumar Roy(Study Leave)<br />
+Phone: 01713425486<br />
+Email: juganta280@yahoo.com</div>
+
+<div class="infoclass">Md. Tanvir Hossain<br />
+Mobile: 01725346333<br />
+Email: tanvirdb@gmail.com</div>
+
+<div class="infoclass">Md. Towhidul Islam<br />
+Phone: 01712593494<br />
+Email: towhid.du@yahoo.com</div>
+
+<div class="infoclass">Nazia Noor (Study Leave)<br />
+Phone: 01717242596<br />
+nizia_du123@yahoo.com</div>
+
+<div class="infoclass">Fateh nur robel (Study Leave)<br />
+Phone: 01819457050<br />
+Email: rubel.acct@yahoo.com</div>
+
+<div class="infoclass">Md. Rafiqul Islam<br />
+Phone: 01717300701<br />
+Email: rafiq_du228@yahoo.com</div>
+
+<p>Lecturer</p>
+
+<div class="infoclass">Md. Azizul Haque<br />
+Phone: 01912123818<br />
+Email: anuceps.sust@gmail.com</div>
+
+<div class="infoclass">Md. Shafiul Islam<br />
+Phone: 01916034310<br />
+Email: shafiul_acct@yahoo.com</div>
+
+<div class="infoclass">Mohammed Shahidul Islam<br />
+Phone: 01710510106<br />
+Email: shahid_acct@yahoo.com</div>
+
+<p>-------------------------------------------<br />
+Section Officer</p>
+
+<div class="infoclass">Md. Ismail Hossain<br />
+Phone: 01728150181<br />
+Email: shipon.nstu@gmail.com</div>
+
+<div class="headertitle">MicroBiology (MBG 05)</div>
+
+<p style="text-align: center;"><u><strong>Chairman &amp; Assistant Professor</strong></u></p>
+
+<div class="infoclass">Mohammad Ruhul Amin<br />
+Phone: 01724756620<br />
+Email: ruhulmicro13@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Assistant Professor</strong></u></p>
+
+<div class="infoclass">Md. Masud Alam(Study Leave)<br />
+Phone: 01818865786<br />
+Email: masud_mbdu@yahoo.com</div>
+
+<div class="infoclass">Rokeya siddiqui(Study Leave)<br />
+Phone: 01714714803<br />
+Email: rokeya_051@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Mohammad Mehadi Hassan Chowdhury<br />
+Phone: 01710527044<br />
+Email: md.mehadihassanchy@yahoo.com</div>
+
+<div class="infoclass">Md. Arifur Rahman<br />
+Phone: 01913849378<br />
+Email: fair_512@yahoo.com</div>
+
+<div class="infoclass">Khandokar Fahmida Sultana<br />
+Phone; 01676172577<br />
+Email: fahmida.foni@gmail.com</div>
+
+<div class="infoclass">Faysal Hossen<br />
+Phone: 01687007112<br />
+Email: foysay.du23@gmail.com</div>
+
+<div class="infoclass">Mir Salma Akter<br />
+Phone: 0711113553</div>
+
+<div class="infoclass">Md. Toslim Mahmud Polash<br />
+Phone: 01725706169</div>
+
+<div class="infoclass">Abanti Barua<br />
+Phone: 01726036487</div>
+
+<div class="headertitle">Applied Mathematics(AM 06)</div>
+
+<p style="text-align: center;"><u><strong>Chairman</strong></u></p>
+
+<div class="infoclass">Mohammed Nizam Uddin<br />
+Phone; 01554329643<br />
+Email: nizamunbd@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Associate Professor</strong></u></p>
+
+<div class="infoclass">Dr. Hanif Murad<br />
+Phone: 63298<br />
+Mobile: 01733066954, 01712018181<br />
+Email: drhanifmurad@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Assistant Professor</strong></u></p>
+
+<div class="infoclass">Mohammed Nizam Uddin<br />
+Phone; 01554329643<br />
+Email: nizamunbd@yahoo.com</div>
+
+<div class="infoclass">Md. Jashim Uddin<br />
+Phone: 01856921311<br />
+Email: mdjaud@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Md. Rifat Hasan<br />
+Phone: 01719422462<br />
+Email: rifat_math2004@yahoo.com</div>
+
+<div class="infoclass">Md. Jamal Hossain<br />
+Phone: 01911104423<br />
+Email: z_math_du@yahoo.com</div>
+
+<div class="infoclass">Mohammad Raquibul Hossain<br />
+phone: 01840607032 , 01912098449</div>
+
+<p>Section Officer<br />
+Muhammud Toyaha<br />
+Phone: 01716650750<br />
+Email: toyaha.nstu@gmail.com</p>
+
+<div class="headertitle">English (07)</div>
+
+<p style="text-align: center;"><strong>Chairman &amp; Assistant professor</strong></p>
+
+<div class="infoclass">Afsana Mousume<br />
+Phone: 01714402508, 01716269848<br />
+Email: afsana.mousume@gmail.com</div>
+
+<p style="text-align: center;"><u><strong>Assistant Professor</strong></u></p>
+
+<div class="infoclass">Md. Nasir Uddin<br />
+Phone: 01736252767<br />
+Email: mnasir7664@gmail.com</div>
+
+<div class="infoclass">Muhammad Mushfiqur Rahman<br />
+Phone; 01818085418<br />
+Email: mmrs1981@yahoo.com</div>
+
+<p style="text-align: center;"><strong><u>Lecturer</u></strong></p>
+
+<div class="infoclass">Shirin Akter popy<br />
+Phone: 01736252767<br />
+Email: shirin.2206@gmail.com</div>
+
+<div class="infoclass">Israt Jahan<br />
+01815865760</div>
+
+<div class="infoclass">Md. Ehsanul Hoque<br />
+01813171087</div>
+
+<p>Section officer:<br />
+A S M Sayem<br />
+01716178646<br />
+email: sayempt07@yahoo.com</p>
+
+<div class="headertitle">Environmental Science and Hazard Studies(ESHS 08)</div>
+
+<p style="text-align: center;"><u><strong>Chairman &amp; Assistant Professor</strong></u></p>
+
+<div class="infoclass">Mohammad Mohinuzzaman Moyeen<br />
+Phone: 01819509301<br />
+Email: moyeen_envsc@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Assistant Professor</strong></u></p>
+
+<div class="infoclass">Jayanta Kumar Basak<br />
+Phone: 01713410793<br />
+email: basak.jkb@gmail.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Shahriar Rahman<br />
+Phone: 01717153711</div>
+
+<div class="infoclass">Nadia Noor<br />
+Phone: 01717955310</div>
+
+<div class="headertitle">Food Technology and Nutrition Science(FTNS 09)</div>
+
+<p style="text-align: center;"><u><strong>&nbsp;Chairman &amp; Assistant Professor</strong></u></p>
+
+<div class="infoclass">Tazul islam<br />
+Phone: 01711335074<br />
+Email: tazul.im@gmail.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Abdullah al mamun<br />
+Phone: 01723572515</div>
+
+<div class="infoclass">Tanzina Rahman<br />
+Phone: 01687304530</div>
+
+<div class="headertitle">Business Administration(BBA 10)</div>
+
+<p style="text-align: center;"><u><strong>Chairman &amp; Assistant Professor</strong></u></p>
+
+<div class="infoclass">Masum Miah<br />
+Phone: 01719883107<br />
+Email: masum7cu@gmail.com</div>
+
+<div class="infoclass">Md. Abdul Kaium Masud<br />
+Phone: 01718509951<br />
+Email: masudbd08@gmail.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Mahabubul Haque<br />
+Phone: 01711063417</div>
+
+<div class="infoclass">Shafiqul Alam<br />
+Phone: 01673642243</div>
+
+<div class="headertitle">Information and Communication Technology(ICT 11)</div>
+
+<p style="text-align: center;"><u><strong>&nbsp;Chairman &amp; Associate Professor</strong></u></p>
+
+<div class="infoclass">Dr.Md. Ashikur Rahaman khan<br />
+email:ashik.nstu@yahoo.com<br />
+phone number:01836350710</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Abidur Rahaman<br />
+email:abid317509@gmail.com<br />
+phone number:01914317509</div>
+
+<div class="infoclass">Zyed-Us-salehin<br />
+email:salehin.fahad@yahoo.com<br />
+phone number:01820295205</div>
+
+<div class="infoclass">Md. Saifur rahaman Saif<br />
+email:iamsaif07@gmail.com<br />
+phone number:01722514322</div>
+
+<div class="headertitle">Biotechnology and Genetic Engineering(BGE 12)</div>
+
+<p style="text-align: center;"><u><strong>Chairman (Acting) &amp; Lecturer</strong></u></p>
+
+<div class="infoclass">Khadizatul Kubra<br />
+Phone: 01723397125<br />
+Email: khadizasimi@gmail.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Fatematuz Juhora Evamoni<br />
+Phone: 01710066124<br />
+Email: Eva.nstu@yahoo.com</div>
+
+<div class="infoclass">Anwar Hossain Khan<br />
+Phone: 01716169825</div>
+
+<div class="infoclass">Abu Nasar Mondal (Study Leave)<br />
+Phone: 01723336562</div>
+
+<div class="headertitle">Economics and Poverty Studies(EPS 13)</div>
+
+<p style="text-align: center;"><u><strong>Chairman (Acting) &amp; Lecturer</strong></u></p>
+
+<div class="infoclass">Md. Khosrul Alam<br />
+Phone: 01730710587<br />
+Email: alam.khosrul@yahoo.com</div>
+
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+
+<div class="infoclass">Md. Khosrul Alam<br />
+Phone: 01730710587<br />
+Email: alam.khosrul@yahoo.com</div>
+
+<div class="infoclass">Binata Rani Sen<br />
+Phone: 01676206194<br />
+Email: ranibinata@gmail.com</div>
+
+<div class="infoclass">Farid Dewan<br />
+Phone: 01969429120</div>
+
+<div class="infoclass">Tania Islam<br />
+01756524309</div>
+
+<div class="headertitle">Coastal Agriculture(CA 14)</div>
+
+<p style="text-align: center;"><u><strong>Chairman (Acting) &amp; Lecturer</strong></u></p>
+
+<div class="infoclass">Mehede Hassan Rubel<br />
+Phone: +8801710586359<br />
+Fax: +88 032162788<br />
+Email: mhrubel_188@yahoo.com</div>
+
+<div>
+<p style="text-align: center;"><u><strong>Lecturer</strong></u></p>
+</div>
+
+<div class="infoclass">Abu Bakkar Siddique<br />
+Phone: +8801673716634, 01919494905 (mobile)<br />
+Fax: +88032162788(Office)<br />
+Email: siddique1506@gmail.com</div>
+
+<div class="infoclass">Shohrab Hossain<br />
+Mobile: 01712019331, 01936493265<br />
+Fax: +88032162788<br />
+Email: shohrab.ag@gmail.com</div>
+
+<div class="infoclass">Kawsar Hossen<br />
+Mobile: 01710395738, 01914161707<br />
+Fax: +88032162788<br />
+Email: kwsarbau@gmail.com</div>
