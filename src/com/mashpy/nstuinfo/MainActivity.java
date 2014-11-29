@@ -2,6 +2,9 @@ package com.mashpy.nstuinfo;
 
 import android.os.Bundle;
 import java.util.ArrayList;
+
+import com.winsontan520.wversionmanager.library.WVersionManager;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -29,7 +32,15 @@ public class MainActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        WVersionManager versionManager = new WVersionManager(this);
+        versionManager.setVersionContentUrl("https://raw.githubusercontent.com/Mashpy/nstuinfo/master/version.txt"); // your update content url, see the response format below
+        versionManager.checkVersion();
         
+        versionManager.setUpdateNowLabel("Update Now (Click here)");
+        versionManager.setRemindMeLaterLabel("");
+        versionManager.setIgnoreThisVersionLabel("");
+        versionManager.setUpdateUrl("http://url.mashpy.me/nstuinfo"); // this is the link will execute when update now clicked. default will go to google play based on your package name.
+        versionManager.setReminderTimer(10); // this mean checkVersion() will not take effect within 10 minutes
 
         ExternalDbOpenHelper dbOpenHelper = new ExternalDbOpenHelper(this, DB_NAME);
         database = dbOpenHelper.openDataBase();
