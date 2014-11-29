@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class NstuInfoDetails extends ActionBarActivity {
 
@@ -12,7 +14,11 @@ public class NstuInfoDetails extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_nstu_info_details);
+AdView adView = (AdView)this.findViewById(R.id.adView);
 
+AdRequest adRequest = new AdRequest.Builder().build();
+
+adView.loadAd(adRequest);
 		String newtest= getIntent().getStringExtra("New_Topic");
 		WebView wv = (WebView) findViewById(R.id.webView1);    
         final String mimeType = "text/html";
