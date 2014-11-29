@@ -1,1 +1,1 @@
-{"version_code":2,"content":"Version 1.1 <p>New features:</p><li>ভাই আপডেট করেন তাড়াতাড়ি</li><li>Added feature B</li><li>Added feature C</li>"}
+{"version_code":0,"content":"Version 0.0 <p>New features:</p><li>This application is now ready to publish. Please uninstall the test version and Download new version</li><li>Thanks</li><li>You</li>"}
