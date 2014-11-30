@@ -3,10 +3,9 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:orientation="vertical"
-	android:background="#ffffff"
-    tools:context="com.mashpy.nstuinfo.MainActivity"
-     >
+    tools:context="com.mashpy.nstuinfo.MainActivity" >
 
     <TextView
         android:id="@+id/textView1"
@@ -20,23 +19,30 @@
         android:text="@string/uniname"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#FFFFFF"
-        android:textSize="21sp"
-        android:typeface="serif"
- />
+        android:textSize="19sp"
+        android:typeface="serif" />
 
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="336dp"
         android:layout_gravity="center"
+        android:layout_weight="0.02"
         android:drawSelectorOnTop="false"
         android:gravity="center"
-      
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-         >
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
 
     </ListView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00"
+        android:text="it is test version, uninstall it before installing final version"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </LinearLayout>
