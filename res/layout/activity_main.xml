@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.00"
-        android:text="it is test version, uninstall it before installing final version"
+        android:text="It's Test version,inform us if u find anything wrong"
         android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
