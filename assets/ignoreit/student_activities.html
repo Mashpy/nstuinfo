@@ -3,8 +3,22 @@
 box-shadow:         inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);}
 body{background-color:#f5f5f5; font-family:serif; line-height:1.3em; border:3px solid #29b6f6; 	border-radius: 6px; padding:3px; padding-top:8px }
 p{font-size:15px}
-.headertitle{width:100%; font-size: 17px; background:#29b6f6; color:#FFFFFF; border-radius: 3px; text-align: center}
-.maintitle{font-weight:bold;width:100%; font-size: 16px; background:#039be5; color:#FFFFFF; border-radius: 15px;padding-top:10px; padding-bottom:10px; text-align: center; margin-bottom:10px}
+.headertitle{ padding-top: 5px; padding-bottom: 5px; margin-bottom:2px;
+  background: #039be5;
+  background-image: -webkit-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -moz-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -ms-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -o-linear-gradient(top, #03a9f4, #039be5);
+  background-image: linear-gradient(to bottom, #03a9f4, #039be5);
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 7px 10px 7px 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.maintitle{font-weight:bold;width:100%; font-size: 16px; background:#039be5; color:#FFFFFF; border-radius: 10px;padding-top:10px; padding-bottom:10px; text-align: center; margin-bottom:3px}
 .telephone {
     background-image: url("http://i61.tinypic.com/n6xtmw.png");
     background-position: 0 0px;
@@ -29,7 +43,33 @@ p{font-size:15px}
     text-decoration: none;
 }
 .Email:hover{color:#29b6f6}
+.content {display:none;}
+.toggle.expander.expanded {
+padding-left: 27px;
+background-position: 13px;
+background-repeat: no-repeat;
+background-image: url(https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/demo/expanded.gif);
+}
+.toggle.expander.collapsed {
+padding-left: 27px;
+background-position: 13px;
+background-repeat: no-repeat;
+background-image: url(https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/demo/collapsed.gif);
+}
+#demo-nesting-sub1 {
+margin-left: 20px;
+}
+#demo-nesting-sub2 {
+margin-left: 40px;
+}
 </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/src/simple-expand.min.js"></script>
+<script type="text/javascript">
+$(function () {
+$('.expander').simpleexpand();
+});
+</script>
 <div class="maintitle">Student Activities</div>
 
 <p>NSTU is very conscious to preserve Bangladesh&#39;s culture. It celebrates International Mother Language Day, Pahela Baishak, Bosonta Baron, Independence Day, Victory Day, University Day, International Anti Drug Day, Friendship Day and other national and international days with actual manner. It also arrange Programming contest and intra- and inter-collage and university debates.<br />
@@ -37,8 +77,10 @@ p{font-size:15px}
 The university has strong cricket, football, volleyball and badminton teams. Intradepartment and interdepartment sport competition is held regularly indoors and outdoors. The university takes parts in inter-university competitions.<br />
 To arrange these event there are some organization. Details here -</p>
 
-<div class="headertitle">NSTU Open Source Network (NSTU OSN)</div>
+<div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">NSTU Open Source Network (NSTU OSN)</div></a>
 
+<div class="content">
 <div class="infoclass">Open source network activities:<br />
 Open Source Network started their journey in Noakhali Science and Technology University from 26 April 2008. Several workshops were arranged by nstu_osn. &nbsp;&nbsp;&nbsp; * Ubuntu installation and administrative uses<br />
 &nbsp;&nbsp;&nbsp; * Open Source philosophy and introducing with PHP, Joomla &amp; wordpress<br />
@@ -48,8 +90,10 @@ Open Source Network started their journey in Noakhali Science and Technology Uni
 
 <div class="infoclass"><strong>Details:</strong> <a href="http://www.bdosn.org">www.bdosn.org</a></div>
 
-<div class="headertitle">Programming Club</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Programming Club</div></a>
 
+<div class="content">
 <div class="infoclass">Based in the School of Computer Science and IT, CSTE Programming Club provides a stimulating, cooperative environment where students can interact and learn from each other by solving various programming problems. Each year we try to enter teams into regional programming competitions as part of the Association for Computing Machinery International Collegiate Programming Contest (ACM-ICPC). &nbsp;&nbsp;&nbsp; * Gain and develop good programming skills and general problem solving skills<br />
 &nbsp;&nbsp;&nbsp; * Learn how to work in a team<br />
 &nbsp;&nbsp;&nbsp; * Develop programming solutions using various data structures, sorting algorithms, arithmetic, algebra, graph algorithms, and number theory<br />
@@ -59,8 +103,10 @@ Open Source Network started their journey in Noakhali Science and Technology Uni
 
 <div class="infoclass"><strong>Facebook Group:</strong> <a href="https://www.facebook.com/profile.php?id=297499666939182">https://www.facebook.com/profile.php?id=297499666939182</a></div>
 
-<div class="headertitle">MOSHAL</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander3" class="headertitle expander">MOSHAL</div></a>
 
+<div class="content">
 <div class="infoclass">Moshal is an literary and cultural organization of Noakhali Science and Technology University. It has lightened a campus based cultural movement. It works for arousing latent literary and cultural talents in the NSTU family. It is also trying to spread the view of a good culture among the people. Our purpose is to cherish Bangalee culture and tradition in our heart and flourish them in our works. It works for creating a wonderful cultural atmosphere in the university campus.<br />
 <br />
 <strong>Works:</strong><br />
@@ -73,7 +119,10 @@ Open Source Network started their journey in Noakhali Science and Technology Uni
 
 <div class="infoclass"><strong>Contact Person:</strong> Kamrul Huda, <a class="telephone" href="tel:01913147411">01913147411</a></div>
 
-<div class="headertitle">Science Mania</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander4" class="headertitle expander">Science Mania</div></a>
+
+<div class="content">
 
 <div class="infoclass">Science Mania Let science thoughts be easy and interesting Science Mania is a science thoughts platform of Noakhali Science and Technology University. The science maniac people of this organization are working on spreading ongoing world, what is going in the science arena, heartthrob science verses technology news, gorgeous approaches of technology and of course easier and modern science. In these days, science and technology is the first and foremast weapon to go ahead. It is a matter of great sorrow that, usually in our country science is described as a hazy and ambiguous thing from the very beginning of our childhood. So our children and young students cherished a fear for science in their heart. But in real view, science is not so. We, science mania believe that science can be interesting and easy. Simple, easy and friendly explanation of science can fight with this fear and make our people interested on science thinking. Beautiful implementation of science and technology in every sector of society can move the world to a new dimension. If you want to know science and spread the science among the people, you are cordially welcome to the family of science mania.<br />
 <br />
@@ -87,7 +136,10 @@ Open Source Network started their journey in Noakhali Science and Technology Uni
 
 <div class="infoclass"><strong>Contact Person:</strong> Rabiul Awal, <a class="telephone" href="tel:01827893381">01827893381</a></div>
 
-<div class="headertitle">SHITBOSTRO SONGROH ANDOLON, Lets share the warm</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander5" class="headertitle expander">Shitbostro Songroh Andolon</div></a>
+
+<div class="content">
 
 <div class="infoclass">It is a volunteering organization of NSTU. It is established on the motoes of voluntarism, patriotism and humanism. Volunteering is a young phenomenon. Our young volunteers spread the hand of mankind. They are always ready to jumpwith their helping hand in any crisis of our country. The cheerful heroes of the group holds a cordial heart for the winter striken people of Bangladesh. Every winter it collects warm clothes from local areas and bitoron kore among the warm striken poor people. In 2012-13, It has collected a some of three hundred and fifty bosta of warm clothes from Choumuhoni, Maijdee, Begumganj, Sonapur and bitoron it at Nolerchar, Nolangirchar, Janatabajar in Hatia and Noakhali. It also works for the floating childrens of the locality. You are most welcome to the volunteering platform of NSTU.</div>
 
@@ -96,19 +148,26 @@ Open Source Network started their journey in Noakhali Science and Technology Uni
 
 <div class="infoclass">Contact Person: <strong>Anik Das</strong>, <a class="telephone" href="tel:01729443322">01729443322</a></div>
 
-<div class="headertitle">STOBOK</div>
+</div></div>
+<div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander6" class="headertitle expander">STOBOK</div></a>
 
-<div class="infoclass">Stobok is a literature society of NSTU. The members of this society used to have an weekly &lsquo;Adda&rsquo; and they discuss about the literature, culture, music and the society. They believe that literature can make a cultural revolution in the mindset of the generation. It had brought out a fine Wall Paper, &lsquo;Kothonika&rsquo; with fresh literary outputs of university students.<br />
+<div class="content">an weekly &lsquo;Adda&rsquo; and they discuss about the literature, culture, music and the society. They believe that literature can make a cultural revolution in the mindset of the generation. It had brought out a fine Wall Paper, &lsquo;Kothonika&rsquo; with fresh literary outputs of university students.<br />
 <br />
 <strong>Activities:</strong><br />
 1. Publishing: Little Magazine, Wallpaper, Bulletin.<br />
 2. Organizing Cultural Programs: Memories the famous literary person, Sahitta Asor.<br />
-3. Spreading: Beliefs of Independence War, Beliefs of Humanity.</div>
-
-<div class="infoclass"><strong>Our Facebook Page:</strong> <a href="http://www.facebook.com/stobok">www.facebook.com/stobok</a><br />
+3. Spreading: Beliefs of Independence War, Beliefs of Humanity.
+<br/><br/>
+<strong>Our Facebook Page:</strong> <a href="http://www.facebook.com/stobok">www.facebook.com/stobok</a><br /><br/>
 <strong>Contact Person:</strong> Iru Khairul Karim, <a class="telephone" href="tel:01684980185">01684980185</a></div>
+</div>
+</div>
 
-<div class="headertitle">Pharma Mirror</div>
+<div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander7" class="headertitle expander">Pharma Mirror</div></a>
+
+<div class="content">
 
 <div class="infoclass">Pharma Mirror &ndash; First online free access professional pharmaceutical magazine of its kind in the world. Pharma Mirror has an International Standard Serial Number ISSN 2219-763X of its own and it has been assigned by ISSN Center, Paris.<br />
 <br />
@@ -126,7 +185,10 @@ Pharma Mirror believes in cutting-edge peer reviewed contents over the pharma ar
 
 <div class="infoclass"><strong>Facebook Page</strong>: <a href="http://www.facebook.com/pharmamirror">www.facebook.com/pharmamirror</a></div>
 
-<div class="headertitle">Biggan Bangla</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander8" class="headertitle expander">Biggan Bangla</div></a>
+
+<div class="content">
 
 <div class="infoclass">Biggan Bangla is a science website where they share knowledge all about science. This website is leading by the CSTE 4th Batch. They also publish Galactica Magazine periodically.</div>
 
@@ -134,7 +196,10 @@ Pharma Mirror believes in cutting-edge peer reviewed contents over the pharma ar
 
 <div class="infoclass"><strong>Facebook Page:</strong> <a href="http://www.facebook.com/mgalactica">www.facebook.com/mgalactica</a></div>
 
-<div class="headertitle">TechnologyBasic</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander9" class="headertitle expander">TechnologyBasic</div></a>
+
+<div class="content">
 
 <div class="infoclass">All Basic Concepts Of Technology In bangla like as wikipedia style ! you can say it a technology dictionary.&nbsp;It&#39;s very helpful site for IT department. This website is leading by CSTE5th Batch.</div>
 
@@ -144,13 +209,19 @@ Pharma Mirror believes in cutting-edge peer reviewed contents over the pharma ar
 
 <div class="infoclass"><strong>Facebook Page:</strong> <a href="http://www.facebook.com/technologybasic">www.facebook.com/technologybasic</a></div>
 
-<div class="headertitle">Coding(Magazine)</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander10" class="headertitle expander">Coding(Magazine)</div></a>
+
+<div class="content">
 
 <div class="infoclass">&quot;Coding&quot; Magazine is published by CSTE7th batch. Here they included technical article, story, science fiction and etc.</div>
 
-<div class="infoclass"><strong>Download:</strong> <a href="https://www.facebook.com/download/778571238821219/mymagazine.pdf">https://www.facebook.com/download/778571238821219/mymagazine.pdf</a></div>
+<div class="infoclass"><strong>Download:</strong> <a href="https://www.facebook.com/download/778571238821219/mymagazine.pdf">download magazine</a></div>
 
-<div class="headertitle">Economicsbd Magazine</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander11" class="headertitle expander">Economicsbd Magazine</div></a>
+
+<div class="content">
 
 <div class="infoclass">It&#39;s rudimentary educative magazine, in Bangladesh launched by Md. Mahmudul Islam Khan a student associated with Economics and poverty studies department of the University with his team consists of additional couple of university&rsquo;s students from the very same department.<br />
 <br />
@@ -160,7 +231,10 @@ The very proposition of instituting the magazine is to provide miscellaneous inf
 
 <div class="infoclass"><strong>Facebook Page:</strong> <a href="http://www.facebook.com/economicsbdmagazine">Economicsbdmagazine</a></div>
 
-<div class="headertitle">COASTAL ENVIRONMENT NETWORK(CEN)</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander12" class="headertitle expander">Coastal Environment Network(CEN)</div></a>
+
+<div class="content">
 
 <div class="infoclass">&quot;Coastal Environment Network(CEN)&quot; is from Department of Environmental Science and Hazard studies of Noakhali Science and technology University.<br />
 <br />
@@ -172,7 +246,10 @@ The Coastal Environment Network (CEN) facilitates networking among environmental
 
 <div class="infoclass"><strong>Dept. group:</strong> <a href="http://goo.gl/s8HXEt">http://goo.gl/s8HXEt</a></div>
 
-<div class="headertitle">DreamBazz Filmz</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander13" class="headertitle expander">DreamBazz Filmz</div></a>
+
+<div class="content">
 
 <div class="infoclass">Films tell the story of life. Film is a combination of happiness , sadness, pain, hatred, anger, music,dance, architecture, sculpture. For the centuries, films have been playing a pivotal role in changing the society. Therefore, we organize a film society named &quot; DreamBazz Filmz &quot; at NSTU in order to change the society through our films.We,some youngsters of NSTU dream to bring the story of life on big screen.We, belive that film is a journey of life.You can also be a proud passanger of this amazing journey.<br />
 <br />
@@ -182,13 +259,16 @@ The Coastal Environment Network (CEN) facilitates networking among environmental
 3.We make short films and full length movies from selected stories.<br />
 <br />
 <strong>Our Running Project:</strong><br />
-এটা গল্প হলেও পারতো।<br />
+এটা গল্প হলেও পারতো।(eta golpo holeo parto)<br />
 <strong>Our Upcoming Project:</strong><br />
 ILLUSION-A short film.</div>
 
 <div class="infoclass"><strong>Facebook page: </strong><a href="http://facebook.com/profile.php?id=669912476438923">DreamBazz Filmz</a></div>
 
-<div class="headertitle">Journalist of Our University</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander14" class="headertitle expander">Journalist of Our University</div></a>
+
+<div class="content">
 
 <div class="infoclass"><strong>Rezaul Karim Bhuiyan Sohag</strong><br />
 Applied Math, 6th Batch<br />
