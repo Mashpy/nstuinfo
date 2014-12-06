@@ -20,7 +20,8 @@ AdRequest adRequest = new AdRequest.Builder().build();
 
 adView.loadAd(adRequest);
 		String newtest= getIntent().getStringExtra("New_Topic");
-		WebView wv = (WebView) findViewById(R.id.webView1);    
+		WebView wv = (WebView) findViewById(R.id.webView1); 
+		wv.getSettings().setJavaScriptEnabled(true);     
         final String mimeType = "text/html";
         final String encoding = "UTF-8";
         wv.setBackgroundColor(0);
