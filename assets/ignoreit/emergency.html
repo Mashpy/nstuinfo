@@ -3,9 +3,23 @@
 box-shadow:         inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);}
 body{background-color:#f5f5f5; font-family:serif; line-height:1.3em; border:3px solid #29b6f6; 	border-radius: 6px; padding:3px; padding-top:8px }
 p{font-size:15px}
-.headertitle{width:100%; font-size: 17px; background:#29b6f6; color:#FFFFFF; border-radius: 3px; text-align: center}
-.maintitle{font-weight:bold;width:100%; font-size: 16px; background:#039be5; color:#FFFFFF; border-radius: 15px;padding-top:10px; padding-bottom:10px; text-align: center; margin-bottom:10px}
-.telePhone {
+.headertitle{ padding-top: 5px; padding-bottom: 5px; margin-bottom:2px;
+  background: #039be5;
+  background-image: -webkit-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -moz-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -ms-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -o-linear-gradient(top, #03a9f4, #039be5);
+  background-image: linear-gradient(to bottom, #03a9f4, #039be5);
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 7px 10px 7px 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.maintitle{font-weight:bold;width:100%; font-size: 16px; background:#039be5; color:#FFFFFF; border-radius: 10px;padding-top:10px; padding-bottom:10px; text-align: center; margin-bottom:3px}
+.telephone {
     background-image: url("http://i61.tinypic.com/n6xtmw.png");
     background-position: 0 0px;
     background-repeat: no-repeat;
@@ -16,8 +30,8 @@ p{font-size:15px}
     text-decoration: none;
     padding-top: 2px;
 }
-.telePhone:hover{color:#29b6f6}
-.email {
+.telephone:hover{color:#29b6f6}
+.Email {
     background-image: url("http://i60.tinypic.com/dqm2cy.png");
     background-position: 3px 3px;
     background-repeat: no-repeat;
@@ -28,13 +42,43 @@ p{font-size:15px}
     padding-top: 2px;
     text-decoration: none;
 }
-.email:hover{color:#29b6f6}
+.Email:hover{color:#29b6f6}
+.content {display:none;}
+.toggle.expander.expanded {
+padding-left: 27px;
+background-position: 13px;
+background-repeat: no-repeat;
+background-image: url(https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/demo/expanded.gif);
+}
+.toggle.expander.collapsed {
+padding-left: 27px;
+background-position: 13px;
+background-repeat: no-repeat;
+background-image: url(https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/demo/collapsed.gif);
+}
+#demo-nesting-sub1 {
+margin-left: 20px;
+}
+#demo-nesting-sub2 {
+margin-left: 40px;
+}
 </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/src/simple-expand.min.js"></script>
+<script type="text/javascript">
+$(function () {
+$('.expander').simpleexpand();
+});
+</script>
 <div class="maintitle">Emergency Contacts</div>
 
 <p>For Noakhali Zilla don&#39;t forget to add phone code +880-321-</p>
 
-<div class="headertitle">Noakhali Zilla</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Noakhali Zilla</div></a>
+
+<div class="content">
+
 
 <div class="infoclass"><strong>DC</strong> : <a class="telephone" href="tel:61021">61021</a>, <a class="telephone" href="tel:61614">61614</a><br />
 Fax: <a class="telephone" href="tel:61062">61062</a>, <a class="telephone" href="tel:61757">61757</a></div>
@@ -51,7 +95,9 @@ Fax: <a class="telephone" href="tel:61062">61062</a>, <a class="telephone" href=
 
 <div class="infoclass"><strong>Power Division</strong>: <a class="telephone" href="tel:61040">61040</a></div>
 
-<div class="headertitle">Police</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Police</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>Police Super:</strong> <a class="telephone" href="tel:61030">61030</a>, <a class="telephone" href="tel:61670">61670</a><br />
 Fax: <a class="telephone" href="tel:61123">61123</a></div>
@@ -60,13 +106,17 @@ Fax: <a class="telephone" href="tel:61123">61123</a></div>
 
 <div class="infoclass"><strong>OC</strong>, Sudharam: <a class="telephone" href="tel:62067">62067</a>, <a class="telephone" href="tel:62281">62281</a></div>
 
-<div class="headertitle">Fire Station</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Fire Station</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>Assistant Director:</strong> <a class="telephone" href="tel:61258">61258</a></div>
 
 <div class="infoclass"><strong>Maijdi Fair Station: </strong><a class="telephone" href="tel:62031">62031</a></div>
 
-<div class="headertitle">Kuriar Service</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Kuriar Service</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>SA Poribohon</strong>, Maijdi: <a class="telephone" href="tel:71006">71006</a></div>
 
@@ -74,7 +124,9 @@ Fax: <a class="telephone" href="tel:61123">61123</a></div>
 
 <div class="infoclass"><strong>Sundorban</strong>, Maijdi: <a class="telephone" href="tel:61846">61846</a></div>
 
-<div class="headertitle">Journalist of Noakhali</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Journalist of Noakhali</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>Noakhali Press Club</strong><br />
 Phone: <a class="telephone" href="tel:62082">62082</a></div>
@@ -157,7 +209,9 @@ Email: <a class="email" href="mailto:editor@noakhaliweb.com.bd">editor@noakhaliw
 Phone: <a class="telephone" href="tel:01711008033">01711008033</a><br />
 Email: <a class="email" href="mailto:editor@chalomannoakhali.com">editor@chalomannoakhali.com</a></div>
 
-<div class="headertitle">Private Clinic</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Private Clinic</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>Royal Hospital</strong><br />
 Phone: <a class="telephone" href="tel:01811601071">01811601071</a></div>
@@ -174,7 +228,9 @@ Phone: <a class="telephone" href="tel:61081">61081</a>, <a class="telephone" hre
 <div class="infoclass"><strong>WoodLand Hospital</strong><br />
 Phone: <a class="telephone" href="tel:01713258453">01713258453</a></div>
 
-<div class="headertitle">Guest House</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Guest House</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>Nice Guest House</strong><br />
 Phone: <a class="telephone" href="tel:01729443250">01729443250</a></div>
@@ -191,7 +247,9 @@ Phone: <a class="telephone" href="tel:61593">61593</a></div>
 <div class="infoclass"><strong>Hotel Wayasi</strong><br />
 Phone: <a class="telephone" href="tel:01812161114">01812161114</a></div>
 
-<div class="headertitle">Bus Service</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Bus Service</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>Bilash Poribohon</strong><br />
 Phone: <a class="telephone" href="tel:01974474404">01974474404</a></div>
@@ -214,12 +272,16 @@ Phone: <a class="telephone" href="tel:01678047365">01678047365</a></div>
 <div class="infoclass"><strong>Upukul Service</strong><br />
 Phone: <a class="telephone" href="tel:01981002934">01981002934</a></div>
 
-<div class="headertitle">Train Service</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Train Service</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>Sonapur</strong>: <a class="telephone" href="tel:62220">62220</a><br />
 <strong>Maijdi Court</strong>: <a class="telephone" href="tel:62190">62190</a></div>
 
-<div class="headertitle">Mail/Express Trains From Noakhali :</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Mail/Express Trains From Noakhali :</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>Train No:</strong> 711<br />
 <strong>Name:</strong> Upakul Express<br />
@@ -260,7 +322,9 @@ Phone: <a class="telephone" href="tel:01981002934">01981002934</a></div>
 <strong>To : </strong>Laksam<br />
 <strong>Arrival:</strong> 7:20:00 PM</div>
 
-<div class="headertitle">Train Location Tracking Service</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Train Location Tracking Service</div></a>
+<div class="content">
 
 <div class="infoclass">From Now you can track Train current location via sms. From January 2014, All trains are tracked by GPS. For this reason you will get the actual location of the train. To get this service you need to know the train no. See the below. Upokul Express Train no is 711<br />
 So you have to write =&gt;<br />

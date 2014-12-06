@@ -3,8 +3,22 @@
 box-shadow:         inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);}
 body{background-color:#f5f5f5; font-family:serif; line-height:1.3em; border:3px solid #29b6f6; 	border-radius: 6px; padding:3px; padding-top:8px }
 p{font-size:15px}
-.headertitle{width:100%; font-size: 17px; background:#29b6f6; color:#FFFFFF; border-radius: 3px; text-align: center}
-.maintitle{font-weight:bold;width:100%; font-size: 16px; background:#039be5; color:#FFFFFF; border-radius: 15px;padding-top:10px; padding-bottom:10px; text-align: center; margin-bottom:10px}
+.headertitle{ padding-top: 5px; padding-bottom: 5px; margin-bottom:2px;
+  background: #039be5;
+  background-image: -webkit-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -moz-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -ms-linear-gradient(top, #03a9f4, #039be5);
+  background-image: -o-linear-gradient(top, #03a9f4, #039be5);
+  background-image: linear-gradient(to bottom, #03a9f4, #039be5);
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 7px 10px 7px 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.maintitle{font-weight:bold;width:100%; font-size: 16px; background:#039be5; color:#FFFFFF; border-radius: 10px;padding-top:10px; padding-bottom:10px; text-align: center; margin-bottom:3px}
 .telephone {
     background-image: url("http://i61.tinypic.com/n6xtmw.png");
     background-position: 0 0px;
@@ -17,7 +31,7 @@ p{font-size:15px}
     padding-top: 2px;
 }
 .telephone:hover{color:#29b6f6}
-.email {
+.Email {
     background-image: url("http://i60.tinypic.com/dqm2cy.png");
     background-position: 3px 3px;
     background-repeat: no-repeat;
@@ -28,12 +42,40 @@ p{font-size:15px}
     padding-top: 2px;
     text-decoration: none;
 }
-.email:hover{color:#29b6f6}
+.Email:hover{color:#29b6f6}
+.content {display:none;}
+.toggle.expander.expanded {
+padding-left: 27px;
+background-position: 13px;
+background-repeat: no-repeat;
+background-image: url(https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/demo/expanded.gif);
+}
+.toggle.expander.collapsed {
+padding-left: 27px;
+background-position: 13px;
+background-repeat: no-repeat;
+background-image: url(https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/demo/collapsed.gif);
+}
+#demo-nesting-sub1 {
+margin-left: 20px;
+}
+#demo-nesting-sub2 {
+margin-left: 40px;
+}
 </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/sylvain-hamel/simple-expand/master/src/simple-expand.min.js"></script>
+<script type="text/javascript">
+$(function () {
+$('.expander').simpleexpand();
+});
+</script>
 <div class="maintitle">Register Office</div>
 
-<div class="headertitle">Vice Chancellor Office</div>
+<div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Vice Chancellor Office</div></a>
 
+<div class="content">
 <div class="infoclass"><strong>Professor Dr md. Abul Hossain</strong><br />
 Pro Vice Chancellor<br />
 phone: <a class="telephone" href="tel:+88032162833">+880-321-62833</a> ,<br />
@@ -45,8 +87,10 @@ phone: <a class="telephone" href="tel:+88032162833">+880-321-62833</a> ,<br />
 Mobile:<a class="telephone" href="tel:01717827338">01717827338</a><br />
 E-mail:<a class="email" href="mailto:khaledju@gmail.com">khaledju@gmail.com</a></div>
 
-<div class="headertitle"><span style="font-size:16px;">Dean office, Science faculty</span></div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander"><span style="font-size:16px;">Dean office, Science faculty</span></div></a>
 
+<div class="content">
 <div class="infoclass">Dean<br />
 phone:<a class="telephone" href="tel:+88032162823">+880-321-62823</a><br />
 Mobile:<a class="telephone" href="tel:01713012916">01713012916</a><br />
@@ -57,7 +101,10 @@ E-mail:<a class="email" href="mailto:mah1754@gmail.com">mah1754@gmail.com</a></d
 Mobile:<a class="telephone" href="tel:01713616399">01713616399</a><br />
 E-mail:<a class="email" href="mailto:meru.nstu@yahoo.com">meru.nstu@yahoo.com&nbsp;</a></div>
 
-<div class="headertitle">Register office</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Register office</div></a>
+
+<div class="content">
 
 <div class="infoclass">Register:<br />
 <strong>Professor Md. Mominul Haque</strong><br />
@@ -92,7 +139,10 @@ E-mail:<a class="email" href="mailto:babarmgtjnu@yahoo.com">babarmgtjnu@yahoo.co
 <div class="infoclass"><strong>Mrs.Shahanara Begum</strong><br />
 Mobile:<a class="telephone" href="tel:01814312632">01814312632</a>;</div>
 
-<div class="headertitle">Establishment Branch:</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Establishment Branchs</div></a>
+
+<div class="content">
 
 <div class="infoclass">Section Officer:<br />
 <strong>Mr. Md Abdur Rahman</strong><br />
@@ -100,7 +150,10 @@ Mobile:<a class="telephone" href="tel:01716239906">01716239906</a>;<br />
 E-mail:<a class="email" href="mailto:ars_nstu@yahoo.com">ars_nstu@yahoo.com</a></div>
 
 <div>
-<div class="headertitle">Administration Branch</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Administration Branch</div></a>
+
+<div class="content">
 </div>
 
 <div class="infoclass">Sub-Register<br />
@@ -113,15 +166,19 @@ E-mail: <a class="email" href="mailto:sarker_2003@yahoo.com">sarker_2003@yahoo.c
 Mobile:<a class="telephone" href="tel:01711124658">01711124658</a><br />
 E-mail:<a class="email" href="mailto:riyantanstu@gmail.com">riyantanstu@gmail.com</a></div>
 
-<div class="headertitle">Medical Centre</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Medical Centre</div></a>
 
+<div class="content">
 <div class="infoclass">Senior medical officer<br />
 <strong>Dr.Mohammad Arafat Rahman</strong><br />
 Mobile:<a class="telephone" href="tel:01925476993">01925476993</a><br />
 E-mail:<a class="email" href="mailto:rousseau777@yahoo.com">rousseau777@yahoo.com</a></div>
 
-<div class="headertitle">Public Relation Branch And Guest house on Dhaka:</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Public Relation Branch And Guest house on Dhaka</div></a>
 
+<div class="content">
 <div class="infoclass">Assistant Register:<br />
 <strong>Mr. mohammad Tamzid Hossain Chowdhury</strong><br />
 Mobile:<a class="telephone" href="tel:01733998894">01733998894</a><br />
@@ -130,7 +187,10 @@ E-mail:<a class="email" href="mailto:tamzidnstu@gmail.com">tamzidnstu@gmail.com<
 <div class="infoclass">Guest house on Dhaka<br />
 Mobile:<a class="telephone" href="tel:01934384890">01934384890</a></div>
 
-<div class="headertitle">Estate and Housing Branch:</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Estate and Housing Branch</div></a>
+
+<div class="content">
 
 <div class="infoclass">Assistant Register:<br />
 <strong>Mr. Mohammad saifuddin</strong><br />
@@ -141,7 +201,10 @@ E-mail:<a class="email" href="mailto:saif_nstu2013@yahoo.com">saif_nstu2013@yaho
 Mobile:<a class="telephone" href="tel:01711284910">01711284910</a>;<br />
 E-mail:<a class="email" href="mailto:bhuiyannstu@yahoo.com">bhuiyannstu@yahoo.com</a></div>
 
-<div class="headertitle">Networking and IT Branch:</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Networking and IT Branch</div></a>
+
+<div class="content">
 
 <div class="infoclass">System annalist:<br />
 <strong>Engineer Md. Abdullah Hil Faruk</strong>(study leave)<br />
@@ -158,21 +221,28 @@ E-mail:<a class="email" href="mailto:moyeen.cste@gmail.com">moyeen.cste@gmail.co
 
 <div>
 <div>
-<div class="headertitle">Safety Branch</div>
-</div>
-</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Safety Branch</div></a>
+
+<div class="content">
 
 <div class="infoclass">Section officer<br />
 <strong>Mr. Mohammad Abdul Kader</strong><br />
 Mobile:<a class="telephone" href="tel:01711021478">01711021478</a><br />
 E-mail:<a class="email" href="mailto:rahman.nstu@yahoo.com">rahman.nstu@yahoo.com</a></div>
 
-<div class="headertitle">Ansar Forces &nbsp;</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Ansar Forces &nbsp;</div></a>
+
+<div class="content">
 
 <div class="infoclass">PC,Ansar<br />
 Mobile:<a class="telephone" href="tel:01727516565">01727516565</a>;</div>
 
-<div class="headertitle">Central store</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Central store</div></a>
+
+<div class="content">
 
 <div class="infoclass">Store officer<br />
 <strong>Mr. Mohammad Abdullah Al Faruk</strong><br />
@@ -184,7 +254,10 @@ Mobile:<a class="telephone" href="tel:01734008350">01734008350</a><br />
 Email:<a class="email" href="mailto:nstu.monir77@yahoo.com">nstu.monir77@yahoo.com</a></div>
 
 <div>
-<div class="headertitle">Central Mosque</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Central Mosque</div></a>
+
+<div class="content">
 </div>
 
 <div class="infoclass">Imam:<strong>Hafez Mao. Md. Giyas Uddin Bhuiyan</strong><br />
@@ -192,7 +265,10 @@ Mobile:<a class="telephone" href="tel:01814174228">01814174228</a></div>
 
 <div>
 <div>
-<div class="headertitle">Despatch Branch</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Despatch Branch</div></a>
+
+<div class="content">
 </div>
 </div>
 
@@ -202,8 +278,10 @@ Mobile:<a class="telephone" href="tel:01819360174">01819360174</a><br />
 Email:<a class="email" href="mailto:masud.nstu@gmail.com">masud.nstu@gmail.com</a></div>
 
 <div>
-<div class="headertitle">University Central Library</div>
-</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">University Central Library</div></a>
+
+<div class="content">
 
 <div class="infoclass">Librarian<br />
 <strong>Mr Md Jahangir Hossain</strong><br />
@@ -221,7 +299,10 @@ Email:<a class="email" href="mailto:nstu_library@yahoo.com">nstu_library@yahoo.c
 Phone: 01722-936805<br />
 Email: baborali.ru@gmail.com</div>
 
-<div class="headertitle">Officers&#39; Association</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Officers&#39; Association</div></a>
+
+<div class="content">
 
 <div class="infoclass">Convener<br />
 Mr. Shakhawat Hossen<br />
@@ -234,7 +315,10 @@ Mobile:<a class="telephone" href="tel:01925476993">01925476993</a><br />
 E-mail:<a class="email" href="mailto:rousseau777@yahoo.com">rousseau777@yahoo.com</a></div>
 
 <div>
-<div class="headertitle">Law Minister&#39;s Office</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Law Minister&#39;s Office</div></a>
+
+<div class="content">
 </div>
 
 <div class="infoclass"><strong>Mr. Joynal Abedin Advocate</strong><br />
@@ -258,14 +342,20 @@ Senior Lawyer<br />
 Phone: <a class="telephone" href="tel:01712211724">01712211724</a></div>
 
 <div>
-<div class="headertitle">Bank</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Bank</div></a>
+
+<div class="content">
 </div>
 
 <div class="infoclass">Manager, Agrani Bank, NSTU<br />
 <strong>Md Monjurul Karim</strong><br />
 Phone: <a class="telephone" href="tel:01819345148">01819345148</a></div>
 
-<div class="headertitle">Director (Finance &amp; Accounts) Office</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Director (Finance &amp; Accounts) Office</div></a>
+
+<div class="content">
 
 <div class="infoclass">Director<br />
 <strong>Mr. Abdul Jolil</strong><br />
@@ -295,7 +385,10 @@ Email: <a class="email" href="mailto:humayunkabir3814@yahoo.com">humayunkabir381
 Phone: <a class="telephone" href="tel:01817584465">01817584465</a></div>
 
 <div>
-<div class="headertitle">Planning Development Office</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Planning Development Office</div></a>
+
+<div class="content">
 </div>
 
 <div class="infoclass">Director<br />
@@ -334,7 +427,10 @@ Phone: <a class="telephone" href="tel:01718565013">01718565013</a></div>
 Phone: <a class="telephone" href="tel:01714777766">01714777766</a><br />
 Email: <a class="email" href="mailto:mamunengr1@yahoo.com">mamunengr1@yahoo.com</a></div>
 
-<div class="headertitle">Exam Controller Office</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Exam Controller Office</div></a>
+
+<div class="content">
 
 <div class="infoclass">Exam Controller<br />
 Vice Chancellor<br />
@@ -351,7 +447,10 @@ Phone: <a class="telephone" href="tel:01818024513">01818024513</a><br />
 Email: <a class="email" href="mailto:wahed@gmail.com">wahed@gmail.com</a></div>
 
 <div>
-<div class="headertitle">Programmar</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Programmar</div></a>
+
+<div class="content">
 </div>
 
 <div class="infoclass">Assistant Programmar<br />
@@ -373,7 +472,10 @@ Phone: <a class="telephone" href="tel:01712210968">01712210968</a><br />
 Email: <a class="email" href="mailto:yousuf00001@gmail.com">yousuf00001@gmail.com</a></div>
 
 <div>
-<div class="headertitle">Athletics department</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Athletics department</div></a>
+
+<div class="content">
 </div>
 
 <div class="infoclass"><strong>Md. Sanjib Kumar dey</strong><br />
@@ -381,15 +483,20 @@ Phone: <a class="telephone" href="tel:01716293672">01716293672</a><br />
 Email: <a class="email" href="mailto:sanjibdey77@yahoo.com">sanjibdey77@yahoo.com</a></div>
 
 <div>
-<div class="headertitle">Cyber Center</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Cyber Center</div></a>
+
+<div class="content">
 </div>
 
 <div class="infoclass"><strong>Abhijit Chakraborty</strong><br />
 Phone: <a class="telephone" href="tel:01912183607">01912183607</a><br />
 Email: <a class="email" href="mailto:abhijit.cse@gmail.com">abhijit.cse@gmail.com</a></div>
 
-<div class="headertitle">Teachers Association Office</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Teachers Association Office</div></a>
 
+<div class="content">
 <div class="infoclass">President<br />
 <strong>Dr. Newaz Mohammed Bahadur</strong><br />
 Phone: <a class="telephone" href="tel:71485">71485</a><br />
@@ -402,8 +509,10 @@ Phone: <a class="telephone" href="tel:01712593494">01712593494</a><br />
 Email: <a class="email" href="mailto:towhid.du@yahoo.com">towhid.du@yahoo.com</a></div>
 
 <div>
-<div class="headertitle">Post Office</div>
-</div>
+</div></div><div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander2" class="headertitle expander">Post Office</div></a>
+
+<div class="content">
 
 <div class="infoclass">Sub Post Master<br />
 <strong>Gowro Gossami</strong><br />
