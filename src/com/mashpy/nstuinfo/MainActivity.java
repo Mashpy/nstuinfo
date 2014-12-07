@@ -39,7 +39,7 @@ public class MainActivity extends ListActivity {
         versionManager.setUpdateNowLabel("Update Now (Click here)");
         versionManager.setRemindMeLaterLabel("");
         versionManager.setIgnoreThisVersionLabel("");
-        versionManager.setUpdateUrl("http://url.mashpy.me/nstuinfo"); // this is the link will execute when update now clicked. default will go to google play based on your package name.
+        versionManager.setUpdateUrl("http://nstuinfo.github.com"); // this is the link will execute when update now clicked. default will go to google play based on your package name.
         versionManager.setReminderTimer(10); // this mean checkVersion() will not take effect within 10 minutes
 
         ExternalDbOpenHelper dbOpenHelper = new ExternalDbOpenHelper(this, DB_NAME);
