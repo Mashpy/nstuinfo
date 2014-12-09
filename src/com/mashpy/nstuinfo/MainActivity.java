@@ -33,7 +33,7 @@ public class MainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         WVersionManager versionManager = new WVersionManager(this);
-        versionManager.setVersionContentUrl("https://raw.githubusercontent.com/Mashpy/nstuinfo/master/version2.txt"); // your update content url, see the response format below
+        versionManager.setVersionContentUrl("https://raw.githubusercontent.com/Mashpy/nstuinfo/master/version.txt"); // your update content url, see the response format below
         versionManager.checkVersion();
         
         versionManager.setUpdateNowLabel("Update Now (Click here)");
