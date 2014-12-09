@@ -1,1 +1,1 @@
-{"version_code":2,"content":"Version 1.0 <p>New features:</p><li>This application is now ready to publish. Please uninstall the test version and Download new version</li><li>Thanks</li><li>You</li>"}
+{"version_code":1,"content":"Version 1.0 <p>New features:</p><li>This application is now ready to publish. Please uninstall the test version and Download new version</li><li>Thanks</li><li>You</li>"}
