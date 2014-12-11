@@ -1,1 +1,1 @@
-{"version_code":2,"content":"Version 1.1 <p>New features:</p><li>This application is now ready to publish. Please uninstall the test version and Download new version</li><li>Thanks</li><li>You</li>"}
+{"version_code":2,"content":"Version 1.1 <p>Emergency updates:</p><li>দুইজন শিক্ষকের নাম্বার ঠিক করা হয়েছে।</li><li>হল অফিসের সার্ভিস সংক্রান্ত নাম্বার ঠিক করা হয়েছে</li><li>২ জন CR এর নাম্বার ঠিক করা হয়েছে।</li><li>Emergency Contact এ কিছু কনটেন্টের পরিবর্তন আনা হয়েছে।</li><li>কিছু ওয়ার্ডের স্পেলিং ঠিক করা হয়েছে।</li>"}
