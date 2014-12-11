@@ -17,7 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends ListActivity {
-    private static final String DB_NAME = "nstuinfodb1.0";
+    private static final String DB_NAME = "nstuinfodb1.1";
     
 	private static final String TABLE_NAME = "nstuinfo_first";
 	private static final String NSTUINFO_ID = "_id";
