@@ -95,8 +95,6 @@ public class MainActivity extends ListActivity {
 		} while (friendCursordetails.moveToNext());
 	}
 	friendCursordetails.close();
-	}
-	
-	
+	}	
 	
 }

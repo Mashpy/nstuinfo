@@ -25,6 +25,7 @@ adView.loadAd(adRequest);
         final String mimeType = "text/html";
         final String encoding = "UTF-8";
         wv.setBackgroundColor(0);
+        wv.loadUrl("about:blank");
         wv.loadDataWithBaseURL("", newtest, mimeType, encoding, "");
         
 	}
