@@ -1,48 +1,46 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:orientation="vertical"
-    tools:context="com.mashpy.nstuinfo.MainActivity" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/LinearLayout1"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#ffffff"
+	android:orientation="vertical"
+	tools:context="com.mashpy.nstuinfo.MainActivity">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:background="#0288d1"
-        android:gravity="center"
-        android:paddingBottom="6dip"
-        android:paddingTop="6dip"
-        android:text="@string/uniname"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#FFFFFF"
-        android:textSize="19sp"
-        android:typeface="serif" />
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:background="#0288d1"
+		android:gravity="center"
+		android:paddingBottom="6dip"
+		android:paddingTop="6dip"
+		android:text="@string/uniname"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:textColor="#FFFFFF"
+		android:textSize="19sp"
+		android:typeface="serif"/>
 
-    <ListView
-        android:id="@android:id/list"
-        android:layout_width="match_parent"
-        android:layout_height="336dp"
-        android:layout_gravity="center"
-        android:layout_weight="0.02"
-        android:drawSelectorOnTop="false"
-        android:gravity="center"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin" >
+	<GridView
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:numColumns="2"
+		android:verticalSpacing="5dp"
+		android:horizontalSpacing="5dp"
+		android:layout_weight="1.0"
+		android:id="@+id/activitymainGridLayout1"/>
 
-    </ListView>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00"
-        android:text="NSTUinfo version 1.2, nstuinfo.github.com"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="0.00"
+		android:text="NSTUinfo version 1.2, nstuinfo.github.com"
+		android:gravity="center"
+		android:textAppearance="?android:attr/textAppearanceSmall"/>
 
 </LinearLayout>
+

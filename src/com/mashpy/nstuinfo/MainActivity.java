@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import com.winsontan520.wversionmanager.library.WVersionManager;
 
-import android.app.ListActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,15 +15,16 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.*;
 
-public class MainActivity extends ListActivity {
+public class MainActivity extends Activity {
     private static final String DB_NAME = "nstuinfodb1.2";
     
 	private static final String TABLE_NAME = "nstuinfo_first";
 	private static final String NSTUINFO_ID = "_id";
 	private static final String NSTUINFO_NAME = "name";
 	private SQLiteDatabase database;
-	private ListView listView;
+	private GridView listView;
 	private ArrayList<String> nstuinfofirst;
 	private ArrayList<String> nstuinfodetails;
 	
@@ -48,24 +49,24 @@ public class MainActivity extends ListActivity {
         setUpList();      
     }
 
-	private void setUpList() {
-		setListAdapter(new ArrayAdapter<String>(this,
-		R.layout.simple_list_item_1, nstuinfofirst));
-		listView = getListView();
-		
-		listView.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> adapterView, View view, int position, long offset) {	
-			Intent intent = new Intent(getApplicationContext(), NstuInfoDetails.class);
-			String mashpy= ((TextView) view).getText().toString();
-			fillNstuinfodetails(mashpy);
-			String s = nstuinfodetails.get(0);
-			intent.putExtra("New_Topic", s);
-			startActivity(intent);
-			}
+	private void setUpList()
+	{
+		listView=(GridView)findViewById(R.id.activitymainGridLayout1);
+		listView.setAdapter(new GridAdapter(MainActivity.this,nstuinfofirst));
+		listView.setOnItemClickListener(new GridView.OnItemClickListener(){
+
+				@Override
+				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
+				{
+					Intent intent = new Intent(getApplicationContext(), NstuInfoDetails.class);
+					String mashpy=(String)p1.getItemAtPosition(p3);
+					fillNstuinfodetails(mashpy);
+					String s = nstuinfodetails.get(0);
+					intent.putExtra("New_Topic", s);
+					startActivity(intent);
+				}
 			});
 	}
-	
 
 	private void fillNstuinfo() {
 		nstuinfofirst = new ArrayList<String>();
