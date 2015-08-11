@@ -38,7 +38,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_weight="0.00"
-		android:text="NSTUinfo version 1.2, nstuinfo.github.com"
+		android:text="NSTUinfo 2015, https://nstuinfo.github.com"
 		android:gravity="center"
 		android:textAppearance="?android:attr/textAppearanceSmall"/>
 

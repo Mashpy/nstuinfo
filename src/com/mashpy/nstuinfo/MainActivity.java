@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.*;
 
 public class MainActivity extends Activity {
-    private static final String DB_NAME = "nstuinfodb1.2";
+    private static final String DB_NAME = "nstuinfodb1.3";
     
 	private static final String TABLE_NAME = "nstuinfo_first";
 	private static final String NSTUINFO_ID = "_id";
