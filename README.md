@@ -21,10 +21,10 @@ You will get all information about our university. Such as
 
 You will get more information from http://nstuinfo.github.com/
 
-Download from Google play: https://play.google.com/store/apps/details?id=com.mashpy.nstuinfo
+Download From- https://github.com/Mashpy/nstuinfo/releases/download/v1.3/NstuInfo2015.apk
 
 ### Version
-1.2
+1.3
 
 ### How to install the source code
 
