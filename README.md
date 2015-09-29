@@ -1,5 +1,7 @@
 # NSTUinfo
 
+[![Join the chat at https://gitter.im/Mashpy/nstuinfo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Mashpy/nstuinfo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 NSTU info is an Android App for Noakhali Science & Technology University
 You will get all information about our university. Such as
 
