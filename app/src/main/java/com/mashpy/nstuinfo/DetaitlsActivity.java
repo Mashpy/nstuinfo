@@ -19,8 +19,6 @@ public class DetaitlsActivity extends AppCompatActivity {
         String Title= getIntent().getStringExtra("title");
         toolbar.setTitle(Title);
         setSupportActionBar(toolbar);
-
-
         TextView URLtv = (TextView)findViewById(R.id.urltv);
         WebView detatils_wv = (WebView)findViewById(R.id.webview);
 
@@ -31,21 +29,10 @@ public class DetaitlsActivity extends AppCompatActivity {
        // detatils_wv.set
 
         detatils_wv.loadDataWithBaseURL(null, UrlFrom_MainActivity, "text/html", "utf-8","about:blank");
-
         URLtv.setText(Html.fromHtml(UrlFrom_MainActivity));
-
         // Making url clickable
         URLtv.setMovementMethod(LinkMovementMethod.getInstance());
         URLtv.setVisibility(View.VISIBLE);
-
-      /**  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-       fab.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-      Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-      .setAction("Action", null).show();
-      }
-      });*/
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

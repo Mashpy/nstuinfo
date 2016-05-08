@@ -14,25 +14,8 @@ import java.util.List;
 
 public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapter.MyViewHolder> {
 
-    private List<RecyclerData> moviesList;
     ColorGenerator generator = ColorGenerator.MATERIAL;
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, year, genre;
-        ImageView letter;
-
-
-
-        public MyViewHolder(View view) {
-            super(view);
-            title = (TextView) view.findViewById(R.id.title);
-            genre = (TextView) view.findViewById(R.id.genre);
-            year = (TextView) view.findViewById(R.id.year);
-            letter = (ImageView) view.findViewById(R.id.gmailitem_letter);
-
-        }
-    }
-
+    private List<RecyclerData> moviesList;
 
     public RecyclerDataAdapter(List<RecyclerData> moviesList) {
         this.moviesList = moviesList;
@@ -63,5 +46,20 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
     @Override
     public int getItemCount() {
         return moviesList.size();
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView title, year, genre;
+        ImageView letter;
+
+
+        public MyViewHolder(View view) {
+            super(view);
+            title = (TextView) view.findViewById(R.id.title);
+            genre = (TextView) view.findViewById(R.id.genre);
+            year = (TextView) view.findViewById(R.id.year);
+            letter = (ImageView) view.findViewById(R.id.gmailitem_letter);
+
+        }
     }
 }
