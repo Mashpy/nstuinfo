@@ -22,8 +22,7 @@ import java.io.FileOutputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class ImageViewTest extends AppCompatActivity {
-
+public class ImageViewUse extends AppCompatActivity {
 
 
     @Override
@@ -32,7 +31,6 @@ public class ImageViewTest extends AppCompatActivity {
         setContentView(R.layout.activity_image_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -44,39 +42,27 @@ public class ImageViewTest extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        String imagename = "safe_image";
+        Bitmap b;
+        ImageView imageView = (ImageView) findViewById(R.id.my_image);
+        String imgurl = "http://nazmul56.github.io/safe_image.jpg";
 
-      //  if(isConnected() ){
-
-            String imagename = "safe_image";
-            Bitmap b;
-            ImageView imageView = (ImageView) findViewById(R.id.my_image);
-            String imgurl ="http://nazmul56.github.io/safe_image.jpg";
-
-            if(ImageStorage.checkifImageExists(imagename, getBaseContext()))
-            {
-                File file = ImageStorage.getImage("/" + imagename + ".jpg", getBaseContext());
-                String path = file.getAbsolutePath();
-                if (path != null){
-                    b = BitmapFactory.decodeFile(path);
-                    imageView.setImageBitmap(b);
-                }
-
-            } else {
-                new GetImages(imgurl, imageView, imagename).execute() ;
+        if (ImageStorage.checkifImageExists(imagename, getBaseContext())) {
+            File file = ImageStorage.getImage("/" + imagename + ".jpg", getBaseContext());
+            String path = file.getAbsolutePath();
+            if (path != null) {
+                b = BitmapFactory.decodeFile(path);
+                imageView.setImageBitmap(b);
             }
 
-      //  }
-      ///  else{
-          //  OffLineData();
-
-
-      //  }
-
-
+        } else {
+            new GetImages(imgurl, imageView, imagename).execute();
+        }
     }
 
-
-    /** Check Internet Connection*/
+    /**
+     * Check Internet Connection
+     */
     public boolean isConnected() {
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Activity.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
@@ -86,46 +72,7 @@ public class ImageViewTest extends AppCompatActivity {
             return false;
     }
 
-
-
-    private class GetImages extends AsyncTask<Object, Object, Object> {
-        private String requestUrl, imagename_;
-        private ImageView view;
-        private Bitmap bitmap ;
-        private FileOutputStream fos;
-        private GetImages(String requestUrl, ImageView view, String _imagename_) {
-            this.requestUrl = requestUrl;
-            this.view = view;
-            this.imagename_ = _imagename_ ;
-        }
-
-        @Override
-        protected Object doInBackground(Object... objects) {
-            try {
-                URL url = new URL(requestUrl);
-                URLConnection conn = url.openConnection();
-                bitmap = BitmapFactory.decodeStream(conn.getInputStream());
-            } catch (Exception ex) {
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Object o) {
-            if(!ImageStorage.checkifImageExists(imagename_, getBaseContext()))
-            {
-                view.setImageBitmap(bitmap);
-               String status = ImageStorage.saveToSdCard(bitmap, imagename_, getBaseContext());
-                Toast.makeText(getBaseContext(), "Status : "+ status, Toast.LENGTH_LONG).show();
-            }
-        }
-    }
-
-
-
     public static class ImageStorage {
-
-
 
         public static String saveToSdCard(Bitmap bitmap, String filename, Context context) {
 
@@ -136,12 +83,12 @@ public class ImageViewTest extends AppCompatActivity {
 
             File sdcard = Environment.getDataDirectory();
             //return checkFile.toString() ;
-          //\  File f = new File("data/data/"+ "/databases");
-           // File folder = new File(sdcard.getAbsoluteFile(), "nazmul");//the dot makes this directory hidden to the user
+            //\  File f = new File("data/data/"+ "/databases");
+            // File folder = new File(sdcard.getAbsoluteFile(), "nazmul");//the dot makes this directory hidden to the user
             folder.mkdir();
-            File file = new File(folder.getAbsoluteFile(), filename + ".jpg") ;
+            File file = new File(folder.getAbsoluteFile(), filename + ".jpg");
             if (file.exists())
-                return stored ;
+                return stored;
 
             try {
 
@@ -158,7 +105,7 @@ public class ImageViewTest extends AppCompatActivity {
             return stored;
         }
 
-        public static File getImage(String imagename,Context context) {
+        public static File getImage(String imagename, Context context) {
 
             File mediaImage = null;
             try {
@@ -169,31 +116,60 @@ public class ImageViewTest extends AppCompatActivity {
                 if (!myDir.exists())
                     return null;
 
-                mediaImage = new File(myDir.getPath() + "/nazmul/"+imagename);
+                mediaImage = new File(myDir.getPath() + "/nazmul/" + imagename);
             } catch (Exception e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
             return mediaImage;
         }
-        public static boolean checkifImageExists(String imagename,Context context)
-        {
-            Bitmap b = null ;
+
+        public static boolean checkifImageExists(String imagename, Context context) {
+            Bitmap b = null;
             File file = ImageStorage.getImage("/" + imagename + ".jpg", context);
             String path = file.getAbsolutePath();
 
             if (path != null)
                 b = BitmapFactory.decodeFile(path);
 
-            if(b == null ||  b.equals(""))
-            {
-                return false ;
+            if (b == null || b.equals("")) {
+                return false;
             }
-            return true ;
+            return true;
         }
     }
 
+    private class GetImages extends AsyncTask<Object, Object, Object> {
+        private String requestUrl, imagename_;
+        private ImageView view;
+        private Bitmap bitmap;
+        private FileOutputStream fos;
 
+        private GetImages(String requestUrl, ImageView view, String _imagename_) {
+            this.requestUrl = requestUrl;
+            this.view = view;
+            this.imagename_ = _imagename_;
+        }
 
+        @Override
+        protected Object doInBackground(Object... objects) {
+            try {
+                URL url = new URL(requestUrl);
+                URLConnection conn = url.openConnection();
+                bitmap = BitmapFactory.decodeStream(conn.getInputStream());
+            } catch (Exception ex) {
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Object o) {
+            if (!ImageStorage.checkifImageExists(imagename_, getBaseContext())) {
+                view.setImageBitmap(bitmap);
+                String status = ImageStorage.saveToSdCard(bitmap, imagename_, getBaseContext());
+                Toast.makeText(getBaseContext(), "Status : " + status, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
 
 }

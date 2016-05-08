@@ -33,7 +33,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".ImageViewTest"
+            android:name=".ImageViewUse"
             android:label="@string/title_activity_image_view"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

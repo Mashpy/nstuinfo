@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent i = new Intent(getApplicationContext(), ImageViewTest.class);
+                Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
                 startActivity(i);
             }
         });
@@ -168,57 +168,45 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(), "OffLine Data!", Toast.LENGTH_LONG).show();
 
         String result;
-        try {
-            InputStream is = getAssets().open("json_string");
+        String file_name = "json_string";
+        if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name) == null) {
+            try {
+                InputStream is = getAssets().open("json_string");
 
-            // We guarantee that the available method returns the total
-            // size of the asset...  of course, this does mean that a single
-            // asset can't be more than 2 gigs.
-            int size = is.available();
+                // We guarantee that the available method returns the total
+                // size of the asset...  of course, this does mean that a single
+                // asset can't be more than 2 gigs.
+                int size = is.available();
 
-            // Read the entire asset into a local byte buffer.
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
+                // Read the entire asset into a local byte buffer.
+                byte[] buffer = new byte[size];
+                is.read(buffer);
+                is.close();
 
-            // Convert the buffer into a string.
-            result = new String(buffer);
+                // Convert the buffer into a string.
+                result = new String(buffer);
 
-        } catch (IOException e) {
-            // Should never happen!
-            throw new RuntimeException(e);
+                try {
+                    new offlineJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            } catch (IOException e) {
+                // Should never happen!
+                throw new RuntimeException(e);
+            }
         }
-
-
-
-
 
         try {
 
             String str = "";
 
-            String file_name = "json_string";
-
-            String name = getResources().getString(R.string.app_name);
-
-            try {
-                new offlineJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
             String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
 
             JSONObject json = new JSONObject(jsonString);
 
-            // JSONArray article_storage = json_storage.getJSONArray("articleList");
-
             JSONArray articles = json.getJSONArray("articleList");
-            str += "articles length = " + json.getJSONArray("articleList").length();//This section find the articleList
-            str += "\n--------\n";
-            str += "names: " + articles.getJSONObject(0).names();
-            str += "\n--------\n";
-            str += "url: " + articles.getJSONObject(1).getString("url");
 
             int jasonObjecLenth = json.getJSONArray("articleList").length();
             for (int i = 0; i < jasonObjecLenth; i++) {
@@ -228,14 +216,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
             mAdapter.notifyDataSetChanged();
-            // etResponse.setText(str);
-            //etResponse.setText(json.toString(1));
 
         } catch (JSONException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
+
 
     @Override
     protected void onPostResume() {
@@ -311,7 +298,6 @@ public class MainActivity extends AppCompatActivity {
 
                 String str = "";
 
-                // str=json.toString();
                 String file_name = "json_string";
 
                 try {
@@ -337,8 +323,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 mAdapter.notifyDataSetChanged();
-                // etResponse.setText(str);
-                //etResponse.setText(json.toString(1));
 
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
@@ -374,7 +358,6 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
 
         public String readJsonFileData(String filename) {
             try {
@@ -476,6 +459,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 
 }

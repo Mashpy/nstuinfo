@@ -1,8 +1,6 @@
 package com.mashpy.nstuinfo;
 
-/**
- * Created by Nazmul Haque on 24/10/16.
- */
+
 public class RecyclerData {
     private String title, genre, year, url;
 
