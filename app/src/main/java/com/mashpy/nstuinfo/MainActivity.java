@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
                 details.putExtra("url", recyclerData.getUrl());
                 startActivity(details);
 
-
             }
 
             @Override
@@ -120,9 +119,6 @@ public class MainActivity extends AppCompatActivity {
     private void prepareMovieData() {
 
         new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
-
-
-
 
     }
 
@@ -199,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
                 str += "names: "+articles.getJSONObject(0).names();
                 str += "\n--------\n";
                 str += "url: "+articles.getJSONObject(1).getString("url");
+                recyclerDataList.clear();
 
                 int jasonObjecLenth =json.getJSONArray("articleList").length();
                 for(int i = 0; i<jasonObjecLenth;i++) {
