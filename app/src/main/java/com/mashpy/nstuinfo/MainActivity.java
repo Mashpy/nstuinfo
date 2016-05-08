@@ -29,6 +29,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -94,8 +97,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }));
 
-        prepareMovieData();
-
+        if(isConnected() ){
+            prepareMovieData();
+        }
+        else{
+            OffLineData();
+        }
 
     }
 
@@ -109,6 +116,16 @@ public class MainActivity extends AppCompatActivity {
         else
             return false;
     }
+
+    private void prepareMovieData() {
+
+        new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
+
+
+
+
+    }
+
 
     public static String GET(String url){
         InputStream inputStream = null;
@@ -167,6 +184,14 @@ public class MainActivity extends AppCompatActivity {
                 String str = "";
 
                 // str=json.toString();
+                String file_name = "json_string";
+
+                try {
+                    new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
 
                 JSONArray articles = json.getJSONArray("articleList");
                 str += "articles length = "+json.getJSONArray("articleList").length();//This section find the articleList
@@ -195,12 +220,132 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void prepareMovieData() {
 
-        new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
-        
+    public void OffLineData(){
+
+        Toast.makeText(getBaseContext(), "OffLine Data!", Toast.LENGTH_LONG).show();
+        try {
+
+            String str = "";
+
+            String file_name = "json_string";
+
+            String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
+
+
+
+            JSONObject json = new JSONObject(jsonString);
+
+            // JSONArray article_storage = json_storage.getJSONArray("articleList");
+
+
+
+
+            JSONArray articles = json.getJSONArray("articleList");
+            str += "articles length = "+json.getJSONArray("articleList").length();//This section find the articleList
+            str += "\n--------\n";
+            str += "names: "+articles.getJSONObject(0).names();
+            str += "\n--------\n";
+            str += "url: "+articles.getJSONObject(1).getString("url");
+
+            int jasonObjecLenth =json.getJSONArray("articleList").length();
+            for(int i = 0; i<jasonObjecLenth;i++) {
+
+                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("title") , articles.getJSONObject(i).getString("categories"), "", articles.getJSONObject(i).getString("url"));
+                recyclerDataList.add(recyclerData);
+
+            }
+
+            mAdapter.notifyDataSetChanged();
+            // etResponse.setText(str);
+            //etResponse.setText(json.toString(1));
+
+        } catch (JSONException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+
+
     }
 
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+
+        recyclerDataList.clear();
+        OffLineData();
+
+    }
+
+
+    /** Store Data into file*/
+    public class ReadWriteJsonFileUtils {
+        Activity activity;
+        Context context;
+
+        public ReadWriteJsonFileUtils(Context context) {
+            this.context = context;
+        }
+
+        public void createJsonFileData(String filename, String mJsonResponse) {
+            try {
+                File checkFile = new File(context.getApplicationInfo().dataDir + "/new_directory_name/");
+                if (!checkFile.exists()) {
+                    checkFile.mkdir();
+                }
+                FileWriter file = new FileWriter(checkFile.getAbsolutePath() + "/" + filename);
+                file.write(mJsonResponse);
+                file.flush();
+                file.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public String readJsonFileData(String filename) {
+            try {
+                File f = new File(context.getApplicationInfo().dataDir + "/new_directory_name/" + filename);
+                if (!f.exists()) {
+                    // onNoResult();
+                    return null;
+                }
+                FileInputStream is = new FileInputStream(f);
+                int size = is.available();
+                byte[] buffer = new byte[size];
+                is.read(buffer);
+                is.close();
+                return new String(buffer);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            // onNoResult();
+            return null;
+        }
+
+        public void deleteFile() {
+            File f = new File(context.getApplicationInfo().dataDir + "/new_directory_name/");
+            File[] files = f.listFiles();
+            for (File fInDir : files) {
+                fInDir.delete();
+            }
+        }
+
+        public void deleteFile(String fileName) {
+            File f = new File(context.getApplicationInfo().dataDir + "/new_directory_name/" + fileName);
+            if (f.exists()) {
+                f.delete();
+            }
+        }
+    }
+
+    private String getHtmlData(Context context, String data)
+    {
+        String head = "<head><style>@font-face {font-family: 'verdana';src: url('file:///android_asset/fonts/verdana.ttf');}body {width=600;height=1024;margin:10px;font-family:'verdana';font-size:12px}</style></head>";
+        String htmlData= "<html>"+head+"<body>"+data+"</body></html>" ;
+        return htmlData;
+    }
     public interface ClickListener {
         void onClick(View view, int position);
 
