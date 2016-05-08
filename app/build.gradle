@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.mashpy.nstuinfo"
-        minSdkVersion 11
+        minSdkVersion 10
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0"
     }
     buildTypes {
         release {
