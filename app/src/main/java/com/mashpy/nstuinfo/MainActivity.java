@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 
         inputStream.close();
         return result;
-
     }
 
     @Override
@@ -103,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
+             //   Intent i = new Intent(getApplicationContext(),DetailsActivity_.class);
+
                 startActivity(i);
             }
         });
@@ -125,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 RecyclerData recyclerData = recyclerDataList.get(position);
                 Toast.makeText(getApplicationContext(), recyclerData.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
 
-                Intent details = new Intent(MainActivity.this, DetaitlsActivity.class);
+                Intent details = new Intent(MainActivity.this, DetailsActivity.class);
                 details.putExtra("url", recyclerData.getUrl());
                 startActivity(details);
 

@@ -3,4 +3,8 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_detaitls">Detaitls Activity</string>
     <string name="title_activity_image_view">Image View</string>
+
+    <string name="title_activity_details_activity_">DetailsActivity_</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

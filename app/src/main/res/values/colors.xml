@@ -6,4 +6,6 @@
 
     <color name="year">#999999</color>
     <color name="title">#222222</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>
