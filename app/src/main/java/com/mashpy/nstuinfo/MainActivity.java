@@ -102,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
-             //   Intent i = new Intent(getApplicationContext(),DetailsActivity_.class);
 
                 startActivity(i);
             }
@@ -160,7 +159,38 @@ public class MainActivity extends AppCompatActivity {
 
     private void prepareMovieData() {
 
-        new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
+        String result;
+        String file_name = "update";
+        if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name) == null) {
+            try {
+                InputStream is = getAssets().open("update");
+
+                // We guarantee that the available method returns the total
+                // size of the asset...  of course, this does mean that a single
+                // asset can't be more than 2 gigs.
+                int size = is.available();
+
+                // Read the entire asset into a local byte buffer.
+                byte[] buffer = new byte[size];
+                is.read(buffer);
+                is.close();
+
+                // Convert the buffer into a string.
+                result = new String(buffer);
+
+                try {
+                    new offlineJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            } catch (IOException e) {
+                // Should never happen!
+                throw new RuntimeException(e);
+            }
+        }
+        new HttpAsyncTask_ChackUpadte_data().execute("http://nazmul56.github.io/update.json");
+        //  new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
 
     }
 
@@ -231,6 +261,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerDataList.clear();
         OffLineData();
+
     }
 
 
@@ -284,6 +315,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+
         @Override
         protected String doInBackground(String... urls) {
 
@@ -324,6 +356,51 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 mAdapter.notifyDataSetChanged();
+
+            } catch (JSONException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private class HttpAsyncTask_ChackUpadte_data extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+
+            return GET(urls[0]);
+        }
+
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(String result) {
+            //  Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
+            try {
+                //JSON object from online
+                JSONObject json = new JSONObject(result);
+
+                String str = "";
+                JSONArray articles = json.getJSONArray("update");
+                String file_name = "update";
+
+                //JSON Object From package folde
+                String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
+                JSONObject json_previous = new JSONObject(jsonString);
+                JSONArray articles_previous = json_previous.getJSONArray("update");
+
+                Toast.makeText(getBaseContext(), articles.getJSONObject(0).getString("update_ver"), Toast.LENGTH_LONG).show();
+
+                if (Integer.parseInt(articles.getJSONObject(0).getString("update_ver")) > Integer.parseInt(articles_previous.getJSONObject(0).getString("update_ver"))) {
+
+                    try {
+                        new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
+
+
+                }
 
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
