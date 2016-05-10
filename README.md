@@ -62,12 +62,7 @@ http://stackoverflow.com/questions/18506374/the-best-way-to-caching-json
 
 http://stackoverflow.com/questions/15549421/how-to-download-and-save-an-image-in-android
 
-
-
-
-
-
-
+http://inducesmile.com/android/android-html-parser-using-jsoup-tutorial/
 ###Author
 Mashpy
 Nazmul Haque
