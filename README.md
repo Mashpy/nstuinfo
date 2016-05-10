@@ -26,7 +26,7 @@ You will get more information from http://nstuinfo.github.com/
 Download From- https://github.com/Mashpy/nstuinfo/releases/download/v1.3/NstuInfo2015.apk
 
 ### Version
-1.3
+3.0
 
 ### How to install the source code
 
