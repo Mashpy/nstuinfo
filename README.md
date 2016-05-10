@@ -63,8 +63,10 @@ http://stackoverflow.com/questions/18506374/the-best-way-to-caching-json
 http://stackoverflow.com/questions/15549421/how-to-download-and-save-an-image-in-android
 
 http://inducesmile.com/android/android-html-parser-using-jsoup-tutorial/
+
+http://www.survivingwithandroid.com/2014/04/parsing-html-in-android-with-jsoup-2.html
 ###Author
-Mashpy
+Mashpy \n
 Nazmul Haque
 ###License
 GNU
