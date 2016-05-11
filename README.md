@@ -69,7 +69,6 @@ http://www.survivingwithandroid.com/2014/04/parsing-html-in-android-with-jsoup-2
 http://stackoverflow.com/questions/14152205/android-how-do-i-parse-an-html-page
 
 ###Author
-Mashpy \n
-Nazmul Haque
+Mashpy & Nazmul Haque
 ###License
 GNU
