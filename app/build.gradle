@@ -26,4 +26,6 @@ dependencies {
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     compile 'com.android.support:support-v4:23.3.0'
+    compile 'org.jsoup:jsoup:1.8.3'
+
 }

@@ -7,4 +7,8 @@
     <string name="title_activity_details_activity_">DetailsActivity_</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name ="Html_activity" > Html Parser</string>
+
+    <string name="parse_html"> </string>
+    <string name="html_button">Click to get HTML Page Title</string>
 </resources>

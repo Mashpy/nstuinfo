@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
@@ -101,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
-
+             //   Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
+                Intent i = new Intent(getApplicationContext(),LivepageActivity.class);
                 startActivity(i);
             }
         });
@@ -375,7 +376,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             //  Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-            try {
+
+           try {
                 //JSON object from online
                 JSONObject json = new JSONObject(result);
 
@@ -398,7 +400,6 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
-
 
                 }
 
