@@ -6,7 +6,6 @@
 "menu_name": "Introduction",
 "root_path": "article",
 "menu_version": "1",
-"last_update":"1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
 },
 {
@@ -14,7 +13,6 @@
 "menu_name": "Regent",
 "root_path": "article",
 "menu_version": "1",
-"last_update": "1-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
 },
 {
@@ -22,7 +20,6 @@
 "menu_name": "Dept",
 "root_path": "article",
 "menu_version": "1",
-"last_update": "1-May-2016",
 "url": "https://nstuinfo.github.io/dept.html"
 }
 ]

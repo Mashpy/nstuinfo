@@ -381,16 +381,8 @@ public class MainActivity extends AppCompatActivity {
 
                 String str = "";
                 JSONArray articles = json.getJSONArray("articleList");
-               int jasonObjecLenth = json.getJSONArray("articleList").length();
+              // int jasonObjecLenth = json.getJSONArray("articleList").length();
                String file_name = "update";
-               for (int i = 0; i < jasonObjecLenth; i++) {
-
-                //   RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("title"), articles.getJSONObject(i).getString("categories"), "", articles.getJSONObject(i).getString("url"));
-                   articles.getJSONObject(i).getString("title");
-                   String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
-
-               }
-
 
                 //JSON Object From package folder
                 String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
