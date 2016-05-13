@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
@@ -368,7 +367,6 @@ public class MainActivity extends AppCompatActivity {
     private class HttpAsyncTask_ChackUpadte_data extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls) {
-
             return GET(urls[0]);
         }
 
@@ -376,7 +374,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             //  Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-
            try {
                 //JSON object from online
                 JSONObject json = new JSONObject(result);
@@ -385,7 +382,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONArray articles = json.getJSONArray("update");
                 String file_name = "update";
 
-                //JSON Object From package folde
+                //JSON Object From package folder
                 String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
                 JSONObject json_previous = new JSONObject(jsonString);
                 JSONArray articles_previous = json_previous.getJSONArray("update");
@@ -399,7 +396,7 @@ public class MainActivity extends AppCompatActivity {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
+                    new HttpAsyncTask().execute("http://nazmul56.github.io/get.json");
 
                 }
 
@@ -538,5 +535,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 }
