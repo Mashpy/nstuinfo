@@ -1,0 +1,27 @@
+{
+"version": "1",
+"update": [
+1,
+3
+],
+"article_list": [
+{
+"id": 1,
+"menu_name": "Introduction",
+"root_path": "article",
+"url": "https://nstuinfo.github.io/introduction.html"
+},
+{
+"id": 2,
+"menu_name": "Regent",
+"root_path": "article",
+"url": "https://nstuinfo.github.io/regent.html"
+},
+{
+"id": 3,
+"menu_name": "Dept",
+"root_path": "article",
+"url": "https://nstuinfo.github.io/dept.html"
+}
+]
+}
