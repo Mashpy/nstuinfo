@@ -19,7 +19,7 @@ import java.io.IOException;
 public class LivepageActivity extends ActionBarActivity {
 
     private Document htmlDocument;
-    private String htmlPageUrl = "http://nazmul56.github.io/html_read_test.html";
+    private String htmlPageUrl = "http://nstuinfo.github.io/introduction.html";
     private TextView parsedHtmlNode;
     private String htmlContentInStringFormat;
     private WebView webview;

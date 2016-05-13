@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void prepareMovieData() {
 
-        String result;
+       /* String result;
         String file_name = "update";
         if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name) == null) {
             try {
@@ -190,7 +190,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         new HttpAsyncTask_ChackUpadte_data().execute("http://nazmul56.github.io/update.json");
-        //  new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
+        */
+          new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
 
     }
 
@@ -379,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject json = new JSONObject(result);
 
                 String str = "";
-                JSONArray articles = json.getJSONArray("update");
+                JSONArray articles = json.getJSONArray("articleList");
                 String file_name = "update";
 
                 //JSON Object From package folder
