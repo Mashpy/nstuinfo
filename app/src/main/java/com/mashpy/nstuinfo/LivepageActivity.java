@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class LivepageActivity extends ActionBarActivity {
     private String htmlPageUrl = "http://nazmul56.github.io/html_read_test.html";
     private TextView parsedHtmlNode;
     private String htmlContentInStringFormat;
+    private WebView webview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +31,16 @@ public class LivepageActivity extends ActionBarActivity {
 
         parsedHtmlNode = (TextView)findViewById(R.id.html_content);
         Button htmlTitleButton = (Button)findViewById(R.id.button);
+        webview = (WebView) findViewById(R.id.wv);
+        webview.getSettings().setJavaScriptEnabled(true);
+
         htmlTitleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
                 jsoupAsyncTask.execute();
+
             }
         });
     }
@@ -78,7 +85,12 @@ public class LivepageActivity extends ActionBarActivity {
 
         @Override
         protected void onPostExecute(Void result) {
-            parsedHtmlNode.setText(htmlContentInStringFormat);
+            //parsedHtmlNode.setText(htmlContentInStringFormat);
+            webview.getSettings().setJavaScriptEnabled(true);
+
+            webview.loadDataWithBaseURL(null, htmlContentInStringFormat, "text/html", "utf-8", "about:blank");
+
+
         }
     }
 }

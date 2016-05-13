@@ -27,4 +27,11 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/html_content"
+        android:id="@+id/wv">
+
+    </WebView>
 </RelativeLayout>
