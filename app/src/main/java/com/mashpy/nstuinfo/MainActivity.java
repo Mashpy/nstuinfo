@@ -356,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
                             jsoupAsyncTask.execute(htmlPageUrl,html_file_name);
 
                     }
-                    Toast.makeText(getBaseContext(), "Update All", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Update All data", Toast.LENGTH_LONG).show();
 
                     String file_name = "json_string";
                     try {
