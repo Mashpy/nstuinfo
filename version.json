@@ -16,6 +16,119 @@
 "menu_version": "1",
 "last_update": "1-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
+},
+{
+"id": 3,
+"menu_name": "Academic Council",
+"root_path": "academic_council",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/academic_council.html"
+},
+{
+"id": 4,
+"menu_name": "Committees",
+"root_path": "committees",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/committes.html"
+},
+{
+"id": 5,
+"menu_name": "Register office",
+"root_path": "register_office",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/registraroffice.html"
+},
+{
+"id": 6,
+"menu_name": "Central Library",
+"root_path": "central_library",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/Central_library.html"
+},
+{
+"id": 7,
+"menu_name": "Departments & Teachers",
+"root_path": "dept_teacher",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/department.html"
+},
+{
+"id": 8,
+"menu_name": "Class Representative",
+"root_path": "cr",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/CR.html"
+},
+{
+"id": 9,
+"menu_name": "Academic Calendar",
+"root_path": "academic_calender",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/academic_calendar.html"
+},
+{
+"id": 10,
+"menu_name": "Academic Officiary",
+"root_path": "academic_officiary",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/Academic_officiary.html"
+},
+{
+"id": 11,
+"menu_name": "Administrative",
+"root_path": "administrative",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/administrative.html"
+},
+{
+"id": 12,
+"menu_name": "Student Activities",
+"root_path": "student_activities",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/student_activities.html"
+},
+{
+"id": 13,
+"menu_name": "Transport Section",
+"root_path": "transport_section",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/transport_section.html"
+},
+{
+"id": 14,
+"menu_name": "Hall Office",
+"root_path": "hall_office",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/halloffice.html"
+},
+{
+"id": 15,
+"menu_name": "Emergency Contacts",
+"root_path": "emergency_contacts",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/emergency.html"
+},
+{
+"id": 16,
+"menu_name": "Message From Developer",
+"root_path": "message_from_developer",
+"menu_version": "1",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/message_developer.html"
 }
+
 ]
 }
