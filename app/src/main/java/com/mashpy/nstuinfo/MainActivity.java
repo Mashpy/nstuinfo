@@ -27,6 +27,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     private List<RecyclerData> recyclerDataList = new ArrayList<>();
     private RecyclerView recyclerView;
     private RecyclerDataAdapter mAdapter;
+
+
 
     public static String GET(String url) {
         InputStream inputStream = null;
@@ -191,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
         }
         new HttpAsyncTask_ChackUpadte_data().execute("http://nazmul56.github.io/update.json");
         */
-          new HttpAsyncTask().execute("http://nazmul56.github.io/nget.json");
+          new HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
 
     }
 
@@ -238,12 +242,12 @@ public class MainActivity extends AppCompatActivity {
 
             JSONObject json = new JSONObject(jsonString);
 
-            JSONArray articles = json.getJSONArray("articleList");
+            JSONArray articles = json.getJSONArray("article_list");
 
-            int jasonObjecLenth = json.getJSONArray("articleList").length();
+            int jasonObjecLenth = json.getJSONArray("article_list").length();
             for (int i = 0; i < jasonObjecLenth; i++) {
 
-                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("title"), articles.getJSONObject(i).getString("categories"), "", articles.getJSONObject(i).getString("url"));
+                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("url"));
                 recyclerDataList.add(recyclerData);
 
             }
@@ -330,9 +334,31 @@ public class MainActivity extends AppCompatActivity {
             try {
                 JSONObject json = new JSONObject(result);
 
+
+                JSONArray articles = json.getJSONArray("article_list");
+                int jasonObjecLenth = json.getJSONArray("article_list").length();
+                for (int i = 0; i<jasonObjecLenth; i++) {
+
+
+                   /* RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("url"));
+                    recyclerDataList.add(recyclerData);*/
+                    String html_file_name = articles.getJSONObject(i).getString("root_path");
+                    String htmlPageUrl = articles.getJSONObject(i).getString("url");
+                  Document  htmlDocument = Jsoup.connect(htmlPageUrl).get();
+                    String htmlContentInStringFormat = htmlDocument.toString();
+                    try {
+                        new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(html_file_name, htmlContentInStringFormat);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+
                 String str = "";
 
                 String file_name = "json_string";
+
 
                 try {
                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
@@ -341,18 +367,13 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-                JSONArray articles = json.getJSONArray("articleList");
-                str += "articles length = " + json.getJSONArray("articleList").length();//This section find the articleList
-                str += "\n--------\n";
-                str += "names: " + articles.getJSONObject(0).names();
-                str += "\n--------\n";
-                str += "url: " + articles.getJSONObject(1).getString("url");
+
                 recyclerDataList.clear();
 
-                int jasonObjecLenth = json.getJSONArray("articleList").length();
+
                 for (int i = 0; i < jasonObjecLenth; i++) {
 
-                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("title"), articles.getJSONObject(i).getString("categories"), "", articles.getJSONObject(i).getString("url"));
+                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("url"));
                     recyclerDataList.add(recyclerData);
 
                 }
@@ -360,6 +381,8 @@ public class MainActivity extends AppCompatActivity {
 
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
@@ -381,8 +404,16 @@ public class MainActivity extends AppCompatActivity {
 
                 String str = "";
                 JSONArray articles = json.getJSONArray("articleList");
-              // int jasonObjecLenth = json.getJSONArray("articleList").length();
+               int jasonObjecLenth = json.getJSONArray("articleList").length();
                String file_name = "update";
+               for (int i = 0; i < jasonObjecLenth; i++) {
+
+                //   RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("title"), articles.getJSONObject(i).getString("categories"), "", articles.getJSONObject(i).getString("url"));
+                   articles.getJSONObject(i).getString("title");
+                   String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
+
+               }
+
 
                 //JSON Object From package folder
                 String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);

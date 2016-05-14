@@ -4,7 +4,7 @@
 {
 "id": 1,
 "menu_name": "Introduction",
-"root_path": "article",
+"root_path": "intruduction",
 "menu_version": "1",
 "last_update":"1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
@@ -12,18 +12,10 @@
 {
 "id": 2,
 "menu_name": "Regent Board",
-"root_path": "article",
+"root_path": "regentboard",
 "menu_version": "1",
 "last_update": "1-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
-},
-{
-"id": 3,
-"menu_name": "Dept",
-"root_path": "article",
-"menu_version": "1",
-"last_update": "1-May-2016",
-"url": "https://nstuinfo.github.io/dept.html"
 }
 ]
 }
