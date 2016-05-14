@@ -203,9 +203,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OffLineData() {
-
-        Toast.makeText(getBaseContext(), "OffLine Data!", Toast.LENGTH_LONG).show();
-
         String result;
         String file_name = "json_string";
         if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name) == null) {
@@ -333,8 +330,7 @@ public class MainActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-            try {
+             try {
                 /**Online JSON read*/
                 JSONObject json = new JSONObject(result);
                 JSONArray articles = json.getJSONArray("article_list");
@@ -344,13 +340,13 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject json_previous = new JSONObject(jsonString_previous);
                 JSONArray articles_previous = json_previous.getJSONArray("article_list");
                 /** JSON Version*/
-                JSONObject online_verson_obj = json.getJSONObject("version");
-                double online_ver =  Double.parseDouble(online_verson_obj.toString());
+                String online_ver_string = (String) json.get("version");
+                String offline_ver_string = (String) json_previous.get("version");
 
-                JSONObject offline_verson_obj = json.getJSONObject("version");
-                double offline_ver =  Double.parseDouble(offline_verson_obj.toString());
+                float online_ver = Float.parseFloat(online_ver_string);
+                float offline_ver = Float.parseFloat(offline_ver_string);
 
-                if(online_ver>offline_ver)
+               if(online_ver>offline_ver)
                 {
                     for (int i = 0; i<online_jasonObjectLenth; i++) {
                         String html_file_name = articles.getJSONObject(i).getString("root_path");
@@ -360,6 +356,8 @@ public class MainActivity extends AppCompatActivity {
                             jsoupAsyncTask.execute(htmlPageUrl,html_file_name);
 
                     }
+                    Toast.makeText(getBaseContext(), "Update All", Toast.LENGTH_LONG).show();
+
                     String file_name = "json_string";
                     try {
                         new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
@@ -376,8 +374,10 @@ public class MainActivity extends AppCompatActivity {
                             jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
                         }
                     }
-                }
-                
+                   Toast.makeText(getBaseContext(), "Update Single", Toast.LENGTH_LONG).show();
+
+               }
+
                 recyclerDataList.clear();
 
                 for (int i = 0; i < online_jasonObjectLenth; i++) {
