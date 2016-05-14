@@ -33,13 +33,13 @@ public class DetailsActivity extends AppCompatActivity {
         String UrlFrom_MainActivity = getIntent().getStringExtra("url");
 
         //Texting
-        String file_name = "json_string";
+        String file_name = "intruduction";
 
         String html = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
 
-        //detatils_wv.loadDataWithBaseURL(null, html, "text/html", "utf-8", "about:blank");
+        detatils_wv.loadDataWithBaseURL(null, html, "text/html", "utf-8", "about:blank");
        // URLtv.setText(Html.fromHtml(html));
-        URLtv.setText(html);
+       // URLtv.setText(html);
         // Making url clickable
         URLtv.setMovementMethod(LinkMovementMethod.getInstance());
         URLtv.setVisibility(View.VISIBLE);

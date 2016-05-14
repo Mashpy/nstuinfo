@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     private List<RecyclerData> recyclerDataList = new ArrayList<>();
     private RecyclerView recyclerView;
     private RecyclerDataAdapter mAdapter;
+    private Document htmlDocument;
+    private String htmlContentInStringFormat;
+    private String htmlPageUrl = "http://nstuinfo.github.io/introduction.html";
 
 
 
@@ -342,17 +345,13 @@ public class MainActivity extends AppCompatActivity {
 
                    /* RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("url"));
                     recyclerDataList.add(recyclerData);*/
-                    String html_file_name = articles.getJSONObject(i).getString("root_path");
-                    String htmlPageUrl = articles.getJSONObject(i).getString("url");
-                  Document  htmlDocument = Jsoup.connect(htmlPageUrl).get();
-                    String htmlContentInStringFormat = htmlDocument.toString();
-                    try {
-                        new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(html_file_name, htmlContentInStringFormat);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                   String html_file_name = articles.getJSONObject(i).getString("root_path");
+                    htmlPageUrl = articles.getJSONObject(i).getString("url");
+
 
                 }
+                JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                jsoupAsyncTask.execute();
 
 
                 String str = "";
@@ -382,9 +381,44 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
+            }
+        }
+    }
+
+    private class JsoupAsyncTask extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                htmlDocument = Jsoup.connect(htmlPageUrl).get();
+                htmlContentInStringFormat = htmlDocument.toString();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            //parsedHtmlNode.setText(htmlContentInStringFormat);
+            //webview.getSettings().setJavaScriptEnabled(true);
+
+          //  webview.loadDataWithBaseURL(null, htmlContentInStringFormat, "text/html", "utf-8", "about:blank");
+            String file = "intruduction";
+            try {
+                new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file,htmlContentInStringFormat);
+            } catch (Exception e) {
+                e.printStackTrace();
+
+            }
+           // Toast.makeText(getBaseContext(), htmlContentInStringFormat, Toast.LENGTH_LONG).show();
+
+
         }
     }
 
