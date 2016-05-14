@@ -68,6 +68,8 @@ http://www.survivingwithandroid.com/2014/04/parsing-html-in-android-with-jsoup-2
 
 http://stackoverflow.com/questions/14152205/android-how-do-i-parse-an-html-page
 
+https://examples.javacodegeeks.com/core-java/json/java-json-parser-example/
+
 ###Author
 Mashpy & Nazmul Haque
 ###License
