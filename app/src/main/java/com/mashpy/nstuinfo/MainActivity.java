@@ -335,42 +335,52 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
             try {
+                /**Online JSON read*/
                 JSONObject json = new JSONObject(result);
-
-
                 JSONArray articles = json.getJSONArray("article_list");
-                int jasonObjecLenth = json.getJSONArray("article_list").length();
-                for (int i = 0; i<jasonObjecLenth; i++) {
+                int online_jasonObjectLenth = json.getJSONArray("article_list").length();
+                /**Offline Stored JSON read*/
+                String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
+                JSONObject json_previous = new JSONObject(jsonString_previous);
+                JSONArray articles_previous = json_previous.getJSONArray("article_list");
+                /** JSON Version*/
+                JSONObject online_verson_obj = json.getJSONObject("version");
+                double online_ver =  Double.parseDouble(online_verson_obj.toString());
 
+                JSONObject offline_verson_obj = json.getJSONObject("version");
+                double offline_ver =  Double.parseDouble(offline_verson_obj.toString());
 
-                   /* RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("url"));
-                    recyclerDataList.add(recyclerData);*/
-                   String html_file_name = articles.getJSONObject(i).getString("root_path");
-                   String  htmlPageUrl = articles.getJSONObject(i).getString("url");
+                if(online_ver>offline_ver)
+                {
+                    for (int i = 0; i<online_jasonObjectLenth; i++) {
+                        String html_file_name = articles.getJSONObject(i).getString("root_path");
+                        String  htmlPageUrl = articles.getJSONObject(i).getString("url");
 
-                    JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                    jsoupAsyncTask.execute(htmlPageUrl,html_file_name);
+                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                            jsoupAsyncTask.execute(htmlPageUrl,html_file_name);
+
+                    }
+                    String file_name = "json_string";
+                    try {
+                        new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }else {
+                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                        String html_file_name = articles.getJSONObject(i).getString("root_path");
+                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
+                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                            jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
+                        }
+                    }
                 }
-
-
-
-                String str = "";
-
-                String file_name = "json_string";
-
-
-                try {
-                    new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-
-
+                
                 recyclerDataList.clear();
 
-
-                for (int i = 0; i < jasonObjecLenth; i++) {
+                for (int i = 0; i < online_jasonObjectLenth; i++) {
 
                     RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
                     recyclerDataList.add(recyclerData);
@@ -406,20 +416,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            //parsedHtmlNode.setText(htmlContentInStringFormat);
-            //webview.getSettings().setJavaScriptEnabled(true);
-
-          //  webview.loadDataWithBaseURL(null, htmlContentInStringFormat, "text/html", "utf-8", "about:blank");
 
             try {
                 new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(htmlfile_name,htmlContentInStringFormat);
             } catch (Exception e) {
                 e.printStackTrace();
-
             }
-           // Toast.makeText(getBaseContext(), htmlContentInStringFormat, Toast.LENGTH_LONG).show();
-
-
         }
     }
 
@@ -449,14 +451,12 @@ public class MainActivity extends AppCompatActivity {
 
                }
 
-
                 //JSON Object From package folder
                 String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
                 JSONObject json_previous = new JSONObject(jsonString);
                 JSONArray articles_previous = json_previous.getJSONArray("update");
 
                 Toast.makeText(getBaseContext(), articles.getJSONObject(0).getString("update_ver"), Toast.LENGTH_LONG).show();
-
                 if (Integer.parseInt(articles.getJSONObject(0).getString("update_ver")) > Integer.parseInt(articles_previous.getJSONObject(0).getString("update_ver"))) {
 
                     try {

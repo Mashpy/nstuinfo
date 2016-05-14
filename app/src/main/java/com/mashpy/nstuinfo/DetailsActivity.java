@@ -37,8 +37,15 @@ public class DetailsActivity extends AppCompatActivity {
 
         String html = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
 
-        detatils_wv.loadDataWithBaseURL(null, html, "text/html", "utf-8", "about:blank");
-       // URLtv.setText(Html.fromHtml(html));
+        if(html==null)
+        {
+            detatils_wv.loadDataWithBaseURL(null, "Please Connect to Internet ", "text/html", "utf-8", "about:blank");
+        }
+        else
+        {
+            detatils_wv.loadDataWithBaseURL(null, html, "text/html", "utf-8", "about:blank");
+        }
+         // URLtv.setText(Html.fromHtml(html));
        // URLtv.setText(html);
         // Making url clickable
         URLtv.setMovementMethod(LinkMovementMethod.getInstance());
