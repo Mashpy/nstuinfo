@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
     public static String GET(String url) {
         InputStream inputStream = null;
         String result = "";
+        int a =10;
+
         try {
 
             // create HttpClient
