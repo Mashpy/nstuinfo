@@ -7,8 +7,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -50,15 +48,10 @@ public class MainActivity extends AppCompatActivity {
     private String htmlContentInStringFormat;
     private String htmlfile_name;
 
-
-
     public static String GET(String url) {
         InputStream inputStream = null;
         String result = "";
-        int a =10;
-
         try {
-
             // create HttpClient
             HttpClient httpclient = new DefaultHttpClient();
 
@@ -104,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),LivepageActivity.class);
                 startActivity(i);
             }
-        });
+        });*/
 
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -132,8 +125,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view, int position) {
                 RecyclerData recyclerData = recyclerDataList.get(position);
-                Toast.makeText(getApplicationContext(), recyclerData.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
-
                 Intent details = new Intent(MainActivity.this, DetailsActivity.class);
                 details.putExtra("root_path", recyclerData.getUrl());
                 startActivity(details);
@@ -168,39 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void prepareMovieData() {
 
-       /* String result;
-        String file_name = "update";
-        if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name) == null) {
-            try {
-                InputStream is = getAssets().open("update");
-
-                // We guarantee that the available method returns the total
-                // size of the asset...  of course, this does mean that a single
-                // asset can't be more than 2 gigs.
-                int size = is.available();
-
-                // Read the entire asset into a local byte buffer.
-                byte[] buffer = new byte[size];
-                is.read(buffer);
-                is.close();
-
-                // Convert the buffer into a string.
-                result = new String(buffer);
-
-                try {
-                    new offlineJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-            } catch (IOException e) {
-                // Should never happen!
-                throw new RuntimeException(e);
-            }
-        }
-        new HttpAsyncTask_ChackUpadte_data().execute("http://nazmul56.github.io/update.json");
-        */
-          new HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
+        new HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
 
     }
 
@@ -332,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-             try {
+            try {
                 /**Online JSON read*/
                 JSONObject json = new JSONObject(result);
                 JSONArray articles = json.getJSONArray("article_list");
@@ -348,14 +307,13 @@ public class MainActivity extends AppCompatActivity {
                 float online_ver = Float.parseFloat(online_ver_string);
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
-               if(online_ver>offline_ver)
-                {
-                    for (int i = 0; i<online_jasonObjectLenth; i++) {
+                if (online_ver > offline_ver) {
+                    for (int i = 0; i < online_jasonObjectLenth; i++) {
                         String html_file_name = articles.getJSONObject(i).getString("root_path");
-                        String  htmlPageUrl = articles.getJSONObject(i).getString("url");
+                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
 
-                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                            jsoupAsyncTask.execute(htmlPageUrl,html_file_name);
+                        JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                        jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
 
                     }
                     Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
@@ -367,7 +325,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                }else {
+                } else {
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
                         String html_file_name = articles.getJSONObject(i).getString("root_path");
                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
@@ -376,9 +334,8 @@ public class MainActivity extends AppCompatActivity {
                             jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
                         }
                     }
-                   Toast.makeText(getBaseContext(), "Update Single data", Toast.LENGTH_LONG).show();
 
-               }
+                }
 
                 recyclerDataList.clear();
 
@@ -420,7 +377,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
 
             try {
-                new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(htmlfile_name,htmlContentInStringFormat);
+                new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(htmlfile_name, htmlContentInStringFormat);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -437,43 +394,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             //  Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-           try {
-                //JSON object from online
-                JSONObject json = new JSONObject(result);
 
-                String str = "";
-                JSONArray articles = json.getJSONArray("articleList");
-               int jasonObjecLenth = json.getJSONArray("articleList").length();
-               String file_name = "update";
-               for (int i = 0; i < jasonObjecLenth; i++) {
-
-                //   RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("title"), articles.getJSONObject(i).getString("categories"), "", articles.getJSONObject(i).getString("url"));
-                   articles.getJSONObject(i).getString("title");
-                   String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
-
-               }
-
-                //JSON Object From package folder
-                String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
-                JSONObject json_previous = new JSONObject(jsonString);
-                JSONArray articles_previous = json_previous.getJSONArray("update");
-
-                Toast.makeText(getBaseContext(), articles.getJSONObject(0).getString("update_ver"), Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(articles.getJSONObject(0).getString("update_ver")) > Integer.parseInt(articles_previous.getJSONObject(0).getString("update_ver"))) {
-
-                    try {
-                        new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    new HttpAsyncTask().execute("http://nazmul56.github.io/get.json");
-
-                }
-
-            } catch (JSONException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
         }
     }
 

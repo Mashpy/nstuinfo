@@ -39,7 +39,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         if(html==null)
         {
-            detatils_wv.loadDataWithBaseURL(null, "Please Connect to Internet ", "text/html", "utf-8", "about:blank");
+            detatils_wv.loadDataWithBaseURL(null, "Reload Please ", "text/html", "utf-8", "about:blank");
         }
         else
         {
