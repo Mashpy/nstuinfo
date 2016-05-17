@@ -1,0 +1,208 @@
+<html>
+ <head>
+  <style type="text/css">.infoclass{ font-size:15px;padding:8px; margin-bottom:3px; border-radius: 3px;  background-color:white;-webkit-box-shadow: inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);
+-moz-box-shadow:    inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);
+box-shadow:         inset 0px 0px 2px 0px rgba(49, 50, 50, 0.67);}
+body{background-color:#f5f5f5; font-family:serif; line-height:1.3em; border:3px solid #29b6f6; 	border-radius: 6px; padding:3px; padding-top:8px }
+p{font-size:15px}
+.headertitle{width:100%; font-size: 17px; background:#29b6f6; color:#FFFFFF; border-radius: 3px; text-align: center}
+.maintitle{font-weight:bold;width:100%; font-size: 16px; background:#039be5; color:#FFFFFF; border-radius: 15px;padding-top:10px; padding-bottom:10px; text-align: center; margin-bottom:10px}
+.telephone {
+    background-image: url("http://i61.tinypic.com/n6xtmw.png");
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    color: black;
+    padding-bottom: 3px;
+    padding-left: 22px;
+    text-decoration: none;
+    padding-top: 2px;
+}
+.telephone:hover{color:#29b6f6}
+.email {
+    background-image: url("http://i60.tinypic.com/dqm2cy.png");
+    background-position: 3px 3px;
+    background-repeat: no-repeat;
+    background-size: 18px auto;
+    color: black;
+    padding-bottom: 3px;
+    padding-left: 22px;
+    padding-top: 2px;
+    text-decoration: none;
+}
+.email:hover{color:#29b6f6}
+</style> 
+ </head>
+ <body>
+  <div class="maintitle">
+   Regent Board
+  </div> 
+  <div class="headertitle">
+   Chairman
+  </div> 
+  <div class="infoclass">
+   <strong>Vice Chancellor</strong>
+   <br> Telephone: 
+   <a class="telephone" href="tel:+880-321-62833">+880-321-62833</a>, 
+   <a class="telephone" href="tel:62733">62733</a>, 
+   <a class="telephone" href="tel:62655">62655</a>
+  </div> 
+  <div class="headertitle">
+   Members:
+  </div> 
+  <ul> 
+   <li><span style="font-size:14px;">Two parliamentary members nominated by parliament leader, one of them should be from greater Noakhali region:</span></li> 
+  </ul> 
+  <div class="infoclass">
+   <strong>Mr. Mohammed Ekramul Karim Chowdhury</strong>
+   <br> MP Noakhali-4, Noakhali.
+   <br> Mobile: 
+   <a class="telephone" href="tel:01713210140">01713210140</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Mr. A.B.M Fazle Karim Chowdhury</strong>
+   <br> MP Chittagong-6, Chittagong
+   <br> Mobile: 
+   <a class="telephone" href="tel:01726000480">01726000480</a>
+  </div> 
+  <ul> 
+   <li><span style="font-size:14px;">Two members of joint-secretary rank nominated by the government.</span></li> 
+  </ul> 
+  <div class="infoclass">
+   <strong>Additional Secretary (Development) Ministry of Education</strong>,
+   <br> The People’s Republic of Bangladesh Government Bangladesh Secretariat,
+   <br> Dhaka-1000.
+   <br> Telephone: 
+   <a class="telephone" href="tel:+88029556789">+880-2-9556789</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Additional Secretary (University) Ministry of Education</strong>,
+   <br> The People’s Republic of Bangladesh Government Bangladesh Secretariat,
+   <br> Dhaka-1000.
+   <br> Telephone: 
+   <a class="telephone" href="tel:+88029512282">+880-2-9512282</a>
+  </div> 
+  <ul> 
+   <li><span style="font-size:14px;">Three members from the research institute of Science and Technology Affairs nominated by the government.</span></li> 
+  </ul> 
+  <div class="infoclass">
+   <strong>Prof. Dr. A. I. Mustafa</strong>
+   <br> Chairman,
+   <br> BCSIR.
+   <br> Dr. Qudrat-E-Khuda road,
+   <br> Dhanmondi, Dhaka-1205.
+   <br> Telephone: +880-2-8613511
+   <br> Mobile: 
+   <a class="telephone" href="tel:01819240980">01819240980</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Dr. Md. Rafiqul Islam Mondal</strong>
+   <br> Director-General
+   <br> Bangladesh Agriculture Research Institute (BARI) Joydebpur, Gazipur.
+   <br> Phone: 
+   <a class="telephone" href="tel:8158327">8158327</a>, 
+   <a class="telephone" href="tel:9124184">9124184</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Prof. Dr. A. S. M. Maksud Kamal</strong>
+   <br> Chairman
+   <br> Department of Disaster Science and Management Dhaka University, Dhaka-1000.
+   <br> Phone: 
+   <a class="telephone" href="tel:01937894557">01937894557</a>
+  </div> 
+  <ul> 
+   <li><span style="font-size:14px;">Three prominent educationist nominated by the Chancellor.</span></li> 
+  </ul> 
+  <div class="infoclass">
+   <strong>Prof. Dr. Md. Abdul Mannan Akondo</strong>
+   <br> Department of Plant Pathology
+   <br> Bangabandhu Sheikh Mujibur Rahman Agricultural University. Gazipur.
+   <br> Phone: 
+   <a class="telephone" href="tel:9205336">9205336</a>
+   <br> Mobile: 
+   <a class="telephone" href="tel:01755593159">01755593159</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Prof. Dr. Shariff Enamul Kabir</strong>
+   <br> Department of Chemistry
+   <br> Jahangirnagar University Savar, Dhaka.
+   <br> Phone: 
+   <a class="telephone" href="tel:01713464698">01713464698</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Prof. Dr. Amir Hossain Khan</strong>
+   <br> Department of Physics
+   <br> Jahangirnagar University Savar, Dhaka.
+   <br> Phone: 
+   <a class="telephone" href="tel:01911021808">01911021808</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Chairman</strong>
+   <br> Intermediate and Secondary Education Boards,
+   <br> Chittagong,
+   <br> Bangladesh Chairman Intermediate and Secondary Education Board.
+   <br> Chittagong.
+   <br> Phone: 
+   <a class="telephone" href="tel:031670125">031-670125</a>
+   <br> Phone: 
+   <a class="telephone" href="tel:01711723224">01711723224</a>
+  </div> 
+  <ul> 
+   <li><span style="font-size:14px;">Three representatives from the teachers of this university nominated by the academic council.</span></li> 
+  </ul> 
+  <div class="infoclass">
+   <strong>Dean</strong>
+   <br> Faculty of Science
+   <br> Phone: 
+   <a class="telephone" href="tel:62823">62823</a>
+   <br> Mobile: 
+   <a class="telephone" href="tel:01713012916">01713012916</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Dr. Md. Jahangir Sarkar</strong>
+   <br> Associate Professor
+   <br> Department of Fisheries and Marine Science
+   <br> Mobile: 
+   <a class="telephone" href="tel:01733910237">01733910237</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Dr. Md. Selim Hossain</strong>
+   <br> Associate Professor
+   <br> Department of Pharmacy
+   <br> Mobile: 
+   <a class="telephone" href="tel:01711200410">01711200410</a>
+  </div> 
+  <ul> 
+   <li><span style="font-size:14px;">Members from industries and business personality nominated by the government.</span></li> 
+  </ul> 
+  <div class="infoclass">
+   <strong>Md. Mamunur Rashid Kiron</strong>
+   <br> Director-General
+   <br> Globe Pharmaceuticals Group of Companies Limited.
+   <br> Chowmuhoni, Noakhali.
+   <br> Phone: 
+   <a class="telephone" href="tel:52079">52079</a>
+   <br> Mobile: 
+   <a class="telephone" href="tel:01817211113">01817211113</a>
+  </div> 
+  <ul> 
+   <li><span style="font-size:14px;">Two members of the rank of principal and professor from different institutes of greater Noakhali region nominated by the academic council.</span></li> 
+  </ul> 
+  <div class="infoclass">
+   <strong>Principal</strong>
+   <br> Noakhali Govt. College. Noakhali
+   <br> Phone: 
+   <a class="telephone" href="tel:61594">61594</a>
+   <br> Mobile: 
+   <a class="telephone" href="tel:01718862934">01718862934</a>
+  </div> 
+  <div class="infoclass">
+   <strong>Principal</strong>
+   <br> Noakhali Govt Women College. Noakhali.
+   <br> Phone: 
+   <a class="telephone" href="tel:61198">61198</a>
+   <br> Mobile: 
+   <a class="telephone" href="tel:01711022540">01711022540</a>
+  </div> 
+ </body>
+</html>

@@ -32,8 +32,7 @@ public class DetailsActivity extends AppCompatActivity {
         detatils_wv.getSettings().setJavaScriptEnabled(true);
         String file_name= getIntent().getStringExtra("root_path");
 
-        //Texting
-        //String file_name = "intruduction";
+
 
         String html = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
 
