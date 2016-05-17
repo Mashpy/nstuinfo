@@ -1,7 +1,9 @@
 package com.mashpy.nstuinfo;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
     private Document htmlDocument;
     private String htmlContentInStringFormat;
     private String htmlfile_name;
+
+    private ProgressDialog progress;
 
     public static String GET(String url) {
         InputStream inputStream = null;
@@ -104,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
              //   Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
-                Intent i = new Intent(getApplicationContext(),LivepageActivity.class);
+
                 startActivity(i);
             }
         });*/
@@ -210,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
             int jasonObjecLenth = json.getJSONArray("article_list").length();
             for (int i = 0; i < jasonObjecLenth; i++) {
 
-                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
+                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "V:"+articles.getJSONObject(i).getString("menu_version"), articles.getJSONObject(i).getString("root_path"));
                 recyclerDataList.add(recyclerData);
 
             }
@@ -258,8 +262,43 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
 
+    public void download(){
+        progress=new ProgressDialog(this);
+        progress.setMessage("Downloading Updated Data");
+        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progress.setCancelable(true);
+       // progress.setIndeterminate(true);
+        progress.setProgress(0);
+        progress.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        progress.show();
 
+        final int totalProgressTime = 100;
+        final Thread t = new Thread() {
+            @Override
+            public void run() {
+                int jumpTime = 0;
+
+                while(jumpTime < totalProgressTime) {
+                    try {
+                        sleep(200);
+                        jumpTime += 5;
+                        progress.setProgress(jumpTime);
+                    }
+                    catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+        t.start();
     }
 
 
@@ -351,6 +390,10 @@ public class MainActivity extends AppCompatActivity {
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
                 if (online_ver > offline_ver) {
+                    download();
+                }
+
+                if (online_ver > offline_ver) {
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
                         String html_file_name = articles.getJSONObject(i).getString("root_path");
                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
@@ -379,15 +422,15 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-
                 recyclerDataList.clear();
 
                 for (int i = 0; i < online_jasonObjectLenth; i++) {
 
-                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
+                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "V:"+articles.getJSONObject(i).getString("menu_version"), articles.getJSONObject(i).getString("root_path"));
                     recyclerDataList.add(recyclerData);
 
                 }
+                download();
                 mAdapter.notifyDataSetChanged();
 
             } catch (JSONException e) {
