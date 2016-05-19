@@ -445,6 +445,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
 
+                    download(online_jasonObjectLenth);
                     final int totalProgressTime = online_jasonObjectLenth;
                     json_length =totalProgressTime;
                     final Thread t = new Thread() {
