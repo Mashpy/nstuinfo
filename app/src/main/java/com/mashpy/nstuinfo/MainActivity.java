@@ -445,7 +445,16 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
 
-                    download(online_jasonObjectLenth);
+                    int  menu_update_number =0;
+                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+
+                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                            menu_update_number++;
+                        }
+                    }
+                    if(menu_update_number>0) {
+                        download(menu_update_number);
+                    }
                     final int totalProgressTime = online_jasonObjectLenth;
                     json_length =totalProgressTime;
                     final Thread t = new Thread() {
