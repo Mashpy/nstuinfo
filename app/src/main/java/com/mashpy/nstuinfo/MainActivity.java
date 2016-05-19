@@ -378,26 +378,7 @@ public class MainActivity extends AppCompatActivity {
 
                    download(online_jasonObjectLenth);
 
-                   /*
-                    progress=new ProgressDialog(MainActivity.this);
-                    progress.setMessage("Downloading Updated Data");
-                    progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                    progress.setCancelable(true);
-                    progress.setMax(online_jasonObjectLenth);
-                    // progress.setIndeterminate(true);
-                    progress.setProgress(0);
-                    progress.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-                    progress.show();
-                    */
-
-
                     final int totalProgressTime = online_jasonObjectLenth;
-                    json_length =totalProgressTime;
                     final Thread t = new Thread() {
                         @Override
                         public void run() {
@@ -415,7 +396,6 @@ public class MainActivity extends AppCompatActivity {
 
                                         JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
                                         jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-
 
                                         progress.setProgress(jumpTime);
                                     }
@@ -455,8 +435,7 @@ public class MainActivity extends AppCompatActivity {
                     if(menu_update_number>0) {
                         download(menu_update_number);
                     }
-                    final int totalProgressTime = online_jasonObjectLenth;
-                    json_length =totalProgressTime;
+                    final int totalProgressTime = menu_update_number;
                     final Thread t = new Thread() {
                         @Override
                         public void run() {
@@ -466,6 +445,7 @@ public class MainActivity extends AppCompatActivity {
                                 try {
 
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
+                        sleep(2);
                         String html_file_name = articles.getJSONObject(i).getString("root_path");
                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
                         if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
@@ -476,6 +456,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                                 } catch (JSONException e) {
+                                    e.printStackTrace();
+                                } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
                             }
