@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog progress;
 
+    int jumpTime = 0;
+    int json_length = 0;
+    int increment =0;
     public static String GET(String url) {
         InputStream inputStream = null;
         String result = "";
@@ -214,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
             int jasonObjecLenth = json.getJSONArray("article_list").length();
             for (int i = 0; i < jasonObjecLenth; i++) {
 
-                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "V:"+articles.getJSONObject(i).getString("menu_version"), articles.getJSONObject(i).getString("root_path"));
+                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), articles.getJSONObject(i).getString("menu_version"), articles.getJSONObject(i).getString("root_path"));
                 recyclerDataList.add(recyclerData);
 
             }
@@ -264,12 +267,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void download(){
-        progress=new ProgressDialog(this);
+    public void download(int total){
+        progress=new ProgressDialog(MainActivity.this);
         progress.setMessage("Downloading Updated Data");
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progress.setCancelable(true);
-       // progress.setIndeterminate(true);
+        progress.setMax(total);
+        // progress.setIndeterminate(true);
         progress.setProgress(0);
         progress.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
             @Override
@@ -279,26 +283,7 @@ public class MainActivity extends AppCompatActivity {
         });
         progress.show();
 
-        final int totalProgressTime = 100;
-        final Thread t = new Thread() {
-            @Override
-            public void run() {
-                int jumpTime = 0;
 
-                while(jumpTime < totalProgressTime) {
-                    try {
-                        sleep(200);
-                        jumpTime += 5;
-                        progress.setProgress(jumpTime);
-                    }
-                    catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
-            }
-        };
-        t.start();
     }
 
 
@@ -372,16 +357,16 @@ public class MainActivity extends AppCompatActivity {
 
         // onPostExecute displays the results of the AsyncTask.
         @Override
-        protected void onPostExecute(String result) {
+        protected void onPostExecute(final String result) {
             try {
                 /**Online JSON read*/
                 JSONObject json = new JSONObject(result);
-                JSONArray articles = json.getJSONArray("article_list");
-                int online_jasonObjectLenth = json.getJSONArray("article_list").length();
+                final JSONArray articles = json.getJSONArray("article_list");
+                final int online_jasonObjectLenth = json.getJSONArray("article_list").length();
                 /**Offline Stored JSON read*/
                 String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
                 JSONObject json_previous = new JSONObject(jsonString_previous);
-                JSONArray articles_previous = json_previous.getJSONArray("article_list");
+                final JSONArray articles_previous = json_previous.getJSONArray("article_list");
                 /** JSON Version*/
                 String online_ver_string = (String) json.get("version");
                 String offline_ver_string = (String) json_previous.get("version");
@@ -390,19 +375,64 @@ public class MainActivity extends AppCompatActivity {
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
                 if (online_ver > offline_ver) {
-                    download();
-                }
 
-                if (online_ver > offline_ver) {
-                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-                        String html_file_name = articles.getJSONObject(i).getString("root_path");
-                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
+                   download(online_jasonObjectLenth);
 
-                        JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                        jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
+                   /*
+                    progress=new ProgressDialog(MainActivity.this);
+                    progress.setMessage("Downloading Updated Data");
+                    progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                    progress.setCancelable(true);
+                    progress.setMax(online_jasonObjectLenth);
+                    // progress.setIndeterminate(true);
+                    progress.setProgress(0);
+                    progress.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    progress.show();
+                    */
 
-                    }
-                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
+
+                    final int totalProgressTime = online_jasonObjectLenth;
+                    json_length =totalProgressTime;
+                    final Thread t = new Thread() {
+                        @Override
+                        public void run() {
+                            jumpTime = 0;
+
+                            while(jumpTime < totalProgressTime) {
+                                try {
+
+                                    //  jumpTime += 5;
+                                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                                        increment =i;
+                                        sleep(2);
+                                        String html_file_name = articles.getJSONObject(i).getString("root_path");
+                                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
+
+                                        JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                                        jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
+
+
+                                        progress.setProgress(jumpTime);
+                                    }
+
+
+                                }
+                                catch (InterruptedException e) {
+                                    // TODO Auto-generated catch block
+                                    e.printStackTrace();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            //progress.dismiss();
+                        }
+                    };
+                    t.start();
 
                     String file_name = "json_string";
                     try {
@@ -411,7 +441,20 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
+                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
+
                 } else {
+
+                    final int totalProgressTime = online_jasonObjectLenth;
+                    json_length =totalProgressTime;
+                    final Thread t = new Thread() {
+                        @Override
+                        public void run() {
+                            jumpTime = 0;
+
+                            while(jumpTime < totalProgressTime) {
+                                try {
+
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
                         String html_file_name = articles.getJSONObject(i).getString("root_path");
                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
@@ -421,16 +464,33 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
 
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            //progress.dismiss();
+                        }
+                    };
+                    t.start();
+
+                    String file_name = "json_string";
+                    try {
+                        new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
+
                 recyclerDataList.clear();
 
                 for (int i = 0; i < online_jasonObjectLenth; i++) {
 
-                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "V:"+articles.getJSONObject(i).getString("menu_version"), articles.getJSONObject(i).getString("root_path"));
+                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), articles.getJSONObject(i).getString("menu_version"), articles.getJSONObject(i).getString("root_path"));
                     recyclerDataList.add(recyclerData);
 
                 }
-                download();
+               // download();
                 mAdapter.notifyDataSetChanged();
 
             } catch (JSONException e) {
@@ -467,6 +527,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            jumpTime += 1;//(increment+1)*(100/json_length) ;
         }
     }
 
@@ -604,7 +665,6 @@ public class MainActivity extends AppCompatActivity {
                 fInDir.delete();
             }
         }
-
         public void deleteFile(String fileName) {
             File f = new File(context.getApplicationInfo().dataDir + "/new_directory_name/" + fileName);
             if (f.exists()) {
