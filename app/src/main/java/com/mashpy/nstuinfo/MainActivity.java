@@ -9,6 +9,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private Document htmlDocument;
     private String htmlContentInStringFormat;
     private String htmlfile_name;
+    public  String expire_date;
 
     private ProgressDialog progress;
 
@@ -106,17 +109,17 @@ public class MainActivity extends AppCompatActivity {
 
         // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-             //   Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
+                Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
 
                 startActivity(i);
             }
-        });*/
+        });
 
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -136,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 RecyclerData recyclerData = recyclerDataList.get(position);
                 Intent details = new Intent(MainActivity.this, DetailsActivity.class);
                 details.putExtra("root_path", recyclerData.getUrl());
+                details.putExtra("exp",expire_date);
                 startActivity(details);
 
             }
@@ -252,6 +256,18 @@ public class MainActivity extends AppCompatActivity {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        /**Offline Stored JSON read*/
+        String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
+        JSONObject json_previous = null;
+        try {
+            /** JSON Expire Date*/
+            json_previous = new JSONObject(jsonString_previous);
+            expire_date = (String) json_previous.get("expire_date");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 
@@ -421,10 +437,8 @@ public class MainActivity extends AppCompatActivity {
 
                                         JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
                                         jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-
                                         progress.setProgress(jumpTime);
                                     }
-
 
                                 }
                                 catch (InterruptedException e) {
@@ -508,7 +522,6 @@ public class MainActivity extends AppCompatActivity {
                     recyclerDataList.add(recyclerData);
 
                 }
-               // download();
                 mAdapter.notifyDataSetChanged();
 
             } catch (JSONException e) {
@@ -531,6 +544,10 @@ public class MainActivity extends AppCompatActivity {
                 htmlDocument = Jsoup.connect(url[0]).get();
                 htmlContentInStringFormat = htmlDocument.toString();
                 htmlfile_name = url[1];
+               // if(htmlContentInStringFormat != "")
+               // {
+                jumpTime += 1;
+               // }
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -542,10 +559,11 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(htmlfile_name, htmlContentInStringFormat);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            jumpTime += 1;//(increment+1)*(100/json_length) ;
+
         }
     }
 
