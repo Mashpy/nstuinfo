@@ -46,10 +46,9 @@ public class DetailsActivity extends AppCompatActivity {
             String current_date = formatter.format(date);
             Date cur_date1 = formatter.parse(current_date);
             Date exp_date2 = formatter.parse(exp_date);
-
-            if (exp_date2.compareTo(cur_date1)<0)
+           if (exp_date2.compareTo(cur_date1)<0)
             {
-               open();//exp_date is Greater Then Current Date
+               open();//exp_date is less then current Date Current Date
             }
 
         }catch (ParseException e1){
