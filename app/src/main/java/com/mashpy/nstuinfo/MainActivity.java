@@ -115,9 +115,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
-
-                startActivity(i);
+                //Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
+                //startActivity(i);
+                prepareMovieData();
             }
         });
 
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
     }
 
-    private void prepareMovieData() {
+    public void prepareMovieData() {
 
         new HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
 
@@ -323,12 +323,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         progress.show();
-
-
     }
-
-
-
     @Override
     protected void onPostResume() {
         super.onPostResume();
@@ -567,7 +562,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private class HttpAsyncTask_ChackUpadte_data extends AsyncTask<String, Void, String> {
+    private class HttpAsyncTask_Update_data extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls) {
             return GET(urls[0]);
