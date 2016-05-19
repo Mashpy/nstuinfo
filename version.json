@@ -13,32 +13,32 @@
 "id": 2,
 "menu_name": "Regent Board",
 "root_path": "regentboard",
-"menu_version": "2",
-"last_update": "20-May-2016",
+"menu_version": "1",
+"last_update": "1-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
 },
 {
 "id": 3,
 "menu_name": "Academic Council",
 "root_path": "academic_council",
-"menu_version": "2",
-"last_update": "20-May-2016",
+"menu_version": "1",
+"last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/academic_council.html"
 },
 {
 "id": 4,
 "menu_name": "Committees",
 "root_path": "committees",
-"menu_version": "2",
-"last_update": "20-May-2016",
+"menu_version": "1",
+"last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/committes.html"
 },
 {
 "id": 5,
 "menu_name": "Register office",
 "root_path": "register_office",
-"menu_version": "2",
-"last_update": "20-May-2016",
+"menu_version": "1",
+"last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/registraroffice.html"
 },
 {

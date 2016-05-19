@@ -451,6 +451,7 @@ public class MainActivity extends AppCompatActivity {
                         if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
                             JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
                             jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
+                            progress.setProgress(jumpTime);
                         }
                     }
 
