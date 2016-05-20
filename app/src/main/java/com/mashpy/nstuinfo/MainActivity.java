@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if(reload_status) {
                         reload_status = false;
+
                         new HttpAsyncTask_Update_data().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
 
                     }else {
@@ -134,18 +135,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
         mAdapter = new RecyclerDataAdapter(recyclerDataList);
-
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
@@ -211,21 +208,17 @@ public class MainActivity extends AppCompatActivity {
         String file_name = "json_string";
         if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name) == null) {
             try {
-                InputStream is = getAssets().open("json_string");
-
+                InputStream is = getAssets().open("json_directory/json_string");
                 // We guarantee that the available method returns the total
                 // size of the asset...  of course, this does mean that a single
                 // asset can't be more than 2 gigs.
                 int size = is.available();
-
                 // Read the entire asset into a local byte buffer.
                 byte[] buffer = new byte[size];
                 is.read(buffer);
                 is.close();
-
                 // Convert the buffer into a string.
                 result = new String(buffer);
-
                 try {
                     new offlineJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
                 } catch (Exception e) {
@@ -267,7 +260,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name[i]) == null) {
                 try {
-                    InputStream is = getAssets().open(file_name[i]);
+                    InputStream is = getAssets().open("html_directory/"+file_name[i]);
 
                     // We guarantee that the available method returns the total
                     // size of the asset...  of course, this does mean that a single
@@ -622,7 +615,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
                 } else {
 
-                    int  menu_update_number =0;
+                    int  menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
 
                         if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
@@ -631,6 +624,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     if(menu_update_number>0) {
                         download(menu_update_number);
+
                     }else if(menu_update_number==0 && reload_status == false){
                         open_dialog();
                         reload_status = true;
