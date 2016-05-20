@@ -12,6 +12,10 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,22 +40,31 @@ public class DetailsActivity extends AppCompatActivity {
         WebView detatils_wv = (WebView) findViewById(R.id.webview);
         detatils_wv.getSettings().setJavaScriptEnabled(true);
         String file_name= getIntent().getStringExtra("root_path");
+        /**Offline Stored JSON read*/
+        String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
+        JSONObject json_previous = null;
 
         try{
 
-            String exp_date = getIntent().getStringExtra("exp");
+            json_previous = new JSONObject(jsonString_previous);
+            String expire_date = (String) json_previous.get("expire_date");
+            //Date cur_date1 = formatter.parse(current_date);
+            Toast.makeText(DetailsActivity.this, expire_date, Toast.LENGTH_LONG).show();
+
             long date = System.currentTimeMillis();
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
             String current_date = formatter.format(date);
             Date cur_date1 = formatter.parse(current_date);
-            Date exp_date2 = formatter.parse(exp_date);
-           if (exp_date2.compareTo(cur_date1)<0)
+            Date exp_date2 = formatter.parse(expire_date);
+            if (exp_date2.compareTo(cur_date1)<0)
             {
-               open();//exp_date is less then current Date Current Date
+                open();//exp_date is less then current Date Current Date
             }
 
         }catch (ParseException e1){
             e1.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
         String html = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
@@ -140,14 +153,16 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void open(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Data Validity has been expired. Please connect Internet and press yes ");
+        alertDialogBuilder.setMessage("Data Validity has been expired. Please Connect to Internet and press reload button ");
 
         alertDialogBuilder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
                 //Toast.makeText(DetailsActivity.this, "You clicked yes button", Toast.LENGTH_LONG).show();
+
                 MainActivity myactivity = new MainActivity();
                 myactivity.prepareMovieData();
+
             }
         });
 

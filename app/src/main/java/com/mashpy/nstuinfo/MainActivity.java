@@ -10,7 +10,6 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -113,8 +112,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+              //  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        //.setAction("Action", null).show();
                 //Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
                 //startActivity(i);
                 prepareMovieData();
@@ -256,16 +255,7 @@ public class MainActivity extends AppCompatActivity {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        /**Offline Stored JSON read*/
-        String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
-        JSONObject json_previous = null;
-        try {
-            /** JSON Expire Date*/
-            json_previous = new JSONObject(jsonString_previous);
-            expire_date = (String) json_previous.get("expire_date");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
 
 
     }
@@ -488,8 +478,6 @@ public class MainActivity extends AppCompatActivity {
                             progress.setProgress(jumpTime);
                         }
                     }
-
-
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 } catch (InterruptedException e) {
@@ -565,13 +553,13 @@ public class MainActivity extends AppCompatActivity {
     private class HttpAsyncTask_Update_data extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls) {
+
             return GET(urls[0]);
         }
 
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            //  Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
 
         }
     }
