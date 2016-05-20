@@ -140,13 +140,14 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void open(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Data Validity has been expired. Please Internet and press yes ");
+        alertDialogBuilder.setMessage("Data Validity has been expired. Please connect Internet and press yes ");
 
         alertDialogBuilder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
                 //Toast.makeText(DetailsActivity.this, "You clicked yes button", Toast.LENGTH_LONG).show();
-
+                MainActivity myactivity = new MainActivity();
+                myactivity.prepareMovieData();
             }
         });
 
