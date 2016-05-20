@@ -1,6 +1,7 @@
 package com.mashpy.nstuinfo;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,6 +11,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private String htmlContentInStringFormat;
     private String htmlfile_name;
     public  String expire_date;
+    public boolean reload_status = true;
 
     private ProgressDialog progress;
 
@@ -112,11 +115,25 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        //.setAction("Action", null).show();
+
+                if (isConnected()) {
+
+                    if(reload_status) {
+                        reload_status = false;
+                        new HttpAsyncTask_Update_data().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
+
+                    }else {
+                        Snackbar.make(view, "Wait. Reload is Processing..", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+
+                }else {
+                    Snackbar.make(view, "Please turn on your data connection", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
                 //Intent i = new Intent(getApplicationContext(), ImageViewUse.class);
                 //startActivity(i);
-                prepareMovieData();
+
             }
         });
 
@@ -245,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
             int jasonObjecLenth = json.getJSONArray("article_list").length();
             for (int i = 0; i < jasonObjecLenth; i++) {
 
-                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), articles.getJSONObject(i).getString("menu_version"), articles.getJSONObject(i).getString("root_path"));
+                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "" , articles.getJSONObject(i).getString("root_path"));
                 recyclerDataList.add(recyclerData);
 
             }
@@ -255,11 +272,7 @@ public class MainActivity extends AppCompatActivity {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-
-
     }
-
 
     public void offlineHtml(){
 
@@ -488,12 +501,14 @@ public class MainActivity extends AppCompatActivity {
                         }
                     };
                     t.start();
-
-                    String file_name = "json_string";
-                    try {
-                        new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    reload_status = true;
+                    if(jumpTime == totalProgressTime) {
+                        String file_name = "json_string";
+                        try {
+                            new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
 
@@ -501,7 +516,7 @@ public class MainActivity extends AppCompatActivity {
 
                 for (int i = 0; i < online_jasonObjectLenth; i++) {
 
-                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), articles.getJSONObject(i).getString("menu_version"), articles.getJSONObject(i).getString("root_path"));
+                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
                     recyclerDataList.add(recyclerData);
 
                 }
@@ -560,7 +575,142 @@ public class MainActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
+            try {
+                /**Online JSON read*/
+                JSONObject json = new JSONObject(result);
+                final JSONArray articles = json.getJSONArray("article_list");
+                final int online_jasonObjectLenth = json.getJSONArray("article_list").length();
+                /**Offline Stored JSON read*/
+                String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
+                JSONObject json_previous = new JSONObject(jsonString_previous);
+                final JSONArray articles_previous = json_previous.getJSONArray("article_list");
+                /** JSON Version*/
+                String online_ver_string = (String) json.get("version");
+                String offline_ver_string = (String) json_previous.get("version");
 
+                float online_ver = Float.parseFloat(online_ver_string);
+                float offline_ver = Float.parseFloat(offline_ver_string);
+
+                if (online_ver > offline_ver) {
+
+                    download(online_jasonObjectLenth);
+
+                    final int totalProgressTime = online_jasonObjectLenth;
+                    final Thread t = new Thread() {
+                        @Override
+                        public void run() {
+                            jumpTime = 0;
+
+                            while(jumpTime < totalProgressTime) {
+                                try {
+
+                                    //  jumpTime += 5;
+                                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                                        increment =i;
+                                        sleep(2);
+                                        String html_file_name = articles.getJSONObject(i).getString("root_path");
+                                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
+
+                                        JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                                        jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
+                                        progress.setProgress(jumpTime);
+                                    }
+
+                                }
+                                catch (InterruptedException e) {
+                                    // TODO Auto-generated catch block
+                                    e.printStackTrace();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            //progress.dismiss();
+                        }
+                    };
+                    t.start();
+
+                    reload_status = true;
+
+                    if(jumpTime == totalProgressTime) {
+                        String file_name = "json_string";
+                        try {
+                            new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
+
+                } else {
+
+                    int  menu_update_number =0;
+                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+
+                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                            menu_update_number++;
+                        }
+                    }
+                    if(menu_update_number>0) {
+                        download(menu_update_number);
+                    }else{
+                        open_dialog();
+                    }
+
+                    final int totalProgressTime = menu_update_number;
+                    final Thread t = new Thread() {
+                        @Override
+                        public void run() {
+                            jumpTime = 0;
+
+                            while(jumpTime < totalProgressTime) {
+                                try {
+
+                                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                                        sleep(2);
+                                        String html_file_name = articles.getJSONObject(i).getString("root_path");
+                                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
+                                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                                            jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
+                                            progress.setProgress(jumpTime);
+                                        }
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            //progress.dismiss();
+                        }
+                    };
+                    t.start();
+                    reload_status = true;
+                    if(jumpTime == totalProgressTime) {
+                        String file_name = "json_string";
+                        try {
+                            new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                recyclerDataList.clear();
+
+                for (int i = 0; i < online_jasonObjectLenth; i++) {
+
+                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
+                    recyclerDataList.add(recyclerData);
+
+                }
+                mAdapter.notifyDataSetChanged();
+
+            } catch (JSONException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
     }
 
@@ -690,5 +840,27 @@ public class MainActivity extends AppCompatActivity {
                 f.delete();
             }
         }
+    }
+
+    public void open_dialog(){
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage("No new Update is Available.");
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+
+            }
+        });
+
+       /* alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });*/
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
     }
 }

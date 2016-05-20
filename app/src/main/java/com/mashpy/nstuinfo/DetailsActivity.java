@@ -12,7 +12,6 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -49,8 +48,6 @@ public class DetailsActivity extends AppCompatActivity {
             json_previous = new JSONObject(jsonString_previous);
             String expire_date = (String) json_previous.get("expire_date");
             //Date cur_date1 = formatter.parse(current_date);
-            Toast.makeText(DetailsActivity.this, expire_date, Toast.LENGTH_LONG).show();
-
             long date = System.currentTimeMillis();
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
             String current_date = formatter.format(date);
@@ -154,24 +151,19 @@ public class DetailsActivity extends AppCompatActivity {
     public void open(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage("Data Validity has been expired. Please Connect to Internet and press reload button ");
-
         alertDialogBuilder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-                //Toast.makeText(DetailsActivity.this, "You clicked yes button", Toast.LENGTH_LONG).show();
-
-                MainActivity myactivity = new MainActivity();
-                myactivity.prepareMovieData();
-
+                finish();
             }
         });
 
-        alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+       /* alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 finish();
             }
-        });
+        });*/
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
