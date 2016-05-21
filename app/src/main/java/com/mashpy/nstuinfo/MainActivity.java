@@ -197,9 +197,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void prepareMovieData() {
-
-       // new HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
-        new HttpAsyncTask_Update_data().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
+        new HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
 
     }
 
@@ -388,39 +386,44 @@ public class MainActivity extends AppCompatActivity {
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
                 if (online_ver > offline_ver) {
-                   download(online_jasonObjectLenth);
 
-                    final int totalProgressTime = online_jasonObjectLenth;
+                    int  menu_update_number = 0;
+                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+
+                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                            menu_update_number++;
+                        }
+                    }
+                    if(menu_update_number>0) {
+                        download(menu_update_number);
+
+                    }
+                    final int totalProgressTime = menu_update_number;
                     final Thread t = new Thread() {
                         @Override
                         public void run() {
                             jumpTime = 0;
-
                             while(jumpTime < totalProgressTime) {
                                 try {
 
-                                    //  jumpTime += 5;
-
                                     for (int i = 0; i < online_jasonObjectLenth; i++) {
-                                        increment= i;
-                                        sleep(200);
+                                        sleep(2);
                                         String html_file_name = articles.getJSONObject(i).getString("root_path");
                                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
-
-                                        JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                                        jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-                                        progress.setProgress(jumpTime);
-
+                                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                                            jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
+                                            progress.setProgress(jumpTime);
+                                        }
                                     }
-                                }
-                                catch (InterruptedException e) {
-                                    // TODO Auto-generated catch block
-                                    e.printStackTrace();
                                 } catch (JSONException e) {
+                                    e.printStackTrace();
+                                } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
                             }
-                            Log.d("Auto Async " , String.valueOf(increment));
+                            //progress.dismiss();
+                            reload_status = true;
                             if((increment+1) == totalProgressTime) {
                                 String file_name = "json_string";
                                 try {
@@ -430,11 +433,13 @@ public class MainActivity extends AppCompatActivity {
                                     e.printStackTrace();
                                 }
                             }
-
                         }
+
                     };
                     t.start();
+                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
                 } else {
+
                     int  menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
 
@@ -450,27 +455,26 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             jumpTime = 0;
-
                             while(jumpTime < totalProgressTime) {
                                 try {
 
-                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-                        increment =i;
-                        sleep(200);
-                        String html_file_name = articles.getJSONObject(i).getString("root_path");
-                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
-                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
-                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                            jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-                            progress.setProgress(jumpTime);
-                        }
-                            }
+                                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                                        sleep(2);
+                                        String html_file_name = articles.getJSONObject(i).getString("root_path");
+                                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
+                                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                                            jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
+                                            progress.setProgress(jumpTime);
+                                        }
+                                    }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
                             }
+                            //progress.dismiss();
                             if((increment+1) == totalProgressTime) {
                                 String file_name = "json_string";
                                 try {
@@ -484,17 +488,12 @@ public class MainActivity extends AppCompatActivity {
                     };
                     t.start();
                 }
-
                 recyclerDataList.clear();
-
                 for (int i = 0; i < online_jasonObjectLenth; i++) {
-
                     RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
                     recyclerDataList.add(recyclerData);
-
                 }
                 mAdapter.notifyDataSetChanged();
-
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -567,53 +566,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (online_ver > offline_ver) {
 
-                    download(online_jasonObjectLenth);
 
-                    final int totalProgressTime = online_jasonObjectLenth;
-                    final Thread t = new Thread() {
-                        @Override
-                        public void run() {
-                            jumpTime = 0;
-
-                            while(jumpTime < totalProgressTime) {
-                                try {
-
-                                    //  jumpTime += 5;
-                                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-                                        increment =i;
-                                        sleep(2);
-                                        String html_file_name = articles.getJSONObject(i).getString("root_path");
-                                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
-
-                                        JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                                        jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-                                        progress.setProgress(jumpTime);
-                                    }
-
-                                }
-                                catch (InterruptedException e) {
-                                    // TODO Auto-generated catch block
-                                    e.printStackTrace();
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            //progress.dismiss();
-                            Log.d("Jump ", String.valueOf(increment));
-                            if((increment+1) == totalProgressTime) {
-                                String file_name = "json_string";
-                                try {
-                                    new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-                                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    };
-                    t.start();
-                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
-                } else {
 
                     int  menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
@@ -624,10 +577,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                     if(menu_update_number>0) {
                         download(menu_update_number);
-
-                    }else if(menu_update_number==0 && reload_status == false){
-                        open_dialog();
-                        reload_status = true;
 
                     }
                     final int totalProgressTime = menu_update_number;
@@ -655,6 +604,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
                             //progress.dismiss();
+                            reload_status = true;
                             if((increment+1) == totalProgressTime) {
                                 String file_name = "json_string";
                                 try {
@@ -665,8 +615,16 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
                         }
+
                     };
                     t.start();
+
+                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    open_dialog();
+                    reload_status = true;
+
                 }
                 recyclerDataList.clear();
                 for (int i = 0; i < online_jasonObjectLenth; i++) {
