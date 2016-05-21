@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public  String expire_date;
     public boolean reload_status = true;
     public boolean noupdate_status = false;
+    public boolean dialog_status = true;
 
     private ProgressDialog progress;
 
@@ -301,6 +302,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onPostResume() {
         super.onPostResume();
 
+        dialog_status = true;
+
         recyclerDataList.clear();
         OffLineData();
 
@@ -309,10 +312,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
-
-
-
+        dialog_status =false;
 
     }
 
@@ -612,7 +612,8 @@ public class MainActivity extends AppCompatActivity {
 
                    open_dialog();
                     noupdate_status = true;
-                    reload_status = true;
+                    
+                    reload_status = false;
                 }
 
             } catch (JSONException e) {
@@ -748,7 +749,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
+           if(dialog_status) {
+               alertDialog.show();
+           }
 
     }
 }
