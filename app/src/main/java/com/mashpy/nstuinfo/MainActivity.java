@@ -396,7 +396,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                     if(menu_update_number>0) {
                         download(menu_update_number);
-
                     }
                     final int totalProgressTime = menu_update_number;
                     final Thread t = new Thread() {
@@ -423,7 +422,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
                             //progress.dismiss();
-                            reload_status = true;
+                           // reload_status = true;
                             if((increment+1) == totalProgressTime) {
                                 String file_name = "json_string";
                                 try {
@@ -437,56 +436,8 @@ public class MainActivity extends AppCompatActivity {
 
                     };
                     t.start();
+
                     Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
-                } else {
-
-                    int  menu_update_number = 0;
-                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-
-                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
-                            menu_update_number++;
-                        }
-                    }
-                    if(menu_update_number>0) {
-                        download(menu_update_number);
-                    }
-                    final int totalProgressTime = menu_update_number;
-                    final Thread t = new Thread() {
-                        @Override
-                        public void run() {
-                            jumpTime = 0;
-                            while(jumpTime < totalProgressTime) {
-                                try {
-
-                                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-                                        sleep(2);
-                                        String html_file_name = articles.getJSONObject(i).getString("root_path");
-                                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
-                                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
-                                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                                            jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-                                            progress.setProgress(jumpTime);
-                                        }
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            //progress.dismiss();
-                            if((increment+1) == totalProgressTime) {
-                                String file_name = "json_string";
-                                try {
-                                    new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-                                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    };
-                    t.start();
                 }
                 recyclerDataList.clear();
                 for (int i = 0; i < online_jasonObjectLenth; i++) {
