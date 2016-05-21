@@ -45,7 +45,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class MainActivity extends AppCompatActivity {
 
     private List<RecyclerData> recyclerDataList = new ArrayList<>();
@@ -56,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private String htmlfile_name;
     public  String expire_date;
     public boolean reload_status = true;
+    public boolean noupdate_status = false;
 
     private ProgressDialog progress;
 
@@ -68,13 +68,10 @@ public class MainActivity extends AppCompatActivity {
         try {
             // create HttpClient
             HttpClient httpclient = new DefaultHttpClient();
-
             // make GET request to the given URL
             HttpResponse httpResponse = httpclient.execute(new HttpGet(url));
-
             // receive response as inputStream
             inputStream = httpResponse.getEntity().getContent();
-
             // convert inputstream to string
             if (inputStream != null)
                 result = convertInputStreamToString(inputStream);
@@ -84,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.d("InputStream", e.getLocalizedMessage());
         }
-
         return result;
     }
 
@@ -97,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         String result = "";
         while ((line = bufferedReader.readLine()) != null)
             result += line;
-
         inputStream.close();
         return result;
     }
@@ -115,19 +110,18 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (isConnected()) {
-
                     if(reload_status) {
                         reload_status = false;
-
                         new HttpAsyncTask_Update_data().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
-
-                    }else {
+                    }else if(noupdate_status){
+                        reload_status =false;
+                        open_dialog();
+                    }
+                    else {
                         Snackbar.make(view, "Wait. Reload is Processing...", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }
-
                 }else {
                     Snackbar.make(view, "Please turn on your data connection", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -155,10 +149,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onLongClick(View view, int position) {
-
             }
         }));
-
         if (isConnected()) {
             prepareMovieData();
         } else {
@@ -178,7 +170,6 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         if (id == R.id.action_settings) {
             return true;
         }
@@ -394,7 +385,7 @@ public class MainActivity extends AppCompatActivity {
                             menu_update_number++;
                         }
                     }
-                    if(menu_update_number>0) {
+                    if(menu_update_number > 0) {
                         download(menu_update_number);
                     }
                     final int totalProgressTime = menu_update_number;
@@ -421,9 +412,12 @@ public class MainActivity extends AppCompatActivity {
                                     e.printStackTrace();
                                 }
                             }
+                            Log.d("Check Auto Update ",String.valueOf(totalProgressTime)+"  "+ String.valueOf(jumpTime));
                             //progress.dismiss();
                            // reload_status = true;
-                            if((increment+1) == totalProgressTime) {
+                            if((increment) == totalProgressTime) {
+                                noupdate_status = true;
+                                reload_status = false;
                                 String file_name = "json_string";
                                 try {
                                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
@@ -438,6 +432,12 @@ public class MainActivity extends AppCompatActivity {
                     t.start();
 
                     Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
+                    recyclerDataList.clear();
+                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                        RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
+                        recyclerDataList.add(recyclerData);
+                    }
+                    mAdapter.notifyDataSetChanged();
                 }
                 recyclerDataList.clear();
                 for (int i = 0; i < online_jasonObjectLenth; i++) {
@@ -516,9 +516,6 @@ public class MainActivity extends AppCompatActivity {
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
                 if (online_ver > offline_ver) {
-
-
-
                     int  menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
 
@@ -528,7 +525,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                     if(menu_update_number>0) {
                         download(menu_update_number);
-
                     }
                     final int totalProgressTime = menu_update_number;
                     final Thread t = new Thread() {
@@ -555,8 +551,9 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
                             //progress.dismiss();
+                            Log.d("Reload ", String.valueOf(jumpTime));
                             reload_status = true;
-                            if((increment+1) == totalProgressTime) {
+                            if((increment) == totalProgressTime) {
                                 String file_name = "json_string";
                                 try {
                                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
@@ -566,23 +563,23 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
                         }
-
                     };
                     t.start();
 
                     Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
+                    recyclerDataList.clear();
+                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                        RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
+                        recyclerDataList.add(recyclerData);
+                    }
+                    mAdapter.notifyDataSetChanged();
+
                 }
                 else {
                     open_dialog();
                     reload_status = true;
+                }
 
-                }
-                recyclerDataList.clear();
-                for (int i = 0; i < online_jasonObjectLenth; i++) {
-                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
-                    recyclerDataList.add(recyclerData);
-                }
-                mAdapter.notifyDataSetChanged();
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
