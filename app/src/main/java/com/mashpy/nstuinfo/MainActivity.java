@@ -192,6 +192,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+
+
+
     public void OffLineData() {
         String result;
         String file_name = "json_string";
@@ -300,6 +305,17 @@ public class MainActivity extends AppCompatActivity {
         OffLineData();
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+
+
+
+
+    }
+
     public interface ClickListener {
         void onClick(View view, int position);
 
@@ -353,9 +369,9 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... urls) {
-
             return GET(urls[0]);
         }
+
 
         // onPostExecute displays the results of the AsyncTask.
         @Override
@@ -396,7 +412,7 @@ public class MainActivity extends AppCompatActivity {
                             while(jumpTime < totalProgressTime) {
                                 try {
 
-                                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                                    for (int i = 0; i < online_jasonObjectLenth ; i++) {
                                         sleep(2);
                                         String html_file_name = articles.getJSONObject(i).getString("root_path");
                                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
@@ -405,14 +421,21 @@ public class MainActivity extends AppCompatActivity {
                                             jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
                                             progress.setProgress(jumpTime);
                                         }
+
                                     }
+
+
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
+
+
                             }
-                            Log.d("Check Auto Update ",String.valueOf(totalProgressTime)+"  "+ String.valueOf(jumpTime));
+
+
+                            Log.d("Auto_Update",String.valueOf(totalProgressTime)+"  "+ String.valueOf(jumpTime));
                             //progress.dismiss();
                            // reload_status = true;
                             if((increment) == totalProgressTime) {
@@ -425,6 +448,12 @@ public class MainActivity extends AppCompatActivity {
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }
+                            }
+                            try {
+                                sleep(500);
+                                progress.dismiss();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
                             }
                         }
 
@@ -439,12 +468,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     mAdapter.notifyDataSetChanged();
                 }
-                recyclerDataList.clear();
-                for (int i = 0; i < online_jasonObjectLenth; i++) {
-                    RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
-                    recyclerDataList.add(recyclerData);
-                }
-                mAdapter.notifyDataSetChanged();
+
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -476,12 +500,12 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
 
+
         @Override
         protected void onPostExecute(String result) {
 
             try {
                 new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(htmlfile_name, htmlContentInStringFormat);
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -494,6 +518,14 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... urls) {
 
             return GET(urls[0]);
+        }
+
+        @Override
+        protected void onCancelled() {
+            super.onCancelled();
+
+            open_dialog();
+
         }
 
         // onPostExecute displays the results of the AsyncTask.
@@ -552,8 +584,10 @@ public class MainActivity extends AppCompatActivity {
                             }
                             //progress.dismiss();
                             Log.d("Reload ", String.valueOf(jumpTime));
-                            reload_status = true;
+
                             if((increment) == totalProgressTime) {
+                                noupdate_status = true;
+                                reload_status = false;
                                 String file_name = "json_string";
                                 try {
                                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
@@ -573,10 +607,11 @@ public class MainActivity extends AppCompatActivity {
                         recyclerDataList.add(recyclerData);
                     }
                     mAdapter.notifyDataSetChanged();
-
                 }
                 else {
-                    open_dialog();
+
+                   open_dialog();
+                    noupdate_status = true;
                     reload_status = true;
                 }
 
@@ -710,12 +745,10 @@ public class MainActivity extends AppCompatActivity {
         alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-
             }
         });
-
         AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+            alertDialog.show();
 
     }
 }
