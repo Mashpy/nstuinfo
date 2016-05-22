@@ -612,8 +612,8 @@ public class MainActivity extends AppCompatActivity {
 
                    open_dialog();
                     noupdate_status = true;
-                    
-                    reload_status = false;
+
+                    reload_status = true;
                 }
 
             } catch (JSONException e) {

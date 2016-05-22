@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
@@ -41,6 +42,8 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
                 .buildRound(letter, generator.getRandomColor());
         holder.letter.setImageDrawable(drawable);
 
+        holder.row_layout.setBackgroundColor(generator.getRandomColor());
+
     }
 
     @Override
@@ -51,6 +54,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, year, genre;
         ImageView letter;
+        RelativeLayout row_layout;
 
 
         public MyViewHolder(View view) {
@@ -59,7 +63,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
             genre = (TextView) view.findViewById(R.id.genre);
             year = (TextView) view.findViewById(R.id.year);
             letter = (ImageView) view.findViewById(R.id.gmailitem_letter);
-
+            row_layout = (RelativeLayout) view.findViewById(R.id.list_row);
         }
     }
 }
