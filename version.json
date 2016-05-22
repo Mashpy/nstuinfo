@@ -25,7 +25,7 @@
 "menu_name": "Academic Council",
 "root_path": "academic_council",
 "menu_version": "1",
-"type" : "ad",
+"type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/academic_council.html"
 },
