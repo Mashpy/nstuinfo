@@ -192,12 +192,6 @@ public class MainActivity extends AppCompatActivity {
         new HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
 
     }
-
-
-
-
-
-
     public void OffLineData() {
         String result;
         String file_name = "json_string";
@@ -236,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
             JSONArray articles = json.getJSONArray("article_list");
             int jasonObjecLenth = json.getJSONArray("article_list").length();
             for (int i = 0; i < jasonObjecLenth; i++) {
-                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "" , articles.getJSONObject(i).getString("root_path"));
+                RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "" , articles.getJSONObject(i).getString("root_path"),articles.getJSONObject(i).getString("type"));
                 recyclerDataList.add(recyclerData);
 
             }
@@ -463,7 +457,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
                     recyclerDataList.clear();
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
-                        RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
+                        RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"),articles.getJSONObject(i).getString("type"));
                         recyclerDataList.add(recyclerData);
                     }
                     mAdapter.notifyDataSetChanged();
@@ -603,7 +597,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
                     recyclerDataList.clear();
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
-                        RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"));
+                        RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"),articles.getJSONObject(i).getString("type"));
                         recyclerDataList.add(recyclerData);
                     }
                     mAdapter.notifyDataSetChanged();

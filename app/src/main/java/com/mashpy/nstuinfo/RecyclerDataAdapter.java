@@ -42,6 +42,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
                 .buildRound(letter, generator.getRandomColor());
         holder.letter.setImageDrawable(drawable);
 
+
         holder.row_layout.setBackgroundColor(generator.getRandomColor());
 
     }
