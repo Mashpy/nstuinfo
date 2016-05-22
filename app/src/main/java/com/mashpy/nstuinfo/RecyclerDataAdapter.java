@@ -11,11 +11,16 @@ import android.widget.TextView;
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapter.MyViewHolder> {
 
     ColorGenerator generator = ColorGenerator.MATERIAL;
+    ColorGenerator list_Color = ColorGenerator.create(Arrays.asList(
+            0xffffffff,
+            0xffe93939
+    ));
     private List<RecyclerData> moviesList;
 
     public RecyclerDataAdapter(List<RecyclerData> moviesList) {
@@ -41,9 +46,13 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
         TextDrawable drawable = TextDrawable.builder()
                 .buildRound(letter, generator.getRandomColor());
         holder.letter.setImageDrawable(drawable);
+        if(recyclerData.getType().equals("ad")) {
+            holder.row_layout.setBackgroundColor(list_Color.getColor(1));
+        }else
+        {
+            holder.row_layout.setBackgroundColor( 0xffffffff);
+        }
 
-
-        holder.row_layout.setBackgroundColor(generator.getRandomColor());
 
     }
 

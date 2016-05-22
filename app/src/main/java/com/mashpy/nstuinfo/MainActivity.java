@@ -232,7 +232,6 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < jasonObjecLenth; i++) {
                 RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "" , articles.getJSONObject(i).getString("root_path"),articles.getJSONObject(i).getString("type"));
                 recyclerDataList.add(recyclerData);
-
             }
             mAdapter.notifyDataSetChanged();
 
