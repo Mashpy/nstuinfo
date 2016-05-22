@@ -1,5 +1,5 @@
 {
-"version": "1.6",
+"version": "1.7",
 "expire_date": "24-May-2016",
 "article_list": [
 {
@@ -25,7 +25,7 @@
 "menu_name": "Academic Council",
 "root_path": "academic_council",
 "menu_version": "1",
-"type" : "non_ad",
+"type" : "ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/academic_council.html"
 },
