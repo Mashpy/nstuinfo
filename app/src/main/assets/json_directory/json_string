@@ -7,7 +7,7 @@
 "menu_name": "Introduction",
 "root_path": "introduction",
 "menu_version": "0",
-"type" : "ad",
+"type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
 },

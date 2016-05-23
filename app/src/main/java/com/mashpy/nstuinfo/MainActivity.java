@@ -55,8 +55,21 @@ public class MainActivity extends AppCompatActivity {
     private String htmlfile_name;
     public  String expire_date;
     public boolean reload_status = true;
-    public boolean noupdate_status = false;
     public boolean dialog_status = true;
+
+    /**Files Name*/
+    String file_name = "json_string";
+
+    /** Auto AsyncTask
+     *   variables */
+    int online_jasonObjectLenth = 0;
+    int downloadedItem = 0;
+    JSONArray articles ;
+    JSONArray articles_previous;
+
+
+    HttpAsyncTask auto_update = new HttpAsyncTask();
+   // HttpAsyncTask_Update_data  reload_async_task =  new HttpAsyncTask_Update_data();
 
     private ProgressDialog progress;
 
@@ -112,18 +125,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isConnected()) {
-                    if(reload_status) {
-                        reload_status = false;
-                        new HttpAsyncTask_Update_data().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
-                    }else if(noupdate_status){
-                        reload_status =false;
-                        open_dialog();
-                    }
-                    else {
-                        Snackbar.make(view, "Wait. Reload is Processing...", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
-                }else {
+                    /*if(reload_status) {
+                        reload_status = false;*/
+                  new  HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
+                   // }
+                    /*else {
+                       Snackbar.make(view, "Wait. Reload is Processing...", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();*/
+
+                }
+                else {
                     Snackbar.make(view, "Please turn on your data connection", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
@@ -189,8 +200,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void prepareMovieData() {
-        new HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
 
+        auto_update.execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
     }
     public void OffLineData() {
         String result;
@@ -274,6 +285,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 
     public void download(int total){
         progress=new ProgressDialog(MainActivity.this);
@@ -361,112 +373,120 @@ public class MainActivity extends AppCompatActivity {
     private class HttpAsyncTask extends AsyncTask<String, Void, String> {
 
         @Override
-        protected String doInBackground(String... urls) {
-            return GET(urls[0]);
+        protected void onPreExecute() {
+            super.onPreExecute();
+            download(10);
         }
 
 
-        // onPostExecute displays the results of the AsyncTask.
         @Override
-        protected void onPostExecute(final String result) {
+        protected String doInBackground(String... urls) {
+            String result = GET(urls[0]);
             try {
                 /**Online JSON read*/
+
                 JSONObject json = new JSONObject(result);
-                final JSONArray articles = json.getJSONArray("article_list");
-                final int online_jasonObjectLenth = json.getJSONArray("article_list").length();
+                articles = json.getJSONArray("article_list");
+                online_jasonObjectLenth = json.getJSONArray("article_list").length();
                 /**Offline Stored JSON read*/
                 String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
                 JSONObject json_previous = new JSONObject(jsonString_previous);
-                final JSONArray articles_previous = json_previous.getJSONArray("article_list");
-                /** JSON Version*/
+                articles_previous = json_previous.getJSONArray("article_list");
+
                 String online_ver_string = (String) json.get("version");
                 String offline_ver_string = (String) json_previous.get("version");
-
                 float online_ver = Float.parseFloat(online_ver_string);
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
                 if (online_ver > offline_ver) {
 
-                    int  menu_update_number = 0;
+                    int menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
 
                         if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
-                            menu_update_number++;
-                        }
+                           menu_update_number++;
+                       }
                     }
-                    if(menu_update_number > 0) {
-                        download(menu_update_number);
+                    if (menu_update_number > 0) {
+                       // download(menu_update_number);
+                        progress.setMax(menu_update_number);
+                        Log.d("Menu " , String.valueOf(menu_update_number));
                     }
                     final int totalProgressTime = menu_update_number;
-                    final Thread t = new Thread() {
-                        @Override
-                        public void run() {
-                            jumpTime = 0;
-                            while(jumpTime < totalProgressTime) {
-                                try {
+                    json_length = menu_update_number;
+                    jumpTime = 0;
 
-                                    for (int i = 0; i < online_jasonObjectLenth ; i++) {
-                                        sleep(2);
-                                        String html_file_name = articles.getJSONObject(i).getString("root_path");
-                                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
-                                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
-                                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                                            jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-                                            progress.setProgress(jumpTime);
-                                        }
+                    try {
+                    for (int i = 0; i < online_jasonObjectLenth; i++) {
 
-                                    }
+                        String HtmlFileName = articles.getJSONObject(i).getString("root_path");
+                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
+                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(jumpTime).getString("menu_version"))) {
 
-
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-
-
-                            }
-
-
-                            Log.d("Auto_Update",String.valueOf(totalProgressTime)+"  "+ String.valueOf(jumpTime));
-                            //progress.dismiss();
-                           // reload_status = true;
-                            if((increment) == totalProgressTime) {
-                                noupdate_status = true;
-                                reload_status = false;
-                                String file_name = "json_string";
-                                try {
-                                    new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-                                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            }
+                            htmlDocument = Jsoup.connect(htmlPageUrl).get();
+                            htmlContentInStringFormat = htmlDocument.toString();
                             try {
-                                sleep(500);
-                                progress.dismiss();
-                            } catch (InterruptedException e) {
+                                new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(HtmlFileName, htmlContentInStringFormat);
+                            } catch (Exception e) {
                                 e.printStackTrace();
                             }
+
                         }
-
-                    };
-                    t.start();
-
-                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
-                    recyclerDataList.clear();
-                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-                        RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"),articles.getJSONObject(i).getString("type"));
-                        recyclerDataList.add(recyclerData);
+                        progress.setProgress(i+1);
+                        if(i+1 == online_jasonObjectLenth)
+                            progress.dismiss();
+                        downloadedItem = i;
+                        Log.d("HtmlFileName" , HtmlFileName);
                     }
-                    mAdapter.notifyDataSetChanged();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+                else
+                {
+                    progress.dismiss();
                 }
 
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+            return result;
         }
+
+
+        // onPostExecute displays the results of the AsyncTask.
+
+        @Override
+        protected void onPostExecute(final String result) {
+
+
+            if((downloadedItem) == online_jasonObjectLenth){
+                reload_status = true;
+                String file_name = "json_string";
+                try {
+                    new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
+                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            recyclerDataList.clear();
+            for (int i = 0; i < online_jasonObjectLenth; i++) {
+                RecyclerData recyclerData = null;
+                try {
+                    recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"),articles.getJSONObject(i).getString("type"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                recyclerDataList.add(recyclerData);
+            }
+            mAdapter.notifyDataSetChanged();
+        }
+
     }
 
     private class JsoupAsyncTask extends AsyncTask<String, Void, String> {
@@ -474,6 +494,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+
         }
 
         @Override
@@ -485,6 +506,7 @@ public class MainActivity extends AppCompatActivity {
                // if(htmlContentInStringFormat != "")
                // {
                 jumpTime += 1;
+                progress.setProgress(jumpTime);
                 increment = jumpTime;
                // }
             } catch (IOException e) {
@@ -502,117 +524,27 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
     }
 
-    private class HttpAsyncTask_Update_data extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(String... urls) {
+    public void downloadHtml(int online_jasonObjectLenth,JSONArray articles, JSONArray articles_previous )
+    {
+        try {
 
-            return GET(urls[0]);
-        }
+            for (int i = 0; i < online_jasonObjectLenth; i++) {
 
-        @Override
-        protected void onCancelled() {
-            super.onCancelled();
+                String html_file_name = articles.getJSONObject(jumpTime).getString("root_path");
+                String htmlPageUrl = articles.getJSONObject(jumpTime).getString("url");
+                if (Integer.parseInt(articles.getJSONObject(jumpTime).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(jumpTime).getString("menu_version"))) {
+                    JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
+                    jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
 
-            open_dialog();
-
-        }
-
-        // onPostExecute displays the results of the AsyncTask.
-        @Override
-        protected void onPostExecute(final String result) {
-            try {
-                /**Online JSON read*/
-                JSONObject json = new JSONObject(result);
-                final JSONArray articles = json.getJSONArray("article_list");
-                final int online_jasonObjectLenth = json.getJSONArray("article_list").length();
-                /**Offline Stored JSON read*/
-                String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
-                JSONObject json_previous = new JSONObject(jsonString_previous);
-                final JSONArray articles_previous = json_previous.getJSONArray("article_list");
-                /** JSON Version*/
-                String online_ver_string = (String) json.get("version");
-                String offline_ver_string = (String) json_previous.get("version");
-
-                float online_ver = Float.parseFloat(online_ver_string);
-                float offline_ver = Float.parseFloat(offline_ver_string);
-
-                if (online_ver > offline_ver) {
-                    int  menu_update_number = 0;
-                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-
-                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
-                            menu_update_number++;
-                        }
-                    }
-                    if(menu_update_number>0) {
-                        download(menu_update_number);
-                    }
-                    final int totalProgressTime = menu_update_number;
-                    final Thread t = new Thread() {
-                        @Override
-                        public void run() {
-                            jumpTime = 0;
-                            while(jumpTime < totalProgressTime) {
-                                try {
-
-                                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-                                        sleep(2);
-                                        String html_file_name = articles.getJSONObject(i).getString("root_path");
-                                        String htmlPageUrl = articles.getJSONObject(i).getString("url");
-                                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
-                                            JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                                            jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-                                            progress.setProgress(jumpTime);
-                                        }
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            //progress.dismiss();
-                            Log.d("Reload ", String.valueOf(jumpTime));
-
-                            if((increment) == totalProgressTime) {
-                                noupdate_status = true;
-                                reload_status = false;
-                                String file_name = "json_string";
-                                try {
-                                    new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
-                                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    };
-                    t.start();
-
-                    Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
-                    recyclerDataList.clear();
-                    for (int i = 0; i < online_jasonObjectLenth; i++) {
-                        RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"),articles.getJSONObject(i).getString("type"));
-                        recyclerDataList.add(recyclerData);
-                    }
-                    mAdapter.notifyDataSetChanged();
                 }
-                else {
-
-                   open_dialog();
-                    noupdate_status = true;
-
-                    reload_status = true;
-                }
-
-            } catch (JSONException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
             }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 
