@@ -1,5 +1,5 @@
 {
-"version": "1.7",
+"version": "1.8",
 "expire_date": "24-May-2016",
 "article_list": [
 {
@@ -15,7 +15,7 @@
 "id": 2,
 "menu_name": "Regent Board",
 "root_path": "regentboard",
-"menu_version": "1",
+"menu_version": "2",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
