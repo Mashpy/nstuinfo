@@ -16,7 +16,7 @@
 "menu_name": "Regent Board",
 "root_path": "regentboard",
 "menu_version": "3",
-"type" : "non_ad",
+"type" : "ad",
 "last_update": "1-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
 },
