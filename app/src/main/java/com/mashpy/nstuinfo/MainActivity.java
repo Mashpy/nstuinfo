@@ -441,9 +441,7 @@ public class MainActivity extends AppCompatActivity {
 
             // increment progress bar by progress value
           //  setProgress(10);
-
             progress.setProgress(values[0]);
-
 
         }
         // onPostExecute displays the results of the AsyncTask.
