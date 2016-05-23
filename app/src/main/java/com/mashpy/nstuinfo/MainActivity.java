@@ -126,15 +126,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isConnected()) {
-
-                    if(reload_status==false) {
+                    getUpdatedData();
+                   /* if(reload_status==false) {
                         reload_status = true;
-                          getUpdatedData();
-                    }
+                   }
                     else {
                         Snackbar.make(view, "Wait. Reload is Processing...", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
-                    }
+                    }*/
                 }else {
                     Snackbar.make(view, "Please turn on your data connection", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -401,8 +400,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(final String result) {
 
-            if(update_status==false && reload_status == true) {
-                reload_status = false;
+            if(update_status==false ) {
                 open_dialog();
             }
             else if(update_status ==true ) {
