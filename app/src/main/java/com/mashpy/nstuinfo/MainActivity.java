@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean reload_status = true;
     public boolean dialog_status = true;
 
+    public String SourceURL = "https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json";
+
     /**Files Name*/
     String file_name = "json_string";
 
@@ -66,10 +68,6 @@ public class MainActivity extends AppCompatActivity {
     int downloadedItem = 0;
     JSONArray articles ;
     JSONArray articles_previous;
-
-
-    HttpAsyncTask auto_update = new HttpAsyncTask();
-   // HttpAsyncTask_Update_data  reload_async_task =  new HttpAsyncTask_Update_data();
 
     private ProgressDialog progress;
 
@@ -201,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void prepareMovieData() {
 
-        auto_update.execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
+        new HttpAsyncTask().execute(SourceURL);
     }
     public void OffLineData() {
         String result;
@@ -287,22 +285,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void download(int total){
-        progress=new ProgressDialog(MainActivity.this);
-        progress.setMessage("Downloading Updated Data");
-        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progress.setCancelable(true);
-        progress.setMax(total);
-        // progress.setIndeterminate(true);
-        progress.setProgress(0);
-        progress.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        progress.show();
-    }
     @Override
     protected void onPostResume() {
         super.onPostResume();
@@ -375,7 +357,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+
             download(10);
+
         }
 
 
@@ -402,13 +386,12 @@ public class MainActivity extends AppCompatActivity {
 
                     int menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
-
                         if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
                            menu_update_number++;
                        }
                     }
                     if (menu_update_number > 0) {
-                       // download(menu_update_number);
+
                         progress.setMax(menu_update_number);
                         Log.d("Menu " , String.valueOf(menu_update_number));
                     }
@@ -432,17 +415,16 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                         }
-                        progress.setProgress(i+1);
+                        onProgressUpdate(i);
+                      // progress.setProgress(i+1);
                         if(i+1 == online_jasonObjectLenth)
-                            progress.dismiss();
+                           progress.dismiss();
                         downloadedItem = i;
                         Log.d("HtmlFileName" , HtmlFileName);
                     }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
-
                 }
                 else
                 {
@@ -455,17 +437,22 @@ public class MainActivity extends AppCompatActivity {
             }
             return result;
         }
+        protected void onProgressUpdate(Integer... values) {
+
+            // increment progress bar by progress value
+          //  setProgress(10);
+
+            progress.setProgress(values[0]);
 
 
+        }
         // onPostExecute displays the results of the AsyncTask.
-
         @Override
         protected void onPostExecute(final String result) {
 
 
-            if((downloadedItem) == online_jasonObjectLenth){
+            if((downloadedItem+1) == online_jasonObjectLenth){
                 reload_status = true;
-                String file_name = "json_string";
                 try {
                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
                     Toast.makeText(getBaseContext(), "Update All  data", Toast.LENGTH_LONG).show();
@@ -489,64 +476,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private class JsoupAsyncTask extends AsyncTask<String, Void, String> {
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-        }
-
-        @Override
-        protected String doInBackground(String... url) {
-            try {
-                htmlDocument = Jsoup.connect(url[0]).get();
-                htmlContentInStringFormat = htmlDocument.toString();
-                htmlfile_name = url[1];
-               // if(htmlContentInStringFormat != "")
-               // {
-                jumpTime += 1;
-                progress.setProgress(jumpTime);
-                increment = jumpTime;
-               // }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-
-        @Override
-        protected void onPostExecute(String result) {
-
-            try {
-                new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(htmlfile_name, htmlContentInStringFormat);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void downloadHtml(int online_jasonObjectLenth,JSONArray articles, JSONArray articles_previous )
-    {
-        try {
-
-            for (int i = 0; i < online_jasonObjectLenth; i++) {
-
-                String html_file_name = articles.getJSONObject(jumpTime).getString("root_path");
-                String htmlPageUrl = articles.getJSONObject(jumpTime).getString("url");
-                if (Integer.parseInt(articles.getJSONObject(jumpTime).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(jumpTime).getString("menu_version"))) {
-                    JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
-                    jsoupAsyncTask.execute(htmlPageUrl, html_file_name);
-
-                }
-            }
-
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * Store Data into file
@@ -679,4 +608,23 @@ public class MainActivity extends AppCompatActivity {
            }
 
     }
+
+    public void download(int total){
+        progress=new ProgressDialog(MainActivity.this);
+        progress.setMessage("Downloading Updated Data");
+        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progress.setCancelable(true);
+        progress.setMax(total);
+        //progress.setIndeterminate(true);
+        progress.setProgress(0);
+        progress.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        progress.show();
+
+    }
+
 }
