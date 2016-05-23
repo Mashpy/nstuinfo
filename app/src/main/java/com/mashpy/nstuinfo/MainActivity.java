@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     JSONArray articles_previous;
 
     private ProgressDialog progress;
+    private ProgressDialog progressSpiner ;
 
     int jumpTime = 0;
     int json_length = 0;
@@ -126,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isConnected()) {
+                    circularProgressBar();
                     getUpdatedData();
                    /* if(reload_status==false) {
                         reload_status = true;
@@ -401,6 +403,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(final String result) {
 
             if(update_status==false ) {
+                progressSpiner.dismiss();
                 open_dialog();
             }
             else if(update_status ==true ) {
@@ -685,6 +688,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         progress.show();
+
+    }
+
+    public void circularProgressBar(){
+        progressSpiner=new ProgressDialog(MainActivity.this);
+        progressSpiner.setMessage("Downloading Updated Data");
+        progressSpiner.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressSpiner.setCancelable(true);
+        //progress.setMax(total);
+        progressSpiner.setIndeterminate(true);
+       // progress.setProgress(0);
+        progressSpiner.show();
 
     }
 
