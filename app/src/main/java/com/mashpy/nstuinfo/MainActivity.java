@@ -54,8 +54,10 @@ public class MainActivity extends AppCompatActivity {
     private String htmlContentInStringFormat;
     private String htmlfile_name;
     public  String expire_date;
-    public boolean reload_status = true;
+    public boolean reload_status = false;
     public boolean dialog_status = true;
+    public boolean update_status = true;
+    String jsonData = "" ;
 
     public String SourceURL = "https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json";
 
@@ -119,20 +121,21 @@ public class MainActivity extends AppCompatActivity {
         // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
+        assert fab != null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (isConnected()) {
-                    /*if(reload_status) {
-                        reload_status = false;*/
-                  new  HttpAsyncTask().execute("https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json");
-                   // }
-                    /*else {
-                       Snackbar.make(view, "Wait. Reload is Processing...", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();*/
 
-                }
-                else {
+                    if(reload_status==false) {
+                        reload_status = true;
+                          getUpdatedData();
+                    }
+                    else {
+                        Snackbar.make(view, "Wait. Reload is Processing...", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                }else {
                     Snackbar.make(view, "Please turn on your data connection", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
@@ -199,11 +202,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void prepareMovieData() {
 
-        new HttpAsyncTask().execute(SourceURL);
+        getUpdatedData();
     }
     public void OffLineData() {
         String result;
-        String file_name = "json_string";
         if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name) == null) {
             try {
                 InputStream is = getAssets().open("json_directory/json_string");
@@ -288,18 +290,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostResume() {
         super.onPostResume();
-
-        dialog_status = true;
-
         recyclerDataList.clear();
         OffLineData();
-
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        dialog_status =false;
+       // dialog_status =false;
 
     }
 
@@ -352,20 +350,88 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void getUpdatedData()
+    {
+        new getJSON().execute(SourceURL);
+
+    }
+
+    private class getJSON extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        @Override
+        protected String doInBackground(String... urls) {
+            String result = GET(urls[0]);
+            try {
+                /**Online JSON read*/
+
+                JSONObject json = new JSONObject(result);
+                articles = json.getJSONArray("article_list");
+                online_jasonObjectLenth = json.getJSONArray("article_list").length();
+                /**Offline Stored JSON read*/
+                String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
+                JSONObject json_previous = new JSONObject(jsonString_previous);
+                articles_previous = json_previous.getJSONArray("article_list");
+                String online_ver_string = (String) json.get("version");
+                String offline_ver_string = (String) json_previous.get("version");
+                float online_ver = Float.parseFloat(online_ver_string);
+                float offline_ver = Float.parseFloat(offline_ver_string);
+
+                if (online_ver > offline_ver) {
+                    update_status = true;
+                }
+                else {
+                    update_status = false;
+                }
+
+
+            } catch (JSONException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            return result;
+        }
+
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(final String result) {
+
+            if(update_status==false && reload_status == true) {
+                reload_status = false;
+                open_dialog();
+            }
+            else if(update_status ==true ) {
+              //  download(online_jasonObjectLenth);
+                download(10);
+                jsonData =  result;
+               new HttpAsyncTask().execute(jsonData);
+            }
+
+
+
+        }
+
+    }
+
+
+
     private class HttpAsyncTask extends AsyncTask<String, Void, String> {
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            download(10);
-
         }
 
 
         @Override
         protected String doInBackground(String... urls) {
-            String result = GET(urls[0]);
+            String result = urls[0];
             try {
                 /**Online JSON read*/
 
@@ -382,7 +448,8 @@ public class MainActivity extends AppCompatActivity {
                 float online_ver = Float.parseFloat(online_ver_string);
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
-                if (online_ver > offline_ver) {
+                if (online_ver > offline_ver)
+                {
 
                     int menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
@@ -395,7 +462,7 @@ public class MainActivity extends AppCompatActivity {
                         progress.setMax(menu_update_number);
                         Log.d("Menu " , String.valueOf(menu_update_number));
                     }
-                    final int totalProgressTime = menu_update_number;
+
                     json_length = menu_update_number;
                     jumpTime = 0;
 
@@ -420,16 +487,16 @@ public class MainActivity extends AppCompatActivity {
                         if(i+1 == online_jasonObjectLenth)
                            progress.dismiss();
                         downloadedItem = i;
-                        Log.d("HtmlFileName" , HtmlFileName);
+                        Log.d("DownloadItem " , String.valueOf(downloadedItem));
                     }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
-                else
-                {
-                    progress.dismiss();
-                }
+               // else
+               // {
+                   // progress.dismiss();
+                ////}
 
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
@@ -439,8 +506,6 @@ public class MainActivity extends AppCompatActivity {
         }
         protected void onProgressUpdate(Integer... values) {
 
-            // increment progress bar by progress value
-          //  setProgress(10);
             progress.setProgress(values[0]);
 
         }
@@ -601,9 +666,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
-           if(dialog_status) {
+          // if(dialog_status) {
                alertDialog.show();
-           }
+          // }
 
     }
 
