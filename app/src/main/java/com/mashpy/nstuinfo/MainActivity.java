@@ -128,8 +128,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isConnected()) {
-                    circularProgressBar();
+
                     if (reload_status == true) {
+                        circularProgressBar();
                         reload_status = false;
                         getUpdatedData();
                     } else {

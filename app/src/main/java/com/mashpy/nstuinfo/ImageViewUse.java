@@ -10,7 +10,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -31,21 +30,24 @@ public class ImageViewUse extends AppCompatActivity {
         setContentView(R.layout.activity_image_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        final String imagename = "safe_image";
+        final String imagename1 ="safe_image1";
+        Bitmap b;
+        final ImageView imageView = (ImageView) findViewById(R.id.my_image);
+        final String imgurl = "http://nazmul56.github.io/safe_image.jpg";
+        final String imgurl2 = "http://nazmul56.github.io/safe_image1.jpg";
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                new GetImages(imgurl2, imageView, imagename1).execute();
+               
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String imagename = "safe_image";
-        Bitmap b;
-        ImageView imageView = (ImageView) findViewById(R.id.my_image);
-        String imgurl = "http://nazmul56.github.io/safe_image.jpg";
+
 
         if (ImageStorage.checkifImageExists(imagename, getBaseContext())) {
             File file = ImageStorage.getImage("/" + imagename + ".jpg", getBaseContext());
