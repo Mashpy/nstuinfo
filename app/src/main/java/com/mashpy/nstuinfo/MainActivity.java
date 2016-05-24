@@ -324,51 +324,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void open_dialog() {
-        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Your have already updated data.");
-        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1) {
-            }
-        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        // if(dialog_status) {
-        alertDialog.show();
-        // }
-
-    }
-
-    public void download(int total) {
-        progress = new ProgressDialog(MainActivity.this);
-        progress.setMessage("Downloading Updated Data ...");
-        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progress.setCancelable(true);
-        progress.setMax(total);
-        //progress.setIndeterminate(true);
-        progress.setProgress(0);
-        progress.setButton(DialogInterface.BUTTON_NEGATIVE, "OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        progress.show();
-
-    }
-
-    public void circularProgressBar() {
-        progressSpiner = new ProgressDialog(MainActivity.this);
-        progressSpiner.setMessage("Checking for update ...");
-        progressSpiner.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressSpiner.setCancelable(true);
-        //progress.setMax(total);
-        progressSpiner.setIndeterminate(true);
-        // progress.setProgress(0);
-        progressSpiner.show();
-
-    }
-
     public interface ClickListener {
         void onClick(View view, int position);
 
@@ -467,16 +422,32 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(final String result) {
 
-            if (update_status == false && reload_status == false) {
-                progressSpiner.dismiss();
-                open_dialog();
-                reload_status = true;
-            } else if (update_status == true) {
-                //  download(online_jasonObjectLenth);
-                download(progressMax);
-                jsonData = result;
-                new HttpAsyncTask().execute(jsonData);
+
+            if(reload_status ==false)
+            {
+                if(update_status== false)
+                {
+                    reload_status = true;
+                    progressSpiner.dismiss();
+                    open_dialog();
+
+                }else if(update_status==true)
+                {
+                    reload_status = true;
+                    progressSpiner.dismiss();
+                    download(progressMax);
+                    jsonData = result;
+                    new HttpAsyncTask().execute(jsonData);
+                }
+            }else if(reload_status ==true)
+            {
+                if(update_status) {
+                    download(progressMax);
+                    jsonData = result;
+                    new HttpAsyncTask().execute(jsonData);
+                }
             }
+
         }
     }
 
@@ -694,5 +665,52 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void circularProgressBar() {
+        progressSpiner = new ProgressDialog(MainActivity.this);
+        progressSpiner.setMessage("Checking for update ...");
+        progressSpiner.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressSpiner.setCancelable(true);
+        //progress.setMax(total);
+        progressSpiner.setIndeterminate(true);
+        // progress.setProgress(0);
+        progressSpiner.show();
+
+    }
+
+    public void open_dialog() {
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage("Your have already updated data.");
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+            }
+        });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        // if(dialog_status) {
+        alertDialog.show();
+        // }
+
+    }
+
+    public void download(int total) {
+        progress = new ProgressDialog(MainActivity.this);
+        progress.setMessage("Downloading Updated Data ...");
+        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progress.setCancelable(true);
+        progress.setMax(total);
+        //progress.setIndeterminate(true);
+        progress.setProgress(0);
+        progress.setButton(DialogInterface.BUTTON_NEGATIVE, "OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        progress.show();
+
+    }
+
+
 
 }
