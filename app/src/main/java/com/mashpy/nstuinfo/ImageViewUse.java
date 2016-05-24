@@ -42,7 +42,7 @@ public class ImageViewUse extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new GetImages(imgurl2, imageView, imagename1).execute();
-               
+
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
