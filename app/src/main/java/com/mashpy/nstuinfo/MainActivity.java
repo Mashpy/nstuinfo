@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
      * Auto AsyncTask variables
      */
     int online_jasonObjectLenth = 0;
+    int offline_jasonObjectLength  = 0;
     int downloadedItem = 0;
     JSONArray articles;
     JSONArray articles_previous;
@@ -284,7 +285,6 @@ public class MainActivity extends AppCompatActivity {
             if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name[i]) == null) {
                 try {
                     InputStream is = getAssets().open("html_directory/" + file_name[i]);
-
                     // We guarantee that the available method returns the total
                     // size of the asset...  of course, this does mean that a single
                     // asset can't be more than 2 gigs.
@@ -398,17 +398,22 @@ public class MainActivity extends AppCompatActivity {
                 String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
                 JSONObject json_previous = new JSONObject(jsonString_previous);
                 articles_previous = json_previous.getJSONArray("article_list");
+                offline_jasonObjectLength = json_previous.getJSONArray("article_list").length();
                 String online_ver_string = (String) json.get("version");
                 String offline_ver_string = (String) json_previous.get("version");
                 float online_ver = Float.parseFloat(online_ver_string);
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
                 if (online_ver > offline_ver) {
-
+                    progressMax = 0;
                     update_status = true;
                     int menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
-                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                        try {
+                            if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
+                                menu_update_number++;
+                            }
+                        }catch(JSONException e){
                             menu_update_number++;
                         }
                     }
@@ -442,22 +447,25 @@ public class MainActivity extends AppCompatActivity {
                 {
                     reload_status = true;
                     progressSpiner.dismiss();
-                    if(progressMax == 0) {
+                    /*if(progressMax == 0) {
                         download(online_jasonObjectLenth);
                     }else{
                         download(progressMax);
-                    }
+                    }*/
+
+                    download(progressMax);
                     jsonData = result;
                     new HttpAsyncTask().execute(jsonData);
                 }
             }else if(reload_status ==true)
             {
                 if(update_status) {
-                    if(progressMax == 0) {
+                   /* if(progressMax == 0) {
                         download(online_jasonObjectLenth);
                     }else{
                         download(progressMax);
-                    }
+                    }*/
+                    download(progressMax);
                     jsonData = result;
                     new HttpAsyncTask().execute(jsonData);
                 }
@@ -496,6 +504,7 @@ public class MainActivity extends AppCompatActivity {
 
                         String HtmlFileName = articles.getJSONObject(i).getString("root_path");
                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
+                        try{
                         if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(jumpTime).getString("menu_version"))) {
 
                             htmlDocument = Jsoup.connect(htmlPageUrl).get();
@@ -504,6 +513,16 @@ public class MainActivity extends AppCompatActivity {
                                 new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(HtmlFileName, htmlContentInStringFormat);
                             } catch (Exception e) {
                                 e.printStackTrace();
+                            }
+                        }
+                        }catch (JSONException e)
+                        {
+                            htmlDocument = Jsoup.connect(htmlPageUrl).get();
+                            htmlContentInStringFormat = htmlDocument.toString();
+                            try {
+                                new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(HtmlFileName, htmlContentInStringFormat);
+                            } catch (Exception ex) {
+                                ex.printStackTrace();
                             }
                         }
                         onProgressUpdate(i);
@@ -535,7 +554,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(final String result) {
             TextView ShowVersion = (TextView) findViewById(R.id.versionName);
 
-            ShowVersion.setText("Version : 3.0 Data Version : "+ver);
+            ShowVersion.setText("Version : 3.0 Data Version : " + ver);
             if ((downloadedItem + 1) == online_jasonObjectLenth) {
                 reload_status = true;
                 try {
