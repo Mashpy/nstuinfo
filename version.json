@@ -1,5 +1,5 @@
 {
-"version": "2.04",
+"version": "2.05",
 "expire_date": "28-May-2016",
 "article_list": [
 {
@@ -7,7 +7,7 @@
 "menu_name": "Introduction",
 "root_path": "intruduction",
 "menu_version": "8",
-"type" : "ad",
+"type" : "non_ad",
 "last_update":"1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
 },
@@ -24,8 +24,8 @@
 "id": 3,
 "menu_name": "Academic Council",
 "root_path": "academic_council",
-"menu_version": "2",
-"type" : "ad",
+"menu_version": "3",
+"type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/academic_council.html"
 },
@@ -33,8 +33,8 @@
 "id": 4,
 "menu_name": "Committees",
 "root_path": "committees",
-"menu_version": "5",
-"type" : "ad",
+"menu_version": "6",
+"type" : "non_ad",
 "last_update": "24-May-2016",
 "url": "http://nstuinfo.github.io/committes.html"
 },
@@ -42,8 +42,8 @@
 "id": 5,
 "menu_name": "Register office",
 "root_path": "register_office",
-"menu_version": "2",
-"type" : "ad",
+"menu_version": "3",
+"type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/registraroffice.html"
 },
@@ -51,8 +51,8 @@
 "id": 6,
 "menu_name": "Central Library",
 "root_path": "central_library",
-"menu_version": "2",
-"type" : "ad",
+"menu_version": "4",
+"type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/Central_library.html"
 },
