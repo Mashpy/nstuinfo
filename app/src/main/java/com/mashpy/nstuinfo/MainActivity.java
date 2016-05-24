@@ -488,7 +488,6 @@ public class MainActivity extends AppCompatActivity {
             try {
                 /**Online JSON read*/
 
-
                 JSONObject json = new JSONObject(result);
                 articles = json.getJSONArray("article_list");
                 online_jasonObjectLenth = json.getJSONArray("article_list").length();
