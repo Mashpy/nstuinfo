@@ -25,6 +25,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DetailsActivity extends AppCompatActivity {
+    String directoryName = "nstuinfo";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,7 +116,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         public String readJsonFileData(String filename) {
             try {
-                File f = new File(context.getApplicationInfo().dataDir + "/new_directory_name/" + filename);
+                File f = new File(context.getApplicationInfo().dataDir + "/" + directoryName + "/"  + filename);
                 if (!f.exists()) {
                     // onNoResult();
                     return null;

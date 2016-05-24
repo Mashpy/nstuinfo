@@ -75,6 +75,7 @@ public class ImageViewUse extends AppCompatActivity {
 
     public static class ImageStorage {
 
+
         public static String saveToSdCard(Bitmap bitmap, String filename, Context context) {
 
             String stored = null;
@@ -172,5 +173,4 @@ public class ImageViewUse extends AppCompatActivity {
             }
         }
     }
-
 }
