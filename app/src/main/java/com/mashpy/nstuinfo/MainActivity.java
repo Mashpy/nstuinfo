@@ -503,7 +503,7 @@ public class MainActivity extends AppCompatActivity {
 
                         String HtmlFileName = articles.getJSONObject(i).getString("root_path");
                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
-                        try{
+
                         if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(jumpTime).getString("menu_version"))) {
 
                             htmlDocument = Jsoup.connect(htmlPageUrl).get();
@@ -514,16 +514,6 @@ public class MainActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                         }
-                        }catch (JSONException e)
-                        {
-                            htmlDocument = Jsoup.connect(htmlPageUrl).get();
-                            htmlContentInStringFormat = htmlDocument.toString();
-                            try {
-                                new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(HtmlFileName, htmlContentInStringFormat);
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                            }
-                        }
                         onProgressUpdate(i);
                         downloadedItem = i;
                         Log.d("DownloadItem ", String.valueOf(downloadedItem));
@@ -532,10 +522,12 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
+                Log.d("Error " , "Problem");
+
+
             }
             return result;
         }

@@ -1,5 +1,5 @@
 {
-"version": "2.08",
+"version": "2.09",
 "expire_date": "28-May-2016",
 "article_list": [
 {
@@ -159,11 +159,20 @@
 "id": 18,
 "menu_name": "Message1",
 "root_path": "message_from2",
+"menu_version": "2",
+"type" : "non_ad",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/message_developer.html"
+},
+{
+"id": 19,
+"menu_name": "Message2",
+"root_path": "message_from3",
 "menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/message_developer.html"
-  }
+}
 
 ]
 }
