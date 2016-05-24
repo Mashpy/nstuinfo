@@ -422,8 +422,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     update_status = false;
                 }
-
-
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -452,7 +450,6 @@ public class MainActivity extends AppCompatActivity {
                     }else{
                         download(progressMax);
                     }*/
-
                     download(progressMax);
                     jsonData = result;
                     new HttpAsyncTask().execute(jsonData);
