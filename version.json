@@ -1,5 +1,5 @@
 {
-"version": "1.99",
+"version": "2.00",
 "expire_date": "28-May-2016",
 "article_list": [
 {
@@ -33,8 +33,8 @@
 "id": 4,
 "menu_name": "Committees",
 "root_path": "committees",
-"menu_version": "1",
-"type" : "non_ad",
+"menu_version": "2",
+"type" : "ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/committes.html"
 },
