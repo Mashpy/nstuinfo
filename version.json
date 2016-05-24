@@ -145,7 +145,16 @@
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/message_developer.html"
-}
+},
+{
+"id": 16,
+"menu_name": "Message",
+"root_path": "message_from",
+"menu_version": "1",
+"type" : "non_ad",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/message_developer.html"
+  }
 
 ]
 }
