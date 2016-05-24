@@ -27,7 +27,6 @@ import java.util.Date;
 public class DetailsActivity extends AppCompatActivity {
     String directoryName = "nstuinfo";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

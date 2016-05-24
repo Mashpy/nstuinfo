@@ -23,6 +23,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public String SourceURL = "https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json";
     public int progressMax = 0;
     String jsonData = "";
+    String ver ;
     /**
      * Json Files Name
      */
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     JSONArray articles;
     JSONArray articles_previous;
     int jumpTime = 0;
+
     private List<RecyclerData> recyclerDataList = new ArrayList<>();
     private RecyclerView recyclerView;
     private RecyclerDataAdapter mAdapter;
@@ -119,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
@@ -186,10 +188,7 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        else if(id == R.id.about)
+        if(id == R.id.about)
         {
             Intent i = new Intent(MainActivity.this, ImageViewUse.class);
             startActivity(i);
@@ -252,11 +251,18 @@ public class MainActivity extends AppCompatActivity {
 
         try {
 
+            TextView ShowVersion = (TextView) findViewById(R.id.versionName);
+
             String str = "";
             String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
             JSONObject json = new JSONObject(jsonString);
             JSONArray articles = json.getJSONArray("article_list");
             int jasonObjecLenth = json.getJSONArray("article_list").length();
+
+            ver = (String) json.get("version");
+
+            ShowVersion.setText("Version : 3.0 Data Version : "+ver);
+
             for (int i = 0; i < jasonObjecLenth; i++) {
                 RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"), articles.getJSONObject(i).getString("type"));
                 recyclerDataList.add(recyclerData);
@@ -465,6 +471,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 /**Online JSON read*/
 
+
                 JSONObject json = new JSONObject(result);
                 articles = json.getJSONArray("article_list");
                 online_jasonObjectLenth = json.getJSONArray("article_list").length();
@@ -472,6 +479,8 @@ public class MainActivity extends AppCompatActivity {
                 String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
                 JSONObject json_previous = new JSONObject(jsonString_previous);
                 articles_previous = json_previous.getJSONArray("article_list");
+                ver = (String) json.get("version");
+
 
                 try {
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
@@ -515,7 +524,9 @@ public class MainActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(final String result) {
+            TextView ShowVersion = (TextView) findViewById(R.id.versionName);
 
+            ShowVersion.setText("Version : 3.0 Data Version : "+ver);
             if ((downloadedItem + 1) == online_jasonObjectLenth) {
                 reload_status = true;
                 try {

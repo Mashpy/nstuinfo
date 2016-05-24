@@ -8,16 +8,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main"
     tools:context="info.nstu.MainActivity">
-
-
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="vertical"
-        android:layout_alignParentTop="true" />
-
-
-
+        android:layout_alignParentTop="true"
+        android:paddingBottom="20dp"
+        />
 </RelativeLayout>
