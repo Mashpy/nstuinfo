@@ -404,6 +404,7 @@ public class MainActivity extends AppCompatActivity {
                 float offline_ver = Float.parseFloat(offline_ver_string);
 
                 if (online_ver > offline_ver) {
+
                     update_status = true;
                     int menu_update_number = 0;
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
@@ -441,14 +442,22 @@ public class MainActivity extends AppCompatActivity {
                 {
                     reload_status = true;
                     progressSpiner.dismiss();
-                    download(progressMax);
+                    if(progressMax == 0) {
+                        download(online_jasonObjectLenth);
+                    }else{
+                        download(progressMax);
+                    }
                     jsonData = result;
                     new HttpAsyncTask().execute(jsonData);
                 }
             }else if(reload_status ==true)
             {
                 if(update_status) {
-                    download(progressMax);
+                    if(progressMax == 0) {
+                        download(online_jasonObjectLenth);
+                    }else{
+                        download(progressMax);
+                    }
                     jsonData = result;
                     new HttpAsyncTask().execute(jsonData);
                 }
