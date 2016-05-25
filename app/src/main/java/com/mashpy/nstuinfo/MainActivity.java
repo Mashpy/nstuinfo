@@ -617,7 +617,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onProgressUpdate(Integer... values) {
 
             progress.setProgress(values[0]);
-            if (values[0] + 1 == progressMax)
+            if (values[0]  == progressMax)
                 progress.dismiss();
 
         }
