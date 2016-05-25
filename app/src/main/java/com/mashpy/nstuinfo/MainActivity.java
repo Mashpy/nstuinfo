@@ -512,8 +512,9 @@ public class MainActivity extends AppCompatActivity {
                         DeleteJsonData.add(OfflineData);
                     }
                     }
+                    progressMax =progressMax+DeleteJsonData.size();
                     //End
-                    Log.d("Delete ",String.valueOf(DeleteJsonData.size()));
+                    Log.d("DeleteSize ",String.valueOf(DeleteJsonData.size()));
 
                 } else {
                     update_status = false;
