@@ -414,7 +414,7 @@ public class MainActivity extends AppCompatActivity {
                                 menu_update_number++;
                             }
                         }catch(JSONException e){
-                            menu_update_number++;
+                           // menu_update_number++;
                         }
                     }
                     progressMax = menu_update_number;
@@ -495,14 +495,13 @@ public class MainActivity extends AppCompatActivity {
                 articles_previous = json_previous.getJSONArray("article_list");
                 ver = (String) json.get("version");
 
-
                 try {
                     for (int i = 0,j=0; i < online_jasonObjectLenth; i++) {
 
                         String HtmlFileName = articles.getJSONObject(i).getString("root_path");
                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
 
-                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(jumpTime).getString("menu_version"))) {
+                        if (Integer.parseInt(articles.getJSONObject(i).getString("menu_version")) > Integer.parseInt(articles_previous.getJSONObject(i).getString("menu_version"))) {
 
                             htmlDocument = Jsoup.connect(htmlPageUrl).get();
                             htmlContentInStringFormat = htmlDocument.toString();
@@ -517,7 +516,7 @@ public class MainActivity extends AppCompatActivity {
                             downloadedItem = j;
                             Log.d("DownloadItem ", String.valueOf(downloadedItem));
                         }
-
+                        Log.d("AllJSON ", String.valueOf(i));
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
