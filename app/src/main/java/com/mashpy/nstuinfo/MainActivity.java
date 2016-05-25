@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean dialog_status = true;
     public boolean update_status = true;
     public String SourceURL = "https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json";
+    HttpAsyncTask myAsyc = new HttpAsyncTask();
     public int progressMax = 0;
     String jsonData = "";
     String ver ;
@@ -452,7 +453,8 @@ public class MainActivity extends AppCompatActivity {
                     }*/
                     download(progressMax);
                     jsonData = result;
-                    new HttpAsyncTask().execute(jsonData);
+                    myAsyc.execute(jsonData);
+                   // new HttpAsyncTask().execute(jsonData);
                 }
             }else if(reload_status ==true)
             {
@@ -464,7 +466,8 @@ public class MainActivity extends AppCompatActivity {
                     }*/
                     download(progressMax);
                     jsonData = result;
-                    new HttpAsyncTask().execute(jsonData);
+                    myAsyc.execute(jsonData);
+                   // new HttpAsyncTask().execute(jsonData);
                 }
             }
 
@@ -532,7 +535,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onProgressUpdate(Integer... values) {
 
             progress.setProgress(values[0]);
-            if (values[0] + 1 == online_jasonObjectLenth)
+            if (values[0] + 1 == progressMax)
                 progress.dismiss();
 
         }
@@ -543,7 +546,7 @@ public class MainActivity extends AppCompatActivity {
             TextView ShowVersion = (TextView) findViewById(R.id.versionName);
 
             ShowVersion.setText("Version : 3.0 Data Version : " + ver);
-            if ((downloadedItem + 1) == online_jasonObjectLenth) {
+            if ((downloadedItem +1) == progressMax) {
                 reload_status = true;
                 try {
                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
