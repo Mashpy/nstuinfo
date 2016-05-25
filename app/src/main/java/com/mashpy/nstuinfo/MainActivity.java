@@ -494,8 +494,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                     }
                     //End
-                    progressMax = UpdateJsonData.size();
-                    Log.d("Nazmul", String.valueOf(progressMax));
+                    progressMax = totalProgress;
+                    Log.d("Update", String.valueOf(progressMax));
                 } else {
                     update_status = false;
                 }
