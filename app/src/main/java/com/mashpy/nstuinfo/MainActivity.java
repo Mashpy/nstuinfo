@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean dialog_status = true;
     public boolean update_status = true;
     public String SourceURL = "https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json";
-    HttpAsyncTask myAsyc = new HttpAsyncTask();
     public int progressMax = 0;
     String jsonData = "";
     String ver ;
@@ -453,8 +452,8 @@ public class MainActivity extends AppCompatActivity {
                     }*/
                     download(progressMax);
                     jsonData = result;
-                    myAsyc.execute(jsonData);
-                   // new HttpAsyncTask().execute(jsonData);
+
+                    new HttpAsyncTask().execute(jsonData);
                 }
             }else if(reload_status ==true)
             {
@@ -466,8 +465,7 @@ public class MainActivity extends AppCompatActivity {
                     }*/
                     download(progressMax);
                     jsonData = result;
-                    myAsyc.execute(jsonData);
-                   // new HttpAsyncTask().execute(jsonData);
+                    new HttpAsyncTask().execute(jsonData);
                 }
             }
 
@@ -499,7 +497,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 try {
-                    for (int i = 0; i < online_jasonObjectLenth; i++) {
+                    for (int i = 0,j=0; i < online_jasonObjectLenth; i++) {
 
                         String HtmlFileName = articles.getJSONObject(i).getString("root_path");
                         String htmlPageUrl = articles.getJSONObject(i).getString("url");
@@ -512,11 +510,14 @@ public class MainActivity extends AppCompatActivity {
                                 new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(HtmlFileName, htmlContentInStringFormat);
                             } catch (Exception e) {
                                 e.printStackTrace();
+                                Log.d("HTMLsave","Error");
                             }
+                            j++;
+                            onProgressUpdate(j);
+                            downloadedItem = j;
+                            Log.d("DownloadItem ", String.valueOf(downloadedItem));
                         }
-                        onProgressUpdate(i);
-                        downloadedItem = i;
-                        Log.d("DownloadItem ", String.valueOf(downloadedItem));
+
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -526,8 +527,6 @@ public class MainActivity extends AppCompatActivity {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
                 Log.d("Error " , "Problem");
-
-
             }
             return result;
         }
@@ -544,9 +543,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(final String result) {
             TextView ShowVersion = (TextView) findViewById(R.id.versionName);
-
             ShowVersion.setText("Version : 3.0 Data Version : " + ver);
-            if ((downloadedItem +1) == progressMax) {
+            Log.d("PostEx",String.valueOf(downloadedItem)+" "+ String.valueOf(progressMax));
+            if (downloadedItem  == progressMax) {
                 reload_status = true;
                 try {
                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
