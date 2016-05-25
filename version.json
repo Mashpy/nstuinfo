@@ -1,5 +1,5 @@
 {
-"version": "2.18",
+"version": "2.19",
 "expire_date": "28-May-2016",
 "article_list": [
 {
@@ -132,7 +132,7 @@
 "id": 15,
 "menu_name": "Emergency Contacts",
 "root_path": "emergency_contacts",
-"menu_version": "4",
+"menu_version": "5",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/emergency.html"
@@ -141,7 +141,7 @@
 "id": 16,
 "menu_name": "Message From Developer",
 "root_path": "message_from_developer",
-"menu_version": "6",
+"menu_version": "7",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/message_developer.html"
