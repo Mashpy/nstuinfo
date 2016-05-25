@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public int progressMax = 0;
     String jsonData = "";
     String ver ;
+    String updateVersion;
     /**
      * Json Files Name
      */
@@ -87,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
     private String htmlContentInStringFormat;
     private ProgressDialog progress;
     private ProgressDialog progressSpiner;
+
+    TextView ShowVersion;
 
     public static String GET(String url) {
         InputStream inputStream = null;
@@ -130,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
+
+        ShowVersion = (TextView) findViewById(R.id.versionName);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
         assert fab != null;
@@ -258,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
 
-            TextView ShowVersion = (TextView) findViewById(R.id.versionName);
+
 
             String str = "";
             String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
@@ -406,6 +411,8 @@ public class MainActivity extends AppCompatActivity {
                 articles_previous = json_previous.getJSONArray("article_list");
                 offline_jasonObjectLength = json_previous.getJSONArray("article_list").length();
                 String online_ver_string = (String) json.get("version");
+                updateVersion = online_ver_string;
+
                 String offline_ver_string = (String) json_previous.get("version");
                 float online_ver = Float.parseFloat(online_ver_string);
                 float offline_ver = Float.parseFloat(offline_ver_string);
@@ -430,18 +437,21 @@ public class MainActivity extends AppCompatActivity {
                         Data = new jsonDataList(root,menu_ver,url);
                         OnlineJsonData.add(Data);
 
+
                     }
+
                     /**Offline Json Data*/
-                    for(int j =0 ; j<offline_jasonObjectLength;j++){
+                    for(int j = 0 ; j< offline_jasonObjectLength;j++){
 
-                        String root = articles.getJSONObject(j).getString("root_path");
-                        int  menu_ver = Integer.parseInt(articles.getJSONObject(j).getString("menu_version"));
-                        String url = articles.getJSONObject(j).getString("url");
-
+                        String root = articles_previous.getJSONObject(j).getString("root_path");
+                        int  menu_ver = Integer.parseInt(articles_previous.getJSONObject(j).getString("menu_version"));
+                        String url = articles_previous.getJSONObject(j).getString("url");
                         jsonDataList Data2;
                         Data2 = new jsonDataList(root,menu_ver,url);
                         OfflineJsonData.add(Data2);
                     }
+
+
                     int totalProgress= 0;
                     /**Find Update*/
                     for(int i =0 ;i< OnlineJsonData.size();i++)
@@ -450,20 +460,28 @@ public class MainActivity extends AppCompatActivity {
                         int checkNew = 0;
                         jsonDataList OnlineData = OnlineJsonData.get(i);
                         String online_root =  OnlineData.getroot_path();
+                       // jsonDataList On = OnlineJsonData.get(0);
+
+
+
                         int onlineMenuVersion = OnlineData.getmenu_version();
                         for(int j = 0 ; j< OfflineJsonData.size() ; j++)
                         {
                             jsonDataList OfflineData = OfflineJsonData.get(j);
                             String offline_root =  OfflineData.getroot_path();
+
                             int offlineMenuVersion = OfflineData.getmenu_version();
+
+                           // String root =  OnlineData.getroot_path();
 
                             if(offline_root.equals(online_root)){
                                 if(onlineMenuVersion>offlineMenuVersion)
                                 {
                                     UpdateJsonData.add(OnlineData);
-                                 totalProgress++;
+
                                 }
                                 checkNew++;
+                                totalProgress++;
                             }
 
                         }
@@ -474,6 +492,9 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     }
+                    progressMax =UpdateJsonData.size();
+
+
                     /**Find Delete*/
                     for(int i =0 ;i< OfflineJsonData.size();i++)
                     {
@@ -485,7 +506,6 @@ public class MainActivity extends AppCompatActivity {
                             jsonDataList OnlineData = OnlineJsonData.get(j);
                             String online_root =  OnlineData.getroot_path();
                             if(offline_root.equals(online_root)){
-
                                 checkDelete++;
                             }
 
@@ -495,8 +515,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                     }
                     //End
-                    progressMax = totalProgress;
-                    Log.d("Update", String.valueOf(progressMax));
+                    Log.d("Delete ",String.valueOf(DeleteJsonData.size()));
+
                 } else {
                     update_status = false;
                 }
@@ -524,7 +544,7 @@ public class MainActivity extends AppCompatActivity {
                     reload_status = true;
                     progressSpiner.dismiss();
 
-                   /// download(progressMax);
+                    download(progressMax);
                     jsonData = result;
 
                     new HttpAsyncTask().execute(jsonData);
@@ -533,7 +553,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(update_status) {
 
-                   // download(progressMax);
+                    download(progressMax);
                     jsonData = result;
                     new HttpAsyncTask().execute(jsonData);
                 }
@@ -574,6 +594,7 @@ public class MainActivity extends AppCompatActivity {
                     onProgressUpdate(j);
                     downloadedItem = j;
                     Log.d("DownloadItem ", String.valueOf(downloadedItem));
+
                 }
 
             } catch (IOException e) {
@@ -591,12 +612,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // onPostExecute displays the results of the AsyncTask.
+
         @Override
         protected void onPostExecute(final String result) {
-            TextView ShowVersion = (TextView) findViewById(R.id.versionName);
-            ShowVersion.setText("Version : 3.0 Data Version : " + ver);
+
+
             Log.d("PostEx",String.valueOf(downloadedItem)+" "+ String.valueOf(progressMax));
             if (downloadedItem  == progressMax) {
+
+
                 reload_status = true;
                 try {
                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
@@ -615,6 +639,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                     recyclerDataList.add(recyclerData);
                 }
+                String uv = "Version : 3.0 Data Version : "+updateVersion;
+                ShowVersion.setText(uv);
             }
             mAdapter.notifyDataSetChanged();
         }

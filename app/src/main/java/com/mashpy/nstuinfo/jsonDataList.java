@@ -4,9 +4,6 @@ public class jsonDataList {
      String root_path, url;
     int menu_version;
 
-    public jsonDataList() {
-    }
-
     public jsonDataList(String root_path, int menu_version, String url) {
         this.root_path = root_path;
         this.menu_version = menu_version;
