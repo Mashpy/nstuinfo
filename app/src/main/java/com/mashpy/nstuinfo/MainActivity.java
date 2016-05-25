@@ -443,7 +443,7 @@ public class MainActivity extends AppCompatActivity {
                         OfflineJsonData.add(Data2);
                     }
                     int totalProgress= 0;
-
+                    /**Find Update*/
                     for(int i =0 ;i< OnlineJsonData.size();i++)
                     {
 
@@ -461,7 +461,7 @@ public class MainActivity extends AppCompatActivity {
                                 if(onlineMenuVersion>offlineMenuVersion)
                                 {
                                     UpdateJsonData.add(OnlineData);
-                                    totalProgress++;
+                                 totalProgress++;
                                 }
                                 checkNew++;
                             }
@@ -474,6 +474,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     }
+                    /**Find Delete*/
                     for(int i =0 ;i< OfflineJsonData.size();i++)
                     {
                         int checkDelete = 0 ;
@@ -523,7 +524,7 @@ public class MainActivity extends AppCompatActivity {
                     reload_status = true;
                     progressSpiner.dismiss();
 
-                    download(progressMax);
+                   /// download(progressMax);
                     jsonData = result;
 
                     new HttpAsyncTask().execute(jsonData);
@@ -532,7 +533,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(update_status) {
 
-                    download(progressMax);
+                   // download(progressMax);
                     jsonData = result;
                     new HttpAsyncTask().execute(jsonData);
                 }
@@ -563,6 +564,7 @@ public class MainActivity extends AppCompatActivity {
 
                     try {
                         new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(HtmlFileName, htmlContentInStringFormat);
+                        Log.d("SaveToLocal", String.valueOf(k));
                     } catch (Exception e) {
                         e.printStackTrace();
                         Log.d("HTMLsave","Error");
