@@ -261,8 +261,6 @@ public class MainActivity extends AppCompatActivity {
 
         try {
 
-
-
             String str = "";
             String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
             JSONObject json = new JSONObject(jsonString);
@@ -448,8 +446,6 @@ public class MainActivity extends AppCompatActivity {
                         Data2 = new jsonDataList(root,menu_ver,url);
                         OfflineJsonData.add(Data2);
                     }
-
-                    int totalProgress= 0;
                     /**Find Update*/
                     for(int i =0 ;i< OnlineJsonData.size();i++)
                     {
@@ -478,14 +474,12 @@ public class MainActivity extends AppCompatActivity {
 
                                 }
                                 checkNew++;
-                                totalProgress++;
                             }
 
                         }
                      if(checkNew==0)
                     {
                         UpdateJsonData.add(OnlineData);
-                        totalProgress++;
                     }
 
                     }
