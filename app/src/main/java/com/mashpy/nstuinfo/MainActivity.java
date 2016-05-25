@@ -449,7 +449,6 @@ public class MainActivity extends AppCompatActivity {
                         OfflineJsonData.add(Data2);
                     }
 
-
                     int totalProgress= 0;
                     /**Find Update*/
                     for(int i =0 ;i< OnlineJsonData.size();i++)
@@ -507,12 +506,13 @@ public class MainActivity extends AppCompatActivity {
                                 checkDelete++;
                             }
 
-                        }if(checkDelete==0)
+                        }
+                    if(checkDelete==0)
                     {
                         DeleteJsonData.add(OfflineData);
                     }
                     }
-                    progressMax =progressMax+DeleteJsonData.size();
+                    progressMax = progressMax+DeleteJsonData.size();
                     //End
                     Log.d("DeleteSize ",String.valueOf(DeleteJsonData.size()));
 
@@ -572,8 +572,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... urls) {
             String result = urls[0];
+            int j =0;
             try {
-                for(int k = 0 , j =0 ; k< UpdateJsonData.size(); k++)
+                for(int k = 0 ; k< UpdateJsonData.size(); k++)
                 {
                    jsonDataList UpdateData = UpdateJsonData.get(k);
                     String HtmlFileName = UpdateData.getroot_path();
@@ -593,6 +594,17 @@ public class MainActivity extends AppCompatActivity {
                     onProgressUpdate(j);
                     downloadedItem = j;
                     Log.d("DownloadItem ", String.valueOf(downloadedItem));
+
+                }
+                /**Delete File Which Removed from OnlineJson*/
+                for(int k = 0 ; k< DeleteJsonData.size(); k++) {
+                    jsonDataList DeleteData = DeleteJsonData.get(k);
+                    String deleteFile = DeleteData.getroot_path();
+                    Log.d("Delete", deleteFile);
+                    new ReadWriteJsonFileUtils(getBaseContext()).deleteFile(deleteFile);
+                    j++;
+                    onProgressUpdate(j);
+                    downloadedItem = j;
 
                 }
 
@@ -640,18 +652,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 String uv = "Version : 3.0 Data Version : "+updateVersion;
                 ShowVersion.setText(uv);
-
-                /**Delete File Which Removed from OnlineJson*/
-                for(int k = 0 ; k< DeleteJsonData.size(); k++) {
-                    jsonDataList DeleteData = DeleteJsonData.get(k);
-                    String deleteFile = DeleteData.getroot_path();
-                    Log.d("Delete", deleteFile);
-                    new ReadWriteJsonFileUtils(getBaseContext()).deleteFile(deleteFile);
-
-                }
-
-
-
 
                 }
             mAdapter.notifyDataSetChanged();
