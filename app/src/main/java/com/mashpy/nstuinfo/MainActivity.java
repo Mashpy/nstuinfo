@@ -132,8 +132,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
-
         ShowVersion = (TextView) findViewById(R.id.versionName);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
@@ -617,7 +615,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(final String result) {
 
 
-            Log.d("PostEx",String.valueOf(downloadedItem)+" "+ String.valueOf(progressMax));
+            Log.d("PostEx", String.valueOf(downloadedItem) + " " + String.valueOf(progressMax));
             if (downloadedItem  == progressMax) {
 
 
@@ -641,7 +639,20 @@ public class MainActivity extends AppCompatActivity {
                 }
                 String uv = "Version : 3.0 Data Version : "+updateVersion;
                 ShowVersion.setText(uv);
-            }
+
+                /**Delete File Which Removed from OnlineJson*/
+                for(int k = 0 ; k< DeleteJsonData.size(); k++) {
+                    jsonDataList DeleteData = DeleteJsonData.get(k);
+                    String deleteFile = DeleteData.getroot_path();
+                    Log.d("Delete", deleteFile);
+                    new ReadWriteJsonFileUtils(getBaseContext()).deleteFile(deleteFile);
+
+                }
+
+
+
+
+                }
             mAdapter.notifyDataSetChanged();
         }
 
