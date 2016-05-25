@@ -630,8 +630,6 @@ public class MainActivity extends AppCompatActivity {
 
             Log.d("PostEx", String.valueOf(downloadedItem) + " " + String.valueOf(progressMax));
             if (downloadedItem  == progressMax) {
-
-
                 reload_status = true;
                 try {
                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
