@@ -480,6 +480,7 @@ public class MainActivity extends AppCompatActivity {
                      if(checkNew==0)
                     {
                         UpdateJsonData.add(OnlineData);
+
                     }
 
                     }
