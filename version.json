@@ -148,8 +148,8 @@
 },
 {
 "id": 16,
-"menu_name": "Message From Developer",
-"root_path": "message_from_developer",
+"menu_name": "Message From Developers",
+"root_path": "message_from_developers",
 "menu_version": "0",
 "type" : "non_ad",
 "last_update": "1-May-2016",
