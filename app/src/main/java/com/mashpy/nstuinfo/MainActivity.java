@@ -270,8 +270,8 @@ public class MainActivity extends AppCompatActivity {
             int jasonObjecLenth = json.getJSONArray("article_list").length();
 
             ver = (String) json.get("version");
-
-            ShowVersion.setText("Version : 3.0 Data Version : "+ver);
+            ver = "Version : 3.0 Data Version : "+ver;
+            ShowVersion.setText(ver);
 
             for (int i = 0; i < jasonObjecLenth; i++) {
                 RecyclerData recyclerData = new RecyclerData(articles.getJSONObject(i).getString("menu_name"), articles.getJSONObject(i).getString("last_update"), "", articles.getJSONObject(i).getString("root_path"), articles.getJSONObject(i).getString("type"));
@@ -530,16 +530,15 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(final String result) {
 
 
-            if(reload_status ==false)
+            if(!reload_status)
             {
-                if(update_status== false)
+                if(!update_status)
                 {
                     reload_status = true;
                     progressSpiner.dismiss();
                     open_dialog();
 
-                }else if(update_status==true)
-                {
+                }else {
                     reload_status = true;
                     progressSpiner.dismiss();
 
@@ -548,8 +547,8 @@ public class MainActivity extends AppCompatActivity {
 
                     new HttpAsyncTask().execute(jsonData);
                 }
-            }else if(reload_status ==true)
-            {
+            }else {
+
                 if(update_status) {
 
                     download(progressMax);

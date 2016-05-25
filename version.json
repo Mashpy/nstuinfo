@@ -12,15 +12,6 @@
 "url": "https://nstuinfo.github.io/introduction.html"
 },
 {
-"id": 3,
-"menu_name": "Academic Council",
-"root_path": "academic_council",
-"menu_version": "4",
-"type" : "non_ad",
-"last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/academic_council.html"
-},
-{
 "id": 2,
 "menu_name": "Regent Board",
 "root_path": "regentboard",
@@ -28,6 +19,15 @@
 "type" : "no_ad",
 "last_update": "24-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
+},
+{
+"id": 3,
+"menu_name": "Academic Council",
+"root_path": "academic_council",
+"menu_version": "4",
+"type" : "non_ad",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/academic_council.html"
 },
 {
 "id": 4,
