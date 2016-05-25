@@ -1,5 +1,5 @@
 {
-"version": "2.26",
+"version": "2.27",
 "expire_date": "28-May-2016",
 "article_list": [
 {
@@ -109,6 +109,15 @@
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/student_activities.html"
+},
+{
+"id": 17,
+"menu_name": "Message From DeveloperS",
+"root_path": "message_from_developers",
+"menu_version": "0",
+"type" : "non_ad",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/message_developer.html"
 },
 {
 "id": 13,
