@@ -480,13 +480,11 @@ public class MainActivity extends AppCompatActivity {
                      if(checkNew==0)
                     {
                         UpdateJsonData.add(OnlineData);
-
                     }
 
                     }
                     progressMax =UpdateJsonData.size();
-
-
+                    Log.d("ProgressMax",String.valueOf(progressMax));
                     /**Find Delete*/
                     for(int i =0 ;i< OfflineJsonData.size();i++)
                     {
@@ -791,7 +789,7 @@ public class MainActivity extends AppCompatActivity {
     public void open_dialog() {
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage("Your have already updated data.");
-        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
             }
@@ -810,7 +808,7 @@ public class MainActivity extends AppCompatActivity {
         progress.setMax(total);
         //progress.setIndeterminate(true);
         progress.setProgress(0);
-        progress.setButton(DialogInterface.BUTTON_NEGATIVE, "OK", new DialogInterface.OnClickListener() {
+        progress.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
