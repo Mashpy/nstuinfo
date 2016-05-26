@@ -268,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
             int jasonObjecLenth = json.getJSONArray("article_list").length();
 
             ver = (String) json.get("version");
-            ver = "Version : 3.0 Data Version : "+ver;
+            ver = "Version : " +ver+ " http://nstuinfo.github.io/";
             ShowVersion.setText(ver);
 
             for (int i = 0; i < jasonObjecLenth; i++) {
@@ -621,7 +621,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Log.d("PostEx", String.valueOf(downloadedItem) + " " + String.valueOf(progressMax));
-            if (downloadedItem  == progressMax) {
+            if (downloadedItem  == progressMax && progressMax != 0) {
                 reload_status = true;
                 try {
                     new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(file_name, result);
@@ -640,7 +640,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     recyclerDataList.add(recyclerData);
                 }
-                String uv = "Version : 3.0 Data Version : "+updateVersion;
+                String uv = "Version : "+updateVersion+" http://nstuinfo.github.io/";
                 ShowVersion.setText(uv);
 
                 }
