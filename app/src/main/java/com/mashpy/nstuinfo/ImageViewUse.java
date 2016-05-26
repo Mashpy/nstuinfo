@@ -22,7 +22,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class ImageViewUse extends AppCompatActivity {
-
+    public static String imageDirectory = "appimage";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class ImageViewUse extends AppCompatActivity {
             String stored = null;
 
             //File sdcard = Environment.getExternalStorageDirectory() ;
-            File folder = new File(context.getApplicationInfo().dataDir + "/nazmul/");
+            File folder = new File(context.getApplicationInfo().dataDir + "/"+imageDirectory+"/");
 
             File sdcard = Environment.getDataDirectory();
             //return checkFile.toString() ;
@@ -120,7 +120,7 @@ public class ImageViewUse extends AppCompatActivity {
                 if (!myDir.exists())
                     return null;
 
-                mediaImage = new File(myDir.getPath() + "/nazmul/" + imagename);
+                mediaImage = new File(myDir.getPath() + "/"+imageDirectory+"/" + imagename);
             } catch (Exception e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

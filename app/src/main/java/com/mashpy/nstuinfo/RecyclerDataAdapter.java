@@ -46,11 +46,12 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
         TextDrawable drawable = TextDrawable.builder()
                 .buildRound(letter, generator.getRandomColor());
         holder.letter.setImageDrawable(drawable);
-        if(recyclerData.getType().equals("ad")) {
+        if (recyclerData.getType().equals("ad")) {
+            //Red Color For ad ListItem
             holder.row_layout.setBackgroundColor(list_Color.getColor(1));
-        }else
-        {
-            holder.row_layout.setBackgroundColor( 0xffffffff);
+        } else {
+            //White Color For non_ad ListItem
+            holder.row_layout.setBackgroundColor(0xffffffff);
         }
 
 

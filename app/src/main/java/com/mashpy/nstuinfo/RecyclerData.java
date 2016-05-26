@@ -21,7 +21,7 @@ public class RecyclerData {
     }
 
     public void setUrl(String url) {
-        this.url= url;
+        this.url = url;
     }
 
     public String getTitle() {
@@ -47,10 +47,12 @@ public class RecyclerData {
     public void setGenre(String genre) {
         this.genre = genre;
     }
-    public String getType(){
+
+    public String getType() {
         return type;
     }
-    public void setType(String type){
+
+    public void setType(String type) {
         this.type = type;
     }
 }

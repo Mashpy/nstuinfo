@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public String expire_date;
     public boolean reload_status = true;
     public boolean dialog_status = true;
-    public boolean update_status = true;
+    public boolean update_status = false;
     public String SourceURL = "https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json";
     public int progressMax = 0;
     String jsonData = "";
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isConnected()) {
 
-                    if (reload_status == true) {
+                    if (reload_status == true && update_status == false) {
                         circularProgressBar();
                         reload_status = false;
                         getUpdatedData();
@@ -198,16 +198,15 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if(id == R.id.about)
+       if(id == R.id.about)
         {
             Intent i = new Intent(MainActivity.this, ImageViewUse.class);
             startActivity(i);
         }
-        else if(id == R.id.clearAll)
+        else
+        if(id == R.id.clearAll)
         {
-            new ReadWriteJsonFileUtils(getBaseContext()).deleteFile();
-            recyclerDataList.clear();
-            OffLineData();
+           clearCache();
 
         }
         return super.onOptionsItemSelected(item);
@@ -230,6 +229,11 @@ public class MainActivity extends AppCompatActivity {
         getUpdatedData();
     }
 
+    public void clearCache(){
+        new ReadWriteJsonFileUtils(getBaseContext()).deleteFile();
+        recyclerDataList.clear();
+        OffLineData();
+    }
     public void OffLineData() {
         String result;
         if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name) == null) {
@@ -276,6 +280,7 @@ public class MainActivity extends AppCompatActivity {
                 recyclerDataList.add(recyclerData);
             }
             mAdapter.notifyDataSetChanged();
+            Log.d("Recyler Total Data ",String.valueOf(recyclerDataList.size()));
 
         } catch (JSONException e) {
             // TODO Auto-generated catch block
@@ -323,12 +328,13 @@ public class MainActivity extends AppCompatActivity {
         super.onPostResume();
         recyclerDataList.clear();
         OffLineData();
+        dialog_status =true;
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        // dialog_status =false;
+         dialog_status =false;
 
     }
 
@@ -423,6 +429,7 @@ public class MainActivity extends AppCompatActivity {
                     UpdateJsonData.clear();
                     DeleteJsonData.clear();
 
+
                     /**Online Json Data */
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
                         String root = articles.getJSONObject(i).getString("root_path");
@@ -432,7 +439,6 @@ public class MainActivity extends AppCompatActivity {
                         jsonDataList Data;
                         Data = new jsonDataList(root,menu_ver,url);
                         OnlineJsonData.add(Data);
-
 
                     }
 
@@ -445,6 +451,7 @@ public class MainActivity extends AppCompatActivity {
                         jsonDataList Data2;
                         Data2 = new jsonDataList(root,menu_ver,url);
                         OfflineJsonData.add(Data2);
+
                     }
                     /**Find Update*/
                     for(int i =0 ;i< OnlineJsonData.size();i++)
@@ -453,10 +460,6 @@ public class MainActivity extends AppCompatActivity {
                         int checkNew = 0;
                         jsonDataList OnlineData = OnlineJsonData.get(i);
                         String online_root =  OnlineData.getroot_path();
-                       // jsonDataList On = OnlineJsonData.get(0);
-
-
-
                         int onlineMenuVersion = OnlineData.getmenu_version();
                         for(int j = 0 ; j< OfflineJsonData.size() ; j++)
                         {
@@ -464,14 +467,10 @@ public class MainActivity extends AppCompatActivity {
                             String offline_root =  OfflineData.getroot_path();
 
                             int offlineMenuVersion = OfflineData.getmenu_version();
-
-                           // String root =  OnlineData.getroot_path();
-
                             if(offline_root.equals(online_root)){
                                 if(onlineMenuVersion>offlineMenuVersion)
                                 {
                                     UpdateJsonData.add(OnlineData);
-
                                 }
                                 checkNew++;
                             }
@@ -534,7 +533,6 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     reload_status = true;
                     progressSpiner.dismiss();
-
                     download(progressMax);
                     jsonData = result;
 
@@ -608,10 +606,11 @@ public class MainActivity extends AppCompatActivity {
 
         protected void onProgressUpdate(Integer... values) {
 
+            if(dialog_status) {
             progress.setProgress(values[0]);
             if (values[0]  == progressMax)
                 progress.dismiss();
-
+            }
         }
 
         // onPostExecute displays the results of the AsyncTask.
@@ -640,13 +639,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                     recyclerDataList.add(recyclerData);
                 }
+
                 String uv = "Version : "+updateVersion+" http://nstuinfo.github.io/";
                 ShowVersion.setText(uv);
 
                 }
+            update_status = false;
             mAdapter.notifyDataSetChanged();
+            if(recyclerDataList.size()==0)
+            {
+                cahceDeletedialog();
+            }
         }
-
     }
     /**
      * Store Data into file
@@ -779,9 +783,7 @@ public class MainActivity extends AppCompatActivity {
         progressSpiner.setMessage("Checking for update ...");
         progressSpiner.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressSpiner.setCancelable(true);
-        //progress.setMax(total);
         progressSpiner.setIndeterminate(true);
-        // progress.setProgress(0);
         progressSpiner.show();
 
     }
@@ -800,13 +802,27 @@ public class MainActivity extends AppCompatActivity {
         // }
     }
 
+    public void cahceDeletedialog() {
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage("Data corrupt press ok for delete corrupted data.");
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                clearCache();
+            }
+        });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        // if(dialog_status) {
+        alertDialog.show();
+        // }
+    }
+
     public void download(int total) {
         progress = new ProgressDialog(MainActivity.this);
         progress.setMessage("Downloading Updated Data ...");
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progress.setCancelable(true);
+        progress.setCancelable(false);
         progress.setMax(total);
-        //progress.setIndeterminate(true);
         progress.setProgress(0);
         progress.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
             @Override
@@ -814,10 +830,9 @@ public class MainActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-        progress.show();
+         if(dialog_status) {
+             progress.show();
+         }
 
     }
-
-
-
 }
