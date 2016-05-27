@@ -84,6 +84,12 @@ public class DetailsActivity extends AppCompatActivity {
                 finish();
             }
         });
+        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+
+            }
+        });
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.setCancelable(false);
