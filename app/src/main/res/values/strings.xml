@@ -1,16 +1,29 @@
 <resources>
-    <string name="app_name">NSTUinfo 2016</string>
+    <string name="app_name">NSTU info 2016</string>
     <string name="action_settings">Settings</string>
     <string name="about">About</string>
     <string name="clear">Clear Cache</string>
     <string name="title_activity_detaitls">Detaitls Activity</string>
     <string name="title_activity_image_view">Image View</string>
+    <string name="App_Details">This Version of app has online Update service and all information is Maintain by central server.To get update regularly user should open this app with data connection on. User can check update by reload button at bottom .</string>
+    <string name="licenceDetails">
+        This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.\n
 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program. If not, see www.gnu.org/licenses/.</string>
     <string name="title_activity_details_activity_">DetailsActivity_</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name ="Html_activity" > Html Parser</string>
+    <string name="Html_activity"> Html Parser</string>
 
     <string name="parse_html"> </string>
     <string name="html_button">Click to get HTML Page Title</string>
+    <string name="title_activity_about">About</string>
 </resources>

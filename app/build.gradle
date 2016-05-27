@@ -27,5 +27,5 @@ dependencies {
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     compile 'com.android.support:support-v4:23.3.0'
     compile 'org.jsoup:jsoup:1.8.3'
-
+    compile 'com.android.support:cardview-v7:22.0.0'
 }

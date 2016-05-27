@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
        if(id == R.id.about)
         {
-            Intent i = new Intent(MainActivity.this, ImageViewUse.class);
+            Intent i = new Intent(MainActivity.this, about.class);
             startActivity(i);
         }
         else
@@ -429,7 +429,6 @@ public class MainActivity extends AppCompatActivity {
                     UpdateJsonData.clear();
                     DeleteJsonData.clear();
 
-
                     /**Online Json Data */
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
                         String root = articles.getJSONObject(i).getString("root_path");
@@ -439,7 +438,6 @@ public class MainActivity extends AppCompatActivity {
                         jsonDataList Data;
                         Data = new jsonDataList(root,menu_ver,url);
                         OnlineJsonData.add(Data);
-
                     }
 
                     /**Offline Json Data*/
