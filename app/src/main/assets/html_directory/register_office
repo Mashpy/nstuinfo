@@ -56,16 +56,7 @@ p{font-size:15px}
      <a class="email" href="mailto:mdwahid@yahoo.com">mdwahid@yahoo.com</a>
     </div> 
     <div class="infoclass">
-     <strong>Pro Vice Chancellor</strong>
-     <br> DR. MD. ABUL HOSSAIN
-     <br> Phone: 
-     <a class="telephone" href="tel:+88032171484">+88032171484</a>
-     <br> Fax: 
-     <a class="telephone" href="tel:+88032162788">+88032162788</a>
-     <br>
-    </div> 
-    <div class="infoclass">
-     Section Officer
+     Personal Secretary
      <br> 
      <strong>Abu Zubair</strong>
      <br> Mobile:
@@ -75,14 +66,34 @@ p{font-size:15px}
     </div> 
    </div>
   </div> 
+  <div class="infoclass">
+   Section Officer
+   <br> 
+   <strong>Md Mostofa Anwar</strong>
+   <br> Mobile:
+   <a class="telephone" href="tel:01819952128">01819952128</a>
+   <br> E-mail:
+   <a class="email" href="mailto:anwar.nstu@gmail.com">anwar.nstu@gmail.com</a>
+  </div>  
+  <div class="infoclass">
+   Personal Officer
+   <br> 
+   <strong>A K M Mehedi Hasan</strong>
+   <br> Mobile:
+   <a class="telephone" href="tel:01716698706">01716698706</a>
+   <br> E-mail:
+   <a class="email" href="mailto:hassanmehedi86@yahoo.com">hassanmehedi86@yahoo.com</a>
+  </div> 
   <div class="demo-frame"> 
    <a style="text-decoration:none" href="#">
     <div id="expander2" class="headertitle expander">
-     <span style="font-size:16px;">Dean office, Science faculty</span>
+     <span style="font-size:16px;">Pro Vice Chancellor</span>
     </div></a> 
    <div class="content"> 
     <div class="infoclass">
      Dean
+     <br> 
+     <strong>DR. MD. ABUL HOSSAIN</strong>
      <br> phone:
      <a class="telephone" href="tel:+88032162823">+880-321-62823</a>
      <br> Mobile:
@@ -91,13 +102,72 @@ p{font-size:15px}
      <a class="email" href="mailto:mah1754@gmail.com">mah1754@gmail.com</a>
     </div> 
     <div class="infoclass">
-     Personal secretary &nbsp;
+     Personal secretary 
      <br> 
      <strong>Mr.Md. Kamrul Hasan</strong>
      <br> Mobile:
      <a class="telephone" href="tel:01713616399">01713616399</a>
      <br> E-mail:
      <a class="email" href="mailto:meru.nstu@yahoo.com">meru.nstu@yahoo.com&nbsp;</a>
+    </div> 
+   </div> 
+  </div> 
+  <div class="demo-frame"> 
+   <a style="text-decoration:none" href="#">
+    <div id="expander2" class="headertitle expander">
+     <span style="font-size:16px;">Dean office, Science faculty</span>
+    </div></a> 
+   <div class="content"> 
+    <div class="infoclass">
+     Dean
+     <br> 
+     <strong>DR. MD. ABUL HOSSAIN</strong>
+     <br> phone:
+     <a class="telephone" href="tel:+88032162823">+880-321-62823</a>
+     <br> Mobile:
+     <a class="telephone" href="tel:01713012916">01713012916</a>
+     <br> E-mail:
+     <a class="email" href="mailto:mah1754@gmail.com">mah1754@gmail.com</a>
+    </div> 
+   </div> 
+  </div> 
+  <div class="demo-frame"> 
+   <a style="text-decoration:none" href="#">
+    <div id="expander2" class="headertitle expander">
+     <span style="font-size:16px;">Dean office, Faculty of Engineering &amp; Technology</span>
+    </div></a> 
+   <div class="content"> 
+    <div class="infoclass">
+     Dean
+     <br> 
+     <strong>DR. MD. ABUL HOSSAIN</strong>
+     <br> phone:
+     <a class="telephone" href="tel:+88032162823">+880-321-62823</a>
+     <br> Mobile:
+     <a class="telephone" href="tel:01713012916">01713012916</a>
+     <br> E-mail:
+     <a class="email" href="mailto:mah1754@gmail.com">mah1754@gmail.com</a>
+    </div> 
+   </div> 
+  </div> 
+  <div class="demo-frame"> 
+   <a style="text-decoration:none" href="#">
+    <div id="expander2" class="headertitle expander">
+     <span style="font-size:16px;">Dean office, Faculty of Social Science &amp; Business Administration </span>
+    </div></a> 
+   <div class="content"> 
+    <div class="infoclass">
+     Dean
+     <br> 
+     <strong>Prof. Dr. M Wahiduzzaman</strong>
+     <br> Telephone: 
+     <a class="telephone" href="tel:+880-321-62833">+880-321-62833</a>, 
+     <a class="telephone" href="tel:62733">62733</a>, 
+     <a class="telephone" href="tel:62655">62655</a>
+     <br> Mobile: 
+     <a class="telephone" href="tel:01730042888">01730042888</a>
+     <br> Email: 
+     <a class="email" href="mailto:mdwahid@yahoo.com">mdwahid@yahoo.com</a>
     </div> 
    </div> 
   </div> 
@@ -129,15 +199,6 @@ p{font-size:15px}
      <br> E-mail:
      <a class="email" href="mailto:jashim_uu@yahoo.com">jashim_uu@yahoo.com</a>
     </div> 
-    <div class="infoclass">
-     Assistant Registrar:
-     <br> 
-     <strong>Mr. Md.Golap Hossain</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01827522677">01827522677</a>
-     <br> E-mail:
-     <a class="email" href="mailto:golapshah77@yahoo.com">golapshah77@yahoo.com</a>
-    </div> 
     <div class="infoclass"> 
      <div>
       Section Officer:
@@ -158,9 +219,23 @@ p{font-size:15px}
      <a class="email" href="mailto:babarmgtjnu@yahoo.com">babarmgtjnu@yahoo.com</a>
     </div> 
     <div class="infoclass">
+     <strong>Nargis Akter Helaly</strong>
+     <br> Phone: 
+     <a class="telephone" href="tel:01913134917">01913134917</a>
+     <br> Email: 
+     <a class="email" href="mailto:nargishelalynstu@gmail.com">nargishelalynstu@gmail.com</a>
+    </div> 
+    <div class="infoclass">
      <strong>Mrs. Shahanara Begum</strong>
      <br> Mobile:
      <a class="telephone" href="tel:01814312632">01814312632</a>
+    </div> 
+    <div class="infoclass">
+     <strong>Ziaur Rahman Samrat</strong>
+     <br> Phone: 
+     <a class="telephone" href="tel:01711202462">01711202462</a>
+     <br> Email: 
+     <a class="email" href="mailto:samrat_sf@yahoo.com">samrat_sf@yahoo.com</a>
     </div> 
    </div> 
   </div> 
@@ -187,6 +262,13 @@ p{font-size:15px}
      <br> E-mail:
      <a class="email" href="mailto:khaledju@gmail.com">khaledju@gmail.com</a>
     </div> 
+    <div class="infoclass">
+     <strong>Md. Monir Hossian</strong>
+     <br> Mobile:
+     <a class="telephone" href="tel:01818548725">01818548725</a>
+     <br> E-mail:
+     <a class="email" href="mailto:nstu.monir77@gmail.com">nstu.monir77@gmail.com</a>
+    </div> 
    </div> 
   </div> 
   <div class="demo-frame"> 
@@ -212,10 +294,11 @@ p{font-size:15px}
     </div></a> 
    <div class="content"> 
     <div class="infoclass">
-     Director:
-     <br> 
-     <strong>Engr. Md. Jamal Hossain</strong>
-     <br> Mobile:
+     <strong>A H M Nizam Uddin</strong>
+     <br> Director
+     <br> Phone: 
+     <a class="telephone" href="tel:62824">62824</a>
+     <br> Mobile: 
      <a class="telephone" href="tel:01720197825">01720197825</a>
      <br> E-mail:
      <a class="email" href="mailto:dpd.nstu@yahoo.com">dpd.nstu@yahoo.com</a>
@@ -227,7 +310,21 @@ p{font-size:15px}
      <br> Mobile:
      <a class="telephone" href="tel:01916170964">01916170964</a>
      <br> E-mail:
-     <a class="email" href="mailto:dpd.nstu@yahoo.com">planning_nstu@yahoo.com</a>
+     <a class="email" href="mailto:planning_nstu@yahoo.com">planning_nstu@yahoo.com</a>
+     <br>
+     <br> 
+     <strong>Abdul Al Mamun</strong>
+     <br> Mobile:
+     <a class="telephone" href="tel:01818631083">01818631083</a>
+     <br> E-mail:
+     <a class="email" href="mailto:shumon.nstu@yahoo.com">shumon.nstu@yahoo.com</a>
+     <br>
+     <br> 
+     <strong>Md. Jamal Hossain</strong>
+     <br> Mobile:
+     <a class="telephone" href="tel:01554337039">01554337039</a>
+     <br> E-mail:
+     <a class="email" href="mailto:dpd.nstu@yahoo.com">dpd.nstu@yahoo.com</a>
     </div> 
     <div class="infoclass">
      Assistant Engineer
@@ -237,44 +334,19 @@ p{font-size:15px}
      <a class="telephone" href="tel:0191363031">0191363031</a>
      <br> E-mail:
      <a class="email" href="mailto:engr.firozahmed@yahoo.com">engr.firozahmed@yahoo.com</a>
-    </div> 
-    <div class="infoclass">
-     Section Officer
+     <br>
      <br> 
-     <strong>Md. Anwar Hossain</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01715703570">01715703570</a>
-     <br> E-mail:
-     <a class="email" href="mailto:dalim97@yahoo.ca">dalim97@yahoo.ca</a>
-    </div> 
-    <div class="infoclass">
-     <strong>Md. Sakhayet ullah</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01716257740">001716257740</a>
-     <br> E-mail:
-     <a class="email" href="mailto:msakhayet_06@gmail.com">msakhayet_06@gmail.com</a> 
-    </div> 
-    <div class="infoclass">
-     Sub-assistant Eng.
-     <br> 
-     <strong>Md. Syed ahmed (Civil)</strong>
+     <strong>Engr. Syed Ahamed</strong>
      <br> Mobile:
      <a class="telephone" href="tel:01716635129">01716635129</a>
      <br> E-mail:
-     <a class="email" href="mailto:Syedahmednstu@gmail.com">Syedahmednstu@gmail.com</a>
+     <a class="email" href="mailto:sayedahmednstu@gmail.com">sayedahmednstu@gmail.com</a>
     </div> 
     <div class="infoclass"> 
      <strong>Md Moin Uddin (Civil)</strong>
      <br> Mobile:
      <a class="telephone" href="tel:01718565013">01718565013</a>
      <br> 
-    </div> 
-    <div class="infoclass"> 
-     <strong>Md Mujibur Rahman (EEE)</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01716635129">01714777766</a>
-     <br> E-mail:
-     <a class="email" href="mailto:mamunengr1@yahoo.com">mamunengr1@yahoo.com</a>
     </div> 
     <div class="infoclass"> 
      <strong>Md. Nahid Hasan(EEE)</strong>
@@ -360,6 +432,13 @@ p{font-size:15px}
      </div></a> 
     <div class="content"> 
      <div class="infoclass">
+      Md. Belal Hossain
+      <br> Mobile:
+      <a class="telephone" href="tel:01711781550">01711781550</a>
+      <br> E-mail: 
+      <a class="email" href="mailto:belalhossain@yahoo.com">belalhossain@yahoo.com</a>
+     </div> 
+     <div class="infoclass">
       Section officer
       <br> 
       <strong>Mr. Tarek Md.Rashed Uddin</strong>
@@ -403,275 +482,252 @@ p{font-size:15px}
      <br> E-mail:
      <a class="email" href="mailto:bhuiyannstu@yahoo.com">bhuiyannstu@yahoo.com</a>
     </div> 
-   </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander12" class="headertitle expander">
-     Networking and IT Branch
-    </div></a> 
-   <div class="content"> 
     <div class="infoclass">
-     System annalist:
-     <br> 
-     <strong>Engineer Md. Abdullah Hil Faruk</strong>(study leave)
+     <strong>Md. Shihab Uddhin</strong>
      <br> Mobile:
-     <a class="telephone" href="tel:01715404356">01715404356</a>
+     <a class="telephone" href="tel:01719900955">01719900955</a>
      <br> E-mail:
-     <a class="email" href="mailto:mahfaruk@yahoo.com">mahfaruk@yahoo.com</a>
+     <a class="email" href="mailto:shihab_77@yahoo.com">shihab_77@yahoo.com</a>
     </div> 
-    <div class="infoclass"> 
-     <div>
-      Assistant programmer
+    <div class="infoclass">
+     <strong>Md. Abdul Hamid</strong>
+     <br> Mobile:
+     <a class="telephone" href="tel:01711047667">01711047667</a>
+     <br> 
+    </div> 
+   </div> 
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander12" class="headertitle expander">
+      Networking and IT Branch
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      System annalist:
+      <br> 
+      <strong>Engineer Md. Abdullah Hil Faruk</strong>(study leave)
+      <br> Mobile:
+      <a class="telephone" href="tel:01715404356">01715404356</a>
+      <br> E-mail:
+      <a class="email" href="mailto:mahfaruk@yahoo.com">mahfaruk@yahoo.com</a>
      </div> 
-     <strong>Mr. Md. Moyeenuddin</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01720847993">01720847993</a>
-     <br> E-mail:
-     <a class="email" href="mailto:moyeen.cste@gmail.com">moyeen.cste@gmail.com</a>
+     <div class="infoclass"> 
+      <div>
+       Assistant programmer
+      </div> 
+      <strong>Mr. Md. Moyeenuddin</strong>
+      <br> Mobile:
+      <a class="telephone" href="tel:01720847993">01720847993</a>
+      <br> E-mail:
+      <a class="email" href="mailto:moyeen.cste@gmail.com">moyeen.cste@gmail.com</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander13" class="headertitle expander">
-     Despatch Branch
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     Assistant Register
-     <br> 
-     <strong>Mr. Md. <span class="null">Mr Mohammad Saifuddin</span></strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01817584882">01817584882</a>
-     <br> Email:
-     <a class="email" href="mailto:saifuddinnstu@gmail.com">saifuddinnstu@gmail.com</a>
-    </div> 
-    <div class="infoclass">
-     Section officer
-     <br> 
-     <strong>Mr. Md. <span class="null">Macchodur Rahman</span></strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01819360174">01819360174</a>
-     <br> Email:
-     <a class="email" href="mailto:masud.nstu@gmail.com">masud.nstu@gmail.com</a>
-    </div> 
-   </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander15" class="headertitle expander">
-     University Central Library
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     Librarian
-     <br> 
-     <strong>Mr Md Jahangir Hossain</strong>
-     <br> Phone:
-     <a class="telephone" href="tel:+88032171481">+880-321-71481</a>
-     <br> Mobile:
-     <a class="telephone" href="tel:01716068982">01716068982</a>
-     <br> Email:
-     <a class="email" href="mailto:nstulib9@yahoo.com">nstulib9@yahoo.com</a>
-    </div> 
-    <div class="infoclass">
-     Section officer
-     <br> 
-     <strong>Mr Mohammad Abdullah Al Mamun</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01720175283">01720175283</a>
-     <br> Email:
-     <a class="email" href="mailto:nstu_library@yahoo.com">nstu_library@yahoo.com</a>
-    </div> 
-    <div class="infoclass">
-     Documentation Officer
-     <br> 
-     <strong>Md.&nbsp; Babor Ali</strong>
-     <br> Phone: 
-     <a class="telephone" href="tel:01722936805">01722-936805</a>
-     <br> Email: 
-     <a class="email" href="mailto:baborali.ru@gmail.com">baborali.ru@gmail.com</a>
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander13" class="headertitle expander">
+      Despatch Branch
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      Assistant Register
+      <br> 
+      <strong>Mr. Md. <span class="null">Mr Mohammad Saifuddin</span></strong>
+      <br> Mobile:
+      <a class="telephone" href="tel:01817584882">01817584882</a>
+      <br> Email:
+      <a class="email" href="mailto:saifuddinnstu@gmail.com">saifuddinnstu@gmail.com</a>
+     </div> 
+     <div class="infoclass">
+      Section officer
+      <br> 
+      <strong>Mr. Md. <span class="null">Macchodur Rahman</span></strong>
+      <br> Mobile:
+      <a class="telephone" href="tel:01819360174">01819360174</a>
+      <br> Email:
+      <a class="email" href="mailto:masud.nstu@gmail.com">masud.nstu@gmail.com</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander16" class="headertitle expander">
-     Teachers Association
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     Secretary
-     <br> 
-     <strong>DR. MD. JAHANGIR SARKER</strong>
-     <br> Phone: 
-     <a class="telephone" href="tel:01733910237">01733910237</a>
-     <br> Email: 
-     <a class="email" href="mailto:swaponj@yahoo.com">swaponj@yahoo.com</a>
-    </div> 
-    <div class="infoclass">
-     General Secretary
-     <br> 
-     <strong>Muhammad Mushfiqur Rahman</strong>
-     <br> Phone: 
-     <a class="telephone" href="tel:01818085418">01818085418</a>
-     <br> Email: 
-     <a class="email" href="mailto:mushfiqur@nstu.edu.bd">mushfiqur@nstu.edu.bd</a>
-    </div> 
-   </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander17" class="headertitle expander">
-     Officers Association
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     Secretary
-     <br> 
-     <strong>Tarek Md. Rashed Uddin</strong>
-     <br> Phone: 
-     <a class="telephone" href="tel:01717688481">01717688481</a>
-     <br> Email: 
-     <a class="email" href="mailto:rashaduddin@yahoo.com">rashaduddin@yahoo.com</a>
-    </div> 
-    <div class="infoclass">
-     General Secretary
-     <br> 
-     <strong>Mr. Shakhawat Hossen</strong>
-     <br> Phone: 
-     <a class="telephone" href="tel:01721267030">01721267030</a>
-     <br> Email: 
-     <a class="email" href="mailto:shakhawat_84@yahoo.com">shakhawat_84@yahoo.com</a>
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander16" class="headertitle expander">
+      Teachers Association
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      Secretary
+      <br> 
+      <strong>MEHEDI MAHMUDUL HASAN</strong>
+      <br> Mobile: 
+      <a class="telephone" href="tel:01727240180">01727240180</a>
+      <br> Email: 
+      <a class="email" href="mailto:mehedimhdudul@gmail.com">mehedimhdudul@gmail.com</a>
+      <br> 
+     </div> 
+     <div class="infoclass">
+      General Secretary
+      <br> 
+      <strong>Mohammad Ruhul Amin</strong>
+      <br> Phone: 
+      <a class="telephone" href="tel:01724756620">01724756620</a>
+      <br> Email: 
+      <a class="email" href="mailto:ruhulmicro13@yahoo.com">ruhulmicro13@yahoo.com</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander18" class="headertitle expander">
-     Law Minister's Office
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     <strong>Mr. Joynal Abedin Advocate</strong>
-     <br> Senior lawyer
-     <br> Noakhali Bar Association
-     <br> Phone: 
-     <a class="telephone" href="tel:62363">62363</a>, 
-     <a class="telephone" href="tel:61288">61288</a>
-    </div> 
-    <div class="infoclass">
-     <strong>Mr. Md. Habibur Rasul Mamun</strong>
-     <br> Senior lawyer
-     <br> Noakhali Bar Association
-     <br> Phone: 
-     <a class="telephone" href="tel:62754">62754</a>
-     <br> Phone: 
-     <a class="telephone" href="tel:01711239709">01711239709</a>
-    </div> 
-    <div class="infoclass">
-     <strong>Advocate Mr. Md. Jamal Uddin Bhuiyan</strong>
-     <br> Senior lawyer
-     <br> Noakhali Bar Association
-     <br>
-    </div> 
-    <div class="infoclass">
-     <strong>Advocate Mr. Md. Jamal Uddin Bhuiyan</strong>
-     <br> Senior lawyer
-     <br> Noakhali Bar Association
-     <br>
-    </div> 
-    <div class="infoclass">
-     <strong>Advocate Md. Mosarrof Hossen</strong>
-     <br> Senior Lawyer
-     <br> Phone: 
-     <a class="telephone" href="tel:01712211724">01712211724</a>
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander17" class="headertitle expander">
+      Officers Association
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      Secretary
+      <br> 
+      <strong>Tarek Md. Rashed Uddin</strong>
+      <br> Phone: 
+      <a class="telephone" href="tel:01717688481">01717688481</a>
+      <br> Email: 
+      <a class="email" href="mailto:rashaduddin@yahoo.com">rashaduddin@yahoo.com</a>
+     </div> 
+     <div class="infoclass">
+      General Secretary
+      <br> 
+      <strong>Mr. Shakhawat Hossen</strong>
+      <br> Phone: 
+      <a class="telephone" href="tel:01721267030">01721267030</a>
+      <br> Email: 
+      <a class="email" href="mailto:shakhawat_84@yahoo.com">shakhawat_84@yahoo.com</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander10" class="headertitle expander">
-     Safety Branch
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     Section officer
-     <br> 
-     <strong>A. As. M Sayem</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01710641525">01710641525</a>
-     <br> E-mail:
-     <a class="email" href="mailto:sayem.nstu@gmail.com">sayem.nstu@gmail.com</a>
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander18" class="headertitle expander">
+      Law Minister's Office
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      <strong>Mr. Joynal Abedin Advocate</strong>
+      <br> Senior lawyer
+      <br> Noakhali Bar Association
+      <br> Phone: 
+      <a class="telephone" href="tel:62363">62363</a>, 
+      <a class="telephone" href="tel:61288">61288</a>
+     </div> 
+     <div class="infoclass">
+      <strong>Mr. Md. Habibur Rasul Mamun</strong>
+      <br> Senior lawyer
+      <br> Noakhali Bar Association
+      <br> Phone: 
+      <a class="telephone" href="tel:62754">62754</a>
+      <br> Phone: 
+      <a class="telephone" href="tel:01711239709">01711239709</a>
+     </div> 
+     <div class="infoclass">
+      <strong>Advocate Mr. Md. Jamal Uddin Bhuiyan</strong>
+      <br> Senior lawyer
+      <br> Noakhali Bar Association
+      <br>
+     </div> 
+     <div class="infoclass">
+      <strong>Advocate Mr. Md. Jamal Uddin Bhuiyan</strong>
+      <br> Senior lawyer
+      <br> Noakhali Bar Association
+      <br>
+     </div> 
+     <div class="infoclass">
+      <strong>Advocate Md. Mosarrof Hossen</strong>
+      <br> Senior Lawyer
+      <br> Phone: 
+      <a class="telephone" href="tel:01712211724">01712211724</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander11" class="headertitle expander">
-     Ansar Forces &nbsp;
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     PC,Ansar
-     <br> Mobile:
-     <a class="telephone" href="tel:01727516565">01727516565</a>
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander10" class="headertitle expander">
+      Safety Branch
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      Section officer
+      <br> 
+      <strong>A. As. M Sayem</strong>
+      <br> Mobile:
+      <a class="telephone" href="tel:01710641525">01710641525</a>
+      <br> E-mail:
+      <a class="email" href="mailto:sayem.nstu@gmail.com">sayem.nstu@gmail.com</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander12" class="headertitle expander">
-     Central store
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     Store officer
-     <br> 
-     <strong>Mr. Mohammad Abdullah Al Faruk</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01716341228">01716341228</a>
-     <br> Email: 
-     <a class="email" href="mailto:sumonhinsa@yahoo.com">sumonhinsa@yahoo.com</a>
-    </div> 
-    <div class="infoclass">
-     <strong>Mr Mohammad Monir Hossain</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01734008350">01734008350</a>
-     <br> Email:
-     <a class="email" href="mailto:nstu.monir77@yahoo.com">nstu.monir77@yahoo.com</a>
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander11" class="headertitle expander">
+      Ansar Forces &nbsp;
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      PC,Ansar
+      <br> Mobile:
+      <a class="telephone" href="tel:01727516565">01727516565</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander13" class="headertitle expander">
-     Central Mosque
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     Imam:
-     <strong>Hafez Mao. Md. Giyas Uddin Bhuiyan</strong>
-     <br> Mobile:
-     <a class="telephone" href="tel:01814174228">01814174228</a>
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander12" class="headertitle expander">
+      Central store
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      Store officer
+      <br> 
+      <strong>Mr. Mohammad Abdullah Al Faruk</strong>
+      <br> Mobile:
+      <a class="telephone" href="tel:01716341228">01716341228</a>
+      <br> Email: 
+      <a class="email" href="mailto:sumonhinsa@yahoo.com">sumonhinsa@yahoo.com</a>
+     </div> 
+     <div class="infoclass">
+      <strong>Mr Mohammad Monir Hossain</strong>
+      <br> Mobile:
+      <a class="telephone" href="tel:01734008350">01734008350</a>
+      <br> Email:
+      <a class="email" href="mailto:nstu.monir77@yahoo.com">nstu.monir77@yahoo.com</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="demo-frame"> 
-   <a style="text-decoration:none" href="#">
-    <div id="expander19" class="headertitle expander">
-     Bank
-    </div></a> 
-   <div class="content"> 
-    <div class="infoclass">
-     Manager, Agrani Bank, NSTU
-     <br> 
-     <strong>Md Monjurul Karim</strong>
-     <br> Phone: 
-     <a class="telephone" href="tel:01819345148">01819345148</a>
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander13" class="headertitle expander">
+      Central Mosque
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      Imam:
+      <strong>Hafez Mao. Md. Giyas Uddin Bhuiyan</strong>
+      <br> Mobile:
+      <a class="telephone" href="tel:01814174228">01814174228</a>
+     </div> 
     </div> 
    </div> 
-  </div> 
+   <div class="demo-frame"> 
+    <a style="text-decoration:none" href="#">
+     <div id="expander19" class="headertitle expander">
+      Bank
+     </div></a> 
+    <div class="content"> 
+     <div class="infoclass">
+      Manager, Agrani Bank, NSTU
+      <br> 
+      <strong>Md Monjurul Karim</strong>
+      <br> Phone: 
+      <a class="telephone" href="tel:01819345148">01819345148</a>
+     </div> 
+    </div> 
+   </div> 
+  </div>
  </body>
 </html>

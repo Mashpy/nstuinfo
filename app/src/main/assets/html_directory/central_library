@@ -47,11 +47,29 @@ p{font-size:15px}
     <br> 
     <strong>Mr Md Jahangir Hossain</strong>
     <br> Phone:
-    <a class="telephone" href="tel:+88032171481">+880-321-71481</a>;
+    <a class="telephone" href="tel:+88032171481">+880-321-71481</a>
     <br> Mobile:
     <a class="telephone" href="tel:01716068982">01716068982</a>
     <br> Email:
     <a class="email" href="mailto:nstulib9@yahoo.com">nstulib9@yahoo.com</a>
+   </div> 
+   <div class="infoclass">
+    Assistant Librarian
+    <br> 
+    <strong>Md Salim Mia</strong>
+    <br> Mobile:
+    <a class="telephone" href="tel:01724571661">01724571661</a>
+    <br> Email:
+    <a class="email" href="mailto:mdsalimmia5178@gmail.com">mdsalimmia5178@gmail.com</a>
+   </div> 
+   <div class="infoclass">
+    Documentation Officer
+    <br> 
+    <strong>Md.&nbsp; Babor Ali</strong>
+    <br> Phone: 
+    <a class="telephone" href="tel:01722936805">01722-936805</a>
+    <br> Email: 
+    <a class="email" href="mailto:baborali.ru@gmail.com">baborali.ru@gmail.com</a>
    </div> 
    <div class="infoclass">
     Section officer
@@ -61,16 +79,21 @@ p{font-size:15px}
     <a class="telephone" href="tel:01720175283">01720175283</a>
     <br> Email:
     <a class="email" href="mailto:nstu_library@yahoo.com">nstu_library@yahoo.com</a>
+    <br> 
+    <strong>Sayed Hossain</strong>
+    <br> Mobile:
+    <a class="telephone" href="tel:01920664044">01920664044</a>
+    <br>
    </div> 
    <div class="infoclass">
-    Documentation Officer
+    Cataloguer
     <br> 
-    <strong>Md. Babor Ali</strong>
+    <strong>Helal Uddin</strong>
     <br> Phone: 
-    <a class="telephone" href="tel:01722936805">01722-936805</a>
+    <a class="telephone" href="tel:01723967788">01723967788</a>
     <br> Email: 
-    <a class="email" href="mailto:baborali.ru@gmail.com">baborali.ru@gmail.com</a>
+    <a class="email" href="mailto:helaluddin2928@gmail.com">helaluddin2928@gmail.com</a>
    </div> 
-  </div> 
+  </div>
  </body>
 </html>

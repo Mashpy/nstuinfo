@@ -9,8 +9,9 @@
     android:paddingBottom="10dp"
     android:clickable="true"
     android:id="@+id/list_row"
-    android:background="?android:attr/selectableItemBackground"
+    android:background="@color/year"
     android:orientation="vertical">
+    <!--"?android:attr/selectableItemBackground"-->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
