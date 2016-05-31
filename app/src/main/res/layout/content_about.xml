@@ -11,7 +11,7 @@
     android:scrollbars="vertical"
     tools:context="com.mashpy.nstuinfo.about"
     tools:showIn="@layout/activity_about"
-    android:background="@color/year">
+    android:background="@color/about_background">
     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:orientation="horizontal"
@@ -45,12 +45,12 @@
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:id="@+id/cv1"
         android:layout_below="@id/cv0"
         card_view:cardElevation="4dp"
@@ -66,34 +66,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/ic_nstu"
-        android:layout_below="@+id/cv0"
         android:layout_centerHorizontal="true" />
 
     </android.support.v7.widget.CardView>
 
-    <!--android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cv1"
-        android:id="@+id/cv2"
-        card_view:cardElevation="4dp"
-        card_view:cardCornerRadius="3dp"
-        android:paddingTop="@dimen/activity_vertical_margin">
-    <TextView
-        android:id="@+id/cardText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"
-        android:text="@string/App_Details"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp"/>
-    </android.support.v7.widget.CardView-->
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -106,6 +84,12 @@
         android:layout_marginBottom="6dp"
         android:scrollbars="vertical"
         android:paddingTop="@dimen/activity_vertical_margin">
+
+        <ScrollView android:id="@+id/ScrollViewID"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -137,7 +121,9 @@
                 />
         </RelativeLayout>
 
+        </ScrollView>
     </android.support.v7.widget.CardView>
+
 
 
 </RelativeLayout>

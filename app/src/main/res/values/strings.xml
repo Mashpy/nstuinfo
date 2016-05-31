@@ -5,12 +5,11 @@
     <string name="clear">Clear Cache</string>
     <string name="title_activity_detaitls">Detaitls Activity</string>
     <string name="title_activity_image_view">Image View</string>
-    <string name="App_Details">This Version of app has online Update service and all information is Maintain by central server.To get update regularly user should open this app with data connection on. User can check update by reload button at bottom .</string>
-    <string name="licenceDetails">
-        This program is free software: you can redistribute it and/or modify
+     <string name="licenceDetails">
+        This program is free software: you can redistribute it and or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.\n
+(at your option) any later version.\n\n
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of

@@ -92,7 +92,7 @@ public class DetailsActivity extends AppCompatActivity {
         });
 
         AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.setCancelable(false);
+        alertDialog.setCancelable(true);
         alertDialog.show();
 
     }
