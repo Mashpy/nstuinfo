@@ -31,7 +31,7 @@ p{font-size:15px}
     text-decoration: none;
 }
 .email:hover{color:#29b6f6}
-</style> 
+</style>
  </head>
  <body>
   <div class="maintitle">
