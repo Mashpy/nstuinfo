@@ -173,7 +173,6 @@ public class MainActivity extends AppCompatActivity {
                 details.putExtra("exp", expire_date);
                 startActivity(details);
             }
-
             @Override
             public void onLongClick(View view, int position) {
             }
@@ -313,7 +312,6 @@ public class MainActivity extends AppCompatActivity {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
                 } catch (IOException e) {
                     // Should never happen!
                     throw new RuntimeException(e);
@@ -561,19 +559,24 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... urls) {
             String result = urls[0];
             int j =0;
-            try {
+
                 for(int k = 0 ; k< UpdateJsonData.size(); k++)
                 {
-                   jsonDataList UpdateData = UpdateJsonData.get(k);
-                    String HtmlFileName = UpdateData.getroot_path();
-                    String htmlPageUrl = UpdateData.getUrl();
-                    htmlDocument = Jsoup.connect(htmlPageUrl).get();
-                    htmlContentInStringFormat = htmlDocument.toString();
+                     try {
+                         jsonDataList UpdateData = UpdateJsonData.get(k);
 
-                    try {
-                        new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(HtmlFileName, htmlContentInStringFormat);
+                         String HtmlFileName = UpdateData.getroot_path();
+                         Log.d("File", HtmlFileName);
+                         String htmlPageUrl = UpdateData.getUrl();
+                         htmlDocument = Jsoup.connect(htmlPageUrl).get();
+                         htmlContentInStringFormat = htmlDocument.toString();
+                       new ReadWriteJsonFileUtils(getBaseContext()).createJsonFileData(HtmlFileName, htmlContentInStringFormat);
                         Log.d("SaveToLocal", String.valueOf(k));
-                    } catch (Exception e) {
+                    }catch(IOException e)
+                     {
+                         Log.d("HTML Load Error","404");
+                     }
+                     catch (Exception e) {
                         e.printStackTrace();
                         Log.d("HTMLsave","Error");
                     }
@@ -596,9 +599,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             return result;
         }
 
