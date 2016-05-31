@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean reload_status = true;
     public boolean dialog_status = true;
     public boolean update_status = false;
-    public String SourceURL = "https://raw.githubusercontent.com/Mashpy/nstuinfo/master/version.json";
+    public String SourceURL = "https://raw.githubusercontent.com/Mashpy/nstuinfo/develop/version.json";
     public int progressMax = 0;
     String jsonData = "";
     String ver ;
