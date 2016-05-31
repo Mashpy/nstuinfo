@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.d("InputStream", e.getLocalizedMessage());
         }
+        Log.d("GET Result ", result);
         return result;
     }
 
@@ -306,7 +307,6 @@ public class MainActivity extends AppCompatActivity {
                     is.close();
                     // Convert the buffer into a string.
                     result = new String(buffer);
-
                     try {
                         new offlineJsonFileUtils(getBaseContext()).createJsonFileData(file_name[i], result);
                     } catch (Exception e) {
@@ -319,7 +319,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 
     @Override
     protected void onPostResume() {
