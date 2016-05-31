@@ -788,7 +788,7 @@ public class MainActivity extends AppCompatActivity {
     public void open_dialog() {
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage("Your have already updated data.");
-        alertDialogBuilder.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
             }
