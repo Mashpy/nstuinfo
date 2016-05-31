@@ -1,5 +1,5 @@
 {
-"version": "2.39",
+"version": "3.00",
 "expire_date": "28-June-2016",
 "article_list": [
 {
@@ -73,6 +73,15 @@
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/CR.html"
+},
+{
+"id": 9,
+"menu_name": "Academic Calendar",
+"root_path": "academic_calender",
+"menu_version": "2",
+"type" : "non_ad",
+"last_update": "1-May-2016",
+"url": "http://nstuinfo.github.io/academic_calendar.html"
 },
 {
 "id": 10,
