@@ -259,10 +259,8 @@ public class MainActivity extends AppCompatActivity {
                 // Should never happen!
                 throw new RuntimeException(e);
             }
+            offlineHtml();
         }
-
-        offlineHtml();
-
         try {
 
             String str = "";
@@ -291,33 +289,44 @@ public class MainActivity extends AppCompatActivity {
     public void offlineHtml() {
 
         String result = "";
-        String file_name[] = {"introduction", "regentboard", "academic_council", "committees", "register_office", "central_library", "dept_teacher", "cr", "academic_calender", "academic_officiary", "administrative", "student_activities", "transport_section", "hall_office", "emergency_contacts", "message_from_developer"};
-        for (int i = 0; i < 16; i++) {
-
-            if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name[i]) == null) {
-                try {
-                    InputStream is = getAssets().open("html_directory/" + file_name[i]);
-                    // We guarantee that the available method returns the total
-                    // size of the asset...  of course, this does mean that a single
-                    // asset can't be more than 2 gigs.
-                    int size = is.available();
-                    // Read the entire asset into a local byte buffer.
-                    byte[] buffer = new byte[size];
-                    is.read(buffer);
-                    is.close();
-                    // Convert the buffer into a string.
-                    result = new String(buffer);
+        try {
+            String str = "";
+            String jsonString = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
+            JSONObject json = new JSONObject(jsonString);
+            JSONArray articles = json.getJSONArray("article_list");
+            int jasonObjecLenth = json.getJSONArray("article_list").length();
+            for (int i = 0; i < jasonObjecLenth; i++) {
+                if (new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(articles.getJSONObject(i).getString("root_path")) == null) {
                     try {
-                        new offlineJsonFileUtils(getBaseContext()).createJsonFileData(file_name[i], result);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                        InputStream is = getAssets().open("html_directory/" + articles.getJSONObject(i).getString("root_path"));
+                        // We guarantee that the available method returns the total
+                        // size of the asset...  of course, this does mean that a single
+                        // asset can't be more than 2 gigs.
+                        int size = is.available();
+                        // Read the entire asset into a local byte buffer.
+                        byte[] buffer = new byte[size];
+                        is.read(buffer);
+                        is.close();
+                        // Convert the buffer into a string.
+                        result = new String(buffer);
+                        try {
+                            new offlineJsonFileUtils(getBaseContext()).createJsonFileData(articles.getJSONObject(i).getString("root_path"), result);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } catch (IOException e) {
+                        // Should never happen!
+                        throw new RuntimeException(e);
                     }
-                } catch (IOException e) {
-                    // Should never happen!
-                    throw new RuntimeException(e);
                 }
             }
+
+
+        }catch(JSONException e)
+        {
+            e.printStackTrace();
         }
+
     }
 
     @Override
