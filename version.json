@@ -1,12 +1,12 @@
 {
-"version": "3.00",
+"version": "3.01",
 "expire_date": "28-June-2017",
 "article_list": [
 {
 "id": 1,
 "menu_name": "Introduction",
 "root_path": "introduction",
-"menu_version": "1",
+"menu_version": "2",
 "type" : "non_ad",
 "last_update":"1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
