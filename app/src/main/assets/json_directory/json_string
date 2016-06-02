@@ -1,22 +1,22 @@
 {
-"version": "3.01",
-"expire_date": "28-June-2016",
+"version": "3.00",
+"expire_date": "28-June-2017",
 "article_list": [
 {
 "id": 1,
 "menu_name": "Introduction",
 "root_path": "introduction",
 "menu_version": "11",
-"type" : "ad",
+"type" : "non_ad",
 "last_update":"1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
 },
 {
 "id": 2,
 "menu_name": "Regent Board",
-"root_path": "regentboard",
+"root_path": "regent",
 "menu_version": "10",
-"type" : "ad",
+"type" : "non_ad",
 "last_update": "24-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
 },
@@ -36,12 +36,12 @@
 "menu_version": "7",
 "type" : "non_ad",
 "last_update": "24-May-2016",
-"url": "http://nstuinfo.github.io/committes.html"
+"url": "http://nstuinfo.github.io/committees.html"
 },
 {
 "id": 5,
 "menu_name": "Register office",
-"root_path": "register_office",
+"root_path": "registraroffice",
 "menu_version": "3",
 "type" : "non_ad",
 "last_update": "1-May-2016",
@@ -54,12 +54,12 @@
 "menu_version": "4",
 "type" : "non_ad",
 "last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/Central_library.html"
+"url": "http://nstuinfo.github.io/central_library.html"
 },
 {
 "id": 7,
 "menu_name": "Departments & Teachers",
-"root_path": "dept_teacher",
+"root_path": "department",
 "menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
@@ -72,7 +72,7 @@
 "menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/CR.html"
+"url": "http://nstuinfo.github.io/cr.html"
 },
 {
 "id": 9,
@@ -90,7 +90,7 @@
 "menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/Academic_officiary.html"
+"url": "http://nstuinfo.github.io/academic_officiary.html"
 },
 {
 "id": 11,
@@ -122,7 +122,7 @@
 {
 "id": 14,
 "menu_name": "Hall Office",
-"root_path": "hall_office",
+"root_path": "halloffice",
 "menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
@@ -131,7 +131,7 @@
 {
 "id": 15,
 "menu_name": "Emergency Contacts",
-"root_path": "emergency_contacts",
+"root_path": "emergency",
 "menu_version": "5",
 "type" : "non_ad",
 "last_update": "1-May-2016",
@@ -140,7 +140,7 @@
 {
 "id": 16,
 "menu_name": "Message From Developer",
-"root_path": "message_from_developer",
+"root_path": "message_developer",
 "menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
