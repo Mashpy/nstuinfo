@@ -6,7 +6,7 @@
 "id": 1,
 "menu_name": "Introduction",
 "root_path": "introduction",
-"menu_version": "11",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update":"1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
@@ -15,7 +15,7 @@
 "id": 2,
 "menu_name": "Regent Board",
 "root_path": "regent",
-"menu_version": "10",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "24-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
@@ -24,7 +24,7 @@
 "id": 3,
 "menu_name": "Academic Council",
 "root_path": "academic_council",
-"menu_version": "4",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/academic_council.html"
@@ -33,7 +33,7 @@
 "id": 4,
 "menu_name": "Committees",
 "root_path": "committees",
-"menu_version": "7",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "24-May-2016",
 "url": "http://nstuinfo.github.io/committees.html"
@@ -42,7 +42,7 @@
 "id": 5,
 "menu_name": "Register office",
 "root_path": "registraroffice",
-"menu_version": "3",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/registraroffice.html"
@@ -51,7 +51,7 @@
 "id": 6,
 "menu_name": "Central Library",
 "root_path": "central_library",
-"menu_version": "4",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/central_library.html"
@@ -78,7 +78,7 @@
 "id": 9,
 "menu_name": "Academic Calendar",
 "root_path": "academic_calender",
-"menu_version": "2",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/academic_calendar.html"
@@ -132,7 +132,7 @@
 "id": 15,
 "menu_name": "Emergency Contacts",
 "root_path": "emergency",
-"menu_version": "5",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/emergency.html"
