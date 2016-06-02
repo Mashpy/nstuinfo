@@ -75,15 +75,6 @@
 "url": "http://nstuinfo.github.io/cr.html"
 },
 {
-"id": 9,
-"menu_name": "Academic Calendar",
-"root_path": "academic_calender",
-"menu_version": "1",
-"type" : "non_ad",
-"last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/academic_calendar.html"
-},
-{
 "id": 10,
 "menu_name": "Academic Officiary",
 "root_path": "academic_officiary",
@@ -142,7 +133,7 @@
 "menu_name": "Message From Developer",
 "root_path": "message_developer",
 "menu_version": "1",
-"type" : "non_ad",
+"type" : "ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/message_developer.html"
 }
