@@ -88,7 +88,7 @@ $( document ).ready(function() {
 </script>
 </head>
 
-<div class="maintitle">Class Representative</div>
+<div class="maintitle">Class Representatives</div>
 
 <div class="demo-frame">
 <a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Computer Science and Telecommunication Engineering (CSTE 01)</div></a>
@@ -140,7 +140,7 @@ Phone: <a class="telephone" href="tel:01961732726">01961732726</a></div>
 <p style="text-align: center;"><u><strong>&nbsp;11th batch</strong></u></p>
 
 <div class="infoclass"><strong>Md. Abu Sakib</strong><br />
-Phone: <a class="telephone" href="tel:01763718943">01763718943</a></div>
+Phone: <a class="telephone" href="tel:01763718934">01763718934</a></div>
 
 <div class="infoclass">CR(Female):<br />
 <b>Raoshan Ara Begum</b></div>
@@ -240,10 +240,6 @@ Phone: <a class="telephone" href="tel:01717801198">01717801198</a></div>
 <strong>iifa rahman</strong></div>
 </div>
 
-<p style="text-align: center;"><strong><u>11th Batch</u></strong></p>
-
-<div class="infoclass"><strong>Mahmudul Hasan Mishu </strong><br />
-Phone: <a class="telephone" href="tel:01718749249">01718749249</a></div>
 
 </div></div><div class="demo-frame">
 <a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Applied Chemistry &amp; Chemical Engineering (ACCE 04)</div></a>
@@ -308,8 +304,8 @@ Phone: <a class="telephone" href="tel:01735698084">01735698084</a></div>
 
 <p style="text-align: center;"><u><strong>7th Batch</strong></u></p>
 
-<div class="infoclass"><strong>Arafat</strong><br />
-Phone: <a class="telephone" href="tel:01814743728">01814743728</a></div>
+<div class="infoclass"><strong>G.M. Shazzad Hossain Prince</strong><br />
+Phone: <a class="telephone" href="tel:01756673188">01756673188</a></div>
 
 <div class="infoclass">CR(Female)<br />
 <strong>Jannatul Fiza</strong></div>
@@ -470,7 +466,7 @@ Phone: <a class="telephone" href="tel:01859106531">01859106531</a></div>
 <strong>Susmita Karmokar</strong></div>
 
 </div></div><div class="demo-frame">
-<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Environmental Science and Hazard Studies(ESHS 09)</div></a>
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Environmental Science and Desaster Management (ESDM)</div></a>
 
 <div class="content">
 
@@ -657,7 +653,7 @@ Phone: <a class="telephone" href="tel:01981320661">01981320661</a></div>
 Phone: <a class="telephone" href="tel:01712768139">01712768139</a></div>
 
 </div></div><div class="demo-frame">
-<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Agriculture (CA 14)</div></a>
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Agriculture (AG 14)</div></a>
 
 <div class="content">
 <p style="text-align: center;"><u><strong>8th Batch</strong></u></p>
