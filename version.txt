@@ -1,1 +1,1 @@
-{"version_code":7,"content":"Version 3.02 <p>Emergency updates:</p><li>নতুন ভার্সন বের হয়েছে ২০১৬ সালের জন্য। প্লিজ নতুন ভার্সনটি ডাউনলোড করে ইন্সটল করুন</li>"}
+{"version_code":8,"content":"Version 3.03 <p>Emergency updates:</p><li>নতুন ভার্সন বের হয়েছে ২০১৬ সালের জন্য। প্লিজ নতুন ভার্সনটি ডাউনলোড করে ইন্সটল করুন</li>"}
