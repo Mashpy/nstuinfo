@@ -1,5 +1,5 @@
 {
-"version": "3.01",
+"version": "3.02",
 "expire_date": "28-June-2017",
 "article_list": [
 {
@@ -40,7 +40,7 @@
 },
 {
 "id": 5,
-"menu_name": "Register office",
+"menu_name": "Registrar office",
 "root_path": "registraroffice",
 "menu_version": "2",
 "type" : "non_ad",
