@@ -92,11 +92,29 @@ $( document ).ready(function() {
 
 <p>For Noakhali Zilla don&#39;t forget to add phone code +880-321-</p>
 
-</div></div><div class="demo-frame">
-<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Noakhali Zilla</div></a>
+</div></div>
 
+<div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">NSTU Canteen + Photocopy</div></a>
 <div class="content">
 
+<div class="infoclass">
+    NSTU Canteen + Photocopy<br/>
+    <strong>Munna</strong><br/>
+    Phone: <a class="telephone" href="tel:01849141248">01849141248</a>
+</div>
+
+<div class="infoclass">
+    Park Canteen (Octogonal)<br/>
+    <strong>Roman</strong><br/>
+    Phone: <a class="telephone" href="tel:01869056243">01869056243</a>
+</div>
+
+</div></div>
+
+<div class="demo-frame">
+<a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Noakhali Zilla</div></a>
+<div class="content">
 
 <div class="infoclass"><strong>DC</strong> : <a class="telephone" href="tel:61021">61021</a>, <a class="telephone" href="tel:61614">61614</a><br />
 Fax: <a class="telephone" href="tel:61062">61062</a>, <a class="telephone" href="tel:61757">61757</a></div>
@@ -113,7 +131,11 @@ Fax: <a class="telephone" href="tel:61062">61062</a>, <a class="telephone" href=
 
 <div class="infoclass"><strong>Power Division</strong>: <a class="telephone" href="tel:61040">61040</a></div>
 
-</div></div><div class="demo-frame">
+
+
+</div></div>
+
+<div class="demo-frame">
 <a style="text-decoration:none" href="#"><div id="expander1" class="headertitle expander">Police</div></a>
 <div class="content">
 
