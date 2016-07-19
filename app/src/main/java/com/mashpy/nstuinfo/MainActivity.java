@@ -427,20 +427,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if (online_ver > offline_ver) {
                     update_status = true;
-
                     /**Clear Json Data From ArrayList*/
-
                     OnlineJsonData.clear();
                     OfflineJsonData.clear();
                     UpdateJsonData.clear();
                     DeleteJsonData.clear();
-
                     /**Online Json Data */
                     for (int i = 0; i < online_jasonObjectLenth; i++) {
                         String root = articles.getJSONObject(i).getString("root_path");
                         int  menu_ver = Integer.parseInt(articles.getJSONObject(i).getString("menu_version"));
                         String url = articles.getJSONObject(i).getString("url");
-
                         jsonDataList Data;
                         Data = new jsonDataList(root,menu_ver,url);
                         OnlineJsonData.add(Data);
@@ -460,7 +456,6 @@ public class MainActivity extends AppCompatActivity {
                     /**Find Update*/
                     for(int i =0 ;i< OnlineJsonData.size();i++)
                     {
-
                         int checkNew = 0;
                         jsonDataList OnlineData = OnlineJsonData.get(i);
                         String online_root =  OnlineData.getroot_path();
@@ -478,7 +473,6 @@ public class MainActivity extends AppCompatActivity {
                                 }
                                 checkNew++;
                             }
-
                         }
                      if(checkNew==0)
                     {
@@ -524,8 +518,6 @@ public class MainActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(final String result) {
-
-
             if(!reload_status)
             {
                 if(!update_status)
@@ -539,19 +531,15 @@ public class MainActivity extends AppCompatActivity {
                     progressSpiner.dismiss();
                     download(progressMax);
                     jsonData = result;
-
                     new HttpAsyncTask().execute(jsonData);
                 }
             }else {
-
                 if(update_status) {
-
                     download(progressMax);
                     jsonData = result;
                     new HttpAsyncTask().execute(jsonData);
                 }
             }
-
         }
     }
 
@@ -561,8 +549,6 @@ public class MainActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
         }
-
-
         @Override
         protected String doInBackground(String... urls) {
             String result = urls[0];
@@ -822,7 +808,6 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
         // }
     }
-
     public void download(int total) {
         progress = new ProgressDialog(MainActivity.this);
         progress.setMessage("Downloading Updated Data ...");
@@ -839,6 +824,5 @@ public class MainActivity extends AppCompatActivity {
          if(dialog_status) {
              progress.show();
          }
-
     }
 }
