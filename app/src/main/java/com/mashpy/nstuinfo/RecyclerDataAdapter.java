@@ -19,7 +19,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
     ColorGenerator generator = ColorGenerator.MATERIAL;
     ColorGenerator list_Color = ColorGenerator.create(Arrays.asList(
             0xffffffff,
-            0xffe93939
+            0xff8ccbf1
     ));
     private List<RecyclerData> moviesList;
 

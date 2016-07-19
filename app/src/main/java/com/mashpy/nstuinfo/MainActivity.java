@@ -270,7 +270,7 @@ public class MainActivity extends AppCompatActivity {
             int jasonObjecLenth = json.getJSONArray("article_list").length();
 
             ver = (String) json.get("version");
-            ver = "Version : " +ver+ " http://nstuinfo.github.io/";
+            ver = "Version: " +ver+ ", http://nstuinfo.github.com";
             ShowVersion.setText(ver);
 
             for (int i = 0; i < jasonObjecLenth; i++) {

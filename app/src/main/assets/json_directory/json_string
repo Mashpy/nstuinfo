@@ -1,30 +1,30 @@
 {
-"version": "1",
-"expire_date": "3-May-2016",
+"version": "3.00",
+"expire_date": "28-June-2017",
 "article_list": [
 {
 "id": 1,
 "menu_name": "Introduction",
 "root_path": "introduction",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
-"last_update": "1-May-2016",
+"last_update":"1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
 },
 {
 "id": 2,
 "menu_name": "Regent Board",
-"root_path": "regentboard",
-"menu_version": "0",
+"root_path": "regent",
+"menu_version": "1",
 "type" : "non_ad",
-"last_update": "1-May-2016",
+"last_update": "24-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
 },
 {
 "id": 3,
 "menu_name": "Academic Council",
 "root_path": "academic_council",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/academic_council.html"
@@ -33,16 +33,16 @@
 "id": 4,
 "menu_name": "Committees",
 "root_path": "committees",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
-"last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/committes.html"
+"last_update": "24-May-2016",
+"url": "http://nstuinfo.github.io/committees.html"
 },
 {
 "id": 5,
 "menu_name": "Register office",
-"root_path": "register_office",
-"menu_version": "0",
+"root_path": "registraroffice",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/registraroffice.html"
@@ -51,16 +51,16 @@
 "id": 6,
 "menu_name": "Central Library",
 "root_path": "central_library",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/Central_library.html"
+"url": "http://nstuinfo.github.io/central_library.html"
 },
 {
 "id": 7,
 "menu_name": "Departments & Teachers",
-"root_path": "dept_teacher",
-"menu_version": "0",
+"root_path": "department",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/department.html"
@@ -69,34 +69,25 @@
 "id": 8,
 "menu_name": "Class Representative",
 "root_path": "cr",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/CR.html"
-},
-{
-"id": 9,
-"menu_name": "Academic Calendar",
-"root_path": "academic_calender",
-"menu_version": "0",
-"type" : "non_ad",
-"last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/academic_calendar.html"
+"url": "http://nstuinfo.github.io/cr.html"
 },
 {
 "id": 10,
 "menu_name": "Academic Officiary",
 "root_path": "academic_officiary",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
-"url": "http://nstuinfo.github.io/Academic_officiary.html"
+"url": "http://nstuinfo.github.io/academic_officiary.html"
 },
 {
 "id": 11,
 "menu_name": "Administrative",
 "root_path": "administrative",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/administrative.html"
@@ -105,7 +96,7 @@
 "id": 12,
 "menu_name": "Student Activities",
 "root_path": "student_activities",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/student_activities.html"
@@ -114,7 +105,7 @@
 "id": 13,
 "menu_name": "Transport Section",
 "root_path": "transport_section",
-"menu_version": "0",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/transport_section.html"
@@ -122,8 +113,8 @@
 {
 "id": 14,
 "menu_name": "Hall Office",
-"root_path": "hall_office",
-"menu_version": "0",
+"root_path": "halloffice",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/halloffice.html"
@@ -131,8 +122,8 @@
 {
 "id": 15,
 "menu_name": "Emergency Contacts",
-"root_path": "emergency_contacts",
-"menu_version": "0",
+"root_path": "emergency",
+"menu_version": "1",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/emergency.html"
@@ -140,9 +131,9 @@
 {
 "id": 16,
 "menu_name": "Message From Developer",
-"root_path": "message_from_developer",
-"menu_version": "0",
-"type" : "non_ad",
+"root_path": "message_developer",
+"menu_version": "1",
+"type" : "ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/message_developer.html"
 }
