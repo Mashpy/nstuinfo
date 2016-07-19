@@ -30,6 +30,11 @@ Download From- https://github.com/Mashpy/nstuinfo/releases/download/v1.3/NstuInf
 
 ### Screenshots
 <img src="https://github.com/Mashpy/nstuinfo/blob/develop/screenshots/mainscreen.png?raw=true" width="222">
+<img src="https://github.com/Mashpy/nstuinfo/blob/develop/screenshots/optionmenu.png?raw=true" width="222">
+<img src="https://github.com/Mashpy/nstuinfo/blob/develop/screenshots/nointernet.png?raw=true" width="222">
+<img src="https://github.com/Mashpy/nstuinfo/blob/develop/screenshots/details.png?raw=true" width="222">
+<img src="https://github.com/Mashpy/nstuinfo/blob/develop/screenshots/about.png?raw=true" width="222">
+
 ### How to install the source code
 
 It's an open source project under GNU General Public License. You can contribute on this project and can help us to fix the bugs. Also you can add more feature on this project and fork me on the github. If you want a more beautiful User Interface, make your design in PDS format and send us Email. We will try to implement it on the next version.
@@ -47,6 +52,7 @@ It's an open source project under GNU General Public License. You can contribute
 First import all dependent libraries on ADT Java-eclips. Then import the application source code. If you find any error please open an issue on github. We will answer you as soon as possible. Thanks in Advance.
 
 ### Development
+
 
 Want to contribute? Great!
 Fork the repo, change the code and send me pull request.
