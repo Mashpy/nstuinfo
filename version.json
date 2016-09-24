@@ -1,5 +1,5 @@
 {
-"version": "3.06",
+"version": "3.07",
 "expire_date": "28-June-2017",
 "article_list": [
 {
@@ -78,9 +78,9 @@
 "id": 10,
 "menu_name": "Academic Officiary",
 "root_path": "academic_officiary",
-"menu_version": "2",
+"menu_version": "3",
 "type" : "non_ad",
-"last_update": "1-May-2016",
+"last_update": "24-September-2016",
 "url": "http://nstuinfo.github.io/academic_officiary.html"
 },
 {
