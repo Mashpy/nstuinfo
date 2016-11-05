@@ -1,5 +1,5 @@
 {
-"version": "3.08",
+"version": "3.09",
 "expire_date": "28-June-2017",
 "article_list": [
 {
@@ -60,9 +60,9 @@
 "id": 7,
 "menu_name": "Departments & Teachers",
 "root_path": "department",
-"menu_version": "6",
+"menu_version": "7",
 "type" : "non_ad",
-"last_update": "23-October-2016",
+"last_update": "05-November-2016",
 "url": "http://nstuinfo.github.io/department.html"
 },
 {
