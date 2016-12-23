@@ -1,5 +1,5 @@
 {
-"version": "3.10",
+"version": "3.11",
 "expire_date": "28-June-2017",
 "article_list": [
 {
@@ -96,7 +96,7 @@
 "id": 12,
 "menu_name": "Student Activities",
 "root_path": "student_activities",
-"menu_version": "3",
+"menu_version": "4",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/student_activities.html"
