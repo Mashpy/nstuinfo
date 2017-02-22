@@ -1,5 +1,5 @@
 {
-"version": "3.12",
+"version": "3.13",
 "expire_date": "28-June-2017",
 "article_list": [
 {
@@ -60,9 +60,9 @@
 "id": 7,
 "menu_name": "Departments & Teachers",
 "root_path": "department",
-"menu_version": "8",
+"menu_version": "9",
 "type" : "non_ad",
-"last_update": "16-November-2016",
+"last_update": "22-March-2017",
 "url": "http://nstuinfo.github.io/department.html"
 },
 {
@@ -105,9 +105,9 @@
 "id": 13,
 "menu_name": "Transport Section",
 "root_path": "transport_section",
-"menu_version": "2",
+"menu_version": "3",
 "type" : "non_ad",
-"last_update": "31-Jan-2017",
+"last_update": "22-March-2017",
 "url": "http://nstuinfo.github.io/transport_section.html"
 },
 {
