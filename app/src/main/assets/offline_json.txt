@@ -5277,7 +5277,7 @@
 				"details" : [{
 						"title": "About Version 4.0",
 						"hint": "",
-						"content": "This app has been updated for the 4th times since 2014. At this time the app has been updated based on NSTU diary 2018. Though we tried to update the recent changes. For the user's concern, even if the app publishes today then you will notice lots of changes between a week. It is normal to have changes in a place like a university. It is really difficult to keep tracks of the changes regularly. So if anyone will found something wrong or irrelevant, please try to inform us about those on the email below:<br /> <a href='mailto:nstuinfoandroid@gmail.com'>nstuinfoandroid@gmail.com</a><br /> We will check your information and then update the information on the server. You will notice the updates on the app instantly as soon as we update the information on the server. So in order to get updated data all you need to do is keep your data connection on and the app will automatically notify you about the data updates. Another way to check if there any updates are available is clicking the pink floating button on the bottom of the app and you need to keep your data connection on as well."
+						"content": "This app has been updated for the 4th times since 2014. At this time the app has been updated based on NSTU diary 2018. Though we tried to update the recent changes. For the user's concern, even if the app publishes today then you will notice lots of changes between a week. It is normal to have changes in a place like a university. It is really difficult to keep tracks of the changes regularly. So if anyone will found something wrong or irrelevant, please try to inform us about those on the Facebook page <strong>News of NSTU</strong> which link is given below:<br /> <a href='https://web.facebook.com/nstu.news1/?ref=br_rs'>https://facebook.com/nstu.news1</a><br /> We will check your information and then update the information on the server. You will notice the updates on the app instantly as soon as we update the information on the server. So in order to get updated data all you need to do is keep your data connection on and the app will automatically notify you about the data updates. Another way to check if there any updates are available is clicking the pink floating button on the bottom of the app and you need to keep your data connection on as well."
 					},
 					{
 						"title": "User Guidelines",
@@ -5292,17 +5292,12 @@
 					{
 						"title": "Founder",
 						"hint": "",
-						"content": "<strong>Mashpy Rahman</strong><br /> CSTE 5th batch"
+						"content": "<strong>Mashpy Rahman</strong><br /> CSTE 5th batch<br /> Email: <a href='mailto:contact@mashpy.me'>contact@mashpy.me</a>"
 					},
 					{
 						"title": "Developer",
 						"hint": "Version 4.0",
 						"content": "<strong>Md. Saiful Haque (Hridoy)</strong><br /> CSTE 10th batch<br /> Email: <a href='mailto:md.saifulhq@gmail.com'>md.saifulhq@gmail.com</a>"
-					},
-					{
-						"title": "",
-						"hint": "",
-						"content": ""
 					}
 				]
 			}
