@@ -1,13 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#1976D2</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorAccent">#4FC3F7</color>
 
-    <color name="year">#999999</color>
-    <color name="about_background">#f1efef</color>
-    <color name="title">#222222</color>
-    <color name = "white">#fff</color>
+    <color name="colorPrimary2">#0288D1</color>
+    <color name="colorPrimaryDark2">#01579B</color>
+    <color name="colorAccent2">#FF4081</color>
 
-    <color name="black_overlay">#66000000</color>
+    <color name="colorPrimary1">#3F51B5</color>
+    <color name="colorPrimaryDark1">#303F9F</color>
+    <color name="colorAccentTransparent">#40FF4081</color>
+
+    <color name="list_item_color">#2196F3</color>
+    <color name="list_item_selection_color">#1976D2</color>
+
+    <color name="list_item_color2">#4FC3F7</color>
+    <color name="list_item_selection_color2">#0091EA</color>
+
+    <!--grey-->
+    <color name="md_grey_50">#FAFAFA</color>
+    <color name="md_grey_100">#F5F5F5</color>
+    <color name="md_grey_200">#EEEEEE</color>
+    <color name="md_grey_300">#E0E0E0</color>
+    <color name="md_grey_400">#BDBDBD</color>
+    <color name="md_grey_500">#9E9E9E</color>
+    <color name="md_grey_600">#757575</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_800">#424242</color>
+    <color name="md_grey_900">#212121</color>
+
+    <color name="md_black_1000">#000000</color>
+    <color name="md_white_1000">#ffffff</color>
+
+    <color name="dark_color_primary">#616161</color>
+    <color name="dark_color_secondary">#212121</color>
+
+    <color name="indigo_300">#7986CB</color>
+    <color name="indigo_400">#5C6BC0</color>
+    <color name="indigo_200">#9FA8DA</color>
+
+
+    <color name="dim_white">#99000000</color>
+
+    <!--
+    Opacity list
+100% — FF
+95% — F2
+90% — E6
+85% — D9
+80% — CC
+75% — BF
+70% — B3
+65% — A6
+60% — 99
+55% — 8C
+50% — 80
+45% — 73
+40% — 66
+35% — 59
+30% — 4D
+25% — 40
+20% — 33
+15% — 26
+10% — 1A
+5% — 0D
+0% — 00
+-->
+
 </resources>

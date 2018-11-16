@@ -1,9 +1,37 @@
-<resources>>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/roboto_regular</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyDialogThemeDark" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/dark_color_secondary</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+    </style>
+
+    <style name="PopupMenuDark" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@color/dark_color_primary</item>
+    </style>
+
+    <style name="PopupMenuLight" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- Required for Lollipop. -->
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">4.0dip</item>
     </style>
 </resources>

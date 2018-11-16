@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recyclerModelMainRL"
+    android:background="@color/md_white_1000"
+    android:layout_marginBottom="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="140dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/recyclerImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"/>
+
+        <TextView
+            android:id="@+id/recyclerTextViewTitle"
+            android:layout_below="@id/recyclerImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Introduction"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:paddingEnd="2dp"
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
+            android:paddingStart="2dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

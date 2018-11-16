@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/dialogMainRL"
+    android:background="@drawable/pop_up_shape">
+
+    <TextView
+        android:id="@+id/fontDialogTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Font Appearance"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="normal"
+        android:textColor="@android:color/white"
+        android:background="@drawable/popup_title_shape"
+        android:padding="5dp"/>
+
+    <RelativeLayout
+        android:layout_below="@id/fontDialogTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp">
+
+        <RadioButton
+            android:id="@+id/smallFontRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small"
+            android:padding="5dp"
+            android:layout_margin="2dp"/>
+
+        <RadioButton
+            android:id="@+id/mediumFontRB"
+            android:layout_below="@id/smallFontRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:padding="5dp"
+            android:layout_margin="2dp"/>
+
+        <RadioButton
+            android:id="@+id/largeFontRB"
+            android:layout_below="@id/mediumFontRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:padding="5dp"
+            android:layout_margin="2dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

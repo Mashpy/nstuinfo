@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_web_site"
+            android:checkable="false"
+            android:icon="@drawable/ic_action_web"
+            android:title="www.nstu.edu.bd" />
+    </group>
+
+    <item android:title="@string/preferences">
+        <menu>
+            <item
+                android:id="@+id/nav_theme"
+                android:checkable="false"
+                android:icon="@drawable/ic_action_theme"
+                android:title="Theme" />
+            <item
+                android:id="@+id/nav_itemview"
+                android:checkable="false"
+                android:icon="@drawable/ic_action_view"
+                android:title="Item view" />
+            <item
+                android:id="@+id/nav_font_appearance"
+                android:checkable="false"
+                android:icon="@drawable/ic_action_font_appearance"
+                android:title="Font appearance" />
+        </menu>
+    </item>
+
+    <item android:title="@string/about">
+        <menu>
+            <item
+                android:id="@+id/nav_dev_msg"
+                android:icon="@drawable/ic_action_info"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

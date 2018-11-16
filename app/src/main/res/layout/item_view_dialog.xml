@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/dialogMainRL"
+    android:background="@drawable/pop_up_shape">
+
+    <TextView
+        android:id="@+id/viewDialogTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item view"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="normal"
+        android:textColor="@android:color/white"
+        android:background="@drawable/popup_title_shape"
+        android:padding="5dp"/>
+
+    <RelativeLayout
+        android:layout_below="@id/viewDialogTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:id="@+id/GridRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grid"
+            android:padding="5dp"
+            android:layout_margin="2dp"/>
+
+        <RadioButton
+            android:id="@+id/ListRB"
+            android:layout_below="@id/GridRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List"
+            android:padding="5dp"
+            android:layout_margin="2dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

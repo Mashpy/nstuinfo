@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dimRL"
+    android:background="#C0000000"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/main_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/theme_popup_bg">
+
+        <RelativeLayout
+            android:id="@+id/ETRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/popup_title_shape"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/popUpSearchET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/search_et_bg"
+                android:hint="Search here..."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="normal"
+                android:textColor="@android:color/black"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="2dp"
+                android:paddingLeft="2dp"
+                android:paddingEnd="2dp"
+                android:paddingRight="2dp"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RecyclerVIew"
+            android:layout_below="@id/ETRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

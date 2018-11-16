@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dimRL"
+    android:background="#C0000000"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/main_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:background="@drawable/pop_up_shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/popUpThemeRL">
+
+            <TextView
+                android:id="@+id/popUpTitleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/popup_title_shape"
+                android:text="Title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"/>
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_below="@id/popUpTitleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/mainLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp">
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

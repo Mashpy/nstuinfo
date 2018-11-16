@@ -1,132 +1,165 @@
 package com.mashpy.nstuinfo;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.text.method.LinkMovementMethod;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.mashpy.nstuinfo.mOtherUtils.Preferences;
+import com.mashpy.nstuinfo.mRecyclerView.MyAdapter;
+import com.mashpy.nstuinfo.mRecyclerView.SpacesItemDecoration;
+import com.mashpy.nstuinfo.mJsonUtils.ExtractDataJson;
+import com.mashpy.nstuinfo.mJsonUtils.ReadWriteJson;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity {
-    String directoryName = "nstuinfo";
+
+    private String title = null;
+
+    private LinearLayout ll, rootLL;
+    private ScrollView scrollView;
+
+    private Toolbar toolbar;
+    private TextView appBarTitleTV;
+    private TextView footerDateTV;
+
+    private ExtractDataJson extractDataJson;
+    private RecyclerView mRecyclerView;
+    private MyAdapter myAdapter;
+    private List<String> itemsList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detaitls);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.content_details);
+
+        invalidateOptionsMenu();
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
-        TextView URLtv = (TextView) findViewById(R.id.urltv);
-        WebView detatils_wv = (WebView) findViewById(R.id.webview);
-        detatils_wv.getSettings().setJavaScriptEnabled(true);
-        String file_name = getIntent().getStringExtra("root_path");
-        /**Offline Stored JSON read*/
-        String jsonString_previous = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData("json_string");
-        JSONObject json_previous = null;
-
-        try {
-
-            json_previous = new JSONObject(jsonString_previous);
-            String expire_date = (String) json_previous.get("expire_date");
-            //Date cur_date1 = formatter.parse(current_date);
-            long date = System.currentTimeMillis();
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-            String current_date = formatter.format(date);
-            Date cur_date1 = formatter.parse(current_date);
-            Date exp_date2 = formatter.parse(expire_date);
-            if (exp_date2.compareTo(cur_date1) < 0) {
-                open();//exp_date is less then current Date Current Date
-            }
-
-        } catch (ParseException e1) {
-            e1.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        String html = new ReadWriteJsonFileUtils(getBaseContext()).readJsonFileData(file_name);
-
-        if (html == null) {
-            open();
-        } else {
-            detatils_wv.loadDataWithBaseURL(null, html, "text/html", "utf-8", "about:blank");
-        }
-
-        URLtv.setMovementMethod(LinkMovementMethod.getInstance());
-        URLtv.setVisibility(View.VISIBLE);
+        //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
+        //noinspection ConstantConditions
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-    public void open() {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Data Validity has been expired. Please Connect to Internet and press reload button.");
-        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1) {
-                finish();
+        appBarTitleTV = findViewById(R.id.appBarTitleTV);
+        footerDateTV = findViewById(R.id.dateTV);
+
+        scrollView = findViewById(R.id.detailsScroll);
+        rootLL = findViewById(R.id.detailsMainLL);
+        ll = findViewById(R.id.mainLL);
+
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.addItemDecoration(new SpacesItemDecoration(1));
+
+        title = getIntent().getStringExtra("TITLE");
+
+        extractDataJson = new ExtractDataJson(this, ReadWriteJson.readDataFile(this), ll);
+
+        if (title != null) {
+            appBarTitleTV.setText(title);
+            if (extractDataJson.hasContents(title)) {
+                mRecyclerView.setVisibility(View.VISIBLE);
+                scrollView.setVisibility(View.GONE);
+                itemsList = extractDataJson.getSecondaryItemsList(title);
+                loadRecyclerView(true);
+            } else {
+                extractDataJson.getView(title);
             }
-        });
-        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1) {
 
+            if (!extractDataJson.getUpdatedDate(title).equalsIgnoreCase("")) {
+                footerDateTV.setVisibility(View.VISIBLE);
+                footerDateTV.setText(extractDataJson.getUpdatedDate(title));
             }
-        });
 
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.setCancelable(true);
-        alertDialog.show();
-
-    }
-
-    /**
-     * Store Data into file
-     */
-    public class ReadWriteJsonFileUtils {
-
-        Context context;
-
-        public ReadWriteJsonFileUtils(Context context) {
-
-            this.context = context;
-
+        } else {
+            appBarTitleTV.setText(getResources().getString(R.string.app_name));
         }
 
-        public String readJsonFileData(String filename) {
-            try {
-                File f = new File(context.getApplicationInfo().dataDir + "/" + directoryName + "/" + filename);
-                if (!f.exists()) {
-                    // onNoResult();
-                    return null;
+        setTheme();
+
+    }
+
+    private void setTheme() {
+        if (Preferences.isDarkTheme(this)) {
+            rootLL.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+            toolbar.setBackgroundColor(Color.BLACK);
+            toolbar.setPopupTheme(R.style.PopupMenuDark);
+            footerDateTV.setTextColor(Color.WHITE);
+            footerDateTV.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+        }
+    }
+
+    private void loadRecyclerView(boolean isList) {
+        myAdapter = new MyAdapter(this, itemsList, title, "second");
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(myAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        if (extractDataJson.hasContents(title)) {
+            getMenuInflater().inflate(R.menu.menu_details, menu);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == android.R.id.home){
+            finish();
+        } else if (id == R.id.menu_item_search){
+            SearchView searchView = (SearchView) item.getActionView();
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    return false;
                 }
-                FileInputStream is = new FileInputStream(f);
-                int size = is.available();
-                byte[] buffer = new byte[size];
-                is.read(buffer);
-                is.close();
-                return new String(buffer);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+
+                    String query = newText.toLowerCase();
+
+                    final List<String> filteredList = new ArrayList<>();
+
+                    for (int i = 0; i < itemsList.size(); i++) {
+                        final String text = itemsList.get(i).toLowerCase();
+                        if (text.contains(query)) {
+                            filteredList.add(itemsList.get(i));
+                        }
+                    }
+
+                    myAdapter = new MyAdapter(DetailsActivity.this, filteredList, title, "second");
+                    mRecyclerView.setLayoutManager(new LinearLayoutManager(DetailsActivity.this));
+                    mRecyclerView.setAdapter(myAdapter);
+                    myAdapter.notifyDataSetChanged();
+
+                    return false;
+                }
+            });
+
+            return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
+
 }
