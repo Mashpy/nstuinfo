@@ -11,7 +11,6 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.text.Html;
-import android.text.SpannableString;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +21,6 @@ import android.widget.TextView;
 import com.mashpy.nstuinfo.R;
 import com.mashpy.nstuinfo.mOtherUtils.AnimationUtils;
 import com.mashpy.nstuinfo.mOtherUtils.Preferences;
-import com.mashpy.nstuinfo.mOtherUtils.StringUtil;
 
 /**
  * Created by whoami on 10/26/2018.
@@ -142,9 +140,77 @@ public class MyView {
         AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
 
         linearLayout.addView(layout);
+    }
 
-        //Spannable p_Text2 = Spannable.Factory.getInstance().newSpannable(tv.getText());
-        StringUtil.removeUnderlines(new SpannableString(tv.getText()));
+    @SuppressLint("InflateParams")
+    public static void setContentView2 (Context context, String content, LinearLayout linearLayout, int position) {
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = null;
+        if (inflater != null) {
+            layout = inflater.inflate(R.layout.content_view2,null);
+        }
+
+        assert layout != null;
+        LinearLayout contentLL = layout.findViewById(R.id.contentViewLL);
+        CardView cardView = layout.findViewById(R.id.content_item_view_card);
+
+        if (Preferences.isDarkTheme(context)) {
+            cardView.setCardBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+        }
+
+        String[] splitArray = content.split("<br />");
+
+        for (String s : splitArray) {
+
+            LayoutInflater inflater2 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View layout2 = null;
+
+            if (inflater2 != null) {
+                layout2 = inflater.inflate(R.layout.content_view_tvs, null);
+            }
+
+            assert layout2 != null;
+            TextView tv = layout2.findViewById(R.id.contentTV);
+            ImageView icon = layout2.findViewById(R.id.iconImageView);
+
+            icon.setVisibility(View.GONE);
+
+            if (Preferences.isDarkTheme(context)) {
+                tv.setTextColor(Color.WHITE);
+            }
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                tv.setText(Html.fromHtml(s, Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                tv.setText(Html.fromHtml(s));
+            }
+
+            if ( s.contains("Phone") || s.contains("Telephone") || s.contains("Mobile") ||
+                    s.contains("phone:") || s.contains("telephone:") || s.contains("mobile:") ) {
+
+                icon.setImageResource(android.R.drawable.sym_action_call);
+                icon.setVisibility(View.VISIBLE);
+            }
+
+            if (s.contains("Email") || s.contains("E-mail") || s.contains("Mail") ||
+                    s.contains("email:") || s.contains("e-mail:") || s.contains("mail:")) {
+
+                icon.setImageResource(R.drawable.ic_action_mail);
+                icon.setVisibility(View.VISIBLE);
+            }
+
+            FontAppearance.setSecondaryTextSize(context, tv);
+
+            Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
+            tv.setLinksClickable(true);
+
+            contentLL.addView(layout2);
+        }
+
+
+        AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
+
+        linearLayout.addView(layout);
     }
 
     public static void setPopupDialog(final Context context, String title, String message, String posBtn, String negBtn, final String posBtnUrl) {

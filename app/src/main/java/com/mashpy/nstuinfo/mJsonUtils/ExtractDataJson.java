@@ -155,7 +155,7 @@ public class ExtractDataJson {
                                         if (detailsObject.has("content")) {
                                             String content = detailsObject.getString("content").trim();
                                             if (!content.equalsIgnoreCase("")) {
-                                                MyView.setContentView(context, content, linearLayout, k);
+                                                MyView.setContentView2(context, content, linearLayout, k);
                                             }
                                         }
 
@@ -237,7 +237,7 @@ public class ExtractDataJson {
                                                         if (contentsObject.has("content")) {
                                                             String content = contentsObject.getString("content").trim();
                                                             if (!content.equalsIgnoreCase("")) {
-                                                                MyView.setContentView(context, content, linearLayout, l);
+                                                                MyView.setContentView2(context, content, linearLayout, l);
                                                             }
                                                         }
                                                     }
