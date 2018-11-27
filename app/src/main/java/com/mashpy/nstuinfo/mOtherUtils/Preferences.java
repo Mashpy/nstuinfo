@@ -35,7 +35,7 @@ public class Preferences {
     }
 
     public static String getFontAppearance(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getString(FONT, SMALL_FONT);
+        return PreferenceManager.getDefaultSharedPreferences(context).getString(FONT, MEDIUM_FONT);
     }
 
     public static void setGridView(Context context, boolean b) {

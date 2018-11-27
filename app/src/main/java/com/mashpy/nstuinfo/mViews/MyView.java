@@ -187,14 +187,14 @@ public class MyView {
 
             if ( s.contains("Phone") || s.contains("Telephone") || s.contains("Mobile") ||
                     s.contains("phone:") || s.contains("telephone:") || s.contains("mobile:") ) {
-
+                tv.setPadding(tv.getPaddingLeft(), 3, tv.getPaddingRight()+10, 3);
                 icon.setImageResource(android.R.drawable.sym_action_call);
                 icon.setVisibility(View.VISIBLE);
             }
 
             if (s.contains("Email") || s.contains("E-mail") || s.contains("Mail") ||
                     s.contains("email:") || s.contains("e-mail:") || s.contains("mail:")) {
-
+                tv.setPadding(tv.getPaddingLeft(), 3, tv.getPaddingRight()+10, 3);
                 icon.setImageResource(R.drawable.ic_action_mail);
                 icon.setVisibility(View.VISIBLE);
             }
