@@ -1,4 +1,4 @@
-package com.mashpy.nstuinfo.mRecyclerView;
+package com.nstuinfo.mRecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -23,13 +23,13 @@ import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
-import com.mashpy.nstuinfo.mOtherUtils.AnimationUtils;
-import com.mashpy.nstuinfo.mOtherUtils.Preferences;
-import com.mashpy.nstuinfo.mViews.FontAppearance;
-import com.mashpy.nstuinfo.R;
-import com.mashpy.nstuinfo.DetailsActivity;
-import com.mashpy.nstuinfo.mJsonUtils.ExtractDataJson;
-import com.mashpy.nstuinfo.mJsonUtils.ReadWriteJson;
+import com.nstuinfo.mOtherUtils.AnimationUtils;
+import com.nstuinfo.mOtherUtils.Preferences;
+import com.nstuinfo.mViews.FontAppearance;
+import com.nstuinfo.R;
+import com.nstuinfo.DetailsActivity;
+import com.nstuinfo.mJsonUtils.ExtractDataJson;
+import com.nstuinfo.mJsonUtils.ReadWriteJson;
 
 import java.util.Arrays;
 import java.util.List;

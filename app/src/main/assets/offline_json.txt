@@ -1,7 +1,7 @@
 [
 
 	{
-		"data_version": "4.0",
+		"data_version": "4.1",
 		"data": [
 
 			{
@@ -716,147 +716,182 @@
 							{
 								"title": "",
 								"hint": "Registrar",
-								"content": "<strong>Professor Md. Mominul Haque</strong><br /> Telephone: <a  href='tel:+88032172720'>0321-72720</a><br /> Mobile: <a  href='tel:+8801720197824'>+8801720197824</a>, <a  href='tel:+8801712072936'>+8801712072936</a><br /> Fax: <a  href='tel:+88032172721'>0321-72721</a><br /> Email: <a  href='mailto:registrarnstu@gmail.com'>registrarnstu@gmail.com</a>"
-							},
-							{
-								"title": "<u>Education Branch</u>",
-								"hint": "Deputy Registrar",
-								"content": "<strong>Md. Jashim Uddin</strong><br /> Mobile: <a  href='tel:+8801819834393'>+8801819834393</a><br /> Email: <a  href='mailto:jashim_uu@yahoo.com'>jashim_uu@yahoo.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Assistant Registrar",
-								"content": "<strong>Khaled Mehedi Hasan</strong><br /> Mobile: <a  href='tel:+8801717827338'>+8801717827338</a><br /> Email: <a  href='mailto:khaledju@gmail.com'>khaledju@gmail.com</a>"
+								"content": "<strong>Professor Md. Mominul Huq</strong><br /> Telephone: <a href='tel:+88032172720'>+88032172720</a><br /> Mobile: <a href='tel:+8801720197824'>+8801720197824</a>, <a href='tel:+8801712072936'>+8801712072936</a><br /> Fax: <a href='tel:+88032172721'>+88032172721</a><br /> Email: <a href='mailto:registrar.nstu@gmail.com'>registrar.nstu@gmail.com</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Nargis Akter Helaly</strong><br /> Mobile:<a  href='tel:+8801913134917'>+8801913134917</a><br /> Email:<a  href='mailto:nargishelaly.nstu2@gmail.com'>nargishelaly.nstu2@gmail.com</a>"
+								"content": "Senior Assistant Cum Computer Operator<br /> <strong>Majharul Islam</strong><br /> Mobile: <a href='tel:+8801830030341'>+8801830030341</a><br /> Email: <a href='mailto:islammajharul727@gmail.com'>islammajharul727@gmail.com</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Mohammad Ullah</strong> (Leave)<br /> Section Officer (Honours)<br /> Mobile: <a  href='tel:+8801717815750'>+8801717815750</a><br /> Email: <a  href='mailto:babarmgtjnu@yahoo.com'>babarmgtjnu@yahoo.com</a>"
+								"content": "Senior Assistant Cum Computer Operator (CB)<br /> <strong>Anwar Hossain</strong><br /> Mobile: <a href='tel:+8801814774214'>+8801814774214</a><br /> Email: <a href='mailto:anwarhossainbabu5@gmail.com'>anwarhossainbabu5@gmail.com</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Zenat Ara Chowdhury</strong><br /> Mobile: <a  href='tel:+8801749166690'>+8801749166690</a><br /> Email: <a  href='mailto:zenatarawazid@gmail.com'>zenatarawazid@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Senior Assistant cum Computer operator",
-								"content": "<strong>Md. Abu Yusuf</strong><br /> Mobile: <a href='tel:+8801823579366'>+8801823579366</a><br /> Email: <a href='mailto:manikabuyusuf@gmail.com'>manikabuyusuf@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "LDA",
-								"content": "<strong>Md. Anowar Hossain Joy</strong><br /> Mobile: <a href='tel:+8801839459520'>+8801839459520</a><br /> Email: <a href='mailto:joy03like@gmail.com'>joy03like@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Security Guard",
-								"content": "<strong>Jahed Hossain</strong><br /> Mobile: <a href='tel:+8801855966218'>+8801855966218</a>"
-							},
-							{
-								"title": "<u>Installation Branch</u>",
-								"hint": "Assistant Registrar",
-								"content": "<strong>Md. Abdur Rahman</strong><br /> Mobile: <a  href='tel:+8801716239906'>+8801716239906</a><br /> Email: <a  href='mailto:ars_nstu273@yahoo.com'>ars_nstu273@yahoo.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Section Officer",
-								"content": "<strong>Md. Monir Hossen</strong><br /> Mobile: <a  href='tel:+8801818548725'>+8801818548725</a><br /> Email: <a  href='mailto:monir_upzu@yahoo.com'>monir_upzu@yahoo.com</a>"
+								"content": "Senior Assistant Cum Computer Operator (CB)<br /> <strong>Nasrin Sultana</strong><br /> Mobile: <a href='tel:+8801822605263'>+8801822605263</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Md. Anisul Haque</strong><br /> Mobile: <a  href='tel:+8801818497356'>+8801818497356</a><br /> Email: <a  href='mailto:anusulnstu@yahoo.com'>anusulnstu@yahoo.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Protocol Officer (Extra Responsibility)",
-								"content": "<strong>Md. Ayub Miah</strong><br /> Mobile: <a  href='tel:+8801869976728'>+8801869976728</a><br /> Email: <a  href='mailto:ayubmiah01@gmail.com'>ayubmiah01@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Section Officer (Extra Responsibility)",
-								"content": "<strong>Md. Ayub Miah</strong><br /> Mobile: <a  href='tel:+8801710641525'>+8801710641525</a><br /> Email: <a  href='mailto:nstu.sayem@gmail.com'>nstu.sayem@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Section Officer",
-								"content": "<strong>Chameli Sharma</strong><br /> Mobile: <a  href='tel:+8801813543518'>+8801813543518</a><br /> Email: <a  href='mailto:chamelinstu@gmail.com'>chamelinstu@gmail.com</a>"
-							},
-							{
-								"title": "<u>Administration Branch</u>",
-								"hint": "Deputy Registrar",
-								"content": "<strong>Dr. Muhammad Alomgir Sarkar</strong><br /> Mobile: <a  href='tel:+8801849120444'>+8801849120444</a><br /> Email: <a  href='mailto:sarker_2003@yahoo.com'>sarker_2003@yahoo.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Section Officer",
-								"content": "<strong>Evne Wazid Islam Emon</strong><br /> Mobile: <a  href='tel:+8801716109765'>+8801716109765</a><br /> Email: <a  href='mailto:wazidemon1@gmail.com'>wazidemon1@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "<strong><u>Council Branch</u></strong><br /><br />Section Officer",
-								"content": "<strong>Zenat Ara Chowdhury</strong><br />Mobile: <a  href='tel:+8801749166690'>+8801749166690</a><br />Email: <a  href='mailto:zenatarawazid@gmail.com'>zenatarawazid@gmail.com</a>"
-							},
-							{
-								"title": "<u>Establishment Section</u>",
-								"hint": "Assistant Registrar",
-								"content": "<strong>Mohammed Abdur Rahman</strong><br /> Mobile: <a  href='tel:+8801814950341'>+8801814950341</a><br /> Email: <a  href='mailto:ars_nstu273@yahoo.com'>ars_nstu273@yahoo.com</a>"
+								"content": "Computer Operator (CB)<br /> <strong>Jannatul Ferdous</strong><br /> Mobile: <a href='tel:+8801765870260'>+8801765870260</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>A.S.M Sayem</strong><br /> Mobile: <a  href='tel:+8801710641525'>+8801710641525</a><br /> Email: <a  href='mailto:nstusayem@gmail.com'>nstusayem@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Section Officer",
-								"content": "<strong>Md. Monir Hossain</strong><br /> Mobile: <a  href='tel:+8801818548725'>+8801818548725</a><br /> Email: <a  href='mailto:monir_up2u@yahoo.com'>monir_up2u@yahoo.com</a>"
+								"content": "Computer Operator (CB)<br /> <strong>Md. Mahmud Hassan</strong><br /> Mobile: <a href='tel:+8801688370037'>+8801688370037</a><br /> Email: <a href='mailto:coolbappi007@gmail.com'>coolbappi007@gmail.com</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Anisul Haq</strong><br /> Mobile: <a  href='tel:+8801818497356'>+8801818497356</a><br /> Email: <a  href='mailto:anisulnstu@yahoo.com'>anisulnstu@yahoo.com</a>"
+								"content": "Computer Operator (CB)<br /> <strong>Abdul Wyahed</strong><br /> Mobile: <a href='tel:+8801815594290'>+8801815594290</a><br /> Email: <a href='mailto:abdulporwana0560@gmail.com'>abdulporwana0560@gmail.com</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Chameli Sharma</strong><br /> Mobile: <a  href='tel:+8801813543518'>+8801813543518</a><br /> Email: <a  href='mailto:chamelinstu@gmail.com'>chamelinstu@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Senior Assistant Cum Computer Operator",
-								"content": "<strong>Shoriot Ullah</strong><br /> Mobile: <a  href='tel:+8801825082657'>+8801825082657</a>, <a  href='tel:+8801812530459'>+8801812530459</a><br /> Email: <a  href='mailto:smshohel39@gmail.com'>smshohel39@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Computer Operator",
-								"content": "<strong>Md. Giash Uddin</strong><br /> Mobile: <a  href='tel:+8801921302249'>+8801921302249</a><br /> Email: <a  href='mailto:giash.nstu15@gmail.com'>giash.nstu15@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "LDA Cum Computer Operator",
-								"content": "<strong>Md. Noman Faruq</strong><br /> Mobile: <a href='tel:+8801719358529'>+8801719358529</a><br /> Email: <a  href='mailto:nomanfaruq.1981@gmail.com'>nomanfaruq.1981@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Office Assistant",
-								"content": "<strong>Md. Rezarul Karim</strong><br /> Mobile: <a href='tel:+8801710951444'>+8801710951444</a><br /> Email: <a href='mailto:rkarim458@gmail.com'>rkarim458@gmail.com</a>"
+								"content": "LDA Cum Computer Operator<br /> <strong>Umme Salma</strong><br /> Mobile: <a href='tel:+8801875922011'>+8801875922011</a><br /> Email: <a href='mailto:uspinu74602@gmail.com'>uspinu74602@gmail.com</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Amzad Hosen</strong><br /> Mobile: <a href='tel:+8801875151551'>+8801875151551</a>, <a href='tel:+8801838265210'>+8801838265210</a><br /> Email: <a href='mailto:jabed102030@gmail.com'>jabed102030@gmail.com</a>"
+								"content": "LDA Cum Computer Operator (CB)<br /> <strong>Arifur Rahman</strong><br /> Mobile: <a href='tel:+8801839923896'>+8801839923896</a><br /> Email: <a href='mailto:arif.nstu2018@gmail.com'>arif.nstu2018@gmail.com</a>"
 							},
 							{
-								"title": "<u>Estate and Housing Branch</u>",
+								"title": "",
 								"hint": "",
-								"content": "Section Officer<br /> <strong>Md. Abdul Hamid</strong><br /> Mobile: <a  href='tel:+8801711047667'>+8801711047667</a><br /> Email: <a  href='mailto:hamid73.nstu@gmail.com'>hamid73.nstu@gmail.com</a>"
+								"content": "LDA Cum Computer Operator (CB)<br /> <strong>Sultana Akter</strong><br /> Mobile: <a href='tel:+8801727874709'>+8801727874709</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "LDA Cum Computer Operator (CB)<br /> <strong>Saddam Hossain</strong><br /> Mobile: <a href='tel:+8801829282708'>+8801829282708</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Muster-Roll<br /> <strong>Nur Alam Shakil</strong><br /> Mobile: <a href='tel:+8801717855691'>+8801717855691</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Muster-Roll<br /> <strong>Md. Mosla Uddin</strong><br /> Mobile: <a href='tel:+8801718040781'>+8801718040781</a><br /> Email: <a href='mailto:shaponmosla@gmail.com'>shaponmosla@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Muster-Roll<br /> <strong>Abdul Mojid</strong><br /> Mobile: <a href='tel:+8801835009614'>+8801835009614</a><br /> Email: <a href='mailto:md.foysal.5006914@gmail.com'>md.foysal.5006914@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Muster-Roll<br /> <strong>Somir Chandra Das</strong><br /> Mobile: <a href='tel:+8801827339118'>+8801827339118</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Muster-Roll<br /> <strong>Iqbal Hossain</strong><br /> Mobile: <a href='tel:+8801823693648'>+8801823693648</a><br /> Email: <a href='mailto:rajiballi6677@gmail.com'>rajiballi6677@gmail.com</a>"
+							},
+							{
+								"title": "<u>Personal Section</u>",
+								"hint": "",
+								"content": "Senior Assistant Cum Computer Operator<br /> <strong>Md. Yeasin Zabed</strong><br /> Mobile: <a href='tel:+8801819023072'>+8801819023072</a>, <a href='tel:+8801619023072'>+8801619023072</a><br /> Email: <a href='mailto:yeasintitu1971@gmail.com'>yeasintitu1971@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Personal Officer<br /> <strong>Obayed Uddin</strong><br /> Mobile: <a href='tel:+8801813217670'>+8801813217670</a><br /> Email: <a href='mailto:obayeddidar.nstu@gmail.com'>obayeddidar.nstu@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "LDA Cum Computer Operator<br /> <strong>Rafidatun Nessa Amanatun Fatema</strong><br /> Mobile: <a href='tel:+8801813039487'>+8801813039487</a><br /> Email: <a href='mailto:yeasintitu1971@gmail.com'>yeasintitu1971@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Office Assistant<br /> <strong>Mohammed Enayet Hossain</strong><br /> Mobile: <a href='tel:+8801819885403'>+8801819885403</a><br /> Email: <a href='mailto:anayetrabby123@yahoo.com'>anayetrabby123@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Office Assistant<br /> <strong>Muhammad Iusuf</strong><br /> Mobile: <a href='tel:+8801622243800'>+8801622243800</a><br /> Email: <a href='mailto:nstuiusuf@gmail.com'>nstuiusuf@gmail.com</a>"
+							},
+							{
+								"title": "<u>Academic Section</u>",
+								"hint": "",
+								"content": "Deputy Registrar<br /> <strong>Md. Jashim Uddin</strong><br /> Mobile: <a  href='tel:+8801819834393'>+8801819834393</a><br /> Email: <a  href='mailto:jashim_uu@yahoo.com'>jashim_uu@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Assistant Registrar<br /> <strong>Khaled Mehedi Hasan</strong><br /> Mobile: <a  href='tel:+8801717827338'>+8801717827338</a><br /> Email: <a  href='mailto:khaledju@gmail.com'>khaledju@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Assistant Registrar<br /> <strong>Nargis Akter Helaly</strong><br /> Mobile:<a  href='tel:+8801913134917'>+8801913134917</a><br /> Email:<a  href='mailto:nargishelaly.nstu2@gmail.com'>nargishelaly.nstu2@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Assistant Registrar<br /> <strong>Mohammad Ullah</strong> (Leave)<br /> Section Officer (Honours)<br /> Mobile: <a  href='tel:+8801717815750'>+8801717815750</a><br /> Email: <a  href='mailto:babarmgtjnu@yahoo.com'>babarmgtjnu@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Assistant Registrar<br /> <strong>Zenat Ara Chowdhury</strong><br /> Mobile: <a  href='tel:+8801749166690'>+8801749166690</a><br /> Email: <a  href='mailto:zenatarawazid@gmail.com'>zenatarawazid@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Senior Assistant cum Computer operator<br /> <strong>Md. Abu Yusuf</strong><br /> Mobile: <a href='tel:+8801823579366'>+8801823579366</a><br /> Email: <a href='mailto:manikabuyusuf@gmail.com'>manikabuyusuf@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "LDA<br /> <strong>Md. Anowar Hossain Joy</strong><br /> Mobile: <a href='tel:+8801839459520'>+8801839459520</a><br /> Email: <a href='mailto:joy03like@gmail.com'>joy03like@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Security Guard<br /> <strong>Jahed Hossain</strong><br /> Mobile: <a href='tel:+8801855966218'>+8801855966218</a>"
+							},
+							{
+								"title": "<u>Installation Section</u>",
+								"hint": "",
+								"content": "Assistant Registrar<br /> <strong>Md. Abdur Rahman</strong><br /> Mobile: <a  href='tel:+8801716239906'>+8801716239906</a><br /> Email: <a  href='mailto:ars_nstu273@yahoo.com'>ars_nstu273@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Section Officer<br /> <strong>Md. Monir Hossen</strong><br /> Mobile: <a  href='tel:+8801818548725'>+8801818548725</a><br /> Email: <a  href='mailto:monir_upzu@yahoo.com'>monir_upzu@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Section Officer<br /> <strong>Md. Anisul Haque</strong><br /> Mobile: <a  href='tel:+8801818497356'>+8801818497356</a><br /> Email: <a  href='mailto:anusulnstu@yahoo.com'>anusulnstu@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Protocol Officer (Extra Responsibility)<br /> <strong>Md. Ayub Miah</strong><br /> Mobile: <a  href='tel:+8801869976728'>+8801869976728</a><br /> Email: <a  href='mailto:ayubmiah01@gmail.com'>ayubmiah01@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Section Officer (Extra Responsibility)<br /> <strong>Md. Ayub Miah</strong><br /> Mobile: <a  href='tel:+8801710641525'>+8801710641525</a><br /> Email: <a  href='mailto:nstu.sayem@gmail.com'>nstu.sayem@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Section Officer<br /> <strong>Chameli Sharma</strong><br /> Mobile: <a  href='tel:+8801813543518'>+8801813543518</a><br /> Email: <a  href='mailto:chamelinstu@gmail.com'>chamelinstu@gmail.com</a>"
+							},
+							{
+								"title": "<u>Administrative Section</u>",
+								"hint": "",
+								"content": "Deputy Registrar<br /> <strong>Dr. Muhammad Alomgir Sarkar</strong><br /> Mobile: <a  href='tel:+8801849120444'>+8801849120444</a><br /> Email: <a  href='mailto:sarker_2003@yahoo.com'>sarker_2003@yahoo.com</a>"
 							},
 							{
 								"title": "",
@@ -864,17 +899,77 @@
 								"content": "Section Officer<br /> <strong>Istiak Mohammad Foysal</strong><br /> Mobile: <a  href='tel:+8801813201150'>+8801813201150</a><br /> Email: <a  href='mailto:istiak.nstu@gmail.com'>istiak.nstu@gmail.com</a>"
 							},
 							{
-								"title": "<u>Guest House at Dhaka</u>",
-								"hint": "Assistant Registrar",
-								"content": "<strong>Tarek Md. Rashed Uddin</strong><br /> Mobile: <a  href='tel:+8801717688481'>+8801717688481</a><br /> Email: <a  href='mailto:tmrashad.nstu@gmail.com'>tmrashad.nstu@gmail.com</a>"
+								"title": "",
+								"hint": "<strong><u>Council Section</u></strong>",
+								"content": "Section Officer<br /> <strong>Zenat Ara Chowdhury</strong><br />Mobile: <a  href='tel:+8801749166690'>+8801749166690</a><br />Email: <a  href='mailto:zenatarawazid@gmail.com'>zenatarawazid@gmail.com</a>"
+							},
+							{
+								"title": "<u>Establishment Section</u>",
+								"hint": "",
+								"content": "Assistant Registrar<br /> <strong>Mohammed Abdur Rahman</strong><br /> Mobile: <a  href='tel:+8801814950341'>+8801814950341</a><br /> Email: <a  href='mailto:ars_nstu273@yahoo.com'>ars_nstu273@yahoo.com</a>"
 							},
 							{
 								"title": "",
-								"hint": "Cook",
-								"content": "<strong>Jakir Hossen</strong><br /> Mobile: <a  href='tel:+8801934384890'>+8801934384890</a><br /><br /> <strong>Alomgir Gazi</strong>"
+								"hint": "",
+								"content": "Assistant Registrar<br /> <strong>A.S.M Sayem</strong><br /> Mobile: <a  href='tel:+8801710641525'>+8801710641525</a><br /> Email: <a  href='mailto:nstusayem@gmail.com'>nstusayem@gmail.com</a>"
 							},
 							{
-								"title": "<u>Security Branch</u>",
+								"title": "",
+								"hint": "",
+								"content": "Section Officer<br /> <strong>Md. Monir Hossain</strong><br /> Mobile: <a  href='tel:+8801818548725'>+8801818548725</a><br /> Email: <a  href='mailto:monir_up2u@yahoo.com'>monir_up2u@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Section Officer<br /> <strong>Anisul Haq</strong><br /> Mobile: <a  href='tel:+8801818497356'>+8801818497356</a><br /> Email: <a  href='mailto:anisulnstu@yahoo.com'>anisulnstu@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Section Officer<br /> <strong>Chameli Sharma</strong><br /> Mobile: <a  href='tel:+8801813543518'>+8801813543518</a><br /> Email: <a  href='mailto:chamelinstu@gmail.com'>chamelinstu@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Senior Assistant Cum Computer Operator<br /> <strong>Shoriot Ullah</strong><br /> Mobile: <a  href='tel:+8801825082657'>+8801825082657</a>, <a  href='tel:+8801812530459'>+8801812530459</a><br /> Email: <a  href='mailto:smshohel39@gmail.com'>smshohel39@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Computer Operator<br /> <strong>Md. Giash Uddin</strong><br /> Mobile: <a  href='tel:+8801921302249'>+8801921302249</a><br /> Email: <a  href='mailto:giash.nstu15@gmail.com'>giash.nstu15@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "LDA Cum Computer Operator<br /> <strong>Md. Noman Faruq</strong><br /> Mobile: <a href='tel:+8801719358529'>+8801719358529</a><br /> Email: <a  href='mailto:nomanfaruq.1981@gmail.com'>nomanfaruq.1981@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Office Assistant<br /> <strong>Md. Rezarul Karim</strong><br /> Mobile: <a href='tel:+8801710951444'>+8801710951444</a><br /> Email: <a href='mailto:rkarim458@gmail.com'>rkarim458@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Office Assistant<br /> <strong>Amzad Hosen</strong><br /> Mobile: <a href='tel:+8801875151551'>+8801875151551</a>, <a href='tel:+8801838265210'>+8801838265210</a><br /> Email: <a href='mailto:jabed102030@gmail.com'>jabed102030@gmail.com</a>"
+							},
+							{
+								"title": "<u>Estate and Housing Section</u>",
+								"hint": "",
+								"content": "Section Officer<br /> <strong>Tarek Md. Rashed Uddin</strong><br /> Mobile: <a  href='tel:+8801717688481'>+8801717688481</a><br /> Email: <a  href='mailto:tmrashad.nstu@gmail.com'>tmrashad.nstu@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Section Officer<br /> <strong>Md. Abdul Hamid</strong><br /> Mobile: <a  href='tel:+8801711047667'>+8801711047667</a><br /> Email: <a  href='mailto:hamid73.nstu@gmail.com'>hamid73.nstu@gmail.com</a>"
+							},
+							{
+								"title": "<u>Guest House at Dhaka</u>",
+								"hint": "",
+								"content": "Cook<br /> <strong>Jakir Hossen</strong><br /> Mobile: <a  href='tel:+8801934384890'>+8801934384890</a><br /><br /> <strong>Alomgir Gazi</strong>"
+							},
+							{
+								"title": "<u>Security Section</u>",
 								"hint": "",
 								"content": "Security Officer<br /> <strong>A. S. M. Sayem</strong><br /> Mobile: <a  href='tel:+8801710641525'>+8801710641525</a><br /> Email: <a  href='mailto:nstu.sayem@gmail.com'>nstu.sayem@gmail.com</a>"
 							},
@@ -894,7 +989,7 @@
 								"content": "Imam<br /> <strong>Hafez Mao. Md. Giyas Uddin Bhuiyan</strong><br /> Mobile: <a  href='tel:+8801814174228'>+8801814174228</a><br /> Email: <a  href='mailto:gsb.nstu@gmail.com'>gsb.nstu@gmail.com</a>"
 							},
 							{
-								"title": "<u>Despatch Branch</u>",
+								"title": "<u>Despatch Section</u>",
 								"hint": "",
 								"content": "Assistant Registrar<br /> <strong>Md. Masudur Rahman</strong><br /> Mobile: <a  href='tel:+8801819360174'>+8801819360174</a><br /> Email: <a  href='mailto:masud.nstu@gmail.com'>masud.nstu@gmail.com</a>"
 							}
@@ -976,7 +1071,7 @@
 						]
 					},
 					{
-						"title": "Transport Branch",
+						"title": "Transport Section",
 						"contents": [
 							{
 								"title": "",
@@ -1188,15 +1283,15 @@
                             "hint": "Director",
                             "content": "<strong>Koushik Chandra Hawladar</strong><br /> Mobile: <a  href='tel:+8801727657094'>+8801727657094</a><br /> Email: <a  href='mailto:koushiksoul@gmail.com'>koushiksoul@gmail.com</a>"
                         },
+						{
+                           "title": "",
+                           "hint": "Assistant Director",
+                           "content": "<strong>Md. Auhidur Rahman</strong><br /> Mobile: <a  href='tel:+8801815662160'>+8801815662160</a>, <a  href='tel:+8801752115473'>+8801752115473</a><br /> Email: <a  href='mailto:koushiksoul@gmail.com'>auhidsumon1@gmail.com</a>"
+                        },
                         {
                            "title": "",
                            "hint": "Assistant Programer",
                            "content": "<strong>Ronok Bhowmik</strong><br /> Mobile: <a  href='tel:+8801746207308'>+8801746207308</a>"
-                        },
-                        {
-                           "title": "",
-                           "hint": "",
-                           "content": "<strong>Md. Auhidur Rahman</strong><br /> Mobile: <a  href='tel:+8801815662160'>+8801815662160</a>, <a  href='tel:+8801752115473'>+8801752115473</a><br /> Email: <a  href='mailto:koushiksoul@gmail.com'>auhidsumon1@gmail.com</a>"
                         },
                         {
                            "title": "",

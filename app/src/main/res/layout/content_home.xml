@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.mashpy.nstuinfo.HomeActivity"
+    tools:context="com.nstuinfo.HomeActivity"
     tools:showIn="@layout/app_bar_home"
     android:id="@+id/homeConstraintLayout"
     android:background="@color/md_grey_300">

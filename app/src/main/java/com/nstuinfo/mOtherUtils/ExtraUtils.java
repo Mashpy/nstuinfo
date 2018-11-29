@@ -1,4 +1,4 @@
-package com.mashpy.nstuinfo.mOtherUtils;
+package com.nstuinfo.mOtherUtils;
 
 /**
  * Created by whoami on 10/30/2018.

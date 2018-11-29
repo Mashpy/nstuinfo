@@ -1,4 +1,4 @@
-package com.mashpy.nstuinfo.mViews;
+package com.nstuinfo.mViews;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -18,9 +18,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mashpy.nstuinfo.R;
-import com.mashpy.nstuinfo.mOtherUtils.AnimationUtils;
-import com.mashpy.nstuinfo.mOtherUtils.Preferences;
+import com.nstuinfo.R;
+import com.nstuinfo.mOtherUtils.AnimationUtils;
+import com.nstuinfo.mOtherUtils.Preferences;
 
 /**
  * Created by whoami on 10/26/2018.

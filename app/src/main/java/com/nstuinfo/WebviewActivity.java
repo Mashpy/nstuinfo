@@ -1,22 +1,15 @@
-package com.mashpy.nstuinfo;
+package com.nstuinfo;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,11 +24,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mashpy.nstuinfo.mOtherUtils.Preferences;
-import com.mashpy.nstuinfo.mRecyclerView.MyAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.nstuinfo.R;
+import com.nstuinfo.mOtherUtils.Preferences;
 
 public class WebviewActivity extends AppCompatActivity {
 

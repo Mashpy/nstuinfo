@@ -1,4 +1,4 @@
-package com.mashpy.nstuinfo.mJsonUtils;
+package com.nstuinfo.mJsonUtils;
 
 import android.content.Context;
 

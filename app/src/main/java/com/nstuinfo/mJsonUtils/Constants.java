@@ -1,4 +1,4 @@
-package com.mashpy.nstuinfo.mJsonUtils;
+package com.nstuinfo.mJsonUtils;
 
 /**
  * Created by whoami on 11/2/2018.
