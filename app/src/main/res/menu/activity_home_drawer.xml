@@ -40,4 +40,12 @@
         </menu>
     </item>
 
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_check_update"
+            android:checkable="false"
+            android:icon="@drawable/ic_action_sync"
+            android:title="Check Update" />
+    </group>
+
 </menu>

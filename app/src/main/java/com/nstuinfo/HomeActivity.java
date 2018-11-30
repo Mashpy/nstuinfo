@@ -185,8 +185,8 @@ public class HomeActivity extends AppCompatActivity
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        syncBtn = findViewById(R.id.syncBtn);
-        syncBtn.setOnClickListener(new View.OnClickListener() {
+        //syncBtn = findViewById(R.id.syncBtn);
+        /*syncBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (isInternetOn()) {
@@ -197,9 +197,9 @@ public class HomeActivity extends AppCompatActivity
                 }
                 navViewImageAlteration();
             }
-        });
+        });*/
 
-        syncBtn.setVisibility(View.GONE);
+        //syncBtn.setVisibility(View.GONE);
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -208,7 +208,7 @@ public class HomeActivity extends AppCompatActivity
         //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         //mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        mRecyclerView.setOnTouchListener(new View.OnTouchListener() {
+        /*mRecyclerView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
@@ -229,7 +229,7 @@ public class HomeActivity extends AppCompatActivity
 
                 return false;
             }
-        });
+        });*/
 
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
@@ -518,6 +518,14 @@ public class HomeActivity extends AppCompatActivity
                 intent.putExtra("TITLE", itemsList.get(itemsList.size()-1).trim());
                 startActivity(intent);
             }
+        } else if (id == R.id.nav_check_update) {
+            if (isInternetOn()) {
+                parseUrlAndCheckData(true);
+            } else {
+                Snackbar.make(coordinatorLayout, "Please check your data connection!!", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+            navViewImageAlteration();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
