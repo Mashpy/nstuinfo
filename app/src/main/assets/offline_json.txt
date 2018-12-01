@@ -5812,6 +5812,11 @@
 						"content": "<strong>Md. Saiful Haque (Hridoy)</strong><br /> CSTE 10th batch<br /> Facebook: <a href='https://facebook.com/unwantedhridoy.cptrii'>https://facebook.com/unwantedhridoy.cptrii</a><br /> Email: <a href='mailto:md.saifulhq@gmail.com'>md.saifulhq@gmail.com</a>"
 					},
 					{
+                    						"title": "Supervisor",
+                    						"hint": "",
+                    						"content": "<strong>Koushik Chandra Hawladar</strong><br /> Assistant Professor, CSTE<br /> Mobile: <a href='tel:+8801727657094'>+8801727657094</a><br /> Email: <a href='mailto:koushiksoul@gmail.com'>koushiksoul@gmail.com</a>"
+                    },
+					{
 						"title": "Founder",
 						"hint": "<i>NSTUinfo version 1.0-3.0</i>",
 						"content": "<strong>Mashpy Rahman</strong><br /> CSTE 5th batch<br /> Facebook: <a href='https://facebook.com/Mashpy'>https://facebook.com/Mashpy</a><br /> Email: <a href='mailto:contact@mashpy.me'>contact@mashpy.me</a><br /> NSTUinfo, <i>Copyright 2014-2017</i>"
