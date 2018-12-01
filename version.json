@@ -1,12 +1,12 @@
 {
-"version": "3.15",
+"version": "3.16",
 "expire_date": "28-June-2017",
 "article_list": [
 {
 "id": 1,
 "menu_name": "Introduction",
 "root_path": "introduction",
-"menu_version": "4",
+"menu_version": "5",
 "type" : "non_ad",
 "last_update":"1-May-2016",
 "url": "https://nstuinfo.github.io/introduction.html"
@@ -15,7 +15,7 @@
 "id": 2,
 "menu_name": "Regent Board",
 "root_path": "regent",
-"menu_version": "1",
+"menu_version": "2",
 "type" : "non_ad",
 "last_update": "24-May-2016",
 "url": "https://nstuinfo.github.io/regent.html"
@@ -24,7 +24,7 @@
 "id": 3,
 "menu_name": "Academic Council",
 "root_path": "academic_council",
-"menu_version": "3",
+"menu_version": "4",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/academic_council.html"
@@ -33,7 +33,7 @@
 "id": 4,
 "menu_name": "Committees",
 "root_path": "committees",
-"menu_version": "2",
+"menu_version": "3",
 "type" : "non_ad",
 "last_update": "24-May-2016",
 "url": "http://nstuinfo.github.io/committees.html"
@@ -42,7 +42,7 @@
 "id": 5,
 "menu_name": "Registrar office",
 "root_path": "registraroffice",
-"menu_version": "3",
+"menu_version": "4",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/registraroffice.html"
@@ -51,7 +51,7 @@
 "id": 6,
 "menu_name": "Central Library",
 "root_path": "central_library",
-"menu_version": "1",
+"menu_version": "2",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/central_library.html"
@@ -60,7 +60,7 @@
 "id": 7,
 "menu_name": "Departments & Teachers",
 "root_path": "department",
-"menu_version": "10",
+"menu_version": "11",
 "type" : "non_ad",
 "last_update": "22-February-2017",
 "url": "http://nstuinfo.github.io/department.html"
@@ -69,7 +69,7 @@
 "id": 8,
 "menu_name": "Class Representative",
 "root_path": "cr",
-"menu_version": "5",
+"menu_version": "6",
 "type" : "non_ad",
 "last_update": "5-June-2016",
 "url": "http://nstuinfo.github.io/cr.html"
@@ -78,7 +78,7 @@
 "id": 10,
 "menu_name": "Academic Officiary",
 "root_path": "academic_officiary",
-"menu_version": "3",
+"menu_version": "4",
 "type" : "non_ad",
 "last_update": "24-September-2016",
 "url": "http://nstuinfo.github.io/academic_officiary.html"
@@ -87,7 +87,7 @@
 "id": 11,
 "menu_name": "Administrative",
 "root_path": "administrative",
-"menu_version": "1",
+"menu_version": "2",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/administrative.html"
@@ -96,7 +96,7 @@
 "id": 12,
 "menu_name": "Student Activities",
 "root_path": "student_activities",
-"menu_version": "4",
+"menu_version": "5",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/student_activities.html"
@@ -105,7 +105,7 @@
 "id": 13,
 "menu_name": "Transport Section",
 "root_path": "transport_section",
-"menu_version": "4",
+"menu_version": "5",
 "type" : "non_ad",
 "last_update": "22-February-2017",
 "url": "http://nstuinfo.github.io/transport_section.html"
@@ -114,7 +114,7 @@
 "id": 14,
 "menu_name": "Hall Office",
 "root_path": "halloffice",
-"menu_version": "2",
+"menu_version": "3",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/halloffice.html"
@@ -123,7 +123,7 @@
 "id": 15,
 "menu_name": "Emergency Contacts",
 "root_path": "emergency",
-"menu_version": "2",
+"menu_version": "3",
 "type" : "non_ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/emergency.html"
@@ -132,7 +132,7 @@
 "id": 16,
 "menu_name": "Message From Developer",
 "root_path": "message_developer",
-"menu_version": "3",
+"menu_version": "4",
 "type" : "ad",
 "last_update": "1-May-2016",
 "url": "http://nstuinfo.github.io/message_developer.html"
