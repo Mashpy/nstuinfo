@@ -324,6 +324,11 @@ public class HomeActivity extends AppCompatActivity
             progressDialog.show();
         }
 
+        if (dataJsonExtract != null && dataJsonExtract.getVersionCheckURL() != null &&
+                !dataJsonExtract.getVersionCheckURL().equalsIgnoreCase("")) {
+            Constants.JSON_CHECKING_URL = dataJsonExtract.getVersionCheckURL();
+        }
+
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.JSON_CHECKING_URL,
 
                 new Response.Listener<String>() {

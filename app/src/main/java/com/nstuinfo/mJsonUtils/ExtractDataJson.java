@@ -62,6 +62,35 @@ public class ExtractDataJson {
         return version;
     }
 
+    public String getVersionCheckURL() {
+        String url = null;
+
+        try {
+            JSONArray jsonArray = new JSONArray(text);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = (JSONObject) jsonArray.get(i);
+
+                if (object.has("version_check_url")) {
+                    try {
+                        url = object.getString("version_check_url").trim();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return url;
+    }
+
     public List<String> getMainItemsList() {
         List<String> list = new ArrayList<>();
 
