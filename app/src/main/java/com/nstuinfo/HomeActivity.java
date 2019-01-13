@@ -148,6 +148,8 @@ public class HomeActivity extends AppCompatActivity
             }
         }
 
+        FontAppearance.replaceDefaultFont(this);
+
     }
 
     @Override

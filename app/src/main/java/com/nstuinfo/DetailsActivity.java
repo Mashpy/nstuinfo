@@ -20,6 +20,7 @@ import com.nstuinfo.mRecyclerView.MyAdapter;
 import com.nstuinfo.mRecyclerView.SpacesItemDecoration;
 import com.nstuinfo.mJsonUtils.ExtractDataJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
+import com.nstuinfo.mViews.FontAppearance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,6 +92,8 @@ public class DetailsActivity extends AppCompatActivity {
         }
 
         setTheme();
+
+        FontAppearance.replaceDefaultFont(this);
 
     }
 

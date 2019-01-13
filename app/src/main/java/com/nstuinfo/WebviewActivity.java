@@ -26,6 +26,7 @@ import android.widget.TextView;
 
 import com.nstuinfo.R;
 import com.nstuinfo.mOtherUtils.Preferences;
+import com.nstuinfo.mViews.FontAppearance;
 
 public class WebviewActivity extends AppCompatActivity {
 
@@ -71,6 +72,8 @@ public class WebviewActivity extends AppCompatActivity {
         });
 
         setTheme();
+
+        FontAppearance.replaceDefaultFont(this);
     }
 
     private void initViews() {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ask="http://schemas.android.com/apk/res-auto">
+    <!-- Normal keys -->
+    <item android:state_pressed="true"
+        android:drawable="@drawable/pressed_dr"/>
+
+    <item android:drawable="@color/colorPrimary"/>
+
+</selector>

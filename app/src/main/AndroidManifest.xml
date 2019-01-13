@@ -12,11 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="com.nstuinfo.HomeActivity"
+        <activity android:name=".IntroActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,17 +22,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.nstuinfo.DetailsActivity"
+            android:name=".HomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".DetailsActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.nstuinfo.WebviewActivity"
-            android:label="@string/title_activity_webview"
+            android:name=".WebviewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:label="@string/title_activity_webview"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
