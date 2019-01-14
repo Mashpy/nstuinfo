@@ -2,10 +2,14 @@ package com.nstuinfo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
 import com.nstuinfo.mViews.FontAppearance;
@@ -16,6 +20,7 @@ public class IntroActivity extends Activity {
 
     ViewFlipper viewFlipper;
     ExpandableTextView expTextView1, expTextView2;
+    Button readMoreBtn1, readMoreBtn2;
     Button enterBtn, enterImgBtn;
 
     @Override
@@ -25,27 +30,40 @@ public class IntroActivity extends Activity {
 
         initViews();
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            expTextView1.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
+            expTextView2.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
+        } else {
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1.2f);
+            expTextView1.setLayoutParams(params);
+            expTextView2.setLayoutParams(params);
+        }
+
         expTextView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //expTextView1.toggle();
-                if (expTextView1.isExpanded()) {
-                    expTextView1.collapse();
-                } else {
-                    expTextView1.expand();
-                }
+                expandingAndCollapsingTV(expTextView1, readMoreBtn1);
             }
         });
 
         expTextView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //expTextView2.toggle();
-                if (expTextView2.isExpanded()) {
-                    expTextView2.collapse();
-                } else {
-                    expTextView2.expand();
-                }
+                expandingAndCollapsingTV(expTextView2, readMoreBtn2);
+            }
+        });
+
+        readMoreBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                expandingAndCollapsingTV(expTextView1, readMoreBtn1);
+            }
+        });
+
+        readMoreBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                expandingAndCollapsingTV(expTextView2, readMoreBtn2);
             }
         });
 
@@ -77,6 +95,9 @@ public class IntroActivity extends Activity {
         expTextView1 = findViewById(R.id.expandableTextView1);
         expTextView2 = findViewById(R.id.expandableTextView2);
 
+        readMoreBtn1 = findViewById(R.id.btnReadMore1);
+        readMoreBtn2 = findViewById(R.id.btnReadMore2);
+
         expTextView1.setInterpolator(new OvershootInterpolator());
         expTextView2.setInterpolator(new OvershootInterpolator());
 
@@ -87,6 +108,17 @@ public class IntroActivity extends Activity {
     private void finishAndStart() {
         startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         finish();
+    }
+
+    private void expandingAndCollapsingTV(ExpandableTextView eptv, Button button) {
+        if (eptv.isExpanded()) {
+            eptv.collapse();
+            button.setText("Read more");
+        } else {
+            eptv.expand();
+            button.setText("Collapse text");
+        }
+        //eptv.toggle();
     }
 
     @Override

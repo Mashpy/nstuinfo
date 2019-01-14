@@ -119,12 +119,6 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/nstu_cover_1"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
                         android:background="@drawable/nstu_cover_2"
                         tools:ignore="ContentDescription" />
 
@@ -155,12 +149,6 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/nstu_cover_6"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
                         android:background="@drawable/nstu_cover_7"
                         tools:ignore="ContentDescription" />
 
@@ -186,11 +174,32 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/md_grey_800"
                     android:textStyle="normal"
-                    android:gravity="center"
+                    android:gravity="start"
                     android:maxLines="5"
                     android:ellipsize="end"
                     app:animation_duration="750"
                     android:padding="5dp"/>
+
+                <Button
+                    android:id="@+id/btnReadMore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/read_more_bg"
+                    android:text="Read more"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="3dp"/>
 
                 <View
                     android:id="@+id/view1"
@@ -257,11 +266,32 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/md_grey_800"
                     android:textStyle="normal"
-                    android:gravity="center"
+                    android:gravity="start"
                     android:maxLines="5"
                     android:ellipsize="end"
                     app:animation_duration="750"
                     android:padding="5dp"/>
+
+                <Button
+                    android:id="@+id/btnReadMore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/read_more_bg"
+                    android:text="Read more"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"/>
 
             </LinearLayout>
 
