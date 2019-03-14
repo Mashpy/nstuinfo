@@ -187,6 +187,14 @@ public class ExtractDataJson {
                                             }
                                         }
 
+                                        if (detailsObject.has("image_content")) {
+                                            String image_content = detailsObject.getString("image_content").trim();
+                                            // image_content = ("imageName, imageFooter")
+                                            if (!image_content.equalsIgnoreCase("")) {
+                                                MyView.setImageContentView(context, image_content, linearLayout, k);
+                                            }
+                                        }
+
                                     }
 
                                 }

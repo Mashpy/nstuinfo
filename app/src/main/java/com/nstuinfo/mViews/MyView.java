@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nstuinfo.R;
 import com.nstuinfo.mOtherUtils.AnimationUtils;
@@ -92,6 +93,7 @@ public class MyView {
         linearLayout.addView(layout);
     }
 
+    // UNUSED METHOD
     @SuppressLint("InflateParams")
     public static void setContentView (Context context, String content, LinearLayout linearLayout, int position) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -158,7 +160,7 @@ public class MyView {
             cardView.setCardBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
         }
 
-        String[] splitArray = content.split("<br />");
+        String[] splitArray = content.split("<br />|<br/>|<br>");
 
         for (String s : splitArray) {
 
@@ -207,6 +209,64 @@ public class MyView {
             contentLL.addView(layout2);
         }
 
+
+        AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
+
+        linearLayout.addView(layout);
+    }
+
+    @SuppressLint("InflateParams")
+    public static void setImageContentView(Context context, String content, LinearLayout linearLayout, int position) {
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = null;
+        if (inflater != null) {
+            layout = inflater.inflate(R.layout.image_content_view,null);
+        }
+
+        assert layout != null;
+        ImageView imageView = layout.findViewById(R.id.imageContentImgView);
+        TextView tv = layout.findViewById(R.id.imageContentTV);
+
+        String[] s = content.split(",");
+        String imgName = "", imgFooter = "";
+        if (s.length == 1) {
+            imgName = s[0];
+        } else {
+            imgName = s[0];
+            for (int i=1; i<s.length; i++) {
+                imgFooter += s[i];
+            }
+        }
+
+        int imageId = context.getResources()
+                .getIdentifier(imgName.trim().toLowerCase(), "drawable", context.getPackageName());
+
+        if (imageId > 0) {
+            imageView.setImageResource(imageId);
+        } else {
+            Toast.makeText(context, "Image doesn't found!!", Toast.LENGTH_SHORT).show();
+            imageView.setVisibility(View.GONE);
+        }
+
+        if (imgFooter.trim().equalsIgnoreCase("")) {
+            tv.setVisibility(View.GONE);
+        } else {
+            tv.setVisibility(View.VISIBLE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                tv.setText(Html.fromHtml(imgFooter.trim(), Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                tv.setText(Html.fromHtml(imgFooter.trim()));
+            }
+        }
+
+        if (Preferences.isDarkTheme(context)) {
+            tv.setTextColor(Color.WHITE);
+        }
+
+        FontAppearance.setSecondaryTextSize(context, tv);
+
+        Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
+        tv.setLinksClickable(true);
 
         AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
 
