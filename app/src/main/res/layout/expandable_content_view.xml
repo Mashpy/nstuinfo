@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:paddingLeft="5dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:paddingRight="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/content_item_view_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <at.blogc.android.views.ExpandableTextView
+            android:id="@+id/expandableTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_nstu"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/md_grey_900"
+            android:textStyle="normal"
+            android:gravity="start"
+            android:maxLines="8"
+            android:ellipsize="end"
+            app:animation_duration="750"
+            android:padding="5dp"/>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

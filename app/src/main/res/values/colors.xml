@@ -18,6 +18,8 @@
     <color name="list_item_color2">#4FC3F7</color>
     <color name="list_item_selection_color2">#0091EA</color>
 
+    <color name="splash_screen_bg_color">#262161</color>
+
     <!--grey-->
     <color name="md_grey_50">#FAFAFA</color>
     <color name="md_grey_100">#F5F5F5</color>

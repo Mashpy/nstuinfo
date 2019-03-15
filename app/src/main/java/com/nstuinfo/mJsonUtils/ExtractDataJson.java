@@ -195,6 +195,13 @@ public class ExtractDataJson {
                                             }
                                         }
 
+                                        if (detailsObject.has("expandable_content")) {
+                                            String expandableContent = detailsObject.getString("expandable_content").trim();
+                                            if (!expandableContent.equalsIgnoreCase("")) {
+                                                MyView.setExpandableContentView(context, expandableContent, linearLayout, k);
+                                            }
+                                        }
+
                                     }
 
                                 }
@@ -276,6 +283,22 @@ public class ExtractDataJson {
                                                                 MyView.setContentView2(context, content, linearLayout, l);
                                                             }
                                                         }
+
+                                                        if (detailsObject.has("image_content")) {
+                                                            String image_content = detailsObject.getString("image_content").trim();
+                                                            // image_content = ("imageName, imageFooter")
+                                                            if (!image_content.equalsIgnoreCase("")) {
+                                                                MyView.setImageContentView(context, image_content, linearLayout, l);
+                                                            }
+                                                        }
+
+                                                        if (detailsObject.has("expandable_content")) {
+                                                            String expandableContent = detailsObject.getString("expandable_content").trim();
+                                                            if (!expandableContent.equalsIgnoreCase("")) {
+                                                                MyView.setExpandableContentView(context, expandableContent, linearLayout, l);
+                                                            }
+                                                        }
+
                                                     }
 
                                                 }

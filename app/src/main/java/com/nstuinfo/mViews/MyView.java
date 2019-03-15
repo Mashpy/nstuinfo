@@ -11,9 +11,11 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.text.Html;
+import android.text.Layout;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,6 +24,8 @@ import android.widget.Toast;
 import com.nstuinfo.R;
 import com.nstuinfo.mOtherUtils.AnimationUtils;
 import com.nstuinfo.mOtherUtils.Preferences;
+
+import at.blogc.android.views.ExpandableTextView;
 
 /**
  * Created by whoami on 10/26/2018.
@@ -267,6 +271,53 @@ public class MyView {
 
         Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
         tv.setLinksClickable(true);
+
+        AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
+
+        linearLayout.addView(layout);
+    }
+
+    @SuppressLint("InflateParams")
+    public static void setExpandableContentView (Context context, String content, LinearLayout linearLayout, int position) {
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = null;
+        if (inflater != null) {
+            layout = inflater.inflate(R.layout.expandable_content_view,null);
+        }
+
+        assert layout != null;
+        final ExpandableTextView etv = layout.findViewById(R.id.expandableTextView);
+        CardView cardView = layout.findViewById(R.id.content_item_view_card);
+
+        if (Preferences.isDarkTheme(context)) {
+            cardView.setCardBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+            etv.setTextColor(Color.WHITE);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            etv.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            etv.setText(Html.fromHtml(content));
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            etv.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
+        } else {
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1.2f);
+            etv.setLayoutParams(params);
+        }
+
+        etv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                etv.toggle();
+            }
+        });
+
+        FontAppearance.setSecondaryTextSize(context, etv);
+
+        Linkify.addLinks(etv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
+        etv.setLinksClickable(true);
 
         AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
 

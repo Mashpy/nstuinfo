@@ -118,7 +118,14 @@ public class IntroActivity extends Activity {
             eptv.expand();
             button.setText("Collapse text");
         }
-        //eptv.toggle();
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        //            expTextView1.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
+        //            expTextView2.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
+        //        } else {
+        //            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1.2f);
+        //            expTextView1.setLayoutParams(params);
+        //            expTextView2.setLayoutParams(params);
+        //        }
     }
 
     @Override

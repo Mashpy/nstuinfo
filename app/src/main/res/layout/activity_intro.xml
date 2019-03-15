@@ -131,12 +131,6 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/uni_day"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
                         android:background="@drawable/nstu_cover_4"
                         tools:ignore="ContentDescription" />
 

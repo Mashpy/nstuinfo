@@ -37,6 +37,36 @@
 			]
 		},
 		{
+        		"item": "About VC",
+        		"updated_date_notice": "Last updated: 15th March ,2019",
+        		"details": [{
+        				"title": "",
+        				"hint": "",
+        				"content": "",
+        				"image_content": "vc_sir"
+        			},
+        			{
+        				"title": "",
+        				"hint": "",
+        				"content": "<strong>Professor Dr. M Wahiduzzaman</strong><br /> Professor of Education, University of Dhaka;Eminent Education Scientist, Columnist & Media personality<br /> <strong>Vice-Chancellor</strong><br /> Noakhali Science and Technology University, Noakhali-3814, Bangladesh<br /> Phone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>",
+        				"image_content": "vc_primeminister, VC with the honourable Prime Minister of Bangladesh"
+        			},
+        			{
+        				"title": "",
+        				"hint": "",
+        				"content": "",
+        				"image_content": "vc_president, VC with the honourable  President of Bangladesh"
+        			},
+        			{
+        				"title": "Message from VC",
+        				"hint": "",
+        				"content": "",
+        				"image_content": "",
+        				"expandable_content": "It is a great pleasure to me to welcome you to Noakhali Science and Technology University(NSTU).This is the 27th public university which was established on 15th July 2001, and the academic activities start on 22th June 2006, having 13 teachers, 180 students with four departments namely Department of Computer Science and Telecommunication Engineering (CSTE), Department of Pharmacy, Department of Applied Chemistry and Chemical Engineering (ACCE) and Department of Fisheries and Marine Science (FIMS). Now the University made its standard world class and addressed as the <b>“Cambridge of the Coastal terrain.”</b> The University provides high-quality education, in-depth research, equipping students with the insight to address both local and global challenges.<br/><br/>Presently, NSTU accommodates 28 Departments under 6 Faculties, 2 Institutes, over 300 teachers, and more than 5000 students. All of the mentors and supportive staffs of NSTU are committed to prepare our students to hard work, acquire skills, technical knowledge and enhance the capabilities that will help them adequately to cope in rapidly changing global environment. In NSTU there are highly qualified and experienced faculties. Around 50 highly qualified teachers whose have Ph.D. or Post-Doctorial and experience of working at world-class universities and research centers. Currently, about 70 teachers are doing Ph.D. at the different world ranking University in UK, USA, Japan, Australia, Europe, South Korea, and many other countries. We will strengthen our faculty to provide higher education of international standards in relevant areas and facilitate training programs for all of the teachers and officers through IQAC (Institutional Quality Assurance Cell).<br/><br/>NSTU’s academic standards are accepted in worldwide, enjoying MoU (Memorandum of Understanding) with many famous universities, institutions and scholarly bodies from all over the world especially Hiroshima University, University of Stirling, Anglia Ruskin University, Kynunpouk National University, Bangabandhu Sheikh Mujibur Rahman Maritime University, Bangladesh providing students/teachers the opportunity to transfer to relevant programs and higher education, joint research etc. Beside academic development, we have enriched infrastructure also.<br /><br />We have already reached the landmark of being Lower-middle income country by the declared vision 2021 and 2041 by Honorable Prime minister “Deshrotno Sheikh Hasina.” For that purpose, we have taken various steps for the University’s infrastructural development like Japan and Europe. For the demand of quality education and research facilities, we have ensured the construction of five halls for the students, five-storied Haji Idris Auditorium cum Multiple Building and adequate transportation facilities for the students, teachers, and officers. Establishment of multiple ten storied towers is going on, among those 1. The largest academic and Lab building 2. Teacher-Officer Tower 3. Provost and Assistant Provost Tower 4. Staff tower is notable. Apart from these, Establishment of three storied Medical center, eye-catching Central Mosque, and worship for the Hindu, Buddhist, and Christian students are going on. For nourishing co-curricular activities, BNCC and Rover Scout has been established. Very soon Building for the BNCC and Rover Scout will be constructed.<br /><br />It is great news that we are going to start a world-class institute Sheikh Hasina Marine Institute where the researcher will work on the blue economy, delta formation, space research, material science, artificial intelligence, and nanotechnology. As the Vice-Chancellor of NSTU, I hope that continuous efforts for the University researchers, faculty members, students, concern stakeholders can be benefitted. I anticipate that this website will help you to know more about the university."
+        			}
+        		]
+        },
+		{
 			"item": "Regent Board",
 			"updated_date_notice": "Last updated: University diary 2018",
 			"details": [{
