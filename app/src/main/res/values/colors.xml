@@ -19,6 +19,8 @@
     <color name="list_item_selection_color2">#0091EA</color>
 
     <color name="splash_screen_bg_color">#262161</color>
+    <color name="splash_sc_top_bg_color">#2A508D</color>
+    <color name="splash_sc_bottom_bg_color">#EE658A</color>
 
     <!--grey-->
     <color name="md_grey_50">#FAFAFA</color>
