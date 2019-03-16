@@ -7,6 +7,8 @@ import android.os.Handler;
 import android.widget.ImageView;
 
 import com.nstuinfo.mOtherUtils.AnimationUtils;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 public class SplashScreenActivity extends Activity {
 

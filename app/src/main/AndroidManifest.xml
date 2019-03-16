@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:name=".MyApp"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".SplashScreenActivity"
@@ -50,6 +51,9 @@
             android:label="@string/title_activity_webview"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="bacb81db58019f050300bbf517e0b8d8dc0cbe9c" />
     </application>
 
 </manifest>
