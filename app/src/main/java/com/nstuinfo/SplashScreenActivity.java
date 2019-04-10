@@ -1,6 +1,7 @@
 package com.nstuinfo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import com.nstuinfo.mOtherUtils.AnimationUtils;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SplashScreenActivity extends Activity {
 
@@ -41,4 +43,10 @@ public class SplashScreenActivity extends Activity {
     public void onBackPressed() {
         //super.onBackPressed();
     }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
 }

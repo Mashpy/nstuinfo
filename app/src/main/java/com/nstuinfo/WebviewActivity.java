@@ -2,6 +2,7 @@ package com.nstuinfo;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -27,6 +28,8 @@ import android.widget.TextView;
 import com.nstuinfo.R;
 import com.nstuinfo.mOtherUtils.Preferences;
 import com.nstuinfo.mViews.FontAppearance;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class WebviewActivity extends AppCompatActivity {
 
@@ -73,7 +76,7 @@ public class WebviewActivity extends AppCompatActivity {
 
         setTheme();
 
-        FontAppearance.replaceDefaultFont(this);
+        //FontAppearance.replaceDefaultFont(this);
     }
 
     private void initViews() {
@@ -94,6 +97,11 @@ public class WebviewActivity extends AppCompatActivity {
         webView = findViewById(R.id.webView);
         btnBackward = findViewById(R.id.backwardBtn);
         btnForward = findViewById(R.id.forwardBtn);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     // Custom method to render a web page

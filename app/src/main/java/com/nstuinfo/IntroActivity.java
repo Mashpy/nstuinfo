@@ -1,6 +1,7 @@
 package com.nstuinfo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.ViewFlipper;
 import com.nstuinfo.mViews.FontAppearance;
 
 import at.blogc.android.views.ExpandableTextView;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class IntroActivity extends Activity {
 
@@ -81,8 +83,13 @@ public class IntroActivity extends Activity {
             }
         });
 
-        FontAppearance.replaceDefaultFont(this);
+        //FontAppearance.replaceDefaultFont(this);
 
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     private void initViews() {

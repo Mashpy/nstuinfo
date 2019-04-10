@@ -22,8 +22,8 @@ android {
         applicationId "com.nstuinfo"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 12
-        versionName "4.2.5"
+        versionCode 13
+        versionName "4.2.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     dexOptions {
@@ -59,5 +59,5 @@ dependencies {
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     implementation 'at.blogc:expandabletextview:1.0.5'
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
-
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 }

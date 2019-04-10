@@ -1,5 +1,6 @@
 package com.nstuinfo;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,8 @@ import com.nstuinfo.mViews.FontAppearance;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -93,8 +96,13 @@ public class DetailsActivity extends AppCompatActivity {
 
         setTheme();
 
-        FontAppearance.replaceDefaultFont(this);
+        //FontAppearance.replaceDefaultFont(this);
 
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     private void setTheme() {

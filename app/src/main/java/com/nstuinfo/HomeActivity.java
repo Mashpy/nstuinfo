@@ -67,6 +67,8 @@ import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import java.util.ArrayList;
 import java.util.List;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -148,8 +150,13 @@ public class HomeActivity extends AppCompatActivity
             }
         }
 
-        FontAppearance.replaceDefaultFont(this);
+        //FontAppearance.replaceDefaultFont(this);
 
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override
