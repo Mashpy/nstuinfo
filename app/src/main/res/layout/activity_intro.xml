@@ -219,7 +219,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="150dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/vc_sir"/>
+                    android:src="@drawable/nstu_cover_7"/>
 
                 <TextView
                     android:id="@+id/txt3"

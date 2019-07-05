@@ -194,51 +194,9 @@ public class HomeActivity extends AppCompatActivity
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        //syncBtn = findViewById(R.id.syncBtn);
-        /*syncBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (isInternetOn()) {
-                    parseUrlAndCheckData(true);
-                } else {
-                    Snackbar.make(view, "Please check your data connection!!", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-                navViewImageAlteration();
-            }
-        });*/
-
-        //syncBtn.setVisibility(View.GONE);
-
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.addItemDecoration(new SpacesItemDecoration(1));
-
-        //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-        //mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-
-        /*mRecyclerView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                if (event.getAction() == MotionEvent.ACTION_DOWN ||
-                        event.getAction() == MotionEvent.ACTION_UP||
-                        event.getAction() == MotionEvent.ACTION_SCROLL) {
-
-                    syncBtn.setVisibility(View.VISIBLE);
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            syncBtn.setVisibility(View.INVISIBLE);
-                        }
-                    }, 4000);
-
-                }
-
-                return false;
-            }
-        });*/
 
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
@@ -333,10 +291,10 @@ public class HomeActivity extends AppCompatActivity
             progressDialog.show();
         }
 
-        if (dataJsonExtract != null && dataJsonExtract.getVersionCheckURL() != null &&
+        /*if (dataJsonExtract != null && dataJsonExtract.getVersionCheckURL() != null &&
                 !dataJsonExtract.getVersionCheckURL().equalsIgnoreCase("")) {
             Constants.JSON_CHECKING_URL = dataJsonExtract.getVersionCheckURL();
-        }
+        }*/
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.JSON_CHECKING_URL,
 
@@ -348,7 +306,7 @@ public class HomeActivity extends AppCompatActivity
                             progressDialog.dismiss();
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, response);
                             jsonOnlineVersion = initialJsonExtract.getDataVersionFromInitialJson();
-                            Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
+                            //Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
 
                             dataJsonExtract = new ExtractDataJson(HomeActivity.this, ReadWriteJson.readDataFile(HomeActivity.this));
                             double tempVersion = dataJsonExtract.getDataVersionFromDataJson();
@@ -373,7 +331,7 @@ public class HomeActivity extends AppCompatActivity
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, response);
                             jsonOnlineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             initialJsonExtract.getPopupNotificationDialog();
-                            Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
+                            //Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, ReadWriteJson.readInitialJsonFile(HomeActivity.this));
                             jsonOfflineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             if (jsonOfflineVersion < jsonOnlineVersion) {

@@ -15,7 +15,7 @@
         android:id="@+id/imageContentImgView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/vc_primeminister"
+        android:src="@drawable/nstu_cover_7"
         android:layout_centerHorizontal="true"/>
 
     <TextView
