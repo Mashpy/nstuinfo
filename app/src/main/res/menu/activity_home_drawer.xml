@@ -42,6 +42,11 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_rate_review"
+            android:checkable="false"
+            android:icon="@android:drawable/btn_star"
+            android:title="Rate &amp; Review" />
+        <item
             android:id="@+id/nav_check_update"
             android:checkable="false"
             android:icon="@drawable/ic_action_sync"

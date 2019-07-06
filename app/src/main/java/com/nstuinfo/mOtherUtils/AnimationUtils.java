@@ -40,6 +40,13 @@ public class AnimationUtils {
         view.startAnimation(animation);
     }
 
+    public static void leftToRightAnimation (View view, int duration) {
+        TranslateAnimation animation = new TranslateAnimation(-1000.0f, 0.0f, 0.0f, 0.0f);
+        animation.setDuration(duration);
+        animation.setFillAfter(true);
+        view.startAnimation(animation);
+    }
+
     public static void shake(Context context, final View view) {
 
         final Animation shake1 = android.view.animation.AnimationUtils.loadAnimation(context, R.anim.shake_1);

@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -75,8 +77,8 @@ public class WebviewActivity extends AppCompatActivity {
         });
 
         setTheme();
-
-        //FontAppearance.replaceDefaultFont(this);
+        setHomeBtn();
+        //.replaceDefaultFont(this);
     }
 
     private void initViews() {
@@ -97,6 +99,12 @@ public class WebviewActivity extends AppCompatActivity {
         webView = findViewById(R.id.webView);
         btnBackward = findViewById(R.id.backwardBtn);
         btnForward = findViewById(R.id.forwardBtn);
+    }
+
+    private void setHomeBtn() {
+        final Drawable upArrow = getResources().getDrawable(R.drawable.ic_action_home);
+        upArrow.setColorFilter(getResources().getColor(android.R.color.white), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
     }
 
     @Override

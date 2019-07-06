@@ -1,9 +1,9 @@
 [{
-	"data_version": "4.135",
+	"data_version": "4.162",
 	"version_check_url": "http://nstudiary.nstu.edu.bd/checkdata.json",
 	"data": [{
 			"item": "Introduction",
-			"updated_date_notice": "Last updated: 04th March, 2019",
+			"updated_date_notice": "Last updated:4 July,2019",
 			"details": [{
 					"title": "",
 					"hint": "",
@@ -12,7 +12,7 @@
 				{
 					"title": "",
 					"hint": "",
-					"content": "<strong>Vice Chancellor</strong><br /> Prof. Dr. M Wahiduzzaman<br/> Phone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+					"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 				},
 				{
 					"title": "",
@@ -32,47 +32,44 @@
 				{
 					"title": "",
 					"hint": "",
-					"content": "<p><u><strong>Establishment:</strong> </u><br /> <strong>Bill Passed at:</strong> 15th July, 2001<br /> <strong>Bill Effective at:</strong> 25th August, 2003<br /> <strong>Academic program started from:</strong> 22nd June, 2006<br /> <strong>Location:</strong> 8 Kilometers south from Noakhali town and at the west side of Sonapur-Subornochar road.<br /> <strong>Area:</strong> 101 Acres.<br /> <strong>Institutes:</strong> 2<br /> <strong>Faculties:</strong> 6<br /> <strong>Departments:</strong> 28</p> <p> <strong>1. Faculty of Engineering & Technology</strong><br /> 01. Department of Computer Science and Telecommunication Engineering (CSTE)<br /> 02. Department of Applied Chemistry & Chemical Engineering (ACCE)<br /> 03. Department of Information & Communication Engineering (ICE)<br /> 04. Department of Electrical & Electronic Engineering (EEE) </p> <p> <strong>2. Faculty of Science</strong><br /> 01. Department of Fisheries & Merine Science (FIMS)<br /> 02. Department of Pharmacy<br /> 03. Department of Microbiology<br /> 04. Department of Applied Mathematics<br /> 05. Department of Statistics<br /> 06. Department of Food Technology & Nutrition Science (FTNS)<br /> 07. Department of Environmental Science & Disaster Management (ESDM)<br /> 08. Department of Biotechnology & Genetic Engineering (BGE)<br /> 09. Department of Agriculture<br /> 10. Department of Oceanography<br /> 11. Department of Biochemistry & Molecular Biology (BMB)<br /> 12. Department of Zoology </p> <p> <strong>3. Faculty of Social Science & Humanities</strong><br /> 01. Department of Bangladesh & Liberation War Studies (BLWS)<br /> 02. Department of Sociology<br /> 03. Department of English<br /> 04. Department of Bangali<br /> 05. Department of Economics<br /> 06. Department of Social Work </p> <p> <strong>4. Faculty of Business Administration</strong><br /> 01. Department of Business Administration (DBA)<br /> 02. Department of Tourism & Hospitality Management (THM)<br /> 03. Department of Management Information System (MIS) </p> <p><strong>5. Faculty of Eduction Sciences</strong><br /> 01. Department of Eduction<br /> 02. Department of Eductional Administration </p> <p><strong>5. Faculty of Law</strong><br /> 01. Department of Law </p> <p><strong>Institutes:</strong> 2</p> <ul> <li>1. Institute of Information Sciences (IIS)</li> <br /> <li>2. Institute of Information Technology (IIT)</li> </ul> <br /> <p> <strong>Medium:</strong> English<br /> <strong>Students:</strong> 6270<br /> <strong>Teachers:</strong> 300+<br /> <strong>Officers:</strong> 120+<br /> <strong>Staffs:</strong> 245<br /> <strong>Academic Buildings: </strong>2<br /> <strong>Administrative Building(s):</strong> 1<br /> <strong><u>Halls</u>: </strong><br /> 1. Bhasha Shaheed Abdus Salam Hall (BSASH)<br /> 2. Hajrat Bibi Khadija Hall(BKH)<br /> 3. Abdul Malek Ukil Hall<br /> 4. Bongobondhu Sheikh Mujibur Rahman Hall<br /> 5.Bongomata Sheikh Fazilatunnesa Mujib Hall<br /> <br /> <strong>Dormitory:</strong> 2 (Teachers' Dormatory & Staffs' Dormatory)<br /> <strong>Apartment:</strong> 1<br />  <br /> <strong>Others : </strong>Great Freedom Fighter Hazi Mohammad Edris Auditorium, Bongobondu Sheikh Mujibur Rahman Mural, Shaheed Minar(Fountain Pen), Liberation War Sculpture, TSC Building, Central Mosque,Worship,VIP Guest House, Canteen Shed, Ansar Shed.<br /> <strong>Central Library:</strong>13511 books,446 journal. E-books 4.5 lakh <br /></p> <strong>Official website:</strong> <a href='http://www.nstu.edu.bd'>www.nstu.edu.bd</a><br /> <strong>Email:</strong> <a class='email' href='mailto:info@nstu.edu.bd'>info@nstu.edu.bd</a>"
+					"content": "<p><u><strong>Establishment:</strong> </u><br /> <strong>Bill Passed at:</strong> 15th July, 2001<br /> <strong>Bill Effective at:</strong> 25th August, 2003<br /> <strong>Academic program started from:</strong> 22nd June, 2006<br /> <strong>Location:</strong> 8 Kilometers south from Noakhali town and at the west side of Sonapur-Subornochar road.<br /> <strong>Area:</strong> 101 Acres.<br /> <strong>Institutes:</strong> 2<br /> <strong>Faculties:</strong> 6<br /> <strong>Departments:</strong> 28</p> <p> <strong>1. Faculty of Engineering & Technology</strong><br /> 01. Department of Computer Science and Telecommunication Engineering (CSTE)<br /> 02. Department of Applied Chemistry & Chemical Engineering (ACCE)<br /> 03. Department of Information & Communication Engineering (ICE)<br /> 04. Department of Electrical & Electronic Engineering (EEE) </p> <p> <strong>2. Faculty of Science</strong><br /> 01. Department of Fisheries & Merine Science (FIMS)<br /> 02. Department of Pharmacy<br /> 03. Department of Microbiology<br /> 04. Department of Applied Mathematics<br /> 05. Department of Statistics<br /> 06. Department of Food Technology & Nutrition Science (FTNS)<br /> 07. Department of Environmental Science & Disaster Management (ESDM)<br /> 08. Department of Biotechnology & Genetic Engineering (BGE)<br /> 09. Department of Agriculture<br /> 10. Department of Oceanography<br /> 11. Department of Biochemistry & Molecular Biology (BMB)<br /> 12. Department of Zoology </p> <p> <strong>3. Faculty of Social Science & Humanities</strong><br /> 01. Department of Bangladesh & Liberation War Studies (BLWS)<br /> 02. Department of Sociology<br /> 03. Department of English<br /> 04. Department of Bangla <br /> 05. Department of Economics<br /> 06. Department of Social Work </p> <p> <strong>4. Faculty of Business Administration</strong><br /> 01. Department of Business Administration (DBA)<br /> 02. Department of Tourism & Hospitality Management (THM)<br /> 03. Department of Management Information System (MIS) </p> <p><strong>5. Faculty of Education Sciences</strong><br /> 01. Department of Education<br /> 02. Department of Educational Administration </p> <p><strong>6. Faculty of Law</strong><br /> 01. Department of Law </p> <p><strong>Institutes:</strong> 2</p> <ul> <li>1. Institute of Information Sciences (IIS)</li> <br /> <li>2. Institute of Information Technology (IIT)</li> </ul> <br /> <p> <strong>Medium:</strong> English<br /> <strong>Students:</strong> 6270<br /> <strong>Teachers:</strong> 300+<br /> <strong>Officers:</strong> 120+<br /> <strong>Staffs:</strong> 245<br /> <strong>Academic Buildings: </strong>2<br /> <strong>Administrative Building(s):</strong> 1<br /> <strong><u>Halls</u>: </strong><br /> 1. Bhasha Shaheed Abdus Salam Hall (BSASH)<br /> 2. Hajrat Bibi Khadija Hall(BKH)<br /> 3. Abdul Malek Ukil Hall<br /> 4. Bongobondhu Sheikh Mujibur Rahman Hall<br /> 5. Bongomata Sheikh Fazilatunnesa Mujib Hall<br /> <br /> <strong>Dormitory:</strong> 2 (Teacher's Dormatory & Staff's Dormitory)<br /> <strong>Apartment:</strong> 1 (Teacher-Officer's Apartment)<br />  <br /> <strong>Others : </strong>Great Freedom Fighter Hazi Mohammad Edris Auditorium, Bongobondu Sheikh Mujibur Rahman Mural, Shaheed Minar(Fountain Pen), Liberation War Sculpture, TSC Building, Central Mosque,Worship,VIP Guest House, Canteen Shed, Ansar Shed.<br /> <strong>Central Library:</strong>13511 books,446 journal. E-books 4.5 lakh <br /></p> <strong>Official website:</strong> <a href='http://www.nstu.edu.bd'>www.nstu.edu.bd</a><br /> <strong>Email:</strong> <a class='email' href='mailto:info@nstu.edu.bd'>info@nstu.edu.bd</a>"
 				}
 			]
 		},
 		{
-        		"item": "About VC",
-        		"updated_date_notice": "Last updated: 15th March ,2019",
-        		"details": [{
-        				"title": "",
-        				"hint": "",
-        				"content": "",
-        				"image_content": "vc_sir"
-        			},
-        			{
-        				"title": "",
-        				"hint": "",
-        				"content": "<strong>Professor Dr. M Wahiduzzaman</strong><br /> Professor of Education, University of Dhaka;Eminent Education Scientist, Columnist & Media personality<br /> <strong>Vice-Chancellor</strong><br /> Noakhali Science and Technology University, Noakhali-3814, Bangladesh<br /> Phone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>",
-        				"image_content": "vc_primeminister, VC with the honourable Prime Minister of Bangladesh"
-        			},
-        			{
-        				"title": "",
-        				"hint": "",
-        				"content": "",
-        				"image_content": "vc_president, VC with the honourable  President of Bangladesh"
-        			},
-        			{
-        				"title": "Message from VC",
-        				"hint": "",
-        				"content": "It is a great pleasure to me to welcome you to Noakhali Science and Technology University(NSTU).This is the 27th public university which was established on 15th July 2001, and the academic activities start on 22th June 2006, having 13 teachers, 180 students with four departments namely Department of Computer Science and Telecommunication Engineering (CSTE), Department of Pharmacy, Department of Applied Chemistry and Chemical Engineering (ACCE) and Department of Fisheries and Marine Science (FIMS). Now the University made its standard world class and addressed as the <b>“Cambridge of the Coastal terrain.”</b> The University provides high-quality education, in-depth research, equipping students with the insight to address both local and global challenges.<br/><br/>Presently, NSTU accommodates 28 Departments under 6 Faculties, 2 Institutes, over 300 teachers, and more than 5000 students. All of the mentors and supportive staffs of NSTU are committed to prepare our students to hard work, acquire skills, technical knowledge and enhance the capabilities that will help them adequately to cope in rapidly changing global environment. In NSTU there are highly qualified and experienced faculties. Around 50 highly qualified teachers whose have Ph.D. or Post-Doctorial and experience of working at world-class universities and research centers. Currently, about 70 teachers are doing Ph.D. at the different world ranking University in UK, USA, Japan, Australia, Europe, South Korea, and many other countries. We will strengthen our faculty to provide higher education of international standards in relevant areas and facilitate training programs for all of the teachers and officers through IQAC (Institutional Quality Assurance Cell).<br/><br/>NSTU’s academic standards are accepted in worldwide, enjoying MoU (Memorandum of Understanding) with many famous universities, institutions and scholarly bodies from all over the world especially Hiroshima University, University of Stirling, Anglia Ruskin University, Kynunpouk National University, Bangabandhu Sheikh Mujibur Rahman Maritime University, Bangladesh providing students/teachers the opportunity to transfer to relevant programs and higher education, joint research etc. Beside academic development, we have enriched infrastructure also.<br /><br />We have already reached the landmark of being Lower-middle income country by the declared vision 2021 and 2041 by Honorable Prime minister “Deshrotno Sheikh Hasina.” For that purpose, we have taken various steps for the University’s infrastructural development like Japan and Europe. For the demand of quality education and research facilities, we have ensured the construction of five halls for the students, five-storied Haji Idris Auditorium cum Multiple Building and adequate transportation facilities for the students, teachers, and officers. Establishment of multiple ten storied towers is going on, among those 1. The largest academic and Lab building 2. Teacher-Officer Tower 3. Provost and Assistant Provost Tower 4. Staff tower is notable. Apart from these, Establishment of three storied Medical center, eye-catching Central Mosque, and worship for the Hindu, Buddhist, and Christian students are going on. For nourishing co-curricular activities, BNCC and Rover Scout has been established. Very soon Building for the BNCC and Rover Scout will be constructed.<br /><br />It is great news that we are going to start a world-class institute Sheikh Hasina Marine Institute where the researcher will work on the blue economy, delta formation, space research, material science, artificial intelligence, and nanotechnology. As the Vice-Chancellor of NSTU, I hope that continuous efforts for the University researchers, faculty members, students, concern stakeholders can be benefitted. I anticipate that this website will help you to know more about the university.",
-        				"image_content": "",
-        				"expandable_content": ""
-        			}
-        		]
-        },
+			"item": "About VC",
+			"updated_date_notice": "Last updated: 15th June ,2019",
+			"details": [{
+					"title": "",
+					"hint": "",
+					"content": ""
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": ""
+				},
+				{
+					"title": "Message from VC",
+					"hint": "",
+					"content": "It is a great pleasure to me to welcome you to Noakhali Science and Technology University(NSTU).This is the 27th public university which was established on 15th July 2001, and the academic activities start on 22th June 2006, having 13 teachers, 180 students with four departments namely Department of Computer Science and Telecommunication Engineering (CSTE), Department of Pharmacy, Department of Applied Chemistry and Chemical Engineering (ACCE) and Department of Fisheries and Marine Science (FIMS). Now the University made its standard world class and addressed as the <b>“Cambridge of the Coastal terrain.”</b> The University provides high-quality education, in-depth research, equipping students with the insight to address both local and global challenges.<br/><br/>Presently, NSTU accommodates 28 Departments under 6 Faculties, 2 Institutes, over 300 teachers, and more than 5000 students. All of the mentors and supportive staffs of NSTU are committed to prepare our students to hard work, acquire skills, technical knowledge and enhance the capabilities that will help them adequately to cope in rapidly changing global environment. In NSTU there are highly qualified and experienced faculties. Around 50 highly qualified teachers whose have Ph.D. or Post-Doctorial and experience of working at world-class universities and research centers. Currently, about 70 teachers are doing Ph.D. at the different world ranking University in UK, USA, Japan, Australia, Europe, South Korea, and many other countries. We will strengthen our faculty to provide higher education of international standards in relevant areas and facilitate training programs for all of the teachers and officers through IQAC (Institutional Quality Assurance Cell).<br/><br/>NSTU’s academic standards are accepted in worldwide, enjoying MoU (Memorandum of Understanding) with many famous universities, institutions and scholarly bodies from all over the world especially Hiroshima University, University of Stirling, Anglia Ruskin University, Kynunpouk National University, Bangabandhu Sheikh Mujibur Rahman Maritime University, Bangladesh providing students/teachers the opportunity to transfer to relevant programs and higher education, joint research etc. Beside academic development, we have enriched infrastructure also.<br /><br />We have already reached the landmark of being Lower-middle income country by the declared vision 2021 and 2041 by Honorable Prime minister “Deshrotno Sheikh Hasina.” For that purpose, we have taken various steps for the University’s infrastructural development like Japan and Europe. For the demand of quality education and research facilities, we have ensured the construction of five halls for the students, five-storied Haji Idris Auditorium cum Multiple Building and adequate transportation facilities for the students, teachers, and officers. Establishment of multiple ten storied towers is going on, among those 1. The largest academic and Lab building 2. Teacher-Officer Tower 3. Provost and Assistant Provost Tower 4. Staff tower is notable. Apart from these, Establishment of three storied Medical center, eye-catching Central Mosque, and worship for the Hindu, Buddhist, and Christian students are going on. For nourishing co-curricular activities, BNCC and Rover Scout has been established. Very soon Building for the BNCC and Rover Scout will be constructed.<br /><br />It is great news that we are going to start a world-class institute Sheikh Hasina Marine Institute where the researcher will work on the blue economy, delta formation, space research, material science, artificial intelligence, and nanotechnology. As the Vice-Chancellor of NSTU, I hope that continuous efforts for the University researchers, faculty members, students, concern stakeholders can be benefitted. I anticipate that this website will help you to know more about the university.",
+					"image_content": "",
+					"expandable_content": ""
+				}
+			]
+		},
 		{
 			"item": "Regent Board",
-			"updated_date_notice": "Last updated: University diary 2018",
+			"updated_date_notice": "Last updated: 15th June,2019 ",
 			"details": [{
 					"title": "<strong>Chairman</strong>",
 					"hint": "",
-					"content": "<strong>Vice Chancellor</strong><br /> Prof. Dr. M Wahiduzzaman<br /> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br /> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a>"
+					"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 				},
 				{
 					"title": "Members:",
@@ -147,17 +144,17 @@
 				{
 					"title": "",
 					"hint": "Three representatives from the teachers of this university nominated by the academic council.",
-					"content": "<strong>Prof. Dr. Mohammed Yousuf Miah</strong><br /> Department of Applied Chemistry & Chemical Engineering<br/> Mobile: <a  href='tel:+8801742710338'>+8801742710338</a><br /> Email: <a  href='mailto:yan19742003@yahoo.com'>yan19742003@yahoo.com</a>"
-				},
-				{
-					"title": "",
-					"hint": "",
-					"content": "<strong>Mehedi Mahmudul Hasan</strong><br /> Associate Professor<br /> Department of Fisheries and Marine Science<br /> Mobile: <a  href='tel:+8801727240180'>+8801727240180</a>"
-				},
-				{
-					"title": "",
-					"hint": "",
 					"content": "<strong>Dr. Abdullah-Al Mamun</strong><br /> Associate Professor<br /> Department of Fisheries and Marine Science<br /> Mobile: <a  href='tel:+8801712928710'>+8801712928710</a><br /> Email: <a  href='mailto:mamun_au22@yahoo.com'>mamun_au22@yahoo.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Dr. Gazi Md. Mohsin</strong><br />Professor<br /> Department of Agriculture<br /> Mobile: <a  href='tel:+8801718304137'>+8801718304137</a><br /> Email: <a  href='mailto:mohsinbreeder97@gmail.com'>mohsinbreeder97@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Palash Karmakar</strong><br />Associate Professor<br /> Department of Pharmacy<br /> Mobile: <a  href='tel:+8801717036968'>+8801717036968</a><br /> Email: <a  href='mailto:karmakar3000@yahoo.com'>karmakar3000@yahoo.com</a>"
 				},
 				{
 					"title": "",
@@ -177,7 +174,7 @@
 			"details": [{
 					"title": "<strong>Chairman</strong>",
 					"hint": "",
-					"content": "<strong>Vice Chancellor</strong><br /> Prof. Dr. M Wahiduzzaman<br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+					"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 				},
 				{
 					"title": "Members",
@@ -207,7 +204,12 @@
 				{
 					"title": "",
 					"hint": "",
-					"content": "Dean, Faculty of Education Sciences<br /> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+					"content": "Dean, Faculty of Education Sciences"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "Dean, Faculty of Law"
 				},
 				{
 					"title": "",
@@ -217,7 +219,7 @@
 				{
 					"title": "",
 					"hint": "",
-					"content": "<strong>Director(Acting)</strong><br /> Institute of Information Technology (IIT)<br /> Phone: <a href='tel:+88-0321-72751'>+88-0321-72751</a>, <a href='+88-0321-72753'>+88-0321-72753</a><br /> Mobile: <a  href='tel:+8801612032781'>+8801612032781</a>"
+					"content": "<strong>Director(Acting)</strong><br /> Institute of Information Technology (IIT)<br /> Phone: <a href='tel:+88-0321-72751'>+88-0321-72751</a>, <a href='+88-0321-72753'>+88-0321-72753</a><br /> Mobile: <a  href='tel:+8801815662160'>+8801815662160</a>"
 				},
 				{
 					"title": "",
@@ -472,12 +474,12 @@
 				{
 					"title": "Software Engineering",
 					"hint": "<u><strong>Assistant Professor &amp; Director (Acting)</strong></u>",
-					"content": "<strong>Md. Nuruzzaman Bhuiyan</strong><br /> Mobile: <a  href='tel:+8801612032781'>+8801612032781</a><br /> Email: <a  href='mailto:iit@nstu.edu.bd'>iit@nstu.edu.bd</a>"
+					"content": "<strong>Md. Auhidur Rahaman</strong><br /> Mobile: <a  href='tel:+8801815662160'>+8801815662160</a><br /> Email: <a  href='mailto:auhidsumon@gmail.com'>auhidsumon@gmail.com</a>"
 				},
 				{
 					"title": "",
 					"hint": "<u><strong>Assistant Professor</strong></u>",
-					"content": "<strong>Md. Auhidur Rahaman</strong><br /> Mobile: <a  href='tel:+8801815662160'>+8801815662160</a><br /> Email: <a  href='mailto:auhidsumon@gmail.com'>auhidsumon@gmail.com</a>"
+					"content": "<strong>Md. Nuruzzaman Bhuiyan</strong><br /> Mobile: <a  href='tel:+8801612032781'>+8801612032781</a><br /> Email: <a  href='mailto:iit@nstu.edu.bd'>iit@nstu.edu.bd</a>"
 				},
 				{
 					"title": "",
@@ -493,6 +495,21 @@
 					"title": "",
 					"hint": "",
 					"content": "<strong>Dipok Chandra Das</strong><br /> Mobile: <a href='tel:+8801743972128'>+8801743972128</a><br /> Email: <a href='mailto:dipok.iit.nstu@gmail.com'>dipok.iit.nstu@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Tasniya Ahmed</strong><br /> Mobile: <a href='tel:+8801936543596'>+8801936543596</a><br /> Email: <a href='mailto:tasniyaahmed0011@gmail.com'>tasniyaahmed0011@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Md. Iftekharul Alam Efat</strong><br /> Mobile: <a href='tel:+8801727208714'>+8801727208714</a><br /> Email: <a href='mailto:iftekhar.iit.nstu@gmail.com'>iftekhar.iit.nstu@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Anup Majumder</strong><br /> Mobile: <a href='tel:+8801725228874'>+8801725228874</a><br /> Email: <a href='mailto:anupju.cse20@gmail.com'>anupju.cse20@gmail.com</a>"
 				},
 				{
 					"title": "",
@@ -518,7 +535,12 @@
 					"title_hint": "<strong><u>Faculty of Engineering &amp; Technology</u></strong>",
 					"title": "Computer Science and Telecommunication Engineering (CSTE)",
 					"contents": [{
-							"title": "<u><strong>Professor &amp; Chairman</strong></u>",
+							"title": "<u><strong>Associate Professor &amp; Chairman</strong></u>",
+							"hint": "",
+							"content": "<strong>Dr. Ashadun Nobi</strong><br /> Mobile: <a  href='tel:+8801717207155'>+8801717207155</a><br /> Email: <a  href='mailto:ashadunnobi_305@yahoo.com'>ashadunnobi_305@yahoo.com</a>"
+						},
+						{
+							"title": "<u><strong>Professor</strong></u>",
 							"hint": "",
 							"content": "<strong>Dr. Md. Humayun Kabir</strong><br /> Mobile: <a  href='tel:+8801814405238'>+8801814405238</a>, <a  href='tel:+8801532319011'>+8801532319011</a><br /> Email: <a  href='mailto:hkabir269@gmail.com'>hkabir269@gmail.com</a>"
 						},
@@ -530,20 +552,15 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Dr. Ashadun Nobi</strong><br /> Mobile: <a  href='tel:+8801717207155'>+8801717207155</a><br /> Email: <a  href='mailto:ashadunnobi_305@yahoo.com'>ashadunnobi_305@yahoo.com</a>"
-						},
-						{
-							"title": "",
-							"hint": "",
 							"content": "<strong>Dr. Nahid Akter</strong><br /> Mobile: <a  href='tel:+8801776381442'>+8801776381442</a><br /> Email: <a  href='mailto:kakolinahid@gmail.com'>kakolinahid@gmail.com</a>"
 						},
 						{
-							"title": "<u><strong>Assistant Professor</strong></u>",
+							"title": "",
 							"hint": "",
 							"content": "<strong>Md. Bellal Hossain</strong><br /> Mobile: <a  href='tel:+8801716699401'>+8801716699401</a>, <a  href='tel:+8801914450085'>+8801914450085</a><br /> Email: <a  href='mailto:belalcste@nstu.edu.bd'>belalcste@nstu.edu.bd</a>, <a  href='mailto:belal.nstu@gmail.com'>belal.nstu@gmail.com</a>"
 						},
 						{
-							"title": "",
+							"title": "<u><strong>Assistant Professor</strong></u>",
 							"hint": "",
 							"content": "<strong>Abhijit Chakraborty</strong> (Study leave)<br /> Mobile: <a  href='tel:+8801912183607'>+8801912183607</a><br /> Email: <a  href='mailto:abhijit.cse@gmail.com'>abhijit.cse@gmail.com</a>, <a  href='mailto:abhijit@nstu.edu.bd'>abhijit@nstu.edu.bd</a>"
 						},
@@ -575,7 +592,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Nazia Majadi</strong> (Study leave)<br /> Mobile: <a  href='tel:+8801718422881'>+8801718422881</a><br /> Email: <a  href='mailto:nazia_majadi@yahoo.com'>nazia_majadi@yahoo.com</a>"
+							"content": "<strong>Nazia Majadi</strong><br /> Mobile: <a  href='tel:+8801718422881'>+8801718422881</a><br /> Email: <a  href='mailto:nazia_majadi@yahoo.com'>nazia_majadi@yahoo.com</a>"
 						},
 						{
 							"title": "",
@@ -610,7 +627,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Saiful Islam</strong> (Study leave)<br /> Mobile: <a  href='tel:+8801823024498'>+8801823024498</a>"
+							"content": "<strong>Syful Islam</strong> (Study leave)<br /> Mobile: <a  href='tel:+8801823024498'>+8801823024498</a>"
 						},
 						{
 							"title": "",
@@ -630,7 +647,7 @@
 					"contents": [{
 							"title": "<u><strong>Chairman &amp; Professor</strong></u>",
 							"hint": "",
-							"content": "<strong>Dr. Muhammed Yousuf Miah</strong><br /> Mobile: <a  href='tel:+8801742710338'>+8801742710338</a><br /> Email: <a  href='mailto:yuri19742003@yahoo.com'>yuri19742003@yahoo.com</a>"
+							"content": "<strong>Dr. Muhammed Yusuf Miah</strong><br /> Mobile: <a  href='tel:+8801742710338'>+8801742710338</a><br /> Email: <a  href='mailto:yuri19742003@yahoo.com'>yuri19742003@yahoo.com</a>"
 						},
 						{
 							"title": "<u><strong>Professor</strong></u>",
@@ -638,12 +655,12 @@
 							"content": "<strong>Dr. Newaz Mohammed Bahadur</strong><br /> Mobile: <a  href='tel:+8801790229674'>+8801790229674</a><br /> Email: <a  href='mailto:nmbahadur@yahoo.com'>nmbahadur@yahoo.com</a>"
 						},
 						{
-							"title": "<u><strong>Associate Professor</strong></u>",
+							"title": "",
 							"hint": "",
 							"content": "<strong>Dr. Md. Ashraful Alam </strong><br /> Mobile: <a  href='tel:+8801919818044'>+8801919818044</a><br /> Email: <a  href='mailto:ashraf.nstu@yahoo.com'>ashraf.nstu@yahoo.com</a>"
 						},
 						{
-							"title": "",
+							"title": "<u><strong>Associate Professor</strong></u>",
 							"hint": "",
 							"content": "<strong>Md. Saiful Alam</strong><br /> Mobile: <a  href='tel:+8801913792542'>+8801913792542</a><br /> Email: <a  href='mailto:saiful224@yahoo.com'>saiful224@yahoo.com</a>"
 						},
@@ -785,7 +802,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>K. M. Aslam Uddin</strong><br /> Mobile: <a  href='tel:+8801745396715'>+8801745396715</a><br /> Email: <a  href='mailto:kmaslamkhan@gmail.com'>kmaslamkhan@gmail.com</a>"
+							"content": "<strong>K. M. Aslam Uddin</strong>(Study leave)<br /> Mobile: <a  href='tel:+8801745396715'>+8801745396715</a><br /> Email: <a  href='mailto:kmaslamkhan@gmail.com'>kmaslamkhan@gmail.com</a>"
 						},
 						{
 							"title": "",
@@ -873,7 +890,7 @@
 							"content": "<strong>Dr. Md. Jahangir Sarker</strong><br /> Mobile: <a  href='tel:+8801733910237'>+8801733910237</a><br /> Email: <a  href='mailto:swaponj@yahoo.com'>swaponj@yahoo.com</a>"
 						},
 						{
-							"title": "",
+							"title": "<u><strong>Professor </strong></u>",
 							"hint": "",
 							"content": "<strong>Prof. Dr. Md. Abul Hossain</strong><br /> Phone: <a  href='tel:+88-0321-72710'>+88-0321-72710</a><br/> Mobile: <a  href='tel:+8801713012916'>+8801713012916</a><br /> Email: <a  href='mailto:mah1754@gmail.com'>mah1754@gmail.com</a>"
 						},
@@ -930,7 +947,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Mahabubur Rahman</strong><br /> Mobile: <a  href='tel:+8801717296238'>+8801717-296238</a><br /> Email: <a  href='mailto:farhad.mrf@gmail.com'>farhad.mrf@gmail.com</a>"
+							"content": "<strong>Mahabubur Rahman</strong>(Study Leave)<br /> Mobile: <a  href='tel:+8801717296238'>+8801717-296238</a><br /> Email: <a  href='mailto:farhad.mrf@gmail.com'>farhad.mrf@gmail.com</a>"
 						},
 						{
 							"title": "",
@@ -1000,7 +1017,7 @@
 						{
 							"title": "<u><strong>Associate Professor</strong></u>",
 							"hint": "",
-							"content": "<strong>Dr. Md. Anwarul Bashar</strong><br /> Mobile: <a  href='tel:+8801768522866'>+8801768522866</a><br /> Email: <a  href='mailto:mabasher@live.com'>mabasher@live.com</a>"
+							"content": "<strong>Dr. Mohammad Anwarul Basher</strong><br /> Mobile: <a  href='tel:+8801768522866'>+8801768522866</a><br /> Email: <a  href='mailto:mabasher@live.com'>mabasher@live.com</a>"
 						},
 						{
 							"title": "",
@@ -1008,12 +1025,12 @@
 							"content": "<strong>Dr. A. F. M. Shahid-Ud-Daula</strong><br /> Mobile: <a  href='tel:+8801911711457'>+8801911711457</a><br /> Email: <a  href='mailto:shahidnstu@yahoo.com'>shahidnstu@yahoo.com</a>"
 						},
 						{
-							"title": "<u><strong>Assistant Professor</strong></u>",
+							"title": "",
 							"hint": "",
 							"content": "<strong>Palash Karmakar</strong><br /> Mobile: <a  href='tel:+8801717036968'>+8801717036968</a><br /> Email: <a  href='mailto:karmakar3000@yahoo.com'>karmakar3000@yahoo.com</a>"
 						},
 						{
-							"title": "",
+							"title": "<u><strong>Assistant Professor</strong></u>",
 							"hint": "",
 							"content": "<strong>Jamiuddin Ahmed</strong><br /> Mobile: <a  href='tel:+8801924516446'>+8801924516446</a><br /> Email: <a  href='mailto:ajami_ju@yahoo.com'>ajami_ju@yahoo.com</a>"
 						},
@@ -1106,6 +1123,11 @@
 							"title": "",
 							"hint": "",
 							"content": "<strong>Mahmuda Ferdous</strong><br /> Mobile: <a  href='tel:+8801757142383'>+8801757142383</a><br /> Email: <a  href='mailto:mahmudapoppy07@gmail.com'>mahmudapoppy07@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Mohammed Tohidul Amin</strong><br /> Mobile: <a  href='tel:+8801709953938'>+8801709953938</a><br /> Email: <a  href='mailto:tamin1417925@gmail.com'>tamin1417925@gmail.com</a>"
 						}
 					]
 				},
@@ -1185,7 +1207,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Sadikur Rahman Shuvo</strong><br /> Mobile: <a  href='tel:+8801751260106'>+8801751260106</a><br /> Email: <a  href='mailto:rs.sadik@gmail.com'>rs.sadik@gmail.com</a>"
+							"content": "<strong>Sadikur Rahman Shuvo</strong><br /> Mobile: <a  href='tel:+8801520100451'>+8801520100451</a><br /> Email: <a  href='mailto:rs.sadik@gmail.com'>rs.sadik@gmail.com</a>"
 						},
 						{
 							"title": "",
@@ -1220,7 +1242,7 @@
 						{
 							"title": "<u><strong>Assistant Professor</strong></u>",
 							"hint": "",
-							"content": "<strong>Md. Jashim Uddin</strong><br /> Mobile: <a  href='tel:+8801856921311'>+8801856921311</a><br /> Email: <a  href='mailto:mdjaud11@gamil.com'>mdjaud11@gamil.com</a>"
+							"content": "<strong>Md. Jashim Uddin</strong><br /> Mobile: <a  href='tel:+8801856921311'>+8801856921311</a><br /> Email: <a  href='mailto:mdjaud11@gmail.com'>mdjaud11@gmail.com</a>"
 						},
 						{
 							"title": "",
@@ -1340,7 +1362,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Tanzina Rahman</strong> (Study Leave)<br /> Mobile: <a  href='tel:+8801687304530'>+8801687304530</a><br /> Email: <a  href='mailto:tanjina.mili@gamil.com'>tanjina.mili@gamil.com</a>"
+							"content": "<strong>Tanzina Rahman</strong> (Study Leave)<br /> Mobile: <a  href='tel:+8801687304530'>+8801687304530</a><br /> Email: <a  href='mailto:tanjina.mili@gmail.com'>tanjina.mili@gmail.com</a>"
 						},
 						{
 							"title": "",
@@ -1533,6 +1555,11 @@
 							"content": "<strong>Md.Imtiaz Iftekhar-e-khuda</strong><br /> Mobile: <a  href='tel:+8801788446489'>+8801788446489</a><br /> Email: <a  href='mailto:imtiazkhuda@gmail.com'>imtiazkhuda@gmail.com</a>"
 						},
 						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Dr. Aradhan sarkar</strong><br /> Mobile: <a  href='tel:+8801794055169'>+8801794055169</a><br /> Email: <a  href='mailto:aradhansarkar@gmail.com'>aradhansarkar@gmail.com</a>"
+						},
+						{
 							"title": "<u><strong>Lecturer</strong></u>",
 							"hint": "",
 							"content": "<strong>Asma Talukder</strong><br /> Mobile: <a  href='tel:+8801591147472'>+8801591147472</a><br /> Email: <a  href='mailto:tonni_geb_cu@yahoo.com'>tonni_geb_cu@yahoo.com</a>"
@@ -1540,17 +1567,32 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Md. Anisur Rahman</strong><br /> Mobile: <a  href='tel:+8801521231437'>+8801521231437</a><br /> Email: <a  href='mailto:anis23nstu@gamil.com'>anis23nstu@gamil.com</a>"
+							"content": "<strong>Md. Anisur Rahman</strong><br /> Mobile: <a  href='tel:+8801521231437'>+8801521231437</a><br /> Email: <a  href='mailto:anis23nstu@gmail.com'>anis23nstu@gmail.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Afrin Sultana Chowdhury</strong>(Study Leave)<br /> Mobile: <a  href='tel:+8801834066794'>+8801834066794</a><br /> Email: <a  href='mailto:afringeb23@gamil.com'>afringeb23@gamil.com</a>"
+							"content": "<strong>Afrin Sultana Chowdhury</strong>(Study Leave)<br /> Mobile: <a  href='tel:+8801834066794'>+8801834066794</a><br /> Email: <a  href='mailto:afringeb23@gmail.com'>afringeb23@gmail.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Md. Shahadat Hossain</strong><br /> Mobile: <a href='tel:+8801757691222'>+8801757691222</a><br /> Email: <a  href='mailto:shahadat.reyad.du@gamil.com'>shahadat.reyad.du@gamil.com</a>"
+							"content": "<strong>Md. Shahadat Hossain</strong><br /> Mobile: <a href='tel:+8801757691222'>+8801757691222</a><br /> Email: <a  href='mailto:shahadat.reyad.du@gmail.com'>shahadat.reyad.du@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Md.Fazley Rabbi</strong><br /> Mobile: <a href='tel:+8801939654554'>+8801939654554</a><br /> Email: <a  href='mailto:rabbi.geb12@gmail.com'>rabbi.geb12@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Shuvo Chandra Das</strong><br /> Mobile: <a href='tel:+8801821605743'>+8801821605743</a><br /> Email: <a  href='mailto:shuvo.geb@gmail.com'>shuvo.geb@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Md. Kobirul Islam</strong><br /> Mobile: <a href='tel:+8801738322575'>+8801738322575</a><br /> Email: <a  href='mailto:kobir13gendu@gmail.com'>kobir13gendu@gmail.com</a>"
 						}
 					]
 				},
@@ -1676,6 +1718,16 @@
 							"title": "",
 							"hint": "",
 							"content": "<strong>Tonima Sarker</strong><br /> Mobile: <a href='tel:+8801681022733'>+8801681022733</a><br /> Email: <a  href='mailto:tonimajoti@gmail.com'>tonimajoti@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Sheta Biswas</strong><br /> Mobile: <a href='tel:+8801751183414'>+8801751183414</a><br /> Email: <a  href='mailto:shwetabio1992@gmail.com'>shwetabio1992@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Tahsin Nairuz</strong><br /> Mobile: <a href='tel:+8801685794620'>+8801685794620</a><br /> Email: <a  href='mailto:tahsinnairuzdu11@gmail.com'>tahsinnairuzdu11@gmail.com</a>"
 						}
 					]
 				},
@@ -1683,16 +1735,10 @@
 					"title_hint": "",
 					"title": "Zoology",
 					"contents": [{
-							"title": "<u><strong>Professor &amp; Chairman</strong></u>",
-							"hint": "",
-							"content": "<strong>Prof. Dr. M Wahiduzzaman</strong><br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br /> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
-						},
-						{
-							"title": "<u><strong>Assistant Professor</strong></u>",
-							"hint": "",
-							"content": "<strong>A. S. M. Sorifur Rahman</strong><br /> Mobile: <a  href='tel:+8801918232222'>+8801918232222</a><br /> Email: <a  href='mailto:sarif.cu@gmail.com'>sarif.cu@gmail.com</a>"
-						}
-					]
+						"title": "<u><strong>Assistant Professor &amp; Chairman</strong></u>",
+						"hint": "",
+						"content": "<strong>Dr A. S. M. Sharifur Rahman</strong><br /> Mobile: <a  href='tel:+8801918232222'>+8801918232222</a><br /> Email: <a  href='mailto:sarif.cu@gmail.com'>sarif.cu@gmail.com</a>"
+					}]
 				},
 				{
 					"title_hint": "<strong><u>Faculty of Social Science &amp; Humanities</u></strong>",
@@ -1778,9 +1824,9 @@
 					"title_hint": "",
 					"title": "Bangladesh and Liberation War Studies(BLWS)",
 					"contents": [{
-							"title": "<u><strong>Associate Professor &amp; Chairman</strong></u>",
+							"title": "<u><strong>Assistant Professor &amp; Chairman(Acting)</strong></u>",
 							"hint": "",
-							"content": "<strong>Dr. Dibyadyuti Sarkar</strong><br /> Mobile: <a  href='tel:+8801716887743'>+8801716887743</a><br /> Email: <a  href='mailto:dibyadyuti.sarkar@gmail.com'>dibyadyuti.sarkar@gmail.com</a>"
+							"content": "<strong>A.H.M. Mostafizur Rahman</strong><br /> Mobile: <a  href='tel:+8801712507272'>+8801712507272</a><br /> Email: <a  href='mailto:mostafiznstu.du@gmail.com'>mostafiznstu.du@gmail.com</a>"
 						},
 						{
 							"title": "<u><strong>Professor</strong></u>",
@@ -1788,12 +1834,13 @@
 							"content": "<strong>Prof Dr. Syed Atiqul Islam</strong><br /> Mobile: <a  href='tel:+8801716584572'>+8801716584572</a><br /> Email: <a  href='mailto:syed_atiqul@yahoo'>syed_atiqul@yahoo</a>"
 						},
 						{
-							"title": "<u><strong>Lecturer</strong></u>",
+							"title": "<u><strong>Associate Professor </strong></u>",
 							"hint": "",
-							"content": "<strong>A.H.M. Mostafizur Rahman</strong><br /> Mobile: <a  href='tel:+8801712507272'>+8801712507272</a><br /> Email: <a  href='mailto:mostafiznstu.du@gmail.com'>mostafiznstu.du@gmail.com</a>"
+							"content": "<strong>Dr. Dibyadyuti Sarkar</strong><br /> Mobile: <a  href='tel:+8801716887743'>+8801716887743</a><br /> Email: <a  href='mailto:dibyadyuti.sarkar@gmail.com'>dibyadyuti.sarkar@gmail.com</a>"
 						},
+
 						{
-							"title": "",
+							"title": "<u><strong>Lecturer</strong></u>",
 							"hint": "",
 							"content": "<strong>Md. Shahin Kadir Bhuiyan</strong><br /> Mobile: <a  href='tel:+8801729844995'>+8801729844995</a><br /> Email: <a  href='mailto:skbhuiyandups@gmail.com'>skbhuiyandups@gmail.com</a>"
 						},
@@ -1961,23 +2008,58 @@
 							"title": "",
 							"hint": "",
 							"content": "<strong>Labanya Mondal</strong><br /> Mobile: <a  href='tel:+8801787894415'>+8801787894415</a><br /> Email: <a  href='mailto:labanya1357@gmail.com'>labanya1357@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Papy Biswas</strong><br /> Mobile: <a  href='tel:+8801963595405'>+8801963595405</a><br /> Email: <a  href='mailto:popy221093@gmail.com'>popy221093@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Tithi Debnath</strong><br /> Mobile: <a  href='tel:+8801712651586'>+8801712651586</a><br /> Email: <a  href='mailto:tithi.debnath@nstu.edu.bd'>tithi.debnath@nstu.edu.bd</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Monju Rani Das</strong><br /> Mobile: <a  href='tel:+8801759407675'>+8801759407675</a><br /> Email: <a  href='mailto:monjudas242@gmail.com'>monjudas242@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Md. Jakariya Hossen</strong><br /> Mobile: <a  href='tel:+8801738640229'>+8801738640229</a><br /> Email: <a  href='mailto:jakariaru630@gmail.com'>jakariaru630@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Md. Sohanuzzaman</strong><br /> Mobile: <a  href='tel:+8801836937178'>+8801836937178</a><br /> Email: <a  href='mailto:sohan.du.13@gmail.com'>sohan.du.13@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Sadika Parvin Tamanna</strong><br /> Mobile: <a  href='tel:+8801715139285'>+8801715139285</a><br /> Email: <a  href='mailto:sadika.tamanna@nstu.edu.bd'>sadika.tamanna@nstu.edu.bd</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Nilufa Ara Akhter</strong><br /> Mobile: <a  href='tel:+8801770188035'>+8801770188035</a><br /> Email: <a  href='mailto:nilufaaraakter@gmail.com'>nilufaaraakter@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Nazia Ferdoush</strong><br /> Mobile: <a  href='tel:+8801710245860'>+8801710245860</a><br /> Email: <a  href='mailto:nazia.ferdoush@yahoo.com'>nazia.ferdoush@yahoo.com</a>"
 						}
+
 					]
 				},
 				{
 					"title_hint": "",
 					"title": "Department of Social Work",
 					"contents": [{
-							"title": "<u><strong>Professor &amp; Chairman</strong></u>",
-							"hint": "",
-							"content": "<strong>Prof. Dr. M Wahiduzzaman</strong><br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
-						},
-						{
-							"title": "<u><strong>Lecturer</strong></u>",
-							"hint": "",
-							"content": "<strong>Chayon Sikder</strong><br /> Mobile: <a  href='tel:+8801515617400'>+8801515617400</a><br /> Email: <a  href='mailto:chayonsikder.du@gmail.com'>chayonsikder.du@gmail.com</a>"
-						}
-					]
+						"title": "<u><strong>Lecturer</strong></u>",
+						"hint": "",
+						"content": "<strong>Chayon Sikder</strong><br /> Mobile: <a  href='tel:+8801515617400'>+8801515617400</a><br /> Email: <a  href='mailto:chayonsikder.du@gmail.com'>chayonsikder.du@gmail.com</a>"
+					}]
 				},
 				{
 					"title_hint": "<strong><u>Faculty of Business Administration</u></strong>",
@@ -2128,12 +2210,12 @@
 							"content": "<strong>Nowreen Yasmin</strong><br /> Mobile: <a href='tel:+8801716849305'>+8801716849305</a><br /> Email: <a  href='mailto:nowreen.edu@nstu.edu.bd'>nowreen.edu@nstu.edu.bd</a>"
 						},
 						{
-							"title": "<u><strong>Lecturer</strong></u>",
+							"title": "",
 							"hint": "",
 							"content": "<strong>Owaliur Rahman Akanda</strong><br /> Mobile: <a  href='tel:+8801719200613'>+8801719200613</a><br /> Email: <a  href='mailto:owaliur_rahman@yahoo.com'>owaliur_rahman@yahoo.com</a>"
 						},
 						{
-							"title": "",
+							"title": "<u><strong>Lecturer</strong></u>",
 							"hint": "",
 							"content": "<strong>Fatema Begum Popy</strong><br /> Mobile: <a  href='tel:+8801759402091'>+8801759402091</a><br /> Email: <a  href='mailto:fatema.popy@nstu.edu.bd'>fatema.popy@nstu.edu.bd</a>"
 						},
@@ -2153,19 +2235,29 @@
 					"title_hint": "",
 					"title": "Department of Educational Administration",
 					"contents": [{
-							"title": "<u><strong>Professor &amp; Chairman</strong></u>",
-							"hint": "",
-							"content": "<strong>Prof. Dr. M Wahiduzzaman</strong><br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br /> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
-						},
-						{
-							"title": "<u><strong>Lecturer &amp; Coordinator</strong></u>",
+							"title": "<u><strong>Assistant Professor &amp; Coordinator</strong></u>",
 							"hint": "",
 							"content": "<strong>Owaliur Rahman Akanda</strong><br /> Mobile: <a  href='tel:+8801719200613'>+8801719200613</a><br /> Email: <a  href='mailto:owaliur_rahman@yahoo.com'>owaliur_rahman@yahoo.com</a>"
 						},
 						{
-							"title": "",
+							"title": "<u><strong>Assistant Professor</strong></u>",
+							"hint": "",
+							"content": "<strong>G M Rakibul Islam</strong><br />"
+						},
+						{
+							"title": "<u><strong>Lecturer</strong></u>",
 							"hint": "",
 							"content": "<strong>Nazmun Nahar Chaitee</strong><br /> Mobile: <a  href='tel:+8801836046783'>+8801836046783</a><br /> Email: <a  href='mailto:chaiteenaaz@gmail.com'>chaiteenaaz@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Bikram Biswas</strong><br /> Mobile: <a  href='tel:+8801967469867'>+8801967469867</a><br /> Email: <a  href='mailto:bikramju1020@gmail.com'>bikramju1020@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Md. Shamsul Arefin</strong><br /> Mobile: <a  href='tel:+8801521462017'>+8801521462017</a><br /> Email: <a  href='mailto:arefindupa@gmail.com'>arefindupa@gmail.com</a>"
 						}
 					]
 				},
@@ -2173,14 +2265,19 @@
 					"title_hint": "<strong><u>Faculty of Law</u></strong>",
 					"title": "Department of Law",
 					"contents": [{
-							"title": "<u><strong>Professor &amp; Chairman</strong></u>",
+							"title": "<u><strong>Assistant Professor &amp; Chairman</strong></u>",
 							"hint": "",
-							"content": "<strong>Prof. Dr. M Wahiduzzaman</strong><br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br /> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+							"content": "<strong>Badsha Mia</strong><br /> Mobile: <a href='tel:+8801818942888'>+8801818942888</a><br /> Email: <a  href='mailto:badsha_law@yahoo.com'>badsha_law@yahoo.com</a>"
 						},
 						{
 							"title": "<u><strong>Lecturer</strong></u>",
 							"hint": "",
-							"content": "<strong>Sourov Ghose</strong><br /> Mobile: <a  href='tel:+8801775693815'>+8801775693815</a><br /> Email: <a  href='mailto:sourovghose@gmail.com'>sourovghose@gmail.com</a>"
+							"content": "<strong>Nasrin Akter</strong><br /> Mobile: <a  href='tel:+8801754474807'>+8801754474807</a><br /> Email: <a  href='mailto:nasrin.akter555@gmail.com'>nasrin.akter555@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Shrabanti Dutta</strong><br /> Mobile: <a  href='tel:+8801674885978'>+8801674885978</a><br /> Email: <a  href='mailto:shrabanti.dutta331@gmail.com'>shrabanti.dutta331@gmail.com</a>"
 						}
 					]
 				}
@@ -2194,12 +2291,12 @@
 					"contents": [{
 							"title": "",
 							"hint": "Email: <a  href='mailto:vcoffice.nstu@gmail.com'>vcoffice.nstu@gmail.com</a>",
-							"content": "<strong>Vice Chancellor</strong><br /> Prof. Dr. M Wahiduzzaman<br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+							"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "Assistant Registrar & Private Secretary (In charge)<br /> <strong>Abu Zubair</strong><br /> Telephone: <a  href='tel:+88-0321-72705'>+88-0321-72705</a><br /> Mobile: <a  href='tel:+8801814945340'>+8801814945340</a><br /> Email: <a  href='mailto:zubairnkl@hotmail.com'>zubairnkl@hotmail.com</a>"
+							"content": "Assistant Registrar & Private Secretary <br /> <strong>Abu Zubair</strong><br /> Telephone: <a  href='tel:+88-0321-72705'>+88-0321-72705</a><br /> Mobile: <a  href='tel:+8801814945340'>+8801814945340</a><br /> Email: <a  href='mailto:zubairnkl@hotmail.com'>zubairnkl@hotmail.com</a>"
 						},
 						{
 							"title": "",
@@ -2256,7 +2353,7 @@
 					"contents": [{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Dean, Faculty of Engineering & Technology</strong><br /> <strong>Dr. Muhammed Yousuf Miah</strong><br /> Mobile: <a  href='tel:+8801742710338'>+8801742710338</a><br /> Email: <a  href='mailto:yuri19742003@yahoo.com'>yuri19742003@yahoo.com</a>"
+							"content": "<strong>Dean, Faculty of Engineering & Technology</strong><br /> <strong>Dr. Muhammed Yusuf Miah</strong><br /> Mobile: <a  href='tel:+8801742710338'>+8801742710338</a><br /> Email: <a  href='mailto:yuri19742003@yahoo.com'>yuri19742003@yahoo.com</a>"
 						},
 						{
 							"title": "",
@@ -2276,12 +2373,13 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Dean, Faculty of Education Science</strong><br /> <strong>Prof. Dr. M Wahiduzzaman</strong><br/> Telephone: <a  href='tel:+88-0321-72702'>+88-0321-72702</a>, <a  href='tel:+88-0321-72704'>+88-0321-72704</a>, <a  href='tel:+88-0321-72701'>+88-0321-72701</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:vc.nstu@nstu.edu.bd'>vc.nstu@nstu.edu.bd</a>"
+							"content": "<strong>Dean, Faculty of Education Sciences</strong><br /> "
+
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Dean, Faculty of Law</strong><br /> <strong>Prof. Dr. M Wahiduzzaman</strong><br/> Telephone: <a  href='tel:+88-0321-72702'>+88-0321-72702</a>, <a  href='tel:+88-0321-72704'>+88-0321-72704</a>, <a  href='tel:+88-0321-72701'>+88-0321-72701</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:vc.nstu@nstu.edu.bd'>vc.nstu@nstu.edu.bd</a>"
+							"content": "<strong>Dean, Faculty of Law</strong><br /> "
 						}
 					]
 				},
@@ -2545,6 +2643,31 @@
 						{
 							"title": "",
 							"hint": "",
+							"content": "Security Guard(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Iqbal Hossain</strong><br/> Mobile: <a href='tel:+8801749921477'>+8801749921477</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Security Guard(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Rajib Nath</strong><br/> Mobile: <a href='tel:+8801838843135'>+8801838843135</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Security Guard(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Ruposh Mia</strong><br/> Mobile: <a href='tel:+8801991129563'>+8801991129563</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Store Keeper<br /> <strong>Farjana Haque</strong><br/> Mobile: <a href='tel:+8801942944525'>+8801942944525</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Store Keeper<br /> <strong>Md. Alauddin</strong><br/> Mobile: <a href='tel:+8801827486625'>+8801827486625</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
 							"content": "Gardener<br /> <strong>Mohammad Monir Uddin</strong><br/> Mobile: <a href='tel:+8801925268525'>+8801925268525</a>"
 						},
 						{
@@ -2585,7 +2708,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "Cook(Teachers-Oddicers Dormitory)<br /> <strong>Abdul Monnan</strong><br/> Mobile: <a href='tel:+8801834257356'>+8801834257356</a>"
+							"content": "Cook(Teachers-Officers Dormitory)<br /> <strong>Abdul Monnan</strong><br/> Mobile: <a href='tel:+8801834257356'>+8801834257356</a>"
 						},
 						{
 							"title": "",
@@ -2595,7 +2718,27 @@
 						{
 							"title": "",
 							"hint": "",
+							"content": "Assistant Cook(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Alamgir Hossain</strong><br/> Mobile: <a href='tel:+8801917155880'>+8801917155880</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Assistant Cook(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Md. Abul Kashem</strong><br/> Mobile: <a href='tel:+8801812653748'>+8801812653748</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
 							"content": "Assistant Cook<br /> <strong>Abu Naser</strong><br/> Mobile: <a href='tel:+8801823644870'>+8801823644870</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Caretaker(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Noor Hossain</strong><br/> Mobile: <a href='tel:+8801824840275'>+8801824840275</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Caretaker(Jatir Pita Bangabandhu Sheikh Mujibur Rahman Hall)<br /> <strong>Md. Fayzul Haque</strong><br/> Mobile: <a href='tel:+8801718403601'>+8801718403601</a>"
 						},
 						{
 							"title": "",
@@ -2653,6 +2796,21 @@
 							"content": "Cleaner<br /> <strong>Lokhan Chandra Majumder</strong><br/> Mobile: <a href='tel:+8801852914402'>+8801852914402</a>"
 						},
 						{
+							"title": "",
+							"hint": "",
+							"content": "Cleaner(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Bipul Chandra Das</strong><br/> Mobile: <a href='tel:+8801842574944'>+8801842574944</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Cleaner(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Redoy Babu</strong><br/> Mobile: <a href='tel:+8801903283095'>+8801903283095</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Aya(Bangamata Sheikh Fazilatunnesa Mujib Hall)<br /> <strong>Shewly Akter</strong><br/> Mobile: <a href='tel:+8801838841174'>+8801838841174</a>"
+						},
+						{
 							"title": "<u><strong>Guest House at Dhaka</strong></u>",
 							"hint": "",
 							"content": "Cook<br /> <strong>Jakir Hossen</strong><br /> Mobile: <a  href='tel:+8801934384890'>+8801934384890</a><br /><br /> <strong>Alomgir Gazi</strong>"
@@ -2688,8 +2846,8 @@
 					"title": "Public Relation and Publication Office",
 					"contents": [{
 							"title": "",
-							"hint": "<u><strong>Director</strong></u>",
-							"content": "Dr. Mohammad Anwar Hossen (Chondon Anwar)<br /> Mobile: <a  href='tel:+8801716195717'>+8801716195717</a>, <a  href='tel:+8801884469687'>+8801884469687</a><br /> Email: <a  href='mailto:chondonanwar@gmail.com'>chondonanwar@gmail.com</a>"
+							"hint": "<u><strong>Director(Acting)</strong></u>",
+							"content": "<strong>Dr. Md. Masud Rahman</strong><br /> Mobile: <a  href='tel:+8801718504544'>+8801718504544</a><br /> Email: <a  href='mailto:masud_kush_bd@yahoo.com'>masud_kush_bd@yahoo.com</a>"
 						},
 						{
 							"title": "",
@@ -2718,12 +2876,12 @@
 					"contents": [{
 							"title": "<u><strong>Director</strong></u>",
 							"hint": "",
-							"content": "<strong>Vice Chancellor</strong><br /> Prof. Dr. M Wahiduzzaman<br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+							"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 						},
 						{
-							"title": "<u><strong>Director (Acting)</strong></u>",
+							"title": "<u><strong>Director(Acting)</strong></u>",
 							"hint": "",
-							"content": "<strong>Dr. Debasish Saha</strong><br /> Mobile: <a  href='tel:+8801714888206'>+8801714888206</a><br /> Email: <a  href='mailto:ds_bau@yahoo.com'>ds_bau@yahoo.com</a>"
+							"content": "<strong>Dr. Md. Mafizul Islam</strong><br /> Mobile: <a  href='tel:+8801734956003'>+8801734956003</a><br /> Email: <a  href='mailto:mafizul77@gmail.com'>mafizul77@gmail.com</a>"
 						},
 						{
 							"title": "<u><strong>Assistant Directors</strong></u>",
@@ -2733,17 +2891,17 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Dr. S M Mahbubur Rahman</strong><br /> Mobile: <a  href='tel:+8801712122849'>+8801712122849</a><br /> Email: <a  href='mailto:mmrahman987@gmail.com'>mmrahman987@gmail.com</a>"
+							"content": "<strong>Dr. Shyamal Kumar Paul</strong><br /> Mobile: <a  href='tel:+8801716024079'>+8801716024079</a><br /> Email: <a  href='mailto:skumarpaul79@yahoo.com'>skumarpaul79@yahoo.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Dr. Dhirendro Nath Barman</strong><br/> Mobile: <a  href='tel:+8801736657543'>+8801736657543</a><br /> Email: <a  href='mailto:dhirenbcmb@yahoo.com'>dhirenbcmb@yahoo.com</a>"
+							"content": "<strong>Dr. Aradhan sarkar</strong><br /> Mobile: <a  href='tel:+8801794055169'>+8801794055169</a><br /> Email: <a  href='mailto:aradhansarkar@gmail.com'>aradhansarkar@gmail.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Dr. Mohammad Abdul Momin Siddique</strong><br/> Mobile: <a  href='tel:+8801744134451'>+8801744134451</a><br /> Email: <a  href='mailto:siddique@frov.jcu.cz'>siddique@frov.jcu.cz</a>"
+							"content": "<strong>G M Rakibul Islam</strong><br />"
 						},
 						{
 							"title": "",
@@ -2753,7 +2911,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Dr. Md. Masud Rahman</strong><br /> Mobile: <a  href='tel:+8801718504544'>+8801718504544</a><br /> Email: <a  href='mailto:masud_kush_bd@yahoo.com'>masud_kush_bd@yahoo.com</a>"
+							"content": "<strong>Nowreen Yasmin</strong><br /> Mobile: <a href='tel:+8801716849305'>+8801716849305</a><br /> Email: <a  href='mailto:nowreen.edu@nstu.edu.bd'>nowreen.edu@nstu.edu.bd</a>"
 						},
 						{
 							"title": "<u><strong>Research Officer</strong></u>",
@@ -2777,7 +2935,7 @@
 					"contents": [{
 							"title": "",
 							"hint": "Transport Adviser",
-							"content": "<strong>Md. Nasir Uddin</strong><br />Assistant Professor, Dept. of English<br /> Mobile: <a  href='tel:+8801675819655'>+8801675819655</a><br /> Email: <a  href='mailto:mnasir7664@gmail.com'>mnasir7664@gmail.com</a>"
+							"content": "<strong>Dr. Nahid Akter</strong><br /> Mobile: <a  href='tel:+8801716381442'>+8801716381442</a><br /> Email: <a  href='mailto:kakolinahid@gmail.com'>kakolinahid@gmail.com</a>"
 						},
 						{
 							"title": "Transport Officer",
@@ -2792,11 +2950,11 @@
 					]
 				},
 				{
-					"title": "Director (Finance and Accounts) Office",
+					"title": "Office of the Director Accounts",
 					"contents": [{
 							"title": "",
 							"hint": "Director, Accounts (Acting)",
-							"content": "<strong>Saidur Rahman</strong><br /> Phone: <a  href='tel:+88-0321-71785'>+88-0321-71785</a><br /> Mobile: <a  href='tel:+8801718155474'>+8801718155474</a><br /> Email: <a  href='mailto:nstu.da@yahoo.com'>nstu.da@yahoo.com</a>, <a  href='mailto:saidur0577@yahoo.com'>saidur0577@yahoo.com</a>"
+							"content": "<strong>Saidur Rahman</strong><br /> Phone: <a  href='tel:+88-0321-72785'>+88-0321-72785</a><br /> Mobile: <a  href='tel:+8801718155474'>+8801718155474</a><br /> Email:<a  href='mailto:daoffice@nstu.edu.bd'>daoffice@nstu.edu.bd</a>, <a  href='mailto:nstu.da@yahoo.com'>nstu.da@yahoo.com</a>, <a  href='mailto:saidur0577@yahoo.com'>saidur0577@yahoo.com</a>"
 						},
 						{
 							"title": "",
@@ -2832,6 +2990,11 @@
 							"title": "",
 							"hint": "Budget Officer",
 							"content": "<strong>Mousumi Paul</strong><br /> Mobile: <a  href='tel:+8801820018068'>+8801820018068</a><br /> Email: <a  href='mailto:bhattamousumi@gmail.com'>bhattamousumi@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "Accounts Officer<br /> <strong>MD. Imrul Hasan rubel</strong><br /> Mobile: <a  href='tel:+8801717611657'>+8801717611657</a><br /> Email: <a  href='mailto:morolhasan87@gmail.com'>morolhasan87@gmail.com</a>"
 						}
 					]
 				},
@@ -3096,17 +3259,17 @@
 						},
 						{
 							"title": "",
-							"hint": "Assistant Director",
+							"hint": "Deputy Director",
 							"content": "<strong>Sanjib Kumar De</strong><br /> Mobile: <a  href='tel:+8801716293672'>+8801716293672</a><br /> Email: <a  href='mailto:sanjib.nstu77@gmail.com'>sanjib.nstu77@gmail.com</a>"
 						},
 						{
 							"title": "",
-							"hint": "Physical Instructor",
+							"hint": "Assistant Director",
 							"content": "<strong>Mahmudur Rahman Riaz</strong><br /> Mobile: <a  href='tel:+8801712183979'>+8801712183979</a><br /> Email: <a  href='mailto:riaz.mahmud.nstu@gmail.com'>riaz.mahmud.nstu@gmail.com</a>"
 						},
 						{
 							"title": "",
-							"hint": "",
+							"hint": "Physical Instructor",
 							"content": "<strong>Najmun Nahar Beauty</strong><br /> Mobile: <a  href='tel:+8801712971707'>+8801712971707</a><br /> Email: <a  href='mailto:beauty.mehedi192@gmail.com'>beauty.mehedi192@gmail.com</a>"
 						}
 					]
@@ -3149,18 +3312,18 @@
 					"title": "ICT Cell",
 					"contents": [{
 							"title": "",
-							"hint": "<u><strong>Assistant Professor &amp;Director (Acting) </strong></u>",
-							"content": "<strong>Md. Nuruzzaman Bhuiyan</strong><br /> Mobile: <a  href='tel:+8801612032781'>+8801612032781</a><br /> Email: <a  href='mailto:iit@nstu.edu.bd'>iit@nstu.edu.bd</a>"
-						},
-						{
-							"title": "",
-							"hint": "<u><strong>System Analyst</strong></u>",
+							"hint": "<u><strong>System Analyst &amp; Director (Acting)</strong></u>",
 							"content": "<strong>Eng. Md. Abdullah Hil Faruk</strong><br />Mobile: <a  href='tel:+8801716615953'>+8801716615953</a><br />Email: <a  href='mailto:mahfaruk@yahoo.com'>mahfaruk@yahoo.com</a>"
 						},
 						{
 							"title": "",
-							"hint": "<u><strong>Programmer</strong></u>",
-							"content": "<strong>Md. Moyeenuddin</strong><br /> Mobile: <a  href='tel:+8801740847993'>+8801740847993</a><br /> Email: <a  href='mailto:moyeen.cste@gmail.com'>moyeen.cste@gmail.com</a>"
+							"hint": "<u><strong>Computer Programmer</strong></u>",
+							"content": "<strong>Md. Mainuddin</strong><br /> Mobile: <a  href='tel:+8801714634759'>+8801714634759</a><br /> Email: <a  href='mailto:moyeen.cste@gmail.com'>moyeen.cste@gmail.com</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Md. Jakir Hossen</strong><br /> Mobile: <a  href='tel:+8801716531461'>+8801716531461</a><br /> Email: <a  href='mailto:znh43@yahoo.com'>znh43@yahoo.com</a>"
 						},
 						{
 							"title": "",
@@ -3173,9 +3336,14 @@
 							"content": "<strong>Foiz Ahmed</strong><br /> Mobile: <a  href='tel:+8801838322422'>+8801838322422</a><br /> Email: <a  href='mailto:foiz.nstu@gmail.com'>foiz.nstu@gmail.com</a>"
 						},
 						{
-							"title": "",
+							"title": "<u><strong>Lower division Assistant</strong></u>",
 							"hint": "",
-							"content": "<strong>Md. Jakir Hossen</strong><br /> Mobile: <a  href='tel:+8801716531461'>+8801716531461</a><br /> Email: <a  href='mailto:znh43@yahoo.com'>znh43@yahoo.com</a>"
+							"content": "<strong>Saddam Hossen</strong><br /> Mobile: <a  href='tel:+8801829282708'>+8801829282708</a>"
+						},
+						{
+							"title": "<u><strong>MLSS</strong></u>",
+							"hint": "",
+							"content": "<strong>Toufik Hossen</strong><br /> Mobile: <a  href='tel:+8801615921769'>+8801615921769</a>"
 						}
 					]
 				},
@@ -3188,41 +3356,55 @@
 					}]
 				},
 				{
+					"title": "International Communication and Co-operation Center (ICCC)",
+					"contents": [{
+						"title": "",
+						"hint": "",
+						"content": "Additional Director <br /><strong>Dr. Md. Roknuzzaman Siddiky</strong><br /> Mobile: <a  href='tel:+8801777386633'>+8801777386633</a><br /> Email: <a  href='mailto:rokonsiddiky@hotmail.com'>rokonsiddiky@hotmail.com</a>"
+					}]
+				},
+				{
 					"title": "Student Counseling and Guidance Office",
 					"contents": [{
 							"title": "",
-							"hint": "<u><strong>Director (Acting)</strong></u>",
-							"content": "<strong>Md. Nasir Uddin</strong><br /> Mobile: <a  href='tel:+8801675819655'>+8801675819655</a><br /> Email: <a  href='mailto:mnasir7664@gmail.com'>mnasir7664@gmail.com</a>"
+							"hint": "<u><strong>Director </strong></u>",
+							"content": "<strong>Afsana Mousumi</strong><br /> Assistant Professor, Dept. of English<br />  Mobile: <a  href='tel:+8801716269848'>+8801716269848</a><br /> Email: <a  href='tel:+8801716269848'>afsanamausumi@yahoo.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "<u><strong>Assistant Directors</strong></u>",
-							"content": "<strong>Md. Rifat Hassan</strong><br /> Mobile: <a  href='tel:+8801719422462'>+8801719422462</a><br /> Email: <a  href='mailto:rifat_math2004@yahoo.com'>rifat_math2004@yahoo.com</a>"
+							"content": "<strong>Md. Omar Faruk</strong><br /> Mobile: <a  href='tel:+8801676879060'>+8801676879060</a><br /> Email: <a  href='mailto:omarfaruk.faruk396@gmail.com'>omarfaruk.faruk396@gmail.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Md. Shafiul Islam</strong><br /> Mobile: <a  href='tel:+8801916034310'>+8801916034310</a><br /> Email: <a  href='mailto:shafiulacce@gmail.com'>shafiulacce@gmail.com</a>"
+							"content": "<strong>Md. Muhaiminul Islam Selim</strong><br /> Mobile: <a  href='tel:+8801758422273'>+8801758422273</a><br /> Email: <a  href='mailto:muhaimin2273@gmail.com'>muhaimin2273@gmail.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Md. Ehsanul Haque</strong><br /> Mobile: <a  href='tel:+8801813171087'>+8801813171087</a><br /> Email: <a  href='mailto:ehsan_onike@yahoo.com'>ehsan_onike@yahoo.com</a>"
+							"content": "<strong>Asma Talukder</strong><br /> Mobile: <a  href='tel:+8801591147472'>+8801591147472</a><br /> Email: <a  href='mailto:tonni_geb_cu@yahoo.com'>tonni_geb_cu@yahoo.com</a>"
+						},
+
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Maruf Rahman</strong><br /> Mobile: <a  href='tel:+8801717228232'>+8801717228232</a><br /> Email: <a  href='mailto:rahmanmaruf2548@gmail.com'>rahmanmaruf2548@gmail.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Shorab Hossain</strong><br /> Mobile: <a  href='tel:+8801712019331'>+8801712019331</a><br /> Email: <a  href='mailto:shorab.ag@gmail.com'>shorab.ag@gmail.com</a>"
+							"content": "<strong>Md. Shalahuddin Millat</strong><br /> Mobile: <a  href='tel:+8801722598057'>+8801722598057</a><br /> Email: <a  href='mailto:millat404pharma@gmail.com'>millat404pharma@gmail.com</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Sujan Bonik</strong>(Study Leave)<br /> Mobile: <a  href='tel:+8801727446920'>+8801727446920</a><br /> Email: <a  href='mailto:pharmasujan@yahoo.com'>pharmasujan@yahoo.com</a>"
+							"content": "<strong>Tithi Debnath</strong><br /> Mobile: <a  href='tel:+8801712651586'>+8801712651586</a><br /> Email: <a  href='mailto:tithi.debnath@nstu.edu.bd'>tithi.debnath@nstu.edu.bd</a>"
 						},
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Shahriar Md. Ariful Rahman</strong><br /> Mobile: <a  href='tel:+8801717153711'>+8801717153711</a><br /> Email: <a  href='mailto:s.rahman@nstu.edu.bd'>s.rahman@nstu.edu.bd</a>"
+							"content": "<strong>Sanjoy Kumar Mukharjee</strong> (Contrary of study leave)<br /> Mobile: <a  href='tel:+8801714832609'>+8801714832609</a><br /> Email: <a  href='mailto:sanjoy@nstu.edu.bd'>sanjoy@nstu.edu.bd</a>, <a  href='mailto:sanjoy.dumb@gmail.com'>sanjoy.dumb@gmail.com</a>"
 						},
 						{
 							"title": "",
@@ -3298,7 +3480,7 @@
 					"contents": [{
 							"title": "Chairman",
 							"hint": "",
-							"content": "<strong>Vice Chancellor</strong><br /> Prof. Dr. M Wahiduzzaman<br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+							"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 						},
 						{
 							"title": "Members",
@@ -3318,7 +3500,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Prof. Dr. Mohammad Humayun Kabir</strong><br /> Dean, Faculty of Science & Technology<br /> Mobile: <a  href='tel:+8801814405238'>+8801814405238</a>"
+							"content": "<strong>Prof. Dr. Mohammad Humayun Kabir</strong><br /> Professor,CSTE<br /> Mobile: <a  href='tel:+8801814405238'>+8801814405238</a>"
 						},
 						{
 							"title": "",
@@ -3347,7 +3529,7 @@
 					"contents": [{
 							"title": "Chairman",
 							"hint": "",
-							"content": "<strong>Vice Chancellor</strong><br /> Prof. Dr. M Wahiduzzaman<br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+							"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 						},
 						{
 							"title": "Members",
@@ -3377,7 +3559,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Prof. Dr. Mohammed Yousuf Miah</strong><br /> Department of Applied Chemistry & Chemical Engineering<br/> Mobile: <a  href='tel:+8801742710338'>+8801742710338</a><br /> Email: <a  href='mailto:yan19742003@yahoo.com'>yan19742003@yahoo.com</a>"
+							"content": "<strong>Prof. Dr. Mohammed Yusuf Miah</strong><br /> Department of Applied Chemistry & Chemical Engineering<br/> Mobile: <a  href='tel:+8801742710338'>+8801742710338</a><br /> Email: <a  href='mailto:yan19742003@yahoo.com'>yan19742003@yahoo.com</a>"
 						},
 						{
 							"title": "",
@@ -3416,7 +3598,7 @@
 					"contents": [{
 							"title": "Chairman",
 							"hint": "",
-							"content": "<strong>Vice Chancellor</strong><br /> Prof. Dr. M Wahiduzzaman<br/> Telephone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+							"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 						},
 						{
 							"title": "Members",
@@ -3504,7 +3686,7 @@
 					"contents": [{
 							"title": "Chairman",
 							"hint": "",
-							"content": "<strong>Prof. Dr. M Wahiduzzaman</strong><br/> Telephone: <a  href='tel:+880-321-62833'>+880-321-62833</a>, <a  href='tel:+88-0321-62733'>+88-0321-62733</a>, <a  href='tel:+88-0321-62655'>+88-0321-62655</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+							"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 						},
 						{
 							"title": "Members",
@@ -3546,7 +3728,7 @@
 			"details": [{
 					"title": "<strong>Vice Chancellor</strong>",
 					"hint": "",
-					"content": "Prof. Dr. M Wahiduzzaman<br/> Phone: <a  href='tel:+88-0321-72701'>+88-0321-72701</a>, <a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801730042888'>+8801730042888</a><br /> Email: <a  href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>"
+					"content": "<strong>Vice Chancellor</strong><br /> Professor Dr. Md. Didar-ul-Alam <br/><a  href='tel:+88-0321-72703'>+88-0321-72703</a>, <a  href='tel:+88-0321-72702'>+88-0321-72702</a><br/> Mobile: <a  href='tel:+8801716058417>+8801716058417</a><br /> Email: <a  href='mailto:dilafi@gmail.com'>dilafi@gmail.com</a>"
 				},
 				{
 					"title": "<strong>Pro Vice Chancellor</strong>",
@@ -3566,7 +3748,7 @@
 				{
 					"title": "<strong>Proctorial Body</strong>",
 					"hint": "<strong><u>Proctor</u></strong>",
-					"content": "<strong>Dr. Md. Roknuzzaman Siddiky</strong><br /> Mobile: <a  href='tel:+8801777386633'>+8801777386633</a><br /> Email: <a  href='mailto:rokonsiddiky@hotmail.com'>rokonsiddiky@hotmail.com</a>"
+					"content": "<strong>Dr. Newaz Mohammed Bahadur</strong><br /> Mobile: <a  href='tel:+8801790229674'>+8801790229674</a><br /> Email: <a  href='mailto:nmbahadur@yahoo.com'>nmbahadur@yahoo.com</a>"
 				},
 				{
 					"title": "",
@@ -3602,6 +3784,16 @@
 					"title": "",
 					"hint": "",
 					"content": "<strong>Md. Al-Amin</strong><br /> Mobile: <a href='tel:+8801920662272'>+8801920662272</a><br/> Email: <a  href='mailto:alamin.mis.du0618@gmail.com'>alamin.mis.du0618@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Md. Foysal Hossen</strong><br /> Mobile: <a  href='tel:+8801687007112'>+8801687007112</a>, <a  href='tel:+8801729607708'>+8801729607708</a><br /> Email: <a  href='mailto:foysal.du23@gmail.com'>foysal.du23@gmail.com</a>, <a  href='mailto:foysal@nstu.edu.bd'>foysal@nstu.edu.bd</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Md. Rubel Miah</strong><br /> Mobile: <a  href='tel:+8801914293176'>+8801914293176</a><br /> Email: <a  href='mailto:mmdrubel03@gmail.com'>mmdrubel03@gmail.com</a>"
 				}
 			]
 		},
@@ -4897,16 +5089,6 @@
 				{
 					"title": "",
 					"hint": "",
-					"content": "<strong>Shovon Bottacharjo</strong><br /> Mobile: <a  href='tel:+8801726584853'>+8801726584853</a><br /> Email: <a  href='mailto:shovon_nstu@yahoo.com'>shovon_nstu@yahoo.com</a>"
-				},
-				{
-					"title": "",
-					"hint": "",
-					"content": "<strong>K. M. Aslam Uddin</strong><br /> Mobile: <a  href='tel:+8801745396715'>+8801745396715</a><br /> Email: <a  href='mailto:kmaslamkhan@gmail.com'>kmaslamkhan@gmail.com</a>"
-				},
-				{
-					"title": "",
-					"hint": "",
 					"content": "<strong>Sohel Rana</strong><br /> Mobile: <a  href='tel:+8801818735018'>+8801818735018</a><br /> Email: <a  href='mailto:ranashohel@yahoo.com'>ranashohel@yahoo.com</a>"
 				},
 				{
@@ -4928,6 +5110,16 @@
 					"title": "",
 					"hint": "",
 					"content": "<strong>Tapu Raihan</strong><br /> Mobile: <a  href='tel:+8801712019331'>+8801712019331</a><br /> Email: <a  href='mailto:tapu.engdu@gmail.com'>tapu.engdu@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Kawsar Hossen</strong><br /> Mobile: <a  href='tel:+8801710395738'>+8801710395738</a><br /> Email: <a  href='mailto:kwsarbau@gmail.com'>kwsarbau@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Md. Shahariar Kabir Shakil</strong><br /> Mobile: <a  href='tel:+8801717112990'>+8801717112990</a><br /> Email: <a  href='mailto:sk.shakil003@gmail.com'>sk.shakil003@gmail.com</a>"
 				},
 				{
 					"title": "",
@@ -4999,6 +5191,22 @@
 					"hint": "",
 					"content": "<strong>Md. Abdullah-Al-Mamun</strong><br /> Mobile: <a  href='tel:+8801936552563'>+8801936552563</a><br /> Email: <a  href='mailto:mamun.nfs.du@gmail.com'>mamun.nfs.du@gmail.com</a>"
 				},
+
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Md. Farid Dewan</strong><br /> Mobile: <a  href='tel:+8801717386048'>+8801717386048</a><br /> Email: <a  href='mailto:farid87.bau@gmail.com'>farid87.bau@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Razia Sultana</strong><br /> Mobile: <a  href='tel:+8801816430518'>+8801816430518</a><br /> Email: <a  href='mailto:razia.geb@gmail.com'>razia.geb@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Fatematuz Zuhura Evamoni</strong><br /> Mobile: <a  href='tel:+8801710066124'>+8801710066124</a><br /> Email: <a  href='mailto:eva.nstu@yahoo.com'>eva.nstu@yahoo.com</a>"
+				},
 				{
 					"title": "",
 					"hint": "<u><strong>Section Officer</strong></u>",
@@ -5007,12 +5215,12 @@
 				{
 					"title": "Abdul Malek Ukil(AMU) Hall",
 					"hint": "<u><strong>Provost</strong></u>",
-					"content": "<strong>Dr. Dibyadyuti Sarkar</strong><br /> Mobile: <a  href='tel:+8801716887743'>+8801716887743</a><br /> Email: <a  href='mailto:dibyadyuti.sarkar@gmail.com'>dibyadyuti.sarkar@gmail.com</a>"
+					"content": "<strong>Dr. Firoz Ahmed</strong><br /> Mobile: <a  href='tel:+8801713195658'>+8801713195658</a><br /> Email: <a  href='mailto:firoz19701016@gmail.com'>firoz19701016@gmail.com</a>, <a  href='mailto:firoz@nstu.edu.bd'>firoz@nstu.edu.bd</a>"
 				},
 				{
 					"title": "",
 					"hint": "<u><strong>Assistant Provost</strong></u>",
-					"content": "<strong>Nahid Akter</strong><br /> Mobile: <a  href='tel:+8801716381442'>+8801716381442</a><br /> Email: <a  href='mailto:kakolinahid@gmail.com'>kakolinahid@gmail.com</a>"
+					"content": "<strong>Dr. Nahid Akter</strong><br /> Mobile: <a  href='tel:+8801716381442'>+8801716381442</a><br /> Email: <a  href='mailto:kakolinahid@gmail.com'>kakolinahid@gmail.com</a>"
 				},
 				{
 					"title": "",
@@ -5041,6 +5249,16 @@
 				},
 				{
 					"title": "",
+					"hint": "",
+					"content": "<strong>Farzana Ehetasum Hossain</strong><br /> Mobile: <a  href='tel:+8801677560227'>+8801677560227</a><br /> Email: <a  href='mailto:farzana@nstu.edu.bd'>farzana@nstu.edu.bd</a>, <a  href='mailto:farzanahetasum@gmail.com'>farzanahetasum@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Binata Rani Sen</strong><br /> Mobile: <a  href='tel:+8801676206194'>+8801676206194</a><br /> Email: <a  href='mailto:ranibinata@gmail.com'>ranibinata@gmail.com</a>"
+				},
+				{
+					"title": "",
 					"hint": "<u><strong>Assistant Registrar</strong></u>",
 					"content": "<strong>Md. Golap Hossain</strong><br /> Mobile: <a  href='tel:+8801827522677'>+8801827522677</a><br /> Email: <a  href='mailto:golapshah77@yahoo.com'>golapshah77@yahoo.com</a>"
 				},
@@ -5063,6 +5281,26 @@
 					"title": "",
 					"hint": "",
 					"content": "<strong>Smriti Chakrobarty</strong><br /> Mobile: <a  href='tel:+8801710270788'>+8801710270788</a><br /> Email: <a  href='mailto:smriti_2009@gmail.com'>smriti_2009@gmail.com</a>"
+				},
+				{
+					"title": "Jatir Pita Bangabandhu Sheikh Mujibur Rahman Hall",
+					"hint": "<u><strong>Provost</strong></u>",
+					"content": "<strong>Dr. Nahid Akter</strong><br /> Mobile: <a  href='tel:+8801776381442'>+8801776381442</a><br /> Email: <a  href='mailto:kakolinahid@gmail.com'>kakolinahid@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "<u><strong>Assistant Provost</strong></u>",
+					"content": "<strong>Nusrat Jahan Methela</strong><br /> Mobile: <a  href='tel:+8801715880185'>+8801715880185</a><br /> Email: <a  href='mailto:nmethela@gmail.com'>nmethela@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>Md. Iqbal Hossain</strong><br /> Mobile: <a  href='tel:+8801918929257'>+8801918929257</a><br /> Email: <a  href='mailto:sumonju3881@gmail.com'>sumonju3881@gmail.com</a>"
+				},
+				{
+					"title": "",
+					"hint": "",
+					"content": "<strong>A.H.M. Mostafizur Rahman</strong><br /> Mobile: <a  href='tel:+8801712507272'>+8801712507272</a><br /> Email: <a  href='mailto:mostafiznstu.du@gmail.com'>mostafiznstu.du@gmail.com</a>"
 				}
 			]
 		},
@@ -5358,6 +5596,11 @@
 							"title": "",
 							"hint": "",
 							"content": "<strong>Masud Mia</strong><br /> MLSS<br /> Mobile: <a  href='tel:+8801735003678'>+8801735003678</a>"
+						},
+						{
+							"title": "",
+							"hint": "",
+							"content": "<strong>Khadija Akter</strong><br />Library Assistant<br /> Mobile: <a  href='tel:+8801726396709'>+8801726396709</a>"
 						}
 					]
 				},
@@ -6257,7 +6500,7 @@
 						{
 							"title": "",
 							"hint": "",
-							"content": "<strong>Club Email :</strong><a href='mailto:nstu.business.club@gmail.com'>nstu.business.club@gmail.com</a>"
+							"content": "<strong>Club Email :</strong><a href='mailto:business.club.nstu@gmail.com'>business.club.nstu@gmail.com</a>"
 						},
 						{
 							"title": "Organogram",

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -291,10 +292,10 @@ public class HomeActivity extends AppCompatActivity
             progressDialog.show();
         }
 
-        /*if (dataJsonExtract != null && dataJsonExtract.getVersionCheckURL() != null &&
+        if (dataJsonExtract != null && dataJsonExtract.getVersionCheckURL() != null &&
                 !dataJsonExtract.getVersionCheckURL().equalsIgnoreCase("")) {
             Constants.JSON_CHECKING_URL = dataJsonExtract.getVersionCheckURL();
-        }*/
+        }
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.JSON_CHECKING_URL,
 
@@ -306,7 +307,7 @@ public class HomeActivity extends AppCompatActivity
                             progressDialog.dismiss();
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, response);
                             jsonOnlineVersion = initialJsonExtract.getDataVersionFromInitialJson();
-                            //Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
+                            Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
 
                             dataJsonExtract = new ExtractDataJson(HomeActivity.this, ReadWriteJson.readDataFile(HomeActivity.this));
                             double tempVersion = dataJsonExtract.getDataVersionFromDataJson();
@@ -331,7 +332,7 @@ public class HomeActivity extends AppCompatActivity
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, response);
                             jsonOnlineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             initialJsonExtract.getPopupNotificationDialog();
-                            //Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
+                            Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, ReadWriteJson.readInitialJsonFile(HomeActivity.this));
                             jsonOfflineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             if (jsonOfflineVersion < jsonOnlineVersion) {
@@ -498,6 +499,12 @@ public class HomeActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
             navViewImageAlteration();
+        } else if (id == R.id.nav_rate_review) {
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+            } catch (android.content.ActivityNotFoundException anfe) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

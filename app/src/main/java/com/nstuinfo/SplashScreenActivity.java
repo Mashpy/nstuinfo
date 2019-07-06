@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.nstuinfo.mOtherUtils.AnimationUtils;
 import com.crashlytics.android.Crashlytics;
@@ -14,8 +15,9 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SplashScreenActivity extends Activity {
 
-    public static final int SPLASH_SCREEN_TIME = 2500;
+    private static final int SPLASH_SCREEN_TIME = 2500;
     private ImageView topImg, bottomImg;
+    private RelativeLayout middleRL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +27,11 @@ public class SplashScreenActivity extends Activity {
 
         topImg = findViewById(R.id.topIM);
         bottomImg = findViewById(R.id.bottomIM1);
+        middleRL = findViewById(R.id.middleShapeRL);
 
         AnimationUtils.shake(this, topImg);
         AnimationUtils.shake(this, bottomImg);
+        AnimationUtils.leftToRightAnimation(middleRL, 1000);
 
         new Handler().postDelayed(new Runnable() {
             @Override
