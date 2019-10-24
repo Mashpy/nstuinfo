@@ -22,8 +22,8 @@ android {
         applicationId "com.nstuinfo"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 14
-        versionName "4.3.0"
+        versionCode 15
+        versionName "4.4.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     dexOptions {
@@ -31,7 +31,7 @@ android {
     }
     buildTypes {
         release {
-            //shrinkResources true
+            shrinkResources true
             useProguard true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

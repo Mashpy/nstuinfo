@@ -292,10 +292,10 @@ public class HomeActivity extends AppCompatActivity
             progressDialog.show();
         }
 
-        if (dataJsonExtract != null && dataJsonExtract.getVersionCheckURL() != null &&
+        /*if (dataJsonExtract != null && dataJsonExtract.getVersionCheckURL() != null &&
                 !dataJsonExtract.getVersionCheckURL().equalsIgnoreCase("")) {
             Constants.JSON_CHECKING_URL = dataJsonExtract.getVersionCheckURL();
-        }
+        }*/
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.JSON_CHECKING_URL,
 
@@ -307,7 +307,7 @@ public class HomeActivity extends AppCompatActivity
                             progressDialog.dismiss();
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, response);
                             jsonOnlineVersion = initialJsonExtract.getDataVersionFromInitialJson();
-                            Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
+                            //Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
 
                             dataJsonExtract = new ExtractDataJson(HomeActivity.this, ReadWriteJson.readDataFile(HomeActivity.this));
                             double tempVersion = dataJsonExtract.getDataVersionFromDataJson();
@@ -332,7 +332,7 @@ public class HomeActivity extends AppCompatActivity
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, response);
                             jsonOnlineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             initialJsonExtract.getPopupNotificationDialog();
-                            Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
+                            //Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, ReadWriteJson.readInitialJsonFile(HomeActivity.this));
                             jsonOfflineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             if (jsonOfflineVersion < jsonOnlineVersion) {
@@ -394,6 +394,8 @@ public class HomeActivity extends AppCompatActivity
                         if (progressDialog.isShowing()) {
                             progressDialog.dismiss();
                         }
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                        error.printStackTrace();
                     }
                 });
 
