@@ -12,4 +12,12 @@ public class Constants {
     public static final String JSON_CHECKING_URL = "http://nstudiary.nstu.edu.bd/api/versionapi";
     public static final String JSON_DATA_URL = "http://nstudiary.nstu.edu.bd/api/infoapi";
 
+    public static final String URL = "http://nstu.edu.bd/";
+
+    public static Boolean UPDATE_AVAILABLE = false;
+
+    public static void INITIALIZE_CONSTANTS () {
+        UPDATE_AVAILABLE = false;
+    }
+
 }

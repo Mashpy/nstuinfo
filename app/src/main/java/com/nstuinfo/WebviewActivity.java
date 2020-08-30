@@ -11,8 +11,8 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,11 +27,11 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.nstuinfo.R;
 import com.nstuinfo.mOtherUtils.Preferences;
-import com.nstuinfo.mViews.FontAppearance;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
+
+import static com.nstuinfo.mJsonUtils.Constants.URL;
 
 public class WebviewActivity extends AppCompatActivity {
 
@@ -42,7 +42,6 @@ public class WebviewActivity extends AppCompatActivity {
     private WebView webView;
     private ProgressDialog progressDialog;
     private ImageButton btnBackward, btnForward;
-    private static final String URL = "http://nstu.edu.bd/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +108,7 @@ public class WebviewActivity extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     // Custom method to render a web page

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -17,8 +18,10 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="Hint"
+        android:justificationMode="inter_word"
         android:textColor="@android:color/black"
         android:textStyle="normal"
-        android:textAppearance="?android:attr/textAppearanceSmall"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:ignore="HardcodedText,UnusedAttribute" />
 
 </RelativeLayout>

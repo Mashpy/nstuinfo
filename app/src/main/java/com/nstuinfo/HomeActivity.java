@@ -13,14 +13,14 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
@@ -28,12 +28,12 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -54,7 +54,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.hitomi.cmlibrary.CircleMenu;
 import com.hitomi.cmlibrary.OnMenuSelectedListener;
-import com.nstuinfo.R;
 import com.nstuinfo.mJsonUtils.ExtractInitialJson;
 import com.nstuinfo.mOtherUtils.ExtraUtils;
 import com.nstuinfo.mOtherUtils.Preferences;
@@ -68,7 +67,8 @@ import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import java.util.ArrayList;
 import java.util.List;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
+
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -124,11 +124,11 @@ public class HomeActivity extends AppCompatActivity
         }
 
         if (ReadWriteJson.readInitialJsonFile(this).equals("")) {
-            if (isInternetOn()) {
+            if (ExtraUtils.isInternetOn(this)) {
                 parseUrlAndCheckData(true);
             }
         } else {
-            if (isInternetOn()) {
+            if (ExtraUtils.isInternetOn(this)) {
                 if (ReadWriteJson.readDataFile(this).equals("")) {
                     parseDataJson(null);
                 }
@@ -157,7 +157,7 @@ public class HomeActivity extends AppCompatActivity
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override
@@ -181,9 +181,16 @@ public class HomeActivity extends AppCompatActivity
                 initialFont = Preferences.getFontAppearance(this);
             }
 
+            if (Constants.UPDATE_AVAILABLE) {
+                ExtraUtils.appVersionUpdateNoticeDialog(this);
+            }
+
         }
     }
 
+    /**
+     * Initialization of the views
+     */
     private void initViews() {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -221,6 +228,9 @@ public class HomeActivity extends AppCompatActivity
         navViewImageAlteration();
     }
 
+    /**
+     * Navigation header image changing
+     */
     private void navViewImageAlteration() {
         int rand = ExtraUtils.getRandomNumber(1,7);
         if (rand == 1) {
@@ -254,6 +264,9 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * Set the theme according with preference
+     */
     private void setTheme() {
         if (Preferences.isDarkTheme(this)) {
             mConstraintLayout.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
@@ -272,6 +285,9 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * Load and Set Recycler View
+     */
     private void loadRecyclerView() {
         myAdapter = new MyAdapter(this, itemsList, "main");
 
@@ -284,6 +300,11 @@ public class HomeActivity extends AppCompatActivity
         mRecyclerView.setAdapter(myAdapter);
     }
 
+    /**
+     * Parse JSON Data and Check if a data update is available
+     *
+     * @param pdVisibility - Progress Dialog Visibility Flag - True (Visible) & False (Hide)
+     */
     private void parseUrlAndCheckData(final boolean pdVisibility) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Checking data....");
@@ -359,6 +380,11 @@ public class HomeActivity extends AppCompatActivity
         requestQueue.add(stringRequest);
     }
 
+    /**
+     * Parse JSON Data and Save for Offline use
+     *
+     * @param initialResponse - Previous JSON String file
+     */
     private void parseDataJson(final String initialResponse) {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -407,33 +433,16 @@ public class HomeActivity extends AppCompatActivity
         requestQueue.add(stringRequest);
     }
 
-    private boolean isInternetOn() {
-
-        // get Connectivity Manager object to check connection
-        getBaseContext();
-        ConnectivityManager connec = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        // Check for network connections
-        assert connec != null;
-        if (connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTED ||
-                connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTING ||
-                connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTING ||
-                connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED) {
-
-            return true;
-        } else if (connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.DISCONNECTED ||
-                connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.DISCONNECTED) {
-
-            return false;
-        }
-
-        return false;
-    }
 
     boolean backButtonPressedOnce = false;
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        if (Constants.UPDATE_AVAILABLE) {
+            ExtraUtils.appVersionUpdateNoticeDialog(this);
+        }
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -494,7 +503,7 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         } else if (id == R.id.nav_check_update) {
-            if (isInternetOn()) {
+            if (ExtraUtils.isInternetOn(this)) {
                 parseUrlAndCheckData(true);
             } else {
                 Snackbar.make(coordinatorLayout, "Please check your data connection!!", Snackbar.LENGTH_LONG)
@@ -507,6 +516,10 @@ public class HomeActivity extends AppCompatActivity
             } catch (android.content.ActivityNotFoundException anfe) {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
             }
+        }
+
+        if (Constants.UPDATE_AVAILABLE) {
+            ExtraUtils.appVersionUpdateNoticeDialog(this);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -618,6 +631,9 @@ public class HomeActivity extends AppCompatActivity
         mPopUpWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
     }
 
+    /**
+     * Dialog to choose the font size
+     */
     private void fontAppearanceDialog() {
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -690,6 +706,9 @@ public class HomeActivity extends AppCompatActivity
         dialog.show();
     }
 
+    /**
+     * Dialog to choose the home item view
+     */
     private void itemViewDialog() {
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -745,6 +764,10 @@ public class HomeActivity extends AppCompatActivity
         dialog.show();
     }
 
+    /**
+     * Dialog to notice user about data version update
+     * @param response - String response
+     */
     private void updatedDataVersionNoticeDialog(final String response) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(Html.fromHtml("<font color='#0D47A1'>Update notice!!</font>"));
@@ -766,6 +789,9 @@ public class HomeActivity extends AppCompatActivity
         alert.show();
     }
 
+    /**
+     * PopUp Window to search the person
+     */
     private void searchPopupWindow() {
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout = null;
@@ -848,6 +874,11 @@ public class HomeActivity extends AppCompatActivity
         mPopUpWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
     }
 
+    /**
+     * Method to find out the content by the person
+     * @param editText - Input text
+     * @param rcView - Recycler view
+     */
     private void searchContent(EditText editText, final RecyclerView rcView) {
 
         final List<String> contentList = dataJsonExtract.getAllContents();
