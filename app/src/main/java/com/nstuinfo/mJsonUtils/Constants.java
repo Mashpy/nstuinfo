@@ -14,6 +14,7 @@ public class Constants {
 
     public static final String URL = "http://nstu.edu.bd/";
 
+
     public static Boolean UPDATE_AVAILABLE = false;
 
     public static void INITIALIZE_CONSTANTS () {
