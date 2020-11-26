@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "478986280453",
+    "firebase_url": "https://nstu-diary.firebaseio.com",
+    "project_id": "nstu-diary",
+    "storage_bucket": "nstu-diary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478986280453:android:b2ec0ad3cd6a52e4cf466c",
+        "android_client_info": {
+          "package_name": "com.nstuinfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478986280453-1lt0fiqfhrbrqpu61cl4skdavva7jeuv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHpAgTVwVEBw62Y1BCHd-Dk8LRp2EB57c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478986280453-1lt0fiqfhrbrqpu61cl4skdavva7jeuv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

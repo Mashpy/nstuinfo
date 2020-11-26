@@ -47,10 +47,6 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_webview"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="bacb81db58019f050300bbf517e0b8d8dc0cbe9c" />
     </application>
 
 </manifest>

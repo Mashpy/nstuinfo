@@ -61,7 +61,6 @@ public class SplashScreenActivity extends Activity {
                 finish();
             }
         }, SPLASH_SCREEN_TIME);
-
     }
 
     @Override
