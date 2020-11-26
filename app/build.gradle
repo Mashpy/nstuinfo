@@ -4,7 +4,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 'android-R'
+    compileSdkVersion 29
     buildToolsVersion '29.0.2'
     defaultConfig {
         applicationId "com.nstuinfo"
